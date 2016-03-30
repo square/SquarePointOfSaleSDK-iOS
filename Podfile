@@ -1,4 +1,4 @@
-source 'https://stash.corp.squareup.com/scm/ios/squarepods.git'
+
 source 'https://github.com/CocoaPods/Specs'
 
 project 'SquareRegisterSDK Tests.xcodeproj/'
