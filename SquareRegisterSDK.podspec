@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name         = 'SquareRegisterSDK'
   s.version      = '1.0.0'
-  s.summary      = 'SDK for clients using Register API'
-  s.homepage     = 'https://github.com/square/SquareRegisterSDK/'
+  s.summary      = 'SDK for clients using Register API on iOS'
+  s.homepage     = 'https://github.com/square/SquareRegisterSDK-iOS/'
   s.license      = { :type => 'Apache License, Version 2.0', :text => "© #{ Date.today.year } Square, Inc." }
   s.authors      = 'Square'
-  s.source       = { :git => 'https://github.com/square/SquareRegisterSDK.git', :tag => s.version }
+  s.source       = { :git => 'https://github.com/square/SquareRegisterSDK-iOS.git', :tag => s.version }
 
   s.ios.deployment_target = '8.0'
 
