@@ -1,8 +1,25 @@
 # Square Register SDK
 
+[![CI Status](https://travis-ci.org/square/SquareRegisterSDK.svg?branch=master)](https://travis-ci.org/square/SquareRegisterSDK)
+[![Carthage Compatibility](https://img.shields.io/badge/carthage-✓-e2c245.svg)](https://github.com/Carthage/Carthage/)
+[![Version](https://img.shields.io/cocoapods/v/SquareRegisterSDK.svg)](http://cocoadocs.org/docsets/SquareRegisterSDK)
+[![License](https://img.shields.io/cocoapods/l/SquareRegisterSDK.svg)](http://cocoadocs.org/docsets/SquareRegisterSDK)
+[![Platform](https://img.shields.io/cocoapods/p/SquareRegisterSDK.svg)](http://cocoadocs.org/docsets/SquareRegisterSDK)
+
 The Square Register SDK lets you quickly and easily add support to your application for completing in-store payments using Square Register.
 
 ## Getting started
+#### [CocoaPods](https://cocoapods.org)
+```
+platform :ios, '8.0'
+pod 'SquareRegisterSDK'
+```
+
+#### [Carthage](https://github.com/Carthage/Carthage)
+```
+github "Square/SquareRegisterSDK"
+```
+
 #### Git Submodules
 Or manually checkout the submodule with `git submodule add git@github.com:Square/SquareRegisterSDK.git`, drag SquareRegisterSDK.xcodeproj to your project, and add SquareRegisterSDK as a build dependency.
 
