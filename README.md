@@ -1,25 +1,8 @@
 # Square Register SDK
 
-[![CI Status](https://travis-ci.org/square/SquareRegisterSDK.svg?branch=master)](https://travis-ci.org/square/SquareRegisterSDK)
-[![Carthage Compatibility](https://img.shields.io/badge/carthage-✓-e2c245.svg)](https://github.com/Carthage/Carthage/)
-[![Version](https://img.shields.io/cocoapods/v/SquareRegisterSDK.svg)](http://cocoadocs.org/docsets/SquareRegisterSDK)
-[![License](https://img.shields.io/cocoapods/l/SquareRegisterSDK.svg)](http://cocoadocs.org/docsets/SquareRegisterSDK)
-[![Platform](https://img.shields.io/cocoapods/p/SquareRegisterSDK.svg)](http://cocoadocs.org/docsets/SquareRegisterSDK)
-
-The Square Register SDK lets you quickly and easily add support to your application for completing payments using Square Register.
+The Square Register SDK lets you quickly and easily add support to your application for completing in-store payments using Square Register.
 
 ## Getting started
-#### [CocoaPods](https://cocoapods.org)
-```
-platform :ios, '8.0'
-pod 'SquareRegisterSDK'
-```
-
-#### [Carthage](https://github.com/Carthage/Carthage)
-```
-github "Square/SquareRegisterSDK"
-```
-
 #### Git Submodules
 Or manually checkout the submodule with `git submodule add git@github.com:Square/SquareRegisterSDK.git`, drag SquareRegisterSDK.xcodeproj to your project, and add SquareRegisterSDK as a build dependency.
 
@@ -27,15 +10,22 @@ Or manually checkout the submodule with `git submodule add git@github.com:Square
 Integrating Square Register SDK into your app takes just a couple of minutes. Once you've calculated how much you'd like to charge your customer, bundle up the relevant details into an API Request.
 
 ```objc
+// Replace with your app's callback URL.
+NSURL *const callbackURL = [NSURL URLWithString:@"your-url-scheme://myCallback"];
+
+// Specify the amount of money to charge.
+SCCMoney *const amount = [SCCMoney moneyWithAmountCents:100 currencyCode:@"USD" error:NULL];
+
 // Note: You only need to set your client ID once, before creating your first request.
 [SCCAPIRequest setClientID:@"YOUR_CLIENT_ID"];
-[SCCAPIRequest requestWithCallbackURL:yourAppCallbackURL
-                               amount:amountToCharge
-                       userInfoString:contextInfo
+[SCCAPIRequest requestWithCallbackURL:callbackURL
+                               amount:amount
+                       userInfoString:nil
                            merchantID:nil
-                                notes:descriptionOfCharge
+                                notes:@"Coffee"
                  supportedTenderTypes:SCCAPIRequestTenderTypeCard
                     clearsDefaultFees:NO
+      returnAutomaticallyAfterPayment:NO
                                 error:&error];
 ```
 
@@ -64,11 +54,20 @@ You'll need to make two quick changes to your app Info.plist file, one to declar
 ```xml
 <key>LSApplicationQueriesSchemes</key>
 <array>
-    <string>square-commerce-v1</string>
+  <string>square-commerce-v1</string>
 </array>
-<key>CFBundleURLSchemes</key>
+<key>CFBundleURLTypes</key>
 <array>
-	<string>register-sdk-testapp</string>
+  <dict>
+    <key>CFBundleTypeRole</key>
+    <string>Editor</string>
+    <key>CFBundleURLName</key>
+    <string>Callback</string>
+    <key>CFBundleURLSchemes</key>
+    <array>
+        <string>your-url-scheme</string>
+    </array>
+  </dict>
 </array>
 ```
 
