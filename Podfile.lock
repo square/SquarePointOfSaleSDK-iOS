@@ -1,9 +1,9 @@
 PODS:
-  - OCMock (3.1.2.internal1)
+  - OCMock (3.1.5)
   - SquareRegisterSDK (1.0.0)
 
 DEPENDENCIES:
-  - OCMock (~> 3.1.2-internal1)
+  - OCMock (~> 3.1.5)
   - SquareRegisterSDK (from `SquareRegisterSDK.podspec`)
 
 EXTERNAL SOURCES:
@@ -11,9 +11,9 @@ EXTERNAL SOURCES:
     :path: SquareRegisterSDK.podspec
 
 SPEC CHECKSUMS:
-  OCMock: 01f49e8a5109fd06b2de246adb5b623747874ff7
-  SquareRegisterSDK: 492b8be02d97356dc494f1cbdcb71ec9945be1e5
+  OCMock: 4c2925291f80407c3738dd1db14d21d0cc278864
+  SquareRegisterSDK: b567ce4593ab18ab4eec817b3a1927552ede38b1
 
-PODFILE CHECKSUM: 0abc07166b345a86002f64626d4dca6911344955
+PODFILE CHECKSUM: 7070311197d161e72b846cbcc8983fa797e2095f
 
 COCOAPODS: 1.0.0.beta.3

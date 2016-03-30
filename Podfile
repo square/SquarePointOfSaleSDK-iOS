@@ -7,7 +7,7 @@ platform :ios, '8.0'
 
 target 'SquareRegisterSDK Tests' do
   pod 'SquareRegisterSDK', :path => 'SquareRegisterSDK.podspec'
-  pod "OCMock", "~> 3.1.2-internal1"
+  pod "OCMock", "~> 3.1.5"
 end
 
 target 'SquareRegisterSDK Test App' do
