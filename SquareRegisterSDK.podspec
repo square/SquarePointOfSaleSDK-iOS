@@ -15,19 +15,6 @@ Pod::Spec.new do |s|
 
   s.pod_target_xcconfig = {
 	  #
-	  # Build settings for Register-consumed CocoaPods.
-	  # This file lives in Register, under 'xcconfigs/default_build_settings.rb'.
-	  #
-	  # Usage:
-	  # Copy the contents of this file into your Podspec:
-	  #
-	  #   Pod::Spec.new do |s|
-	  #      ...
-	  #      s.pod_target_xcconfig = { ... Contents of this file ... }
-	  #   end
-	  #
-
-	  #
 	  # Treat warnings as errors.
 	  #
 
