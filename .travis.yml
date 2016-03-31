@@ -1,0 +1,9 @@
+language: objective-c
+osx_image: xcode7
+before_script:
+    - bundle install
+    - bundle exec pod install
+script:
+    - xcodebuild -project "SquareRegisterSDK.xcodeproj" -scheme "SquareRegisterSDK" -sdk iphonesimulator -configuration Debug -PBXBuildsContinueAfterErrors=0 -destination "name=iPhone 4s,OS=8.4" ACTIVE_ARCH_ONLY=0 build
+    - xcodebuild -workspace "SquareRegisterSDK Tests.xcworkspace" -scheme "SquareRegisterSDK Tests" -sdk iphonesimulator -configuration Debug -PBXBuildsContinueAfterErrors=0 -destination "name=iPhone 4s,OS=8.4" ACTIVE_ARCH_ONLY=0 test
+    - pod lib lint --verbose --fail-fast
