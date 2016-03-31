@@ -2,9 +2,9 @@
 
 [![CI Status](https://travis-ci.org/square/SquareRegisterSDK-iOS.svg?branch=master)](https://travis-ci.org/square/SquareRegisterSDK-iOS)
 [![Carthage Compatibility](https://img.shields.io/badge/carthage-✓-e2c245.svg)](https://github.com/Carthage/Carthage/)
-[![Version](https://img.shields.io/cocoapods/v/SquareRegisterSDK-iOS.svg)](http://cocoadocs.org/docsets/SquareRegisterSDK-iOS)
-[![License](https://img.shields.io/cocoapods/l/SquareRegisterSDK-iOS.svg)](http://cocoadocs.org/docsets/SquareRegisterSDK-iOS)
-[![Platform](https://img.shields.io/cocoapods/p/SquareRegisterSDK-iOS.svg)](http://cocoadocs.org/docsets/SquareRegisterSDK-iOS)
+[![Version](https://img.shields.io/cocoapods/v/SquareRegisterSDK.svg)](http://cocoadocs.org/docsets/SquareRegisterSDK)
+[![License](https://img.shields.io/cocoapods/l/SquareRegisterSDK.svg)](http://cocoadocs.org/docsets/SquareRegisterSDK)
+[![Platform](https://img.shields.io/cocoapods/p/SquareRegisterSDK.svg)](http://cocoadocs.org/docsets/SquareRegisterSDK)
 
 The Square Register SDK lets you quickly and easily add support to your application for completing in-store payments using Square Register.
 
