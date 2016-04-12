@@ -260,13 +260,12 @@ static NSString *__nullable APIClientID = nil;
         return nil;
     }
 
-    NSString *const query = [[NSString alloc] initWithData:JSONData encoding:NSUTF8StringEncoding];
-    NSString *const encodedString = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(
-        kCFAllocatorDefault,
-        (CFStringRef)query,
-        NULL,
-        CFSTR(":/?#[]@!$&'()*+,;="),
-        kCFStringEncodingUTF8));
+    // The query parameter character set is everything allowed in the entire query term minus reserved characters.
+    NSMutableCharacterSet *const queryParameterCharacterSet = [[NSCharacterSet URLQueryAllowedCharacterSet] mutableCopy];
+    [queryParameterCharacterSet removeCharactersInString:@":/?#[]@!$&'()*+,;="];
+
+    NSString *const queryDataParameter = [[NSString alloc] initWithData:JSONData encoding:NSUTF8StringEncoding];
+    NSString *const encodedString = [queryDataParameter stringByAddingPercentEncodingWithAllowedCharacters:queryParameterCharacterSet];
     NSString *const URLString = [NSString stringWithFormat:@"%@://payment/create?data=%@", [[self class] _URLScheme], encodedString];
 
     return [NSURL URLWithString:URLString];
