@@ -34,6 +34,7 @@ NSString *__nonnull const SCCAPIResponseErrorCodeKey = @"error_code";
 NSString *__nonnull const SCCAPIResponsePaymentIDKey = @"payment_id";
 NSString *__nonnull const SCCAPIResponseOfflinePaymentIDKey = @"offline_payment_id";
 NSString *__nonnull const SCCAPIResponseTransactionIDKey = @"transaction_id";
+NSString *__nonnull const SCCAPIResponseClientTransactionIDKey = @"client_transaction_id";
 NSString *__nonnull const SCCAPIResponseStateKey = @"state";
 
 NSString *__nonnull const SCCAPIResponseStatusStringOK = @"ok";
