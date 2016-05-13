@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'SquareRegisterSDK'
-  s.version      = '1.0.1'
+  s.version      = '1.0.2'
   s.summary      = 'SDK for clients using Register API on iOS'
   s.homepage     = 'https://github.com/square/SquareRegisterSDK-iOS/'
   s.license      = { :type => 'Apache License, Version 2.0', :text => "© #{ Date.today.year } Square, Inc." }
@@ -39,7 +39,7 @@ Pod::Spec.new do |s|
 	  # Controls whether objc_msgSend calls must be cast to the appropriate function pointer type before being called.
 	  'ENABLE_STRICT_OBJC_MSGSEND' => 'YES',
 
-	  # Causes warnings about missing function prototypes to be treated as errors.  Only applies to C and Objective-C. 
+	  # Causes warnings about missing function prototypes to be treated as errors.  Only applies to C and Objective-C.
 	  'GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS' => 'YES',
 
 	  # Enabling this option causes warnings about incompatible pointer types to be treated as errors.
@@ -64,7 +64,7 @@ Pod::Spec.new do |s|
 	  # Causes warnings to be emitted about missing prototypes.
 	  'GCC_WARN_ABOUT_MISSING_PROTOTYPES' => 'YES',
 
-	  # Causes warnings to be emitted when a function with a defined return type (not void) contains a return statement without a return-value. 
+	  # Causes warnings to be emitted when a function with a defined return type (not void) contains a return statement without a return-value.
 	  # Also emits a warning when a function is defined without specifying a return type.
 	  'GCC_WARN_ABOUT_RETURN_TYPE' => 'YES',
 
