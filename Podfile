@@ -13,3 +13,7 @@ end
 target 'SquareRegisterSDK Test App' do
   pod 'SquareRegisterSDK', :path => 'SquareRegisterSDK.podspec'
 end
+
+target 'SquareRegisterSDK-Test-App-Swift' do
+  pod 'SquareRegisterSDK', :path => 'SquareRegisterSDK.podspec'
+end

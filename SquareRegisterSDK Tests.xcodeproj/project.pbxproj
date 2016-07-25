@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		385B50705CBBF1ABA1896130 /* libPods-SquareRegisterSDK-Test-App-Swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C51AD265558A4FDD6491C55 /* libPods-SquareRegisterSDK-Test-App-Swift.a */; };
+		7F48F1F51D248EE000B3BC6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F48F1F41D248EE000B3BC6E /* AppDelegate.swift */; };
+		7F48F1FC1D248EE000B3BC6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F48F1FB1D248EE000B3BC6E /* Assets.xcassets */; };
 		85EEDAAE1BA261C7009B8340 /* SCCAPIResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EEDAAD1BA261C7009B8340 /* SCCAPIResponseTests.swift */; };
 		8D5B8D771C89112600517590 /* SCCMoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5B8D761C89112600517590 /* SCCMoneyTests.swift */; };
 		8DB920861C8E3E6900AAD8CC /* SCCAPIRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB920851C8E3E6900AAD8CC /* SCCAPIRequestTests.swift */; };
@@ -41,14 +44,22 @@
 /* Begin PBXFileReference section */
 		0A02641217B027A2008E22F5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0A02646E17B02E50008E22F5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		0C51AD265558A4FDD6491C55 /* libPods-SquareRegisterSDK-Test-App-Swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SquareRegisterSDK-Test-App-Swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21F363F7D77DC6C87C1441AD /* Pods-SquareRegisterSDK Test App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquareRegisterSDK Test App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SquareRegisterSDK Test App/Pods-SquareRegisterSDK Test App.debug.xcconfig"; sourceTree = "<group>"; };
 		266852125415334F831385A0 /* Pods-SquareRegisterSDK Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquareRegisterSDK Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SquareRegisterSDK Tests/Pods-SquareRegisterSDK Tests.release.xcconfig"; sourceTree = "<group>"; };
 		4301844733BCD093677E1461 /* libPods-SquareRegisterSDK Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SquareRegisterSDK Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F48F1F21D248EE000B3BC6E /* SquareRegisterSDK-Test-App-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SquareRegisterSDK-Test-App-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F48F1F41D248EE000B3BC6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7F48F1FB1D248EE000B3BC6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7F48F2001D248EE000B3BC6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F48F2041D248FCE00B3BC6E /* SquareRegisterSDK-Test-App-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SquareRegisterSDK-Test-App-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		7F68204B1D249A2700ACB51A /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = "../../../Library/Developer/Xcode/DerivedData/SquareRegisterSDK_Tests-csmeghvkxhpobrdxjmkoxnqenniy/Build/Products/Debug-iphoneos/OCMock/libOCMock.a"; sourceTree = "<group>"; };
 		85EEDAAD1BA261C7009B8340 /* SCCAPIResponseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCCAPIResponseTests.swift; sourceTree = "<group>"; };
 		8D5B8D751C89112600517590 /* SquareRegisterSDK Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SquareRegisterSDK Tests-Bridging-Header.h"; sourceTree = "<group>"; };
 		8D5B8D761C89112600517590 /* SCCMoneyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCCMoneyTests.swift; sourceTree = "<group>"; };
 		8DB920851C8E3E6900AAD8CC /* SCCAPIRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCCAPIRequestTests.swift; sourceTree = "<group>"; };
 		8DB9208B1C8E687E00AAD8CC /* SCCAPIConnectionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCAPIConnectionTests.m; sourceTree = "<group>"; };
+		AE9A41EB18CD990042C1C925 /* Pods-SquareRegisterSDK-Test-App-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquareRegisterSDK-Test-App-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-SquareRegisterSDK-Test-App-Swift/Pods-SquareRegisterSDK-Test-App-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		D32DAFE1185C0D2300EB5572 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D32DB01B185C1FD700EB5572 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D368EE4C185855D700180B41 /* SquareRegisterSDK Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SquareRegisterSDK Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,12 +75,21 @@
 		D373DF5B185C24EA006BAFB3 /* SCCTestAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCCTestAppDelegate.h; sourceTree = "<group>"; };
 		D373DF5C185C24EA006BAFB3 /* SCCTestAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCCTestAppDelegate.m; sourceTree = "<group>"; };
 		D373DF5E185C24EA006BAFB3 /* SquareRegisterSDKTestsAppImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SquareRegisterSDKTestsAppImages.xcassets; sourceTree = "<group>"; };
+		E9D9F1EA64FB51A189DBEF64 /* Pods-SquareRegisterSDK-Test-App-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquareRegisterSDK-Test-App-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SquareRegisterSDK-Test-App-Swift/Pods-SquareRegisterSDK-Test-App-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		F170F785F7C6ABEEFB107B55 /* Pods-SquareRegisterSDK Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquareRegisterSDK Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SquareRegisterSDK Tests/Pods-SquareRegisterSDK Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F4F9857FFD5D8B7513A0B06C /* libPods-SquareRegisterSDK Test App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SquareRegisterSDK Test App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9892596185CF1DC9E977914 /* Pods-SquareRegisterSDK Test App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquareRegisterSDK Test App.release.xcconfig"; path = "Pods/Target Support Files/Pods-SquareRegisterSDK Test App/Pods-SquareRegisterSDK Test App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7F48F1EF1D248EE000B3BC6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				385B50705CBBF1ABA1896130 /* libPods-SquareRegisterSDK-Test-App-Swift.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D368EE49185855D700180B41 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -101,6 +121,7 @@
 			children = (
 				D368EE52185855D700180B41 /* SquareRegisterSDK Tests */,
 				D373DF52185C24EA006BAFB3 /* SquareRegisterSDK Test App */,
+				7F48F1F31D248EE000B3BC6E /* SquareRegisterSDK Test App Swift */,
 				0A02641117B027A2008E22F5 /* Frameworks */,
 				0A02641017B027A2008E22F5 /* Products */,
 				FB6607806952E7B45DCBCE3C /* Pods */,
@@ -112,6 +133,7 @@
 			children = (
 				D368EE4C185855D700180B41 /* SquareRegisterSDK Tests.xctest */,
 				D373DF4E185C24EA006BAFB3 /* SquareRegisterSDK Test App.app */,
+				7F48F1F21D248EE000B3BC6E /* SquareRegisterSDK-Test-App-Swift.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,6 +141,7 @@
 		0A02641117B027A2008E22F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7F68204B1D249A2700ACB51A /* libOCMock.a */,
 				0A02646E17B02E50008E22F5 /* CoreData.framework */,
 				D32DB01B185C1FD700EB5572 /* CoreGraphics.framework */,
 				0A02641217B027A2008E22F5 /* Foundation.framework */,
@@ -126,8 +149,21 @@
 				D32DAFE1185C0D2300EB5572 /* UIKit.framework */,
 				F4F9857FFD5D8B7513A0B06C /* libPods-SquareRegisterSDK Test App.a */,
 				4301844733BCD093677E1461 /* libPods-SquareRegisterSDK Tests.a */,
+				0C51AD265558A4FDD6491C55 /* libPods-SquareRegisterSDK-Test-App-Swift.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7F48F1F31D248EE000B3BC6E /* SquareRegisterSDK Test App Swift */ = {
+			isa = PBXGroup;
+			children = (
+				7F48F2041D248FCE00B3BC6E /* SquareRegisterSDK-Test-App-Swift-Bridging-Header.h */,
+				7F48F1F41D248EE000B3BC6E /* AppDelegate.swift */,
+				7F48F1FB1D248EE000B3BC6E /* Assets.xcassets */,
+				7F48F2001D248EE000B3BC6E /* Info.plist */,
+			);
+			name = "SquareRegisterSDK Test App Swift";
+			path = "SquareRegisterSDK-Test-App-Swift";
 			sourceTree = "<group>";
 		};
 		D368EE52185855D700180B41 /* SquareRegisterSDK Tests */ = {
@@ -198,6 +234,8 @@
 				F9892596185CF1DC9E977914 /* Pods-SquareRegisterSDK Test App.release.xcconfig */,
 				F170F785F7C6ABEEFB107B55 /* Pods-SquareRegisterSDK Tests.debug.xcconfig */,
 				266852125415334F831385A0 /* Pods-SquareRegisterSDK Tests.release.xcconfig */,
+				E9D9F1EA64FB51A189DBEF64 /* Pods-SquareRegisterSDK-Test-App-Swift.debug.xcconfig */,
+				AE9A41EB18CD990042C1C925 /* Pods-SquareRegisterSDK-Test-App-Swift.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -205,17 +243,37 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7F48F1F11D248EE000B3BC6E /* SquareRegisterSDK-Test-App-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F48F2031D248EE000B3BC6E /* Build configuration list for PBXNativeTarget "SquareRegisterSDK-Test-App-Swift" */;
+			buildPhases = (
+				D1557DA76EB5FC8917315E6A /* [CP] Check Pods Manifest.lock */,
+				7F48F1EE1D248EE000B3BC6E /* Sources */,
+				7F48F1EF1D248EE000B3BC6E /* Frameworks */,
+				7F48F1F01D248EE000B3BC6E /* Resources */,
+				5C1770775934FB07A4EB05CE /* [CP] Embed Pods Frameworks */,
+				011C9B922FA54FB76D2ED7BB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SquareRegisterSDK-Test-App-Swift";
+			productName = "SquareRegisterSDK-Test-App-Swift";
+			productReference = 7F48F1F21D248EE000B3BC6E /* SquareRegisterSDK-Test-App-Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
 		D368EE4B185855D700180B41 /* SquareRegisterSDK Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D368EE61185855D700180B41 /* Build configuration list for PBXNativeTarget "SquareRegisterSDK Tests" */;
 			buildPhases = (
-				4F517CD3AF2025A72D83AAF1 /* Check Pods Manifest.lock */,
+				4F517CD3AF2025A72D83AAF1 /* [CP] Check Pods Manifest.lock */,
 				D79DFB720572C12C05ED62E0 /* 📦 Check Pods Manifest.lock */,
 				D368EE48185855D700180B41 /* Sources */,
 				D368EE49185855D700180B41 /* Frameworks */,
 				D368EE4A185855D700180B41 /* Resources */,
-				6BF515D1AF9828F2DD4E73AB /* 📦 Embed Pods Frameworks */,
-				8CDFF1FAF1AEC8E6333DA83D /* 📦 Copy Pods Resources */,
+				6BF515D1AF9828F2DD4E73AB /* [CP] Embed Pods Frameworks */,
+				8CDFF1FAF1AEC8E6333DA83D /* [CP] Copy Pods Resources */,
 				3751129E61C14F0C4F5F77A9 /* Embed Pods Frameworks */,
 				495E32D01A05972073C97F62 /* Copy Pods Resources */,
 			);
@@ -233,13 +291,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D373DF72185C24EB006BAFB3 /* Build configuration list for PBXNativeTarget "SquareRegisterSDK Test App" */;
 			buildPhases = (
-				67A266DF1118E66ACFFF22F8 /* Check Pods Manifest.lock */,
+				67A266DF1118E66ACFFF22F8 /* [CP] Check Pods Manifest.lock */,
 				A38B244EF4EA286C689E4AFB /* 📦 Check Pods Manifest.lock */,
 				D373DF4A185C24EA006BAFB3 /* Sources */,
 				D373DF4B185C24EA006BAFB3 /* Frameworks */,
 				D373DF4C185C24EA006BAFB3 /* Resources */,
-				A4CCD26A8B563C1BAC70CF5A /* 📦 Embed Pods Frameworks */,
-				FC52451264156B09D402A0F2 /* 📦 Copy Pods Resources */,
+				A4CCD26A8B563C1BAC70CF5A /* [CP] Embed Pods Frameworks */,
+				FC52451264156B09D402A0F2 /* [CP] Copy Pods Resources */,
 				AB275A9852D80AEBF873E7E9 /* Embed Pods Frameworks */,
 				655660DE414ABD3258CEEDC6 /* Copy Pods Resources */,
 			);
@@ -259,9 +317,13 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = SC;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Square, Inc.";
 				TargetAttributes = {
+					7F48F1F11D248EE000B3BC6E = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					D368EE4B185855D700180B41 = {
 						TestTargetID = D373DF4D185C24EA006BAFB3;
 					};
@@ -273,6 +335,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 0A02640617B027A2008E22F5;
 			productRefGroup = 0A02641017B027A2008E22F5 /* Products */;
@@ -281,11 +344,20 @@
 			targets = (
 				D368EE4B185855D700180B41 /* SquareRegisterSDK Tests */,
 				D373DF4D185C24EA006BAFB3 /* SquareRegisterSDK Test App */,
+				7F48F1F11D248EE000B3BC6E /* SquareRegisterSDK-Test-App-Swift */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7F48F1F01D248EE000B3BC6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F48F1FC1D248EE000B3BC6E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D368EE4A185855D700180B41 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -306,6 +378,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		011C9B922FA54FB76D2ED7BB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SquareRegisterSDK-Test-App-Swift/Pods-SquareRegisterSDK-Test-App-Swift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3751129E61C14F0C4F5F77A9 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -336,19 +423,34 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SquareRegisterSDK Tests/Pods-SquareRegisterSDK Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4F517CD3AF2025A72D83AAF1 /* Check Pods Manifest.lock */ = {
+		4F517CD3AF2025A72D83AAF1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5C1770775934FB07A4EB05CE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SquareRegisterSDK-Test-App-Swift/Pods-SquareRegisterSDK-Test-App-Swift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		655660DE414ABD3258CEEDC6 /* Copy Pods Resources */ = {
@@ -366,14 +468,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SquareRegisterSDK Test App/Pods-SquareRegisterSDK Test App-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		67A266DF1118E66ACFFF22F8 /* Check Pods Manifest.lock */ = {
+		67A266DF1118E66ACFFF22F8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,14 +483,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		6BF515D1AF9828F2DD4E73AB /* 📦 Embed Pods Frameworks */ = {
+		6BF515D1AF9828F2DD4E73AB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,14 +498,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SquareRegisterSDK Tests/Pods-SquareRegisterSDK Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8CDFF1FAF1AEC8E6333DA83D /* 📦 Copy Pods Resources */ = {
+		8CDFF1FAF1AEC8E6333DA83D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,14 +528,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		A4CCD26A8B563C1BAC70CF5A /* 📦 Embed Pods Frameworks */ = {
+		A4CCD26A8B563C1BAC70CF5A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,6 +558,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SquareRegisterSDK Test App/Pods-SquareRegisterSDK Test App-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D1557DA76EB5FC8917315E6A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		D79DFB720572C12C05ED62E0 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -471,14 +588,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		FC52451264156B09D402A0F2 /* 📦 Copy Pods Resources */ = {
+		FC52451264156B09D402A0F2 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,6 +606,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7F48F1EE1D248EE000B3BC6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F48F1F51D248EE000B3BC6E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D368EE48185855D700180B41 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -632,6 +757,83 @@
 			};
 			name = Release;
 		};
+		7F48F2011D248EE000B3BC6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9D9F1EA64FB51A189DBEF64 /* Pods-SquareRegisterSDK-Test-App-Swift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "SquareRegisterSDK-Test-App-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/SquareRegisterSDK\"",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.square.SquareRegisterSDK-Test-App-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/SquareRegisterSDK-Test-App-Swift/SquareRegisterSDK-Test-App-Swift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7s armv7 arm64";
+			};
+			name = Debug;
+		};
+		7F48F2021D248EE000B3BC6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE9A41EB18CD990042C1C925 /* Pods-SquareRegisterSDK-Test-App-Swift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "SquareRegisterSDK-Test-App-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/SquareRegisterSDK\"",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.square.SquareRegisterSDK-Test-App-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/SquareRegisterSDK-Test-App-Swift/SquareRegisterSDK-Test-App-Swift-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7s armv7 arm64";
+			};
+			name = Release;
+		};
 		D368EE5D185855D700180B41 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F170F785F7C6ABEEFB107B55 /* Pods-SquareRegisterSDK Tests.debug.xcconfig */;
@@ -662,8 +864,9 @@
 				INFOPLIST_FILE = "SquareRegisterSDK Tests/Other/SquareRegisterSDK Tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SquareRegisterSDK Tests/SquareRegisterSDK Tests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -712,7 +915,9 @@
 				INFOPLIST_FILE = "SquareRegisterSDK Tests/Other/SquareRegisterSDK Tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "SquareRegisterSDK Tests/SquareRegisterSDK Tests-Bridging-Header.h";
@@ -778,6 +983,15 @@
 			buildConfigurations = (
 				0A02641B17B027A2008E22F5 /* Debug */,
 				0A02641C17B027A2008E22F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F48F2031D248EE000B3BC6E /* Build configuration list for PBXNativeTarget "SquareRegisterSDK-Test-App-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F48F2011D248EE000B3BC6E /* Debug */,
+				7F48F2021D248EE000B3BC6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
