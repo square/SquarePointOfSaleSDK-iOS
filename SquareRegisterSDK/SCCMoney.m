@@ -37,7 +37,7 @@ NSString *__nonnull const SCCMoneyRequestDictionaryCurrencyCodeKey = @"currency_
     static NSSet *setOfSupportedISO4217CurrencyCodes = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        setOfSupportedISO4217CurrencyCodes = [NSSet setWithObjects:@"USD", @"CAD", @"JPY", nil];
+        setOfSupportedISO4217CurrencyCodes = [NSSet setWithObjects:@"USD", @"CAD", @"JPY", @"AUD", nil];
     });
     return setOfSupportedISO4217CurrencyCodes;
 }
