@@ -9,6 +9,9 @@
 The Square Register SDK lets you quickly and easily add support to your application for completing in-store payments using Square Register.
 
 ## Getting started
+
+### Add the SDK to your project
+
 #### [CocoaPods](https://cocoapods.org)
 ```
 platform :ios, '8.0'
@@ -22,6 +25,15 @@ github "Square/SquareRegisterSDK-iOS"
 
 #### Git Submodules
 Or manually checkout the submodule with `git submodule add git@github.com:Square/SquareRegisterSDK-iOS.git`, drag SquareRegisterSDK.xcodeproj to your project, and add SquareRegisterSDK as a build dependency.
+
+### [Swift apps only] Add the SDK's umbrella header to your bridging header
+
+If you're using the Register SDK in a Swift project, you need to add the SDK's umbrella header to your project's
+bridging header, like so:
+
+    #import <SquareRegisterSDK/SquareRegisterSDK.h>
+
+The sample Swift app in the `SquareRegisterSDK-Test-App-Swift` directory demonstrates this.
 
 ## Usage
 Integrating Square Register SDK into your app takes just a couple of minutes. Once you've calculated how much you'd like to charge your customer, bundle up the relevant details into an API Request.
