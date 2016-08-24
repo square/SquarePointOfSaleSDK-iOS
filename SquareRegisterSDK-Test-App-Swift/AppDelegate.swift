@@ -19,7 +19,6 @@
 //
 import UIKit
 
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -27,13 +26,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        self.window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
-        self.window!.rootViewController = UIViewController.init()
-        self.window!.backgroundColor = UIColor.whiteColor()
-        self.window!.makeKeyAndVisible()
+        window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
+        window!.rootViewController = UIViewController.init()
+        window!.backgroundColor = UIColor.whiteColor()
+        window!.makeKeyAndVisible()
         
         // Always set the client ID before creating your first API request.
-        SCCAPIRequest.setClientID("8M4Qn6MyR4BZDeS0c41L3g")
+        SCCAPIRequest.setClientID("APPLICATION_ID")
         
         // Replace with your app's callback URL.
         let callbackURL = NSURL(string: "squareregisterdemo://Callback")
@@ -52,10 +51,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let merchantID = "YOUR_MERCHANT_ID"
         
         // Replace with any string you want returned from Square Register.
-        let userInfoString = "Useful information";
+        let userInfoString = "Useful information"
         
         // Replace with notes to associate with the transaction.
-        let notes = "Notes";
+        let notes = "Notes"
         
         // Initialize the request.
         let requestWithCallbackURL = try! SCCAPIRequest(callbackURL: callbackURL!,
@@ -71,10 +70,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         do {
             try SCCAPIConnection.performRequest(requestWithCallbackURL)
         } catch {
-            let alertView = UIAlertView.init(title: "Register app instaled?",
-                                             message: "Make sure the register app is installed in the simulator.",
-                                             delegate: self,
-                                             cancelButtonTitle: "Dismiss")
+            let alertView = UIAlertController(title: "Register app installed?", message: "Make sure the Square Register app is installed", preferredStyle: .Alert)
+            alertView.addAction(UIAlertAction(title: "Dismiss", style: .Default, handler: nil))
+            window!.rootViewController!.presentViewController(alertView, animated: true, completion: nil)
+
             alertView.show()
         }
         
@@ -82,33 +81,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-        
         // Make sure the URL comes from Square Register, fail if it doesn't.
-        if (!(sourceApplication?.hasPrefix("com.squareup.square"))!) {
-            return false;
+        guard let srcApp = sourceApplication else { return false }
+        if !srcApp.hasPrefix("com.squareup.square") {
+            return false
         }
         
-        var message: NSString = ""
-        var title: NSString = ""
-        let response: SCCAPIResponse
+        var message: String!
+        var title: String!
+        let response: SCCAPIResponse = try! SCCAPIResponse(responseURL: url)
         
-        response = try! SCCAPIResponse(responseURL: url)
-        if (response.successResponse) {
+        if response.successResponse {
             title = "Success!"
-            message = NSString.init(format: "Payment creation succeeded with payment ids %@ %@, transaction ID %@",
-                                    response.paymentID!,
-                                    response.offlinePaymentID!,
-                                    response.transactionID!)
+            message = "Payment creation succeeded with payment ids \(response.paymentID!) \(response.offlinePaymentID!), transaction ID: \(response.transactionID!)"
         } else {
-            let errorToPresent = response.error
-            message = NSString.init(format: "Payment creation failed with error %@", errorToPresent!.localizedDescription)
+            let errorToPresent = response.error!
+            title = "Failure"
+            message = "Payment creation failed with error: \(errorToPresent.localizedDescription)"
         }
         
-        let alertView = UIAlertView.init(title: title as String,
-                                         message: message as String,
-                                         delegate: self,
-                                         cancelButtonTitle: "OK")
-        alertView.show()
+        let alertView = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        alertView.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+        window!.rootViewController!.presentViewController(alertView, animated: true, completion: nil)
         
         return true
     }
