@@ -33,7 +33,7 @@ typedef NS_ENUM(NSUInteger, SCCAPIErrorCode) {
     SCCAPIErrorCodePaymentCanceled,
     SCCAPIErrorCodePayloadMissingOrInvalid,
     SCCAPIErrorCodeAppNotLoggedIn,
-    SCCAPIErrorCodeLoginCodeInvalidOrExpired,
+    SCCAPIErrorCodeUnused,
     SCCAPIErrorCodeMerchantIDMismatch,
     SCCAPIErrorCodeUserNotActivated,
     SCCAPIErrorCodeCurrencyMissingOrInvalid,

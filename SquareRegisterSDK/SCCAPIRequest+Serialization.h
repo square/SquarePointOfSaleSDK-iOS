@@ -24,7 +24,6 @@
 extern NSString *__nonnull const SCCAPIRequestClientIDKey;
 extern NSString *__nonnull const SCCAPIRequestAmountMoneyKey;
 extern NSString *__nonnull const SCCAPIRequestCallbackURLKey;
-extern NSString *__nonnull const SCCAPIRequestLoginCodeKey;
 extern NSString *__nonnull const SCCAPIRequestStateKey;
 extern NSString *__nonnull const SCCAPIRequestMerchantIDKey;
 extern NSString *__nonnull const SCCAPIRequestNotesKey;

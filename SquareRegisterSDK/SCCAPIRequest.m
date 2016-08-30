@@ -35,7 +35,6 @@ NSString *__nonnull const SCCAPIRequestSDKVersionKey = @"sdk_version";
 NSString *__nonnull const SCCAPIRequestClientIDKey = @"client_id";
 NSString *__nonnull const SCCAPIRequestAmountMoneyKey = @"amount_money";
 NSString *__nonnull const SCCAPIRequestCallbackURLKey = @"callback_url";
-NSString *__nonnull const SCCAPIRequestLoginCodeKey = @"login_code";
 NSString *__nonnull const SCCAPIRequestStateKey = @"state";
 NSString *__nonnull const SCCAPIRequestMerchantIDKey = @"merchant_id";
 NSString *__nonnull const SCCAPIRequestNotesKey = @"notes";
