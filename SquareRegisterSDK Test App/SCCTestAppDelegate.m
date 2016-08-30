@@ -96,7 +96,7 @@
     // Process the response as desired.
     if (response.isSuccessResponse) {
         title = @"Success!";
-        message = [NSString stringWithFormat:@"Payment creation succeeded with payment ids %@ %@, transaction ID %@", response.paymentID, response.offlinePaymentID, response.transactionID];
+        message = [NSString stringWithFormat:@"Payment creation succeeded with transaction ID %@", response.transactionID];
     } else {
         title = @"Error!";
 

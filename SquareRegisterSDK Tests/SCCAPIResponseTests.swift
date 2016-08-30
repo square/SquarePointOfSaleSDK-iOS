@@ -43,58 +43,6 @@ class SCCAPIResponseTests: SCCTestCase {
             let response = try SCCAPIResponse(responseURL: callbackURL)
             XCTAssertNil(response.error)
             XCTAssertEqual(response.userInfoString, "PASS_ME_BACK")
-            XCTAssertEqual(response.paymentID, "PAYMENT_ID")
-            XCTAssertEqual(response.offlinePaymentID, "OFFLINE_PAYMENT_ID")
-            XCTAssertEqual(response.transactionID, "TRANSACTION_ID")
-            XCTAssertTrue(response.successResponse)
-        } catch _ {
-            XCTFail()
-        }
-    }
-
-    func test_responseWithResponseURLError_parsesSuccessfulPaymentResponse_noOfflinePaymentID() {
-        let responseDictionary: [NSObject : AnyObject] = [
-            "payment_id" : "PAYMENT_ID",
-            "transaction_id" : "TRANSACTION_ID",
-            "status" : "ok",
-            "error_code" : "0",
-            "state" : "PASS_ME_BACK"
-        ]
-
-        let responseData = self.queryStringForData(responseDictionary)
-        let callbackURL = NSURL(string: "my-app://callback?data=\(responseData)")!
-
-        do {
-            let response = try SCCAPIResponse(responseURL: callbackURL)
-            XCTAssertNil(response.error)
-            XCTAssertEqual(response.userInfoString, "PASS_ME_BACK")
-            XCTAssertEqual(response.paymentID, "PAYMENT_ID")
-            XCTAssertNil(response.offlinePaymentID)
-            XCTAssertEqual(response.transactionID, "TRANSACTION_ID")
-            XCTAssertTrue(response.successResponse)
-        } catch _ {
-            XCTFail()
-        }
-    }
-
-    func test_responseWithResponseURLError_parsesSuccessfulPaymentResponse_noOnlinePaymentID() {
-        let responseDictionary: [NSObject : AnyObject] = [
-            "offline_payment_id" : "OFFLINE_PAYMENT_ID",
-            "transaction_id" : "TRANSACTION_ID",
-            "status" : "ok",
-            "error_code" : "0",
-            "state" : "PASS_ME_BACK"
-        ]
-
-        let responseData = self.queryStringForData(responseDictionary)
-        let callbackURL = NSURL(string: "my-app://callback?data=\(responseData)")!
-
-        do {
-            let response = try SCCAPIResponse(responseURL: callbackURL)
-            XCTAssertNil(response.error)
-            XCTAssertEqual(response.userInfoString, "PASS_ME_BACK")
-            XCTAssertNil(response.paymentID)
-            XCTAssertEqual(response.offlinePaymentID, "OFFLINE_PAYMENT_ID")
             XCTAssertEqual(response.transactionID, "TRANSACTION_ID")
             XCTAssertTrue(response.successResponse)
         } catch _ {
@@ -118,8 +66,6 @@ class SCCAPIResponseTests: SCCTestCase {
             XCTAssertEqual(response.error!.domain, SCCAPIErrorDomain)
             XCTAssertEqual(SCCAPIErrorCode(rawValue: UInt(response.error!.code)), .Unknown)
             XCTAssertEqual(response.userInfoString, "PASS_ME_BACK")
-            XCTAssertNil(response.paymentID)
-            XCTAssertNil(response.offlinePaymentID)
             XCTAssertNil(response.transactionID)
             XCTAssertFalse(response.successResponse)
         } catch _ {
@@ -143,8 +89,6 @@ class SCCAPIResponseTests: SCCTestCase {
             XCTAssertEqual(response.error!.domain, SCCAPIErrorDomain)
             XCTAssertEqual(SCCAPIErrorCode(rawValue: UInt(response.error!.code)), .UserNotActivated)
             XCTAssertEqual(response.userInfoString, "PASS_ME_BACK")
-            XCTAssertNil(response.paymentID)
-            XCTAssertNil(response.offlinePaymentID)
             XCTAssertNil(response.transactionID)
             XCTAssertFalse(response.successResponse)
         } catch _ {
