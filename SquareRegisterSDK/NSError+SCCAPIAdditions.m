@@ -25,7 +25,6 @@
 NSString *__nonnull const SCCAPIErrorStringPaymentCanceled = @"payment_canceled";
 NSString *__nonnull const SCCAPIErrorStringPayloadMissingOrInvalid = @"data_invalid";
 NSString *__nonnull const SCCAPIErrorStringAppNotLoggedIn = @"not_logged_in";
-NSString *__nonnull const SCCAPIErrorStringLoginCodeInvalidOrExpired = @"login_code_invalid";
 NSString *__nonnull const SCCAPIErrorStringMerchantIDMismatch = @"user_id_mismatch";
 NSString *__nonnull const SCCAPIErrorStringClientNotAuthorizedForUser = @"client_not_authorized_for_user";
 NSString *__nonnull const SCCAPIErrorStringUserNotActivated = @"user_not_active";
@@ -81,10 +80,6 @@ SCCAPIErrorCode SCCAPIErrorCodeFromString(NSString *__nullable errorCodeString)
 
     if ([errorCodeString isEqualToString:SCCAPIErrorStringAppNotLoggedIn]) {
         return SCCAPIErrorCodeAppNotLoggedIn;
-    }
-
-    if ([errorCodeString isEqualToString:SCCAPIErrorStringLoginCodeInvalidOrExpired]) {
-        return SCCAPIErrorCodeLoginCodeInvalidOrExpired;
     }
 
     if ([errorCodeString isEqualToString:SCCAPIErrorStringMerchantIDMismatch]) {
@@ -153,8 +148,8 @@ NSString *__nullable NSStringFromSCCAPIErrorCode(SCCAPIErrorCode errorCode)
             return SCCAPIErrorStringPayloadMissingOrInvalid;
         case SCCAPIErrorCodeAppNotLoggedIn:
             return SCCAPIErrorStringAppNotLoggedIn;
-        case SCCAPIErrorCodeLoginCodeInvalidOrExpired:
-            return SCCAPIErrorStringLoginCodeInvalidOrExpired;
+        case SCCAPIErrorCodeUnused:
+            return nil;
         case SCCAPIErrorCodeMerchantIDMismatch:
             return SCCAPIErrorStringMerchantIDMismatch;
         case SCCAPIErrorCodeUserNotActivated:

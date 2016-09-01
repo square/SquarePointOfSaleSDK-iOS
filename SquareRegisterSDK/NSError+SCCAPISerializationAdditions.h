@@ -22,7 +22,6 @@
 extern NSString *__nonnull const SCCAPIErrorStringPaymentCanceled;
 extern NSString *__nonnull const SCCAPIErrorStringPayloadMissingOrInvalid;
 extern NSString *__nonnull const SCCAPIErrorStringAppNotLoggedIn;
-extern NSString *__nonnull const SCCAPIErrorStringLoginCodeInvalidOrExpired;
 extern NSString *__nonnull const SCCAPIErrorStringMerchantIDMismatch;
 extern NSString *__nonnull const SCCAPIErrorStringClientNotAuthorizedForUser;
 extern NSString *__nonnull const SCCAPIErrorStringUserNotActivated;
