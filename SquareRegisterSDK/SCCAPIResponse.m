@@ -154,11 +154,9 @@ NSString *__nonnull const SCCAPIResponseStatusStringError = @"error";
 - (nonnull NSString *)description;
 {
     if (self.successResponse) {
-        return [NSString stringWithFormat:@"<%@:%p> { paymentID: %@, offlinePaymentID: %@, transactionID: %@, userInfoString: %@ }",
+        return [NSString stringWithFormat:@"<%@:%p> { transactionID: %@, userInfoString: %@ }",
             NSStringFromClass(self.class),
             self,
-            self.paymentID,
-            self.offlinePaymentID,
             self.transactionID,
             self.userInfoString];
     } else {
@@ -172,7 +170,7 @@ NSString *__nonnull const SCCAPIResponseStatusStringError = @"error";
 
 - (NSUInteger)hash;
 {
-    return self.userInfoString.hash ^ self.error.hash ^ self.paymentID.hash ^ self.offlinePaymentID.hash ^ self.transactionID.hash;
+    return self.userInfoString.hash ^ self.error.hash ^ self.transactionID.hash;
 }
 
 - (BOOL)isEqual:(nullable id)object;
@@ -213,11 +211,9 @@ NSString *__nonnull const SCCAPIResponseStatusStringError = @"error";
 
     BOOL const haveEqualUserInfoStrings = (!self.userInfoString && !response.userInfoString) || [self.userInfoString isEqual:response.userInfoString];
     BOOL const haveEqualErrors = (!self.error && !response.error) || [self.error isEqual:response.error];
-    BOOL const haveEqualPaymentIDs = (!self.paymentID && !response.paymentID) || [self.paymentID isEqual:response.paymentID];
-    BOOL const haveEqualOfflinePaymentIDs = (!self.offlinePaymentID && !response.offlinePaymentID) || [self.offlinePaymentID isEqual:response.offlinePaymentID];
     BOOL const haveEqualTransactionIDs = (!self.transactionID && !response.transactionID) || [self.transactionID isEqual:response.transactionID];
 
-    return haveEqualUserInfoStrings && haveEqualErrors && haveEqualPaymentIDs && haveEqualOfflinePaymentIDs && haveEqualTransactionIDs;
+    return haveEqualUserInfoStrings && haveEqualErrors && haveEqualTransactionIDs;
 }
 
 @end

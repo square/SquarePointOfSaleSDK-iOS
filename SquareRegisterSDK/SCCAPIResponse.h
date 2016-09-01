@@ -58,14 +58,14 @@
  This value is also nil if the payment was processed in offline mode.
  You can use this ID to get the full details of the payment with the Square Connect API.
  */
-@property (nonatomic, copy, readonly, nullable) NSString *paymentID;
+@property (nonatomic, copy, readonly, nullable) NSString *paymentID DEPRECATED_MSG_ATTRIBUTE("Developers should pass the contents of the transactionID field in a Connect V2 request to retrieve the entire transaction.  This field will be removed in a later version.");
 
 /**
  The payment's unique offline ID, generated in case the payment needed to be processed 
  in offline mode. Note that this value is present even if the payment was not processed 
  in offline mode.
  */
-@property (nonatomic, copy, readonly, nullable) NSString *offlinePaymentID;
+@property (nonatomic, copy, readonly, nullable) NSString *offlinePaymentID DEPRECATED_MSG_ATTRIBUTE("Developers should pass the contents of the transactionID field in a Connect V2 request to retrieve the entire transaction.  This field will be removed in a later version.");
 
 /**
  The ID of the transaction.

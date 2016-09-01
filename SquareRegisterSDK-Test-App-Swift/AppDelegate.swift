@@ -95,9 +95,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         response = try! SCCAPIResponse(responseURL: url)
         if (response.successResponse) {
             title = "Success!"
-            message = NSString.init(format: "Payment creation succeeded with payment ids %@ %@, transaction ID %@",
-                                    response.paymentID!,
-                                    response.offlinePaymentID!,
+            message = NSString.init(format: "Payment creation succeeded with transaction ID %@",
                                     response.transactionID!)
         } else {
             let errorToPresent = response.error
