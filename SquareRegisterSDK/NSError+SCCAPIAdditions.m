@@ -38,6 +38,8 @@ NSString *__nonnull const SCCAPIErrorStringInvalidTenderType = @"invalid_tender_
 NSString *__nonnull const SCCAPIErrorStringUnsupportedTenderType = @"unsupported_tender_type";
 NSString *__nonnull const SCCAPIErrorStringCouldNotPerform = @"could_not_perform";
 NSString *__nonnull const SCCAPIErrorStringNoNetworkConnection = @"no_network_connection";
+NSString *__nonnull const SCCAPIErrorStringUnsupportedAPIVersion = @"unsupported_api_version";
+NSString *__nonnull const SCCAPIErrorStringInvalidVersionNumber = @"invalid_version_number";
 
 
 NSString *__nonnull const SCCAPIErrorDomain = @"SCCAPIErrorDomain";
@@ -134,6 +136,14 @@ SCCAPIErrorCode SCCAPIErrorCodeFromString(NSString *__nullable errorCodeString)
         return SCCAPIErrorCodeClientNotAuthorizedForUser;
     }
 
+    if ([errorCodeString isEqualToString:SCCAPIErrorStringUnsupportedAPIVersion]) {
+        return SCCAPIErrorCodeUnsupportedAPIVersion;
+    }
+
+    if ([errorCodeString isEqualToString:SCCAPIErrorStringInvalidVersionNumber]) {
+        return SCCAPIErrorCodeInvalidVersionNumber;
+    }
+
     return SCCAPIErrorCodeUnknown;
 }
 
@@ -176,6 +186,10 @@ NSString *__nullable NSStringFromSCCAPIErrorCode(SCCAPIErrorCode errorCode)
             return SCCAPIErrorStringNoNetworkConnection;
         case SCCAPIErrorCodeClientNotAuthorizedForUser:
             return SCCAPIErrorStringClientNotAuthorizedForUser;
+        case SCCAPIErrorCodeUnsupportedAPIVersion:
+            return SCCAPIErrorStringUnsupportedAPIVersion;
+        case SCCAPIErrorCodeInvalidVersionNumber:
+            return SCCAPIErrorStringInvalidVersionNumber;
     }
 
     return nil;

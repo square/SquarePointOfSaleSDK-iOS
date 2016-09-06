@@ -47,6 +47,8 @@ typedef NS_ENUM(NSUInteger, SCCAPIErrorCode) {
     SCCAPIErrorCodeCouldNotPerform,
     SCCAPIErrorCodeNoNetworkConnection,
     SCCAPIErrorCodeClientNotAuthorizedForUser,
+    SCCAPIErrorCodeUnsupportedAPIVersion,
+    SCCAPIErrorCodeInvalidVersionNumber
 };
 
 

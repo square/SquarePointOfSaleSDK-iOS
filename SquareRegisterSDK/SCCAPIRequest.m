@@ -28,10 +28,10 @@
 
 
 NSString *__nonnull const SCCSDKVersion = @"2";
-NSString *__nonnull const SCCAPIVersion = @"1";
-NSString *__nonnull const SCCAPIURLSchemeBase = @"square-commerce";
+NSString *__nonnull const SCCAPIVersion = @"1.0";
 
 NSString *__nonnull const SCCAPIRequestSDKVersionKey = @"sdk_version";
+NSString *__nonnull const SCCAPIRequestAPIVersionKey = @"version";
 NSString *__nonnull const SCCAPIRequestClientIDKey = @"client_id";
 NSString *__nonnull const SCCAPIRequestAmountMoneyKey = @"amount_money";
 NSString *__nonnull const SCCAPIRequestCallbackURLKey = @"callback_url";
@@ -65,12 +65,7 @@ static NSString *__nullable APIClientID = nil;
 
 + (nonnull NSString *)_URLScheme;
 {
-    static NSString *URLScheme;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        URLScheme = [NSString stringWithFormat:@"%@-v%@", SCCAPIURLSchemeBase, SCCAPIVersion];
-    });
-    return URLScheme;
+    return @"square-commerce-v1";
 }
 
 #pragma mark - Initialization
@@ -234,6 +229,7 @@ static NSString *__nullable APIClientID = nil;
 {
     NSMutableDictionary *const data = [NSMutableDictionary dictionary];
     [data setObject:SCCSDKVersion forKey:SCCAPIRequestSDKVersionKey];
+    [data setObject:SCCAPIVersion forKey:SCCAPIRequestAPIVersionKey];
     [data setObject:self.clientID forKey:SCCAPIRequestClientIDKey];
 
     [data SCC_setSafeObject:self.amount.requestDictionaryRepresentation forKey:SCCAPIRequestAmountMoneyKey];
