@@ -150,6 +150,7 @@ class SCCAPIRequestTests: SCCTestCase {
             let expectedData: [String : NSObject] = [
                 "client_id" : SCCAPIRequestTests.defaultTestClientID,
                 "sdk_version" : "2",
+                "version" : "1.0",
                 "amount_money" : [
                     "amount" : 100,
                     "currency_code" : "USD"
