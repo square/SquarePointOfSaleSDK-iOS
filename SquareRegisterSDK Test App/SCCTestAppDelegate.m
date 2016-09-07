@@ -33,23 +33,25 @@
     [self.window makeKeyAndVisible];
 
     // Always set the client ID before creating your first API request.
-    [SCCAPIRequest setClientID:@"8M4Qn6MyR4BZDeS0c41L3g"];
+    // Replace this with the Application ID found in the Square Application Dashboard [https://connect.squareup.com/apps].
+    [SCCAPIRequest setClientID:@"YOUR_APPLICATION_ID"];
 
     // Replace with your app's callback URL.
+    // You must also declare this URL scheme in SquareRegisterSDK Test App-Info.plist, under URL types.
     NSURL *const callbackURL = [NSURL URLWithString:@"register-sdk-testapp://myCallback"];
 
     // Specify the amount of money to charge.
     SCCMoney *const amount = [SCCMoney moneyWithAmountCents:100 currencyCode:@"USD" error:NULL];
 
     // Specify which forms of tender the merchant can accept
-    SCCAPIRequestTenderTypes const supportedTenderTypes = SCCAPIRequestTenderTypeCard;
+    SCCAPIRequestTenderTypes const supportedTenderTypes = SCCAPIRequestTenderTypeAll;
 
     // Specify whether default fees in Square Register are cleared from this transaction
     // (Default is NO, they are not cleared)
     BOOL const clearsDefaultFees = YES;
 
-    // Replace with the current merchant's ID.
-    NSString *const merchantID = @"YOUR_MERCHANT_ID";
+    // Replace with the ID of the location that should be able to take payments (if desired).
+    NSString *const merchantID = nil;
 
     // Replace with any string you want returned from Square Register.
     NSString *const userInfoString = @"Useful information";
@@ -66,21 +68,18 @@
                                                                    notes:notes
                                                     supportedTenderTypes:supportedTenderTypes
                                                        clearsDefaultFees:clearsDefaultFees
-                                         returnAutomaticallyAfterPayment:NO
+                                         returnAutomaticallyAfterPayment:YES
                                                                    error:&error];
 
     // Perform the request.
-    BOOL const success = [SCCAPIConnection performRequest:request error:&error];
-    if (!success) {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Register app installed?" message:@"Make sure the register app is installed in the simulator. Log in as the merchant with token 7074ME2C077ZB." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
-        [alertView show];
-    }
+    [SCCAPIConnection performRequest:request error:&error];
 
     return YES;
 }
 
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)URL sourceApplication:(NSString *)sourceApplication annotation:(id)annotation;
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)URL options:(NSDictionary<NSString *,id> *)options;
 {
+    NSString *const sourceApplication = options[UIApplicationOpenURLOptionsSourceApplicationKey];
     // Make sure the URL comes from Square Register, fail if it doesn't.
     if (![sourceApplication hasPrefix:@"com.squareup.square"]) {
         return NO;
@@ -105,8 +104,10 @@
         message = [NSString stringWithFormat:@"Payment creation failed with error %@", [errorToPresent localizedDescription]];
     }
 
-    UIAlertView *const alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [alertView show];
+    UIAlertController *const alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:NULL]];
+    [self.window.rootViewController presentViewController:alertController animated:YES completion:NULL];
+
     return YES;
 }
 

@@ -51,7 +51,7 @@
 		7F48F1F21D248EE000B3BC6E /* SquareRegisterSDK-Test-App-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SquareRegisterSDK-Test-App-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F48F1F41D248EE000B3BC6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F48F1FB1D248EE000B3BC6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7F48F2001D248EE000B3BC6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F48F2001D248EE000B3BC6E /* SquareRegisterSDK Test App Swift-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SquareRegisterSDK Test App Swift-Info.plist"; sourceTree = "<group>"; };
 		7F48F2041D248FCE00B3BC6E /* SquareRegisterSDK-Test-App-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SquareRegisterSDK-Test-App-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		7F68204B1D249A2700ACB51A /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = "../../../Library/Developer/Xcode/DerivedData/SquareRegisterSDK_Tests-csmeghvkxhpobrdxjmkoxnqenniy/Build/Products/Debug-iphoneos/OCMock/libOCMock.a"; sourceTree = "<group>"; };
 		85EEDAAD1BA261C7009B8340 /* SCCAPIResponseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCCAPIResponseTests.swift; sourceTree = "<group>"; };
@@ -160,7 +160,7 @@
 				7F48F2041D248FCE00B3BC6E /* SquareRegisterSDK-Test-App-Swift-Bridging-Header.h */,
 				7F48F1F41D248EE000B3BC6E /* AppDelegate.swift */,
 				7F48F1FB1D248EE000B3BC6E /* Assets.xcassets */,
-				7F48F2001D248EE000B3BC6E /* Info.plist */,
+				7F48F2001D248EE000B3BC6E /* SquareRegisterSDK Test App Swift-Info.plist */,
 			);
 			name = "SquareRegisterSDK Test App Swift";
 			path = "SquareRegisterSDK-Test-App-Swift";
@@ -859,8 +859,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = "SquareRegisterSDK-Test-App-Swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				INFOPLIST_FILE = "SquareRegisterSDK-Test-App-Swift/SquareRegisterSDK Test App Swift-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -897,8 +897,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = "SquareRegisterSDK-Test-App-Swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				INFOPLIST_FILE = "SquareRegisterSDK-Test-App-Swift/SquareRegisterSDK Test App Swift-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1025,7 +1025,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = "SquareRegisterSDK Test App/SquareRegisterSDK Test App-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 2;
@@ -1048,7 +1048,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = "SquareRegisterSDK Test App/SquareRegisterSDK Test App-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
