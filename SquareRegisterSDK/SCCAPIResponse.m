@@ -97,6 +97,7 @@ NSString *__nonnull const SCCAPIResponseStatusStringError = @"error";
     }
 
     NSString *const transactionID = [data SCC_stringForKey:SCCAPIResponseTransactionIDKey];
+    NSString *const clientTransactionID = [data SCC_stringForKey:SCCAPIResponseClientTransactionIDKey];
     NSString *const paymentID = [data SCC_stringForKey:SCCAPIResponsePaymentIDKey];
     NSString *const offlinePaymentID = [data SCC_stringForKey:SCCAPIResponseOfflinePaymentIDKey];
     if (paymentID.length == 0 && offlinePaymentID.length == 0) {
@@ -109,7 +110,8 @@ NSString *__nonnull const SCCAPIResponseStatusStringError = @"error";
     return [[self alloc] initWithPaymentID:paymentID
                           offlinePaymentID:offlinePaymentID
                             userInfoString:userInfoString
-                             transactionID:transactionID];
+                             transactionID:transactionID
+                       clientTransactionID:clientTransactionID];
 }
 
 #pragma mark - Initialization
@@ -132,7 +134,8 @@ NSString *__nonnull const SCCAPIResponseStatusStringError = @"error";
 - (nonnull instancetype)initWithPaymentID:(nullable NSString *)paymentID
                          offlinePaymentID:(nullable NSString *)offlinePaymentID
                            userInfoString:(nullable NSString *)userInfoString
-                            transactionID:(nullable NSString *)transactionID;
+                            transactionID:(nullable NSString *)transactionID
+                      clientTransactionID:(nullable NSString *)clientTransactionID;
 {
     NSAssert(paymentID.length > 0 || offlinePaymentID.length > 0, @"Attempting to initialize a success response without a payment ID.");
 
@@ -145,6 +148,7 @@ NSString *__nonnull const SCCAPIResponseStatusStringError = @"error";
     _userInfoString = [userInfoString copy];
     _offlinePaymentID = [offlinePaymentID copy];
     _transactionID = [transactionID copy];
+    _clientTransactionID = [clientTransactionID copy];
 
     return self;
 }
@@ -170,7 +174,7 @@ NSString *__nonnull const SCCAPIResponseStatusStringError = @"error";
 
 - (NSUInteger)hash;
 {
-    return self.userInfoString.hash ^ self.error.hash ^ self.transactionID.hash;
+    return self.userInfoString.hash ^ self.error.hash ^ self.clientTransactionID.hash;
 }
 
 - (BOOL)isEqual:(nullable id)object;
@@ -211,9 +215,9 @@ NSString *__nonnull const SCCAPIResponseStatusStringError = @"error";
 
     BOOL const haveEqualUserInfoStrings = (!self.userInfoString && !response.userInfoString) || [self.userInfoString isEqual:response.userInfoString];
     BOOL const haveEqualErrors = (!self.error && !response.error) || [self.error isEqual:response.error];
-    BOOL const haveEqualTransactionIDs = (!self.transactionID && !response.transactionID) || [self.transactionID isEqual:response.transactionID];
+    BOOL const haveEqualClientTransactionIDs = (!self.clientTransactionID && !response.clientTransactionID) || [self.clientTransactionID isEqual:response.clientTransactionID];
 
-    return haveEqualUserInfoStrings && haveEqualErrors && haveEqualTransactionIDs;
+    return haveEqualUserInfoStrings && haveEqualErrors && haveEqualClientTransactionIDs;
 }
 
 @end
