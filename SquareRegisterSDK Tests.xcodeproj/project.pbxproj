@@ -14,6 +14,7 @@
 		8D5B8D771C89112600517590 /* SCCMoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5B8D761C89112600517590 /* SCCMoneyTests.swift */; };
 		8DB920861C8E3E6900AAD8CC /* SCCAPIRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB920851C8E3E6900AAD8CC /* SCCAPIRequestTests.swift */; };
 		8DB9208C1C8E687E00AAD8CC /* SCCAPIConnectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB9208B1C8E687E00AAD8CC /* SCCAPIConnectionTests.m */; };
+		9CD870A91D80D11E009FCDF1 /* NSError+SCCAPIAdditionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD870A81D80D11E009FCDF1 /* NSError+SCCAPIAdditionsTests.swift */; };
 		D0B4FC9EF75DBD20F62FE9A0 /* libPods-SquareRegisterSDK Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4301844733BCD093677E1461 /* libPods-SquareRegisterSDK Tests.a */; };
 		D32DAFE0185C0CF900EB5572 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A02646E17B02E50008E22F5 /* CoreData.framework */; };
 		D32DAFE3185C0D2F00EB5572 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32DAFE1185C0D2300EB5572 /* UIKit.framework */; };
@@ -59,6 +60,7 @@
 		8D5B8D761C89112600517590 /* SCCMoneyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCCMoneyTests.swift; sourceTree = "<group>"; };
 		8DB920851C8E3E6900AAD8CC /* SCCAPIRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCCAPIRequestTests.swift; sourceTree = "<group>"; };
 		8DB9208B1C8E687E00AAD8CC /* SCCAPIConnectionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCAPIConnectionTests.m; sourceTree = "<group>"; };
+		9CD870A81D80D11E009FCDF1 /* NSError+SCCAPIAdditionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+SCCAPIAdditionsTests.swift"; sourceTree = "<group>"; };
 		AE9A41EB18CD990042C1C925 /* Pods-SquareRegisterSDK-Test-App-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquareRegisterSDK-Test-App-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-SquareRegisterSDK-Test-App-Swift/Pods-SquareRegisterSDK-Test-App-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		D32DAFE1185C0D2300EB5572 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D32DB01B185C1FD700EB5572 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -193,6 +195,7 @@
 				8D5B8D761C89112600517590 /* SCCMoneyTests.swift */,
 				8DB920851C8E3E6900AAD8CC /* SCCAPIRequestTests.swift */,
 				85EEDAAD1BA261C7009B8340 /* SCCAPIResponseTests.swift */,
+				9CD870A81D80D11E009FCDF1 /* NSError+SCCAPIAdditionsTests.swift */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -698,6 +701,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CD870A91D80D11E009FCDF1 /* NSError+SCCAPIAdditionsTests.swift in Sources */,
 				D368EF7C185C071400180B41 /* SCCTestCase.m in Sources */,
 				8DB920861C8E3E6900AAD8CC /* SCCAPIRequestTests.swift in Sources */,
 				85EEDAAE1BA261C7009B8340 /* SCCAPIResponseTests.swift in Sources */,
