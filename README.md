@@ -67,8 +67,9 @@ When you're ready to charge the customer, use our API Connection object to bring
 Finally, implement the relevant UIApplication delegate.
 
 ```objc
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)URL sourceApplication:(NSString *)sourceApplication annotation:(id)annotation;
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)URL options:(NSDictionary<NSString *,id> *)options;
 {
+    NSString *const sourceApplication = options[UIApplicationOpenURLOptionsSourceApplicationKey];
 	if ([sourceApplication hasPrefix:@"com.squareup.square"]) {
         SCCAPIResponse *const response = [SCCAPIResponse responseWithResponseURL:URL error:&decodeError];
         ...
