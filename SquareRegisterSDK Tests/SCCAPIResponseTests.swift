@@ -65,6 +65,7 @@ class SCCAPIResponseTests: SCCTestCase {
             XCTAssertNotNil(response.error)
             XCTAssertEqual(response.error!.domain, SCCAPIErrorDomain)
             XCTAssertEqual(SCCAPIErrorCode(rawValue: UInt(response.error!.code)), .Unknown)
+            XCTAssertEqual(response.error!.userInfo[SCCAPIErrorUserInfoCodeStringKey] as? String, "UNKNOWN_ERROR_INVALID_CODE")
             XCTAssertEqual(response.userInfoString, "PASS_ME_BACK")
             XCTAssertNil(response.transactionID)
             XCTAssertFalse(response.successResponse)

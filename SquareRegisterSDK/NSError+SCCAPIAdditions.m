@@ -63,6 +63,19 @@ NSString *__nonnull const SCCAPIErrorUserInfoCodeStringKey = @"error_code";
     return [[NSError alloc] initWithDomain:SCCAPIErrorDomain code:code userInfo:userInfo];
 }
 
++ (nonnull NSError *)SCC_APIErrorWithErrorCodeString:(NSString *_Nonnull)errorCodeString;
+{
+    SCCAPIErrorCode code = SCCAPIErrorCodeFromString(errorCodeString);
+    NSDictionary *userInfo = nil;
+    if (errorCodeString.length > 0) {
+        userInfo = @{
+                     SCCAPIErrorUserInfoCodeStringKey : errorCodeString
+                     };
+    }
+
+    return [[NSError alloc] initWithDomain:SCCAPIErrorDomain code:code userInfo:userInfo];
+}
+
 @end
 
 

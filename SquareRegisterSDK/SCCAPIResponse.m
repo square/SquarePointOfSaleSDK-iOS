@@ -91,7 +91,7 @@ NSString *__nonnull const SCCAPIResponseStatusStringError = @"error";
             return nil;
         }
 
-        NSError *const APIError = [NSError SCC_APIErrorWithCode:SCCAPIErrorCodeFromString(errorCodeString)];
+        NSError *const APIError = [NSError SCC_APIErrorWithErrorCodeString:errorCodeString];
 
         return [[self alloc] initWithError:APIError userInfoString:userInfoString];
     }
