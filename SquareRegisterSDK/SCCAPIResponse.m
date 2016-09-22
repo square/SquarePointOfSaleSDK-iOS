@@ -31,8 +31,6 @@
 NSString *__nonnull const SCCAPIResponseDataKey = @"data";
 NSString *__nonnull const SCCAPIResponseStatusKey = @"status";
 NSString *__nonnull const SCCAPIResponseErrorCodeKey = @"error_code";
-NSString *__nonnull const SCCAPIResponsePaymentIDKey = @"payment_id";
-NSString *__nonnull const SCCAPIResponseOfflinePaymentIDKey = @"offline_payment_id";
 NSString *__nonnull const SCCAPIResponseTransactionIDKey = @"transaction_id";
 NSString *__nonnull const SCCAPIResponseClientTransactionIDKey = @"client_transaction_id";
 NSString *__nonnull const SCCAPIResponseStateKey = @"state";
@@ -98,14 +96,10 @@ NSString *__nonnull const SCCAPIResponseStatusStringError = @"error";
 
     NSString *const transactionID = [data SCC_stringForKey:SCCAPIResponseTransactionIDKey];
     NSString *const clientTransactionID = [data SCC_stringForKey:SCCAPIResponseClientTransactionIDKey];
-    NSString *const paymentID = [data SCC_stringForKey:SCCAPIResponsePaymentIDKey];
-    NSString *const offlinePaymentID = [data SCC_stringForKey:SCCAPIResponseOfflinePaymentIDKey];
-
-    return [[self alloc] initWithPaymentID:paymentID
-                          offlinePaymentID:offlinePaymentID
-                            userInfoString:userInfoString
-                             transactionID:transactionID
-                       clientTransactionID:clientTransactionID];
+    
+    return [[self alloc] initWithTransactionID:transactionID
+                           clientTransactionID:clientTransactionID
+                                userInfoString:userInfoString];
 }
 
 #pragma mark - Initialization
@@ -125,24 +119,18 @@ NSString *__nonnull const SCCAPIResponseStatusStringError = @"error";
     return self;
 }
 
-- (nonnull instancetype)initWithPaymentID:(nullable NSString *)paymentID
-                         offlinePaymentID:(nullable NSString *)offlinePaymentID
-                           userInfoString:(nullable NSString *)userInfoString
-                            transactionID:(nullable NSString *)transactionID
-                      clientTransactionID:(nullable NSString *)clientTransactionID;
+- (nonnull instancetype)initWithTransactionID:(nullable NSString *)transactionID
+                          clientTransactionID:(nullable NSString *)clientTransactionID
+                               userInfoString:(nullable NSString *)userInfoString;
 {
-    NSAssert(paymentID.length > 0 || offlinePaymentID.length > 0, @"Attempting to initialize a success response without a payment ID.");
-
     self = [super init];
     if (!self) {
         return nil;
     }
 
-    _paymentID = [paymentID copy];
-    _userInfoString = [userInfoString copy];
-    _offlinePaymentID = [offlinePaymentID copy];
     _transactionID = [transactionID copy];
     _clientTransactionID = [clientTransactionID copy];
+    _userInfoString = [userInfoString copy];
 
     return self;
 }

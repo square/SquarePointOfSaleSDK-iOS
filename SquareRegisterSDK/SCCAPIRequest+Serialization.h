@@ -32,13 +32,16 @@ extern NSString *__nonnull const SCCAPIRequestOptionsClearDefaultFeesKey;
 extern NSString *__nonnull const SCCAPIRequestOptionsSupportedTenderTypesKey;
 extern NSString *__nonnull const SCCAPIRequestOptionsAutoReturnKey;
 extern NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringCard;
+extern NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringCash;
+extern NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringOther;
+extern NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringSquareGiftCard;
 
 
 /**
  @param tenderTypes Combination of API Request Tender Types.
  @return An array of API strings corresponding to the tender types specified.
  */
-NSArray *__nonnull NSArrayOfTenderTypeStringsFromSCCAPIRequestTenderTypes(SCCAPIRequestTenderTypes tenderTypes);
+NSArray<NSString *> *__nonnull NSArrayOfTenderTypeStringsFromSCCAPIRequestTenderTypes(SCCAPIRequestTenderTypes tenderTypes);
 
 
 @interface SCCAPIRequest (Serialization)

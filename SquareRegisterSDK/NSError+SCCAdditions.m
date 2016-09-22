@@ -32,14 +32,14 @@ NSString *__nonnull const SCCErrorDomain = @"SCCErrorDomain";
 {
     return [NSError errorWithDomain:SCCErrorDomain
                                code:SCCErrorCodeMissingCurrencyCode
-                           userInfo:@{}];
+                           userInfo:@{NSLocalizedDescriptionKey : @"Currency code was missing.  Please provide a valid currency code."}];
 }
 
 + (nonnull NSError *)SCC_unsupportedCurrencyCodeError;
 {
     return [NSError errorWithDomain:SCCErrorDomain
                                code:SCCErrorCodeUnsupportedCurrencyCode
-                           userInfo:@{}];
+                           userInfo:@{NSLocalizedDescriptionKey : @"Unsupported currency code.  Please provide a code from the set of supported ISO 4217 currency codes found in SCCMoney."}];
 }
 
 #pragma mark - Class Methods - Request Errors
@@ -48,35 +48,35 @@ NSString *__nonnull const SCCErrorDomain = @"SCCErrorDomain";
 {
     return [NSError errorWithDomain:SCCErrorDomain
                                code:SCCErrorCodeMissingRequestClientID
-                           userInfo:@{}];
+                           userInfo:@{NSLocalizedDescriptionKey : @"Missing Client ID.  You must call +[SCCAPIRequest setClientID:] with the Application ID found in your Square Application Dashboard before making a request."}];
 }
 
 + (nonnull NSError *)SCC_invalidRequestCallbackURLError;
 {
     return [NSError errorWithDomain:SCCErrorDomain
                                code:SCCErrorCodeInvalidRequestCallbackURL
-                           userInfo:@{}];
+                           userInfo:@{NSLocalizedDescriptionKey : @"Invalid Callback URL.  Your callback URL must begin with a valid scheme (i.e., \"some-string://\")"}];
 }
 
 + (nonnull NSError *)SCC_invalidRequestAmountError;
 {
     return [NSError errorWithDomain:SCCErrorDomain
                                code:SCCErrorCodeInvalidRequestAmount
-                           userInfo:@{}];
+                           userInfo:@{NSLocalizedDescriptionKey : @"Invalid Request Amount.  You must provide a valid SCCMoney object with a cents amount greater than zero."}];
 }
 
 + (nonnull NSError *)SCC_cannotPerformRequestError;
 {
     return [NSError errorWithDomain:SCCErrorDomain
                                code:SCCErrorCodeCannotPerformRequest
-                           userInfo:@{}];
+                           userInfo:@{NSLocalizedDescriptionKey : @"Cannot Perform Request.  Ensure that \"square-commerce-v1\" is included in the LSApplicationQueriesSchemes in your Info.plist and that Square Register is installed on your device."}];
 }
 
 + (nonnull NSError *)SCC_unableToGenerateRequestJSONError;
 {
     return [NSError errorWithDomain:SCCErrorDomain
                                code:SCCErrorCodeUnableToGenerateRequestJSON
-                           userInfo:@{}];
+                           userInfo:@{NSLocalizedDescriptionKey : @"Unable to Generate Request JSON.  Please report this error to developers@squareup.com with an example of your request object."}];
 }
 
 #pragma mark - Class Methods - Response Errors
@@ -85,35 +85,28 @@ NSString *__nonnull const SCCErrorDomain = @"SCCErrorDomain";
 {
     return [NSError errorWithDomain:SCCErrorDomain
                                code:SCCErrorCodeMissingOrInvalidResponseData
-                           userInfo:@{}];
+                           userInfo:@{NSLocalizedDescriptionKey : @"Missing or Invalid Response Data.  Please report this error to developers@squareup.com with your request URL, the response URL and the version of Square Register you are running."}];
 }
 
 + (nonnull NSError *)SCC_missingOrInvalidResponseJSONDataError;
 {
     return [NSError errorWithDomain:SCCErrorDomain
                                code:SCCErrorCodeMissingOrInvalidResponseJSONData
-                           userInfo:@{}];
+                           userInfo:@{NSLocalizedDescriptionKey : @"Missing or Invalid Response JSON.  Please report this error to developers@squareup.com with your request URL, the response URL and the version of Square Register you are running."}];
 }
 
 + (nonnull NSError *)SCC_missingOrInvalidResponseStatusError;
 {
     return [NSError errorWithDomain:SCCErrorDomain
                                code:SCCErrorCodeMissingOrInvalidResponseStatus
-                           userInfo:@{}];
-}
-
-+ (nonnull NSError *)SCC_missingOrInvalidResponsePaymentIDError;
-{
-    return [NSError errorWithDomain:SCCErrorDomain
-                               code:SCCErrorCodeMissingOrInvalidResponsePaymentID
-                           userInfo:@{}];
+                           userInfo:@{NSLocalizedDescriptionKey : @"Missing or Invalid Response Status.  Please report this error to developers@squareup.com with your request URL, the response URL and the version of Square Register you are running."}];
 }
 
 + (nonnull NSError *)SCC_missingOrInvalidResponseErrorCodeError;
 {
     return [NSError errorWithDomain:SCCErrorDomain
                                code:SCCErrorCodeMissingOrInvalidResponseErrorCode
-                           userInfo:@{}];
+                           userInfo:@{NSLocalizedDescriptionKey : @"Missing or Invalid Error Code.  Please report this error to developers@squareup.com with your request URL, the response URL and the version of Square Register you are running."}];
 }
 
 @end

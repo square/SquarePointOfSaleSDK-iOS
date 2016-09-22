@@ -40,6 +40,8 @@
         NULL,
         CFSTR(":/?#[]@!$&'()*+,;="),
         kCFStringEncodingUTF8));
+    
+    XCTAssertNotNil(encodedStr);
     return encodedStr;
 }
 

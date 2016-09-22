@@ -19,6 +19,7 @@
 //
 
 import Foundation
+import SquareRegisterSDK
 import XCTest
 
 
@@ -50,8 +51,8 @@ class SCCAPIRequestTests: SCCTestCase {
             let merchantID = "7074ME2C077ZB"
             let userInfoString = "User Info"
             let amount = try! SCCMoney(amountCents: 100, currencyCode: "USD")
-            let callbackURL = NSURL(string: "register-sdk-testapp://myCallback")!
-            let supportedTenderTypes = SCCAPIRequestTenderTypes.Card
+            let callbackURL = URL(string: "register-sdk-testapp://myCallback")!
+            let supportedTenderTypes = SCCAPIRequestTenderTypes.card
             let clearsDefaultFees = true
             let autoreturn = true
 
@@ -83,74 +84,74 @@ class SCCAPIRequestTests: SCCTestCase {
         do {
             SCCAPIRequest.setClientID(nil)
             _ = try SCCAPIRequest(
-                callbackURL: NSURL(string: "register-sdk-testapp://myCallback")!,
+                callbackURL: URL(string: "register-sdk-testapp://myCallback")!,
                 amount: try! SCCMoney(amountCents: 100, currencyCode: "USD"),
                 userInfoString: nil,
                 merchantID: nil,
                 notes: nil,
-                supportedTenderTypes: SCCAPIRequestTenderTypes.All,
+                supportedTenderTypes: SCCAPIRequestTenderTypes.all,
                 clearsDefaultFees: false,
                 returnAutomaticallyAfterPayment: false)
             XCTFail()
         } catch let error as NSError {
             XCTAssertEqual(error.domain, SCCErrorDomain)
-            XCTAssertEqual(SCCErrorCode(rawValue: UInt(error.code)), .MissingRequestClientID);
+            XCTAssertEqual(SCCErrorCode(rawValue: UInt(error.code)), .missingRequestClientID);
         }
     }
 
     func test_requestWithCallbackURL_validatesCallbackURL() {
         do {
             _ = try SCCAPIRequest(
-                callbackURL: NSURL(string: "//myCallback")!,
+                callbackURL: URL(string: "//myCallback")!,
                 amount: try! SCCMoney(amountCents: 100, currencyCode: "USD"),
                 userInfoString: nil,
                 merchantID: nil,
                 notes: nil,
-                supportedTenderTypes: SCCAPIRequestTenderTypes.All,
+                supportedTenderTypes: SCCAPIRequestTenderTypes.all,
                 clearsDefaultFees: false,
                 returnAutomaticallyAfterPayment: false)
             XCTFail()
         } catch let error as NSError {
             XCTAssertEqual(error.domain, SCCErrorDomain)
-            XCTAssertEqual(SCCErrorCode(rawValue: UInt(error.code)), .InvalidRequestCallbackURL);
+            XCTAssertEqual(SCCErrorCode(rawValue: UInt(error.code)), .invalidRequestCallbackURL);
         }
     }
 
     func test_requestWithCallbackURL_validatesAmount() {
         do {
             _ = try SCCAPIRequest(
-                callbackURL: NSURL(string: "register-sdk-testapp://myCallback")!,
+                callbackURL: URL(string: "register-sdk-testapp://myCallback")!,
                 amount: try! SCCMoney(amountCents: -100, currencyCode: "USD"),
                 userInfoString: nil,
                 merchantID: nil,
                 notes: nil,
-                supportedTenderTypes: SCCAPIRequestTenderTypes.All,
+                supportedTenderTypes: SCCAPIRequestTenderTypes.all,
                 clearsDefaultFees: false,
                 returnAutomaticallyAfterPayment: false)
             XCTFail()
         } catch let error as NSError {
             XCTAssertEqual(error.domain, SCCErrorDomain)
-            XCTAssertEqual(SCCErrorCode(rawValue: UInt(error.code)), .InvalidRequestAmount);
+            XCTAssertEqual(SCCErrorCode(rawValue: UInt(error.code)), .invalidRequestAmount);
         }
     }
 
     func test_APIRequestURLWithError_generatesURLBasedOnSpecifiedProperties() {
         do {
             let request = try SCCAPIRequest(
-                callbackURL: NSURL(string: "my-app://perform-callback")!,
+                callbackURL: URL(string: "my-app://perform-callback")!,
                 amount: try! SCCMoney(amountCents: 100, currencyCode: "USD"),
                 userInfoString: "state-user-info",
                 merchantID: "abc123",
                 notes: "blue shoes",
-                supportedTenderTypes: SCCAPIRequestTenderTypes.Card,
+                supportedTenderTypes: SCCAPIRequestTenderTypes.card,
                 clearsDefaultFees: false,
                 returnAutomaticallyAfterPayment: true)
-            let requestURL = try request.APIRequestURL()
+            let requestURL = try request.apiRequestURL()
 
-            let expectedData: [String : NSObject] = [
+            let expectedData: [String : Any] = [
                 "client_id" : SCCAPIRequestTests.defaultTestClientID,
-                "sdk_version" : "1.2",
-                "version" : "1.0",
+                "sdk_version" : "2.0",
+                "version" : "1.1",
                 "amount_money" : [
                     "amount" : 100,
                     "currency_code" : "USD"
@@ -166,7 +167,7 @@ class SCCAPIRequestTests: SCCTestCase {
                 ]
             ]
 
-            XCTAssertEqual(expectedData, self.dataForURL(requestURL) as! [String : NSObject]);
+            XCTAssertEqual(NSDictionary(dictionary: expectedData), NSDictionary(dictionary: self.data(for: requestURL)));
         } catch _ {
             XCTFail()
         }
@@ -177,8 +178,8 @@ class SCCAPIRequestTests: SCCTestCase {
         let merchantID = "7074ME2C077ZB"
         let userInfoString = "User Info"
         let amount = try! SCCMoney(amountCents: 100, currencyCode: "USD")
-        let callbackURL = NSURL(string: "register-sdk-testapp://myCallback")!
-        let supportedTenderTypes = SCCAPIRequestTenderTypes.Card
+        let callbackURL = URL(string: "register-sdk-testapp://myCallback")!
+        let supportedTenderTypes = SCCAPIRequestTenderTypes.card
         let clearsDefaultFees = true
         let autoreturn = true
 
@@ -218,7 +219,7 @@ class SCCAPIRequestTests: SCCTestCase {
 
         // Different callback URL.
         XCTAssertNotEqual(baseRequest, try! SCCAPIRequest(
-            callbackURL: NSURL(string: "http://google.com")!,
+            callbackURL: URL(string: "http://google.com")!,
             amount: amount,
             userInfoString: userInfoString,
             merchantID: merchantID,
@@ -296,15 +297,18 @@ class SCCAPIRequestTests: SCCTestCase {
 
     func test_NSArrayOfTenderTypeStringsFromSCCAPIRequestTenderTypes_supportsAllTenderTypes() {
         let noTenderTypes = SCCAPIRequestTenderTypes()
-        let noTenderStrings = NSArrayOfTenderTypeStringsFromSCCAPIRequestTenderTypes(noTenderTypes) as! [ String ]
+        let noTenderStrings = NSArrayOfTenderTypeStringsFromSCCAPIRequestTenderTypes(noTenderTypes)
         XCTAssertEqual(noTenderStrings, [ String ]())
 
-        let creditOnlyStrings = NSArrayOfTenderTypeStringsFromSCCAPIRequestTenderTypes(.Card) as! [ String ]
+        let creditOnlyStrings = NSArrayOfTenderTypeStringsFromSCCAPIRequestTenderTypes(.card)
         XCTAssertEqual(creditOnlyStrings, [ SCCAPIRequestOptionsTenderTypeStringCard ])
 
-        let allStrings = NSArrayOfTenderTypeStringsFromSCCAPIRequestTenderTypes(.All) as! [ String ]
+        let allStrings = NSArrayOfTenderTypeStringsFromSCCAPIRequestTenderTypes(.all)
         XCTAssertEqual(allStrings, [
-            SCCAPIRequestOptionsTenderTypeStringCard
+            SCCAPIRequestOptionsTenderTypeStringCard,
+            SCCAPIRequestOptionsTenderTypeStringCash,
+            SCCAPIRequestOptionsTenderTypeStringOther,
+            SCCAPIRequestOptionsTenderTypeStringSquareGiftCard,
         ])
     }
 }
