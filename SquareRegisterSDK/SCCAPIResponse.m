@@ -100,12 +100,6 @@ NSString *__nonnull const SCCAPIResponseStatusStringError = @"error";
     NSString *const clientTransactionID = [data SCC_stringForKey:SCCAPIResponseClientTransactionIDKey];
     NSString *const paymentID = [data SCC_stringForKey:SCCAPIResponsePaymentIDKey];
     NSString *const offlinePaymentID = [data SCC_stringForKey:SCCAPIResponseOfflinePaymentIDKey];
-    if (paymentID.length == 0 && offlinePaymentID.length == 0) {
-        if (error) {
-            *error = [NSError SCC_missingOrInvalidResponsePaymentIDError];
-        }
-        return nil;
-    }
 
     return [[self alloc] initWithPaymentID:paymentID
                           offlinePaymentID:offlinePaymentID

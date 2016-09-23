@@ -134,26 +134,6 @@ class SCCAPIResponseTests: SCCTestCase {
         }
     }
 
-    func test_responseWithResponseURLError_handlesMissingOrInvalidPaymentID() {
-        do {
-            let responseDictionary: [NSObject : AnyObject] = [
-                "transaction_id" : "TRANSACTION_ID",
-                "status" : "ok",
-                "error_code" : "0",
-                "state" : "PASS_ME_BACK"
-            ]
-
-            let responseData = self.queryStringForData(responseDictionary)
-            let callbackURL = NSURL(string: "my-app://callback?data=\(responseData)")!
-
-            _ = try SCCAPIResponse(responseURL: callbackURL)
-            XCTFail()
-        } catch let error as NSError {
-            XCTAssertEqual(error.domain, SCCErrorDomain)
-            XCTAssertEqual(SCCErrorCode(rawValue: UInt(error.code)), .MissingOrInvalidResponsePaymentID)
-        }
-    }
-
     func test_responseWithResponseURLError_handlesMissingOrInvalidErrorCode() {
         do {
             let responseDictionary: [NSObject : AnyObject] = [
