@@ -32,7 +32,7 @@ typedef NS_ENUM(NSUInteger, SCCErrorCode) {
     /// No currency code was specified.
     SCCErrorCodeMissingCurrencyCode,
 
-    // An unsupported or invalid currency code was specified.
+    /// An unsupported or invalid currency code was specified.
     SCCErrorCodeUnsupportedCurrencyCode,
 
     /// No client ID was specified to build a request.
@@ -58,9 +58,6 @@ typedef NS_ENUM(NSUInteger, SCCErrorCode) {
 
     /// The response status field was missing or invalid.
     SCCErrorCodeMissingOrInvalidResponseStatus,
-
-    /// The payment ID or offline payment ID field was missing or invalid.
-    SCCErrorCodeMissingOrInvalidResponsePaymentID __deprecated_enum_msg("Payment IDs are deprecated.  This enum value will be removed in a later version."),
 
     /// The error code on an unsuccessful response was missing or invalid.
     SCCErrorCodeMissingOrInvalidResponseErrorCode,
@@ -130,11 +127,6 @@ typedef NS_ENUM(NSUInteger, SCCErrorCode) {
  @return An error indicating that the response status field was missing or invalid.
  */
 + (nonnull NSError *)SCC_missingOrInvalidResponseStatusError;
-
-/**
- @return An error indicating that the response payment ID or offline payment ID field was missing or invalid.
- */
-+ (nonnull NSError *)SCC_missingOrInvalidResponsePaymentIDError DEPRECATED_MSG_ATTRIBUTE("Payment IDs are deprecated.  This method will be removed in a later version.");
 
 /**
  @return An error indicating that the error code on an unsuccessful response was missing or invalid.

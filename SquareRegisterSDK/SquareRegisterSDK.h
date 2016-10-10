@@ -24,6 +24,7 @@
 // Categories
 #import <SquareRegisterSDK/NSError+SCCAdditions.h>
 #import <SquareRegisterSDK/NSError+SCCAPIAdditions.h>
+#import <SquareRegisterSDK/NSURL+SCCAdditions.h>
 
 // Classes
 #import <SquareRegisterSDK/SCCAPIConnection.h>

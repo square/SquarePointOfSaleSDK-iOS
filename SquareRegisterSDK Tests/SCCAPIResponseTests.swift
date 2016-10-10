@@ -19,6 +19,7 @@
 //
 
 import Foundation
+import SquareRegisterSDK
 import XCTest
 
 
@@ -27,7 +28,7 @@ class SCCAPIResponseTests: SCCTestCase {
     // MARK: - Tests - Valid Responses
 
     func test_responseWithResponseURLError_parsesSuccessfulPaymentResponse() {
-        let responseDictionary: [NSObject : AnyObject] = [
+        let responseDictionary: [AnyHashable: Any] = [
             "payment_id" : "PAYMENT_ID",
             "offline_payment_id" : "OFFLINE_PAYMENT_ID",
             "transaction_id" : "TRANSACTION_ID",
@@ -36,62 +37,70 @@ class SCCAPIResponseTests: SCCTestCase {
             "state" : "PASS_ME_BACK"
         ]
 
-        let responseData = self.queryStringForData(responseDictionary)
-        let callbackURL = NSURL(string: "my-app://callback?data=\(responseData)")!
+        let responseData = self.queryString(forData: responseDictionary)
+        let callbackURL = URL(string: "my-app://callback?data=\(responseData)")!
 
         do {
             let response = try SCCAPIResponse(responseURL: callbackURL)
             XCTAssertNil(response.error)
             XCTAssertEqual(response.userInfoString, "PASS_ME_BACK")
             XCTAssertEqual(response.transactionID, "TRANSACTION_ID")
-            XCTAssertTrue(response.successResponse)
+            XCTAssertTrue(response.isSuccessResponse)
         } catch _ {
             XCTFail()
         }
     }
 
     func test_responseWithResponseURLError_parsesResponseWithUnknownError() {
-        let responseDictionary: [NSObject : AnyObject] = [
+        let responseDictionary: [AnyHashable: Any] = [
             "status" : "error",
             "error_code" : "UNKNOWN_ERROR_INVALID_CODE",
             "state" : "PASS_ME_BACK"
         ]
 
-        let responseData = self.queryStringForData(responseDictionary)
-        let callbackURL = NSURL(string: "my-app://callback?data=\(responseData)")!
+        let responseData = self.queryString(forData: responseDictionary)
+        let callbackURL = URL(string: "my-app://callback?data=\(responseData)")!
 
         do {
             let response = try SCCAPIResponse(responseURL: callbackURL)
-            XCTAssertNotNil(response.error)
-            XCTAssertEqual(response.error!.domain, SCCAPIErrorDomain)
-            XCTAssertEqual(SCCAPIErrorCode(rawValue: UInt(response.error!.code)), .Unknown)
-            XCTAssertEqual(response.error!.userInfo[SCCAPIErrorUserInfoCodeStringKey] as? String, "UNKNOWN_ERROR_INVALID_CODE")
-            XCTAssertEqual(response.userInfoString, "PASS_ME_BACK")
-            XCTAssertNil(response.transactionID)
-            XCTAssertFalse(response.successResponse)
+            if let error = response.error as? NSError {
+                XCTAssertNotNil(error)
+                XCTAssertEqual(error.domain, SCCAPIErrorDomain)
+                XCTAssertEqual(SCCAPIErrorCode(rawValue: UInt(error.code)), .unknown)
+                XCTAssertEqual(error.userInfo[SCCAPIErrorUserInfoCodeStringKey] as? String, "UNKNOWN_ERROR_INVALID_CODE")
+                XCTAssertEqual(response.userInfoString, "PASS_ME_BACK")
+                XCTAssertNil(response.transactionID)
+                XCTAssertFalse(response.isSuccessResponse)
+            } else {
+                XCTFail()
+            }
         } catch _ {
             XCTFail()
         }
     }
 
     func test_responseWithResponseURLError_parsesResponseWithUserNotActivatedError() {
-        let responseDictionary: [NSObject : AnyObject] = [
+        let responseDictionary: [AnyHashable: Any] = [
             "status" : "error",
             "error_code" : "user_not_active",
             "state" : "PASS_ME_BACK"
         ]
 
-        let responseData = self.queryStringForData(responseDictionary)
-        let callbackURL = NSURL(string: "my-app://callback?data=\(responseData)")!
+        let responseData = self.queryString(forData: responseDictionary)
+        let callbackURL = URL(string: "my-app://callback?data=\(responseData)")!
 
         do {
             let response = try SCCAPIResponse(responseURL: callbackURL)
-            XCTAssertNotNil(response.error)
-            XCTAssertEqual(response.error!.domain, SCCAPIErrorDomain)
-            XCTAssertEqual(SCCAPIErrorCode(rawValue: UInt(response.error!.code)), .UserNotActivated)
-            XCTAssertEqual(response.userInfoString, "PASS_ME_BACK")
-            XCTAssertNil(response.transactionID)
-            XCTAssertFalse(response.successResponse)
+            if let error = response.error as? NSError {
+                XCTAssertNotNil(error)
+                XCTAssertEqual(error.domain, SCCAPIErrorDomain)
+                XCTAssertEqual(SCCAPIErrorCode(rawValue: UInt(error.code)), .userNotActivated)
+                XCTAssertEqual(response.userInfoString, "PASS_ME_BACK")
+                XCTAssertNil(response.transactionID)
+                XCTAssertFalse(response.isSuccessResponse)
+            } else {
+                XCTFail()
+            }
         } catch _ {
             XCTFail()
         }
@@ -101,54 +110,54 @@ class SCCAPIResponseTests: SCCTestCase {
 
     func test_responseWithResponseURLError_handlesMissingOrInvalidDataParameter() {
         do {
-            let callbackURL = NSURL(string: "my-app://callback?foo=bar")!
+            let callbackURL = URL(string: "my-app://callback?foo=bar")!
             _ = try SCCAPIResponse(responseURL: callbackURL)
             XCTFail()
         } catch let error as NSError {
             XCTAssertEqual(error.domain, SCCErrorDomain)
-            XCTAssertEqual(SCCErrorCode(rawValue: UInt(error.code)), .MissingOrInvalidResponseData)
+            XCTAssertEqual(SCCErrorCode(rawValue: UInt(error.code)), .missingOrInvalidResponseData)
         }
     }
 
     func test_responseWithResponseURLError_handlesMissingOrInvalidJSONInDataParameter() {
         do {
-            let callbackURL = NSURL(string: "my-app://callback?data=%5B%5D")!
+            let callbackURL = URL(string: "my-app://callback?data=%5B%5D")!
             _ = try SCCAPIResponse(responseURL: callbackURL)
             XCTFail()
         } catch let error as NSError {
             XCTAssertEqual(error.domain, SCCErrorDomain)
-            XCTAssertEqual(SCCErrorCode(rawValue: UInt(error.code)), .MissingOrInvalidResponseJSONData)
+            XCTAssertEqual(SCCErrorCode(rawValue: UInt(error.code)), .missingOrInvalidResponseJSONData)
         }
     }
 
     func test_responseWithResponseURLError_handlesMissingOrInvalidStatus() {
         do {
-            let responseDictionary: [NSObject : AnyObject] = [ "status" : "INVALID_STATUS" ]
-            let responseData = self.queryStringForData(responseDictionary)
-            let callbackURL = NSURL(string: "my-app://callback?data=\(responseData)")!
+            let responseDictionary: [AnyHashable: Any] = [ "status" : "INVALID_STATUS" ]
+            let responseData = self.queryString(forData: responseDictionary)
+            let callbackURL = URL(string: "my-app://callback?data=\(responseData)")!
             _ = try SCCAPIResponse(responseURL: callbackURL)
             XCTFail()
         } catch let error as NSError {
             XCTAssertEqual(error.domain, SCCErrorDomain)
-            XCTAssertEqual(SCCErrorCode(rawValue: UInt(error.code)), .MissingOrInvalidResponseStatus)
+            XCTAssertEqual(SCCErrorCode(rawValue: UInt(error.code)), .missingOrInvalidResponseStatus)
         }
     }
 
     func test_responseWithResponseURLError_handlesMissingOrInvalidErrorCode() {
         do {
-            let responseDictionary: [NSObject : AnyObject] = [
+            let responseDictionary: [AnyHashable: Any] = [
                 "status" : "error",
                 "state" : "PASS_ME_BACK"
             ]
 
-            let responseData = self.queryStringForData(responseDictionary)
-            let callbackURL = NSURL(string: "my-app://callback?data=\(responseData)")!
+            let responseData = self.queryString(forData: responseDictionary)
+            let callbackURL = URL(string: "my-app://callback?data=\(responseData)")!
 
             _ = try SCCAPIResponse(responseURL: callbackURL)
             XCTFail()
         } catch let error as NSError {
             XCTAssertEqual(error.domain, SCCErrorDomain)
-            XCTAssertEqual(SCCErrorCode(rawValue: UInt(error.code)), .MissingOrInvalidResponseErrorCode)
+            XCTAssertEqual(SCCErrorCode(rawValue: UInt(error.code)), .missingOrInvalidResponseErrorCode)
         }
     }
 

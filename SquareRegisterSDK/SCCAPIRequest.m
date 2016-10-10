@@ -27,8 +27,8 @@
 #import "SCCMoney+Serialization.h"
 
 
-NSString *__nonnull const SCCSDKVersion = @"1.2";
-NSString *__nonnull const SCCAPIVersion = @"1.0";
+NSString *__nonnull const SCCSDKVersion = @"2.0";
+NSString *__nonnull const SCCAPIVersion = @"1.1";
 
 NSString *__nonnull const SCCAPIRequestSDKVersionKey = @"sdk_version";
 NSString *__nonnull const SCCAPIRequestAPIVersionKey = @"version";
@@ -43,6 +43,9 @@ NSString *__nonnull const SCCAPIRequestOptionsSupportedTenderTypesKey = @"suppor
 NSString *__nonnull const SCCAPIRequestOptionsClearDefaultFeesKey = @"clear_default_fees";
 NSString *__nonnull const SCCAPIRequestOptionsAutoReturnKey = @"auto_return";
 NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringCard = @"CREDIT_CARD";
+NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringCash = @"CASH";
+NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringOther = @"OTHER";
+NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringSquareGiftCard = @"SQUARE_GIFT_CARD";
 
 
 @implementation SCCAPIRequest
@@ -269,12 +272,24 @@ static NSString *__nullable APIClientID = nil;
 @end
 
 
-NSArray *__nonnull NSArrayOfTenderTypeStringsFromSCCAPIRequestTenderTypes(SCCAPIRequestTenderTypes tenderTypes)
+NSArray<NSString *> *__nonnull NSArrayOfTenderTypeStringsFromSCCAPIRequestTenderTypes(SCCAPIRequestTenderTypes tenderTypes)
 {
     NSMutableArray *const arrayOfTenderTypes = [NSMutableArray array];
 
     if (tenderTypes & SCCAPIRequestTenderTypeCard) {
         [arrayOfTenderTypes addObject:SCCAPIRequestOptionsTenderTypeStringCard];
+    }
+    
+    if (tenderTypes & SCCAPIRequestTenderTypeCash) {
+        [arrayOfTenderTypes addObject:SCCAPIRequestOptionsTenderTypeStringCash];
+    }
+    
+    if (tenderTypes & SCCAPIRequestTenderTypeOther) {
+        [arrayOfTenderTypes addObject:SCCAPIRequestOptionsTenderTypeStringOther];
+    }
+    
+    if (tenderTypes & SCCAPIRequestTenderTypeSquareGiftCard) {
+        [arrayOfTenderTypes addObject:SCCAPIRequestOptionsTenderTypeStringSquareGiftCard];
     }
 
     return arrayOfTenderTypes;

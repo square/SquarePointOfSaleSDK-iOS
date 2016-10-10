@@ -38,10 +38,8 @@ SCCAPIResponseStatus SCCAPIResponseStatusFromString(NSString *__nullable statusS
 extern NSString *__nonnull const SCCAPIResponseDataKey;
 extern NSString *__nonnull const SCCAPIResponseStatusKey;
 extern NSString *__nonnull const SCCAPIResponseErrorCodeKey;
-extern NSString *__nonnull const SCCAPIResponsePaymentIDKey;
 extern NSString *__nonnull const SCCAPIResponseTransactionIDKey;
 extern NSString *__nonnull const SCCAPIResponseClientTransactionIDKey;
-extern NSString *__nonnull const SCCAPIResponseOfflinePaymentIDKey;
 extern NSString *__nonnull const SCCAPIResponseStateKey;
 
 extern NSString *__nonnull const SCCAPIResponseStatusStringOK;

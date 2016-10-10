@@ -30,6 +30,15 @@ typedef NS_OPTIONS(NSUInteger, SCCAPIRequestTenderTypes) {
 
     /// Allow the merchant to accept card tenders to complete the payment.
     SCCAPIRequestTenderTypeCard = 1 << 0,
+    
+    /// Allow the merchant to accept cash tenders to complete the payment.
+    SCCAPIRequestTenderTypeCash = 1 << 1,
+    
+    /// Allow the merchant to accept other tenders to complete the payment.
+    SCCAPIRequestTenderTypeOther = 1 << 2,
+    
+    /// Allow the merchant to accept Square gift cards to complete the payment.
+    SCCAPIRequestTenderTypeSquareGiftCard = 1 << 3
 };
 
 

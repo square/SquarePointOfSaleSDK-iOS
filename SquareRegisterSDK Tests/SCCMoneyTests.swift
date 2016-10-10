@@ -19,6 +19,7 @@
 //
 
 import Foundation
+import SquareRegisterSDK
 import XCTest
 
 
@@ -62,7 +63,7 @@ class SCCMoneyTests: XCTestCase {
             XCTFail()
         } catch let error as NSError {
             XCTAssertEqual(error.domain, SCCErrorDomain);
-            XCTAssertEqual(SCCErrorCode(rawValue: UInt(error.code)), .UnsupportedCurrencyCode);
+            XCTAssertEqual(SCCErrorCode(rawValue: UInt(error.code)), .unsupportedCurrencyCode);
         }
     }
 
@@ -72,7 +73,7 @@ class SCCMoneyTests: XCTestCase {
             XCTFail()
         } catch let error as NSError {
             XCTAssertEqual(error.domain, SCCErrorDomain);
-            XCTAssertEqual(SCCErrorCode(rawValue: UInt(error.code)), .MissingCurrencyCode);
+            XCTAssertEqual(SCCErrorCode(rawValue: UInt(error.code)), .missingCurrencyCode);
         }
     }
 
@@ -84,10 +85,10 @@ class SCCMoneyTests: XCTestCase {
             let moneyWithDifferentAmount = try SCCMoney(amountCents: 200, currencyCode: "USD")
 
             // Test direct invocation of the equality test.
-            XCTAssertFalse(money.isEqualToSCCMoney(nil))
-            XCTAssertFalse(money.isEqualToSCCMoney(moneyWithDifferentCurrency))
-            XCTAssertFalse(money.isEqualToSCCMoney(moneyWithDifferentAmount))
-            XCTAssertTrue(money.isEqualToSCCMoney(equivalentMoney))
+            XCTAssertFalse(money.isEqual(to: nil))
+            XCTAssertFalse(money.isEqual(to: moneyWithDifferentCurrency))
+            XCTAssertFalse(money.isEqual(to: moneyWithDifferentAmount))
+            XCTAssertTrue(money.isEqual(to: equivalentMoney))
 
             // Equality operator invokes isEqualToSCCMoney via -[NSObject isEqual:].
             XCTAssertFalse(money == moneyWithDifferentCurrency)
@@ -111,12 +112,9 @@ class SCCMoneyTests: XCTestCase {
     func test_requestDictionaryRepresentation_encodesAmountAndCurrency() {
         do {
             let money = try SCCMoney(amountCents: 100, currencyCode: "USD")
-            let requestDictionary = money.requestDictionaryRepresentation() as! [String : NSObject]
-            let expectedRequestDictionary: [String : NSObject]  = [
-                SCCMoneyRequestDictionaryAmountKey : 100,
-                SCCMoneyRequestDictionaryCurrencyCodeKey : "USD"
-            ];
-            XCTAssertEqual(requestDictionary, expectedRequestDictionary)
+            let requestDictionary = money.requestDictionaryRepresentation()
+            XCTAssertEqual(requestDictionary[SCCMoneyRequestDictionaryAmountKey] as! Int, 100)
+            XCTAssertEqual(requestDictionary[SCCMoneyRequestDictionaryCurrencyCodeKey] as! String, "USD")
         } catch _ {
             XCTFail()
         }

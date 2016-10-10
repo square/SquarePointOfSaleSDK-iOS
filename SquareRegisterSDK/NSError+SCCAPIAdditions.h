@@ -55,19 +55,23 @@ typedef NS_ENUM(NSUInteger, SCCAPIErrorCode) {
 @interface NSError (SCCAPIAdditions)
 
 /**
- @param code A Register API error code.
- @return A new register API error with `code` in the `SCCAPIErrorDomain`.
-   The user info dictionary associated with the error will include, if available, 
-   the error code string associated with the `SCCAPIErrorUserInfoCodeStringKey`.
- */
-+ (nonnull NSError *)SCC_APIErrorWithCode:(SCCAPIErrorCode)code DEPRECATED_MSG_ATTRIBUTE("Use SCC_APIErrorWithErrorCodeString:, passing the error code from the response URL. This method will be removed in a future version.");
-
-/**
  @param errorCodeString A Register API error code string.
  @return A new Register API error with an appropriate numeric code in the `SCCAPIErrorDomain`.
  The user info dictionary associated with the error will include, if available,
  the error code string associated with the `SCCAPIErrorUserInfoCodeStringKey`.
+ 
+ Note that this string is intended to be seen by developers only.  Developers should present 
+ their own error messaging to merchants as appropriate.
  */
 + (nonnull NSError *)SCC_APIErrorWithErrorCodeString:(NSString *_Nonnull)errorCodeString;
+
+/**
+ @param errorCodeString A Register API error code string.
+ @return A human-readable description of the error represented by the error code string.
+ 
+ Note that this string is intended to be seen by developers only.  Developers should present 
+ their own error messaging to merchants as appropriate.
+ */
++ (nullable NSString *)SCC_localizedDescriptionForErrorCodeString:(nonnull NSString *)errorCodeString;
 
 @end

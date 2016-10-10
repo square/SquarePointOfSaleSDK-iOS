@@ -23,7 +23,7 @@
 
 @interface SCCTestCase : XCTestCase
 
-- (NSString *)queryStringForData:(NSDictionary *)dictData;
-- (NSDictionary *)dataForURL:(NSURL *)url;
+- (nonnull NSString *)queryStringForData:(nonnull NSDictionary *)dictData;
+- (nonnull NSDictionary *)dataForURL:(nonnull NSURL *)url;
 
 @end

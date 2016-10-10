@@ -26,15 +26,6 @@ github "Square/SquareRegisterSDK-iOS"
 #### Git Submodules
 Or manually checkout the submodule with `git submodule add git@github.com:Square/SquareRegisterSDK-iOS.git`, drag SquareRegisterSDK.xcodeproj to your project, and add SquareRegisterSDK as a build dependency.
 
-### [Swift apps only] Add the SDK's umbrella header to your bridging header
-
-If you're using the Register SDK in a Swift project, you need to add the SDK's umbrella header to your project's
-bridging header, like so:
-
-    #import <SquareRegisterSDK/SquareRegisterSDK.h>
-
-The sample Swift app in the `SquareRegisterSDK-Test-App-Swift` directory demonstrates this.
-
 ## Usage
 Integrating Square Register SDK into your app takes just a couple of minutes. Once you've calculated how much you'd like to charge your customer, bundle up the relevant details into an API Request.
 
@@ -52,7 +43,7 @@ SCCMoney *const amount = [SCCMoney moneyWithAmountCents:100 currencyCode:@"USD" 
                        userInfoString:nil
                            merchantID:nil
                                 notes:@"Coffee"
-                 supportedTenderTypes:SCCAPIRequestTenderTypeCard
+                 supportedTenderTypes:SCCAPIRequestTenderTypeAll
                     clearsDefaultFees:NO
       returnAutomaticallyAfterPayment:NO
                                 error:&error];
@@ -101,10 +92,10 @@ You'll need to make two quick changes to your app Info.plist file, one to declar
 </array>
 ```
 
-Check out the Square Register SDK Test App for a complete example and don't forget to check out our [API Documentation](https://docs.connect.squareup.com/).
+Check out the HelloCharge and HelloCharge-Swift apps in the project for a complete example and don't forget to check out our [API Documentation](https://docs.connect.squareup.com/).
 
 ## Requirements
-* Xcode 6.3 or later.
+* Xcode 8.0 or later.
 * iOS 8 or later.
 
 ## Contributing
