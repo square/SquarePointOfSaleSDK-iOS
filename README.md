@@ -18,13 +18,18 @@ platform :ios, '8.0'
 pod 'SquareRegisterSDK'
 ```
 
+Be sure to call `pod update` and use `pod install --repo-update` to ensure you have the most recent version of the SDK installed.
+
 #### [Carthage](https://github.com/Carthage/Carthage)
 ```
 github "Square/SquareRegisterSDK-iOS"
 ```
 
 #### Git Submodules
-Or manually checkout the submodule with `git submodule add git@github.com:Square/SquareRegisterSDK-iOS.git`, drag SquareRegisterSDK.xcodeproj to your project, and add SquareRegisterSDK as a build dependency.
+Checkout the submodule with `git submodule add git@github.com:Square/SquareRegisterSDK-iOS.git`, drag SquareRegisterSDK.xcodeproj to your project, and add SquareRegisterSDK as a build dependency.
+
+#### Clone-and-Copy
+You can always just clone this repository and copy the source files from the SquareRegisterSDK directory into your project, but when using this approach, you must manually keep the SDK up-to-date yourself.
 
 ## Usage
 Integrating Square Register SDK into your app takes just a couple of minutes. Once you've calculated how much you'd like to charge your customer, bundle up the relevant details into an API Request.
