@@ -40,7 +40,8 @@ NSString *__nonnull const SCCAPIErrorStringCouldNotPerform = @"could_not_perform
 NSString *__nonnull const SCCAPIErrorStringNoNetworkConnection = @"no_network_connection";
 NSString *__nonnull const SCCAPIErrorStringUnsupportedAPIVersion = @"unsupported_api_version";
 NSString *__nonnull const SCCAPIErrorStringInvalidVersionNumber = @"invalid_version_number";
-
+NSString *__nonnull const SCCAPIErrorStringCustomerManagementNotSupported = @"customer_management_not_supported";
+NSString *__nonnull const SCCAPIErrorStringInvalidCustomerID = @"invalid_customer_id";
 
 NSString *__nonnull const SCCAPIErrorDomain = @"SCCAPIErrorDomain";
 
@@ -143,6 +144,14 @@ NSString *__nonnull const SCCAPIErrorUserInfoCodeStringKey = @"error_code";
         return @"Invalid version number.  The specified API version is not in a form that Square Register recognizes.  Ensure that the version parameter you are passing is in standard decimal form (e.g., 1.1) and try again.";
     }
 
+    if ([errorCodeString isEqualToString:SCCAPIErrorStringCustomerManagementNotSupported]) {
+        return @"Customer management not supported. This account does not have customer management enabled and therefore cannot associate transactions with customers.";
+    }
+
+    if ([errorCodeString isEqualToString:SCCAPIErrorStringInvalidCustomerID]) {
+        return @"Invalid customer ID. The customer_id specified does not correspond to a merchant's customer.";
+    }
+
     return nil;
 }
 
@@ -227,6 +236,14 @@ SCCAPIErrorCode SCCAPIErrorCodeFromString(NSString *__nullable errorCodeString)
         return SCCAPIErrorCodeInvalidVersionNumber;
     }
 
+    if ([errorCodeString isEqualToString:SCCAPIErrorStringCustomerManagementNotSupported]) {
+        return SCCAPIErrorCodeCustomerManagementNotSupported;
+    }
+
+    if ([errorCodeString isEqualToString:SCCAPIErrorStringInvalidCustomerID]) {
+        return SCCAPIErrorCodeInvalidCustomerID;
+    }
+
     return SCCAPIErrorCodeUnknown;
 }
 
@@ -273,6 +290,10 @@ NSString *__nullable NSStringFromSCCAPIErrorCode(SCCAPIErrorCode errorCode)
             return SCCAPIErrorStringUnsupportedAPIVersion;
         case SCCAPIErrorCodeInvalidVersionNumber:
             return SCCAPIErrorStringInvalidVersionNumber;
+        case SCCAPIErrorCodeCustomerManagementNotSupported:
+            return SCCAPIErrorStringCustomerManagementNotSupported;
+        case SCCAPIErrorCodeInvalidCustomerID:
+            return SCCAPIErrorStringInvalidCustomerID;
     }
 
     return nil;

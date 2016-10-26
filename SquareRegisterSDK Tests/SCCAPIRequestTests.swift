@@ -49,6 +49,7 @@ class SCCAPIRequestTests: SCCTestCase {
         do {
             let notes = "Notes"
             let merchantID = "7074ME2C077ZB"
+            let customerID = "YT6ZX064G97X12NVED31CJJK34"
             let userInfoString = "User Info"
             let amount = try! SCCMoney(amountCents: 100, currencyCode: "USD")
             let callbackURL = URL(string: "register-sdk-testapp://myCallback")!
@@ -62,6 +63,7 @@ class SCCAPIRequestTests: SCCTestCase {
                 userInfoString: userInfoString,
                 merchantID: merchantID,
                 notes: notes,
+                customerID: customerID,
                 supportedTenderTypes: supportedTenderTypes,
                 clearsDefaultFees: clearsDefaultFees,
                 returnAutomaticallyAfterPayment: autoreturn)
@@ -69,6 +71,7 @@ class SCCAPIRequestTests: SCCTestCase {
             XCTAssertEqual(completeRequest.clientID, SCCAPIRequestTests.defaultTestClientID)
             XCTAssertEqual(completeRequest.notes, notes)
             XCTAssertEqual(completeRequest.merchantID, merchantID)
+            XCTAssertEqual(completeRequest.customerID, customerID)
             XCTAssertEqual(completeRequest.userInfoString, userInfoString)
             XCTAssertEqual(completeRequest.amount, amount)
             XCTAssertEqual(completeRequest.callbackURL, callbackURL)
@@ -89,6 +92,7 @@ class SCCAPIRequestTests: SCCTestCase {
                 userInfoString: nil,
                 merchantID: nil,
                 notes: nil,
+                customerID: nil,
                 supportedTenderTypes: SCCAPIRequestTenderTypes.all,
                 clearsDefaultFees: false,
                 returnAutomaticallyAfterPayment: false)
@@ -107,6 +111,7 @@ class SCCAPIRequestTests: SCCTestCase {
                 userInfoString: nil,
                 merchantID: nil,
                 notes: nil,
+                customerID: nil,
                 supportedTenderTypes: SCCAPIRequestTenderTypes.all,
                 clearsDefaultFees: false,
                 returnAutomaticallyAfterPayment: false)
@@ -125,6 +130,7 @@ class SCCAPIRequestTests: SCCTestCase {
                 userInfoString: nil,
                 merchantID: nil,
                 notes: nil,
+                customerID: nil,
                 supportedTenderTypes: SCCAPIRequestTenderTypes.all,
                 clearsDefaultFees: false,
                 returnAutomaticallyAfterPayment: false)
@@ -143,6 +149,7 @@ class SCCAPIRequestTests: SCCTestCase {
                 userInfoString: "state-user-info",
                 merchantID: "abc123",
                 notes: "blue shoes",
+                customerID: "def456",
                 supportedTenderTypes: SCCAPIRequestTenderTypes.card,
                 clearsDefaultFees: false,
                 returnAutomaticallyAfterPayment: true)
@@ -151,7 +158,7 @@ class SCCAPIRequestTests: SCCTestCase {
             let expectedData: [String : Any] = [
                 "client_id" : SCCAPIRequestTests.defaultTestClientID,
                 "sdk_version" : "2.0",
-                "version" : "1.1",
+                "version" : "1.2",
                 "amount_money" : [
                     "amount" : 100,
                     "currency_code" : "USD"
@@ -159,6 +166,7 @@ class SCCAPIRequestTests: SCCTestCase {
                 "callback_url" : "my-app://perform-callback",
                 "state" : "state-user-info",
                 "merchant_id" : "abc123",
+                "customer_id": "def456",
                 "notes" : "blue shoes",
                 "options" : [
                     "supported_tender_types" : [ "CREDIT_CARD" ],
@@ -176,6 +184,7 @@ class SCCAPIRequestTests: SCCTestCase {
     func test_isEqualToAPIRequest_comparesAllFields() {
         let notes = "Notes"
         let merchantID = "7074ME2C077ZB"
+        let customerID = "YT6ZX064G97X12NVED31CJJK34"
         let userInfoString = "User Info"
         let amount = try! SCCMoney(amountCents: 100, currencyCode: "USD")
         let callbackURL = URL(string: "register-sdk-testapp://myCallback")!
@@ -189,6 +198,7 @@ class SCCAPIRequestTests: SCCTestCase {
             userInfoString: userInfoString,
             merchantID: merchantID,
             notes: notes,
+            customerID: customerID,
             supportedTenderTypes: supportedTenderTypes,
             clearsDefaultFees: clearsDefaultFees,
             returnAutomaticallyAfterPayment: autoreturn)
@@ -200,6 +210,7 @@ class SCCAPIRequestTests: SCCTestCase {
             userInfoString: userInfoString,
             merchantID: merchantID,
             notes: notes,
+            customerID: customerID,
             supportedTenderTypes: supportedTenderTypes,
             clearsDefaultFees: clearsDefaultFees,
             returnAutomaticallyAfterPayment: autoreturn))
@@ -212,6 +223,7 @@ class SCCAPIRequestTests: SCCTestCase {
             userInfoString: userInfoString,
             merchantID: merchantID,
             notes: notes,
+            customerID: customerID,
             supportedTenderTypes: supportedTenderTypes,
             clearsDefaultFees: clearsDefaultFees,
             returnAutomaticallyAfterPayment: autoreturn))
@@ -224,6 +236,7 @@ class SCCAPIRequestTests: SCCTestCase {
             userInfoString: userInfoString,
             merchantID: merchantID,
             notes: notes,
+            customerID: customerID,
             supportedTenderTypes: supportedTenderTypes,
             clearsDefaultFees: clearsDefaultFees,
             returnAutomaticallyAfterPayment: autoreturn))
@@ -235,6 +248,7 @@ class SCCAPIRequestTests: SCCTestCase {
             userInfoString: userInfoString,
             merchantID: merchantID,
             notes: notes,
+            customerID: customerID,
             supportedTenderTypes: supportedTenderTypes,
             clearsDefaultFees: clearsDefaultFees,
             returnAutomaticallyAfterPayment: autoreturn))
@@ -246,6 +260,7 @@ class SCCAPIRequestTests: SCCTestCase {
             userInfoString: "DIFFERENT_USER_INFO_STRING",
             merchantID: merchantID,
             notes: notes,
+            customerID: customerID,
             supportedTenderTypes: supportedTenderTypes,
             clearsDefaultFees: clearsDefaultFees,
             returnAutomaticallyAfterPayment: autoreturn))
@@ -257,6 +272,7 @@ class SCCAPIRequestTests: SCCTestCase {
             userInfoString: userInfoString,
             merchantID: "DIFFERENT_MERCHANT_ID",
             notes: notes,
+            customerID: customerID,
             supportedTenderTypes: supportedTenderTypes,
             clearsDefaultFees: clearsDefaultFees,
             returnAutomaticallyAfterPayment: autoreturn))
@@ -268,10 +284,23 @@ class SCCAPIRequestTests: SCCTestCase {
             userInfoString: userInfoString,
             merchantID: merchantID,
             notes: "DIFFERENT_NOTES",
+            customerID: customerID,
             supportedTenderTypes: supportedTenderTypes,
             clearsDefaultFees: clearsDefaultFees,
             returnAutomaticallyAfterPayment: autoreturn))
-
+        
+        // Different customer ID.
+        XCTAssertNotEqual(baseRequest, try! SCCAPIRequest(
+            callbackURL: callbackURL,
+            amount: amount,
+            userInfoString: userInfoString,
+            merchantID: merchantID,
+            notes: notes,
+            customerID: "DIFFERENT_CUSTOMER_ID",
+            supportedTenderTypes: supportedTenderTypes,
+            clearsDefaultFees: clearsDefaultFees,
+            returnAutomaticallyAfterPayment: autoreturn))
+        
         // Different clears default fees.
         XCTAssertNotEqual(baseRequest, try! SCCAPIRequest(
             callbackURL: callbackURL,
@@ -279,6 +308,7 @@ class SCCAPIRequestTests: SCCTestCase {
             userInfoString: userInfoString,
             merchantID: merchantID,
             notes: notes,
+            customerID: customerID,
             supportedTenderTypes: supportedTenderTypes,
             clearsDefaultFees: !clearsDefaultFees,
             returnAutomaticallyAfterPayment: autoreturn))
@@ -290,6 +320,7 @@ class SCCAPIRequestTests: SCCTestCase {
             userInfoString: userInfoString,
             merchantID: merchantID,
             notes: notes,
+            customerID: customerID,
             supportedTenderTypes: supportedTenderTypes,
             clearsDefaultFees: clearsDefaultFees,
             returnAutomaticallyAfterPayment: !autoreturn))
@@ -309,6 +340,7 @@ class SCCAPIRequestTests: SCCTestCase {
             SCCAPIRequestOptionsTenderTypeStringCash,
             SCCAPIRequestOptionsTenderTypeStringOther,
             SCCAPIRequestOptionsTenderTypeStringSquareGiftCard,
+            SCCAPIRequestOptionsTenderTypeStringCardOnFile,
         ])
     }
 }

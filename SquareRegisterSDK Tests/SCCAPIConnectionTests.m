@@ -50,6 +50,7 @@
                                                           userInfoString:nil
                                                               merchantID:nil
                                                                    notes:nil
+                                                              customerID:nil
                                                     supportedTenderTypes:SCCAPIRequestTenderTypeCard
                                                        clearsDefaultFees:NO
                                          returnAutomaticallyAfterPayment:NO
@@ -78,6 +79,7 @@
                                                           userInfoString:nil
                                                               merchantID:nil
                                                                    notes:nil
+                                                              customerID:nil
                                                     supportedTenderTypes:SCCAPIRequestTenderTypeCard
                                                        clearsDefaultFees:NO
                                          returnAutomaticallyAfterPayment:NO

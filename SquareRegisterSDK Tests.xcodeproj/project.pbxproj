@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		3E0592448BFF7C4AC0D4F73C /* Pods_SquareRegisterSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2135BF5C72737CD2FD7420 /* Pods_SquareRegisterSDK_Tests.framework */; };
 		65588757FD3D0B8796C99BCF /* Pods_HelloCharge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84D61797940709E0BC8B7A8 /* Pods_HelloCharge.framework */; };
+		85A6FF421DCBEEE90023D15F /* HelloCharge-Swift.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85A6FF401DCBEEE90023D15F /* HelloCharge-Swift.storyboard */; };
+		85D810C81DC280C200FB4286 /* SquareRegisterSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85D810C71DC280C200FB4286 /* SquareRegisterSDK.framework */; };
 		85EEDAAE1BA261C7009B8340 /* SCCAPIResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EEDAAD1BA261C7009B8340 /* SCCAPIResponseTests.swift */; };
 		8D5B8D771C89112600517590 /* SCCMoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5B8D761C89112600517590 /* SCCMoneyTests.swift */; };
 		8DB920861C8E3E6900AAD8CC /* SCCAPIRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB920851C8E3E6900AAD8CC /* SCCAPIRequestTests.swift */; };
 		8DB9208C1C8E687E00AAD8CC /* SCCAPIConnectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB9208B1C8E687E00AAD8CC /* SCCAPIConnectionTests.m */; };
 		9C98F4661D9472F50078FED4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C98F4651D9472F50078FED4 /* main.m */; };
 		9C98F4691D9472F50078FED4 /* HelloChargeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C98F4681D9472F50078FED4 /* HelloChargeAppDelegate.m */; };
-		9C98F46F1D9472F50078FED4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C98F46D1D9472F50078FED4 /* Main.storyboard */; };
+		9C98F46F1D9472F50078FED4 /* HelloCharge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C98F46D1D9472F50078FED4 /* HelloCharge.storyboard */; };
 		9C98F4711D9472F50078FED4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C98F4701D9472F50078FED4 /* Assets.xcassets */; };
 		9C98F4741D9472F50078FED4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C98F4721D9472F50078FED4 /* LaunchScreen.storyboard */; };
 		9C98F47B1D947D690078FED4 /* HelloChargeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C98F47A1D947D690078FED4 /* HelloChargeTableViewController.m */; };
@@ -24,7 +26,6 @@
 		9CE9D8581D95D82100ACB62E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CE9D8571D95D82100ACB62E /* Assets.xcassets */; };
 		9CE9D8631D95D8AE00ACB62E /* HelloChargeSwiftTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9D8621D95D8AE00ACB62E /* HelloChargeSwiftTableViewController.swift */; };
 		9CE9D8721D95ECE600ACB62E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CE9D86E1D95ECE600ACB62E /* LaunchScreen.storyboard */; };
-		9CE9D8731D95ECE600ACB62E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CE9D8701D95ECE600ACB62E /* Main.storyboard */; };
 		D32DAFE0185C0CF900EB5572 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A02646E17B02E50008E22F5 /* CoreData.framework */; };
 		D32DAFE3185C0D2F00EB5572 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32DAFE1185C0D2300EB5572 /* UIKit.framework */; };
 		D368EE4F185855D700180B41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A02641217B027A2008E22F5 /* Foundation.framework */; };
@@ -53,6 +54,8 @@
 		266852125415334F831385A0 /* Pods-SquareRegisterSDK Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquareRegisterSDK Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SquareRegisterSDK Tests/Pods-SquareRegisterSDK Tests.release.xcconfig"; sourceTree = "<group>"; };
 		5E679D35337DD3F8373EA5EC /* Pods_HelloCharge_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloCharge_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F68204B1D249A2700ACB51A /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = "../../../Library/Developer/Xcode/DerivedData/SquareRegisterSDK_Tests-csmeghvkxhpobrdxjmkoxnqenniy/Build/Products/Debug-iphoneos/OCMock/libOCMock.a"; sourceTree = "<group>"; };
+		85A6FF411DCBEEE90023D15F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/HelloCharge-Swift.storyboard"; sourceTree = "<group>"; };
+		85D810C71DC280C200FB4286 /* SquareRegisterSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SquareRegisterSDK.framework; path = "../../Library/Developer/Xcode/DerivedData/SquareRegisterSDK_Tests-hhxeiiroxofcijhdstsvbknjritu/Build/Products/Debug-iphonesimulator/SquareRegisterSDK/SquareRegisterSDK.framework"; sourceTree = "<group>"; };
 		85EEDAAD1BA261C7009B8340 /* SCCAPIResponseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCCAPIResponseTests.swift; sourceTree = "<group>"; };
 		8D5B8D751C89112600517590 /* SquareRegisterSDK Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SquareRegisterSDK Tests-Bridging-Header.h"; sourceTree = "<group>"; };
 		8D5B8D761C89112600517590 /* SCCMoneyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCCMoneyTests.swift; sourceTree = "<group>"; };
@@ -63,7 +66,7 @@
 		9C98F4651D9472F50078FED4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9C98F4671D9472F50078FED4 /* HelloChargeAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloChargeAppDelegate.h; sourceTree = "<group>"; };
 		9C98F4681D9472F50078FED4 /* HelloChargeAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloChargeAppDelegate.m; sourceTree = "<group>"; };
-		9C98F46E1D9472F50078FED4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9C98F46E1D9472F50078FED4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HelloCharge.storyboard; sourceTree = "<group>"; };
 		9C98F4701D9472F50078FED4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C98F4731D9472F50078FED4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C98F4751D9472F50078FED4 /* HelloCharge-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelloCharge-Info.plist"; sourceTree = "<group>"; };
@@ -78,7 +81,6 @@
 		9CE9D8641D95D98C00ACB62E /* HelloCharge-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "HelloCharge-Swift-Bridging-Header.h"; path = "HelloCharge-Swift/HelloCharge-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		9CE9D86C1D95DBF500ACB62E /* HelloCharge-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloCharge-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		9CE9D86F1D95ECE600ACB62E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = HelloCharge/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
-		9CE9D8711D95ECE600ACB62E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = HelloCharge/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		B84D61797940709E0BC8B7A8 /* Pods_HelloCharge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloCharge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA2135BF5C72737CD2FD7420 /* Pods_SquareRegisterSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SquareRegisterSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D32DAFE1185C0D2300EB5572 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -99,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85D810C81DC280C200FB4286 /* SquareRegisterSDK.framework in Frameworks */,
 				65588757FD3D0B8796C99BCF /* Pods_HelloCharge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,6 +154,7 @@
 		0A02641117B027A2008E22F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				85D810C71DC280C200FB4286 /* SquareRegisterSDK.framework */,
 				9CE9D8641D95D98C00ACB62E /* HelloCharge-Swift-Bridging-Header.h */,
 				7F68204B1D249A2700ACB51A /* libOCMock.a */,
 				0A02646E17B02E50008E22F5 /* CoreData.framework */,
@@ -174,7 +178,7 @@
 				9C98F4681D9472F50078FED4 /* HelloChargeAppDelegate.m */,
 				9C98F4791D947D690078FED4 /* HelloChargeTableViewController.h */,
 				9C98F47A1D947D690078FED4 /* HelloChargeTableViewController.m */,
-				9C98F46D1D9472F50078FED4 /* Main.storyboard */,
+				9C98F46D1D9472F50078FED4 /* HelloCharge.storyboard */,
 				9C98F4701D9472F50078FED4 /* Assets.xcassets */,
 				9C98F4721D9472F50078FED4 /* LaunchScreen.storyboard */,
 				9C98F4751D9472F50078FED4 /* HelloCharge-Info.plist */,
@@ -194,8 +198,8 @@
 		9CE9D84B1D95D81F00ACB62E /* HelloCharge-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				85A6FF401DCBEEE90023D15F /* HelloCharge-Swift.storyboard */,
 				9CE9D86E1D95ECE600ACB62E /* LaunchScreen.storyboard */,
-				9CE9D8701D95ECE600ACB62E /* Main.storyboard */,
 				9CE9D84C1D95D82000ACB62E /* HelloChargeSwiftAppDelegate.swift */,
 				9CE9D8621D95D8AE00ACB62E /* HelloChargeSwiftTableViewController.swift */,
 				9CE9D8571D95D82100ACB62E /* Assets.xcassets */,
@@ -381,7 +385,7 @@
 			files = (
 				9C98F4741D9472F50078FED4 /* LaunchScreen.storyboard in Resources */,
 				9C98F4711D9472F50078FED4 /* Assets.xcassets in Resources */,
-				9C98F46F1D9472F50078FED4 /* Main.storyboard in Resources */,
+				9C98F46F1D9472F50078FED4 /* HelloCharge.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,8 +393,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CE9D8731D95ECE600ACB62E /* Main.storyboard in Resources */,
 				9CE9D8721D95ECE600ACB62E /* LaunchScreen.storyboard in Resources */,
+				85A6FF421DCBEEE90023D15F /* HelloCharge-Swift.storyboard in Resources */,
 				9CE9D8581D95D82100ACB62E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -647,12 +651,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9C98F46D1D9472F50078FED4 /* Main.storyboard */ = {
+		85A6FF401DCBEEE90023D15F /* HelloCharge-Swift.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85A6FF411DCBEEE90023D15F /* Base */,
+			);
+			name = "HelloCharge-Swift.storyboard";
+			sourceTree = "<group>";
+		};
+		9C98F46D1D9472F50078FED4 /* HelloCharge.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				9C98F46E1D9472F50078FED4 /* Base */,
 			);
-			name = Main.storyboard;
+			name = HelloCharge.storyboard;
 			sourceTree = "<group>";
 		};
 		9C98F4721D9472F50078FED4 /* LaunchScreen.storyboard */ = {
@@ -669,14 +681,6 @@
 				9CE9D86F1D95ECE600ACB62E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		9CE9D8701D95ECE600ACB62E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9CE9D8711D95ECE600ACB62E /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		D373DF43185C2468006BAFB3 /* InfoPlist.strings */ = {

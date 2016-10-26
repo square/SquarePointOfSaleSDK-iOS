@@ -23,7 +23,7 @@ enum Section: Int {
 }
 
 
-let allTenderTypes: [SCCAPIRequestTenderTypes] = [.card, .cash, .other, .squareGiftCard]
+let allTenderTypes: [SCCAPIRequestTenderTypes] = [.card, .cash, .other, .squareGiftCard, .cardOnFile]
 
 
 extension String {
@@ -45,6 +45,7 @@ class HelloChargeSwiftTableViewController: UITableViewController {
     @IBOutlet weak var notesField: UITextField!
     @IBOutlet weak var userInfoStringField: UITextField!
     @IBOutlet weak var merchantIDField: UITextField!
+    @IBOutlet weak var customerIDField: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -138,6 +139,7 @@ class HelloChargeSwiftTableViewController: UITableViewController {
         
         let userInfoString = userInfoStringField.text?.nilIfEmpty
         let merchantID = merchantIDField.text?.nilIfEmpty
+        let customerID = customerIDField.text?.nilIfEmpty
         let notes = notesField.text?.nilIfEmpty
 
         let request: SCCAPIRequest
@@ -147,6 +149,7 @@ class HelloChargeSwiftTableViewController: UITableViewController {
                                         userInfoString: userInfoString,
                                         merchantID: merchantID,
                                         notes: notes,
+                                        customerID: customerID,
                                         supportedTenderTypes: supportedTenderTypes,
                                         clearsDefaultFees: clearsDefaultFees,
                                         returnAutomaticallyAfterPayment: returnAutomaticallyAfterPayment)

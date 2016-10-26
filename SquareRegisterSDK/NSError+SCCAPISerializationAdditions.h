@@ -35,7 +35,8 @@ extern NSString *__nonnull const SCCAPIErrorStringInvalidTenderType;
 extern NSString *__nonnull const SCCAPIErrorStringUnsupportedTenderType;
 extern NSString *__nonnull const SCCAPIErrorStringCouldNotPerform;
 extern NSString *__nonnull const SCCAPIErrorStringNoNetworkConnection;
-
+extern NSString *__nonnull const SCCAPIErrorStringCustomerManagementNotSupported;
+extern NSString *__nonnull const SCCAPIErrorStringInvalidCustomerID;
 
 /**
  @param errorCodeString The string value of the API error code.
