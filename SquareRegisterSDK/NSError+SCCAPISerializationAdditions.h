@@ -48,4 +48,4 @@ SCCAPIErrorCode SCCAPIErrorCodeFromString(NSString *__nullable errorCodeString);
  @param errorCode The error code.
  @return The API error code string corresponding to the error code.
  */
-NSString *__nullable NSStringFromSCCAPIErrorCode(SCCAPIErrorCode errorCode);
+NSString *__nullable NSStringFromSCCAPIErrorCode(SCCAPIErrorCode errorCode) __deprecated;

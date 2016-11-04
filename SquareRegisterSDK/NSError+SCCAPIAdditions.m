@@ -224,10 +224,6 @@ SCCAPIErrorCode SCCAPIErrorCodeFromString(NSString *__nullable errorCodeString)
         return SCCAPIErrorCodeNoNetworkConnection;
     }
 
-    if ([errorCodeString isEqualToString:SCCAPIErrorStringClientNotAuthorizedForUser]) {
-        return SCCAPIErrorCodeClientNotAuthorizedForUser;
-    }
-
     if ([errorCodeString isEqualToString:SCCAPIErrorStringUnsupportedAPIVersion]) {
         return SCCAPIErrorCodeUnsupportedAPIVersion;
     }

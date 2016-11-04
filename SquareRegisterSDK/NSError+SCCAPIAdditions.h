@@ -46,7 +46,7 @@ typedef NS_ENUM(NSUInteger, SCCAPIErrorCode) {
     SCCAPIErrorCodeUnsupportedTenderType,
     SCCAPIErrorCodeCouldNotPerform,
     SCCAPIErrorCodeNoNetworkConnection,
-    SCCAPIErrorCodeClientNotAuthorizedForUser,
+    SCCAPIErrorCodeClientNotAuthorizedForUser __deprecated_enum_msg("Starting with Register API version 1.2, the OAuth authorization flow is no longer required for Register API, and this error will never be returned."),
     SCCAPIErrorCodeUnsupportedAPIVersion,
     SCCAPIErrorCodeInvalidVersionNumber,
     SCCAPIErrorCodeCustomerManagementNotSupported,
