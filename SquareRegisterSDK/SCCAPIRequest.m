@@ -28,7 +28,7 @@
 
 
 NSString *__nonnull const SCCSDKVersion = @"2.0";
-NSString *__nonnull const SCCAPIVersion = @"1.1";
+NSString *__nonnull const SCCAPIVersion = @"1.2";
 
 NSString *__nonnull const SCCAPIRequestSDKVersionKey = @"sdk_version";
 NSString *__nonnull const SCCAPIRequestAPIVersionKey = @"version";
@@ -37,6 +37,7 @@ NSString *__nonnull const SCCAPIRequestAmountMoneyKey = @"amount_money";
 NSString *__nonnull const SCCAPIRequestCallbackURLKey = @"callback_url";
 NSString *__nonnull const SCCAPIRequestStateKey = @"state";
 NSString *__nonnull const SCCAPIRequestMerchantIDKey = @"merchant_id";
+NSString *__nonnull const SCCAPIRequestCustomerIDKey = @"customer_id";
 NSString *__nonnull const SCCAPIRequestNotesKey = @"notes";
 NSString *__nonnull const SCCAPIRequestOptionsKey = @"options";
 NSString *__nonnull const SCCAPIRequestOptionsSupportedTenderTypesKey = @"supported_tender_types";
@@ -46,6 +47,7 @@ NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringCard = @"CREDIT_CA
 NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringCash = @"CASH";
 NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringOther = @"OTHER";
 NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringSquareGiftCard = @"SQUARE_GIFT_CARD";
+NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringCardOnFile = @"CARD_ON_FILE";
 
 
 @implementation SCCAPIRequest
@@ -78,6 +80,7 @@ static NSString *__nullable APIClientID = nil;
                                  userInfoString:(nullable NSString *)userInfoString
                                      merchantID:(nullable NSString *)merchantID
                                           notes:(nullable NSString *)notes
+                                     customerID:(nullable NSString *)customerID
                            supportedTenderTypes:(SCCAPIRequestTenderTypes)supportedTenderTypes
                               clearsDefaultFees:(BOOL)clearsDefaultFees
                 returnAutomaticallyAfterPayment:(BOOL)autoreturn
@@ -110,6 +113,7 @@ static NSString *__nullable APIClientID = nil;
                            userInfoString:userInfoString
                                merchantID:merchantID
                                     notes:notes
+                               customerID:customerID
                      supportedTenderTypes:supportedTenderTypes
                         clearsDefaultFees:clearsDefaultFees
           returnAutomaticallyAfterPayment:autoreturn];
@@ -121,6 +125,7 @@ static NSString *__nullable APIClientID = nil;
                   userInfoString:(nullable NSString *)userInfoString
                       merchantID:(nullable NSString *)merchantID
                            notes:(nullable NSString *)notes
+                      customerID:(nullable NSString *)customerID
             supportedTenderTypes:(SCCAPIRequestTenderTypes)supportedTenderTypes
                clearsDefaultFees:(BOOL)clearsDefaultFees
  returnAutomaticallyAfterPayment:(BOOL)autoreturn;
@@ -142,6 +147,7 @@ static NSString *__nullable APIClientID = nil;
     _supportedTenderTypes = supportedTenderTypes;
     _clearsDefaultFees = clearsDefaultFees;
     _returnsAutomaticallyAfterPayment = autoreturn;
+    _customerID = [customerID copy];
 
     return self;
 }
@@ -164,7 +170,7 @@ static NSString *__nullable APIClientID = nil;
 - (NSUInteger)hash;
 {
     NSUInteger const hashOfRequiredFields = self.clientID.hash ^ self.callbackURL.hash ^ self.amount.hash;
-    NSUInteger const hashOfOptionalFields = self.userInfoString.hash ^ self.merchantID.hash ^ self.notes.hash;
+    NSUInteger const hashOfOptionalFields = self.userInfoString.hash ^ self.merchantID.hash ^ self.notes.hash ^ self.customerID.hash;
     NSUInteger const hashOfScalarFields = (NSUInteger)self.supportedTenderTypes ^ (NSUInteger)self.clearsDefaultFees ^ (NSUInteger)self.returnsAutomaticallyAfterPayment;
 
     return hashOfRequiredFields ^ hashOfOptionalFields ^ hashOfScalarFields;
@@ -214,9 +220,10 @@ static NSString *__nullable APIClientID = nil;
     // The following properties are nullable and require additional verification.
     BOOL const haveEqualUserInfoStrings = (!self.userInfoString && !request.userInfoString) || [self.userInfoString isEqual:request.userInfoString];
     BOOL const haveEqualMerchantIDs = (!self.merchantID && !request.merchantID) || [self.merchantID isEqual:request.merchantID];
+    BOOL const haveEqualCustomerIDs = (!self.customerID && !request.customerID) || [self.customerID isEqual:request.customerID];
     BOOL const haveEqualNotes = (!self.notes && !request.notes) || [self.notes isEqual:request.notes];
 
-    if (!(haveEqualUserInfoStrings && haveEqualMerchantIDs && haveEqualNotes)) {
+    if (!(haveEqualUserInfoStrings && haveEqualMerchantIDs && haveEqualNotes && haveEqualCustomerIDs)) {
         return NO;
     }
 
@@ -240,6 +247,7 @@ static NSString *__nullable APIClientID = nil;
     [data SCC_setSafeObject:self.userInfoString forKey:SCCAPIRequestStateKey];
     [data SCC_setSafeObject:self.merchantID forKey:SCCAPIRequestMerchantIDKey];
     [data SCC_setSafeObject:self.notes forKey:SCCAPIRequestNotesKey];
+    [data SCC_setSafeObject:self.customerID forKey:SCCAPIRequestCustomerIDKey];
 
     NSMutableDictionary *const options = [NSMutableDictionary dictionary];
     NSArray *const supportedTenderTypes = NSArrayOfTenderTypeStringsFromSCCAPIRequestTenderTypes(self.supportedTenderTypes);
@@ -290,6 +298,10 @@ NSArray<NSString *> *__nonnull NSArrayOfTenderTypeStringsFromSCCAPIRequestTender
     
     if (tenderTypes & SCCAPIRequestTenderTypeSquareGiftCard) {
         [arrayOfTenderTypes addObject:SCCAPIRequestOptionsTenderTypeStringSquareGiftCard];
+    }
+    
+    if (tenderTypes & SCCAPIRequestTenderTypeCardOnFile) {
+        [arrayOfTenderTypes addObject:SCCAPIRequestOptionsTenderTypeStringCardOnFile];
     }
 
     return arrayOfTenderTypes;

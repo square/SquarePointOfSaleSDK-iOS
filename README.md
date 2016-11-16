@@ -48,6 +48,7 @@ SCCMoney *const amount = [SCCMoney moneyWithAmountCents:100 currencyCode:@"USD" 
                        userInfoString:nil
                            merchantID:nil
                                 notes:@"Coffee"
+                           customerID:nil
                  supportedTenderTypes:SCCAPIRequestTenderTypeAll
                     clearsDefaultFees:NO
       returnAutomaticallyAfterPayment:NO

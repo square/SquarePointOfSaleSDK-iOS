@@ -38,7 +38,10 @@ typedef NS_OPTIONS(NSUInteger, SCCAPIRequestTenderTypes) {
     SCCAPIRequestTenderTypeOther = 1 << 2,
     
     /// Allow the merchant to accept Square gift cards to complete the payment.
-    SCCAPIRequestTenderTypeSquareGiftCard = 1 << 3
+    SCCAPIRequestTenderTypeSquareGiftCard = 1 << 3,
+    
+    /// Allow the merchant to accept Square customers' cards on file to complete the payment.
+    SCCAPIRequestTenderTypeCardOnFile = 1 << 4
 };
 
 
@@ -68,6 +71,10 @@ typedef NS_OPTIONS(NSUInteger, SCCAPIRequestTenderTypes) {
  @param clearsDefaultFees If YES, default fees (i.e., taxes) are not automatically applied to the payment in Square Register.
  @param autoreturn If NO, merchant must tap New Sale in Register to switch back to requesting application on the receipt screen.
    If YES, Register will automatically switch back to the requesting application after a timeout elapses from the receipt screen.
+   Note that if the merchant taps the "Add Customer" or "Save Card on File" buttons at the end of the payment flow, causing a modal
+   to appear in Register before the auto return timeout elapses, we will not automatically switch back to your application, regardless
+   of the value of this parameter.
+ @param customerID The Square-issued ID for the merchant's customer associated with this transaction.
  @param error Stores an error (domain SCCErrorDomain) in the event one or more parameters are invalid.
  */
 + (nullable instancetype)requestWithCallbackURL:(nonnull NSURL *)callbackURL
@@ -75,6 +82,7 @@ typedef NS_OPTIONS(NSUInteger, SCCAPIRequestTenderTypes) {
                                  userInfoString:(nullable NSString *)userInfoString
                                      merchantID:(nullable NSString *)merchantID
                                           notes:(nullable NSString *)notes
+                                     customerID:(nullable NSString*)customerID
                            supportedTenderTypes:(SCCAPIRequestTenderTypes)supportedTenderTypes
                               clearsDefaultFees:(BOOL)clearsDefaultFees
                 returnAutomaticallyAfterPayment:(BOOL)autoreturn
@@ -95,6 +103,9 @@ typedef NS_OPTIONS(NSUInteger, SCCAPIRequestTenderTypes) {
 /// The merchant's Square-issued ID.
 @property (nonatomic, copy, readonly, nullable) NSString *merchantID;
 
+/// The Square-issued ID for the merchant's customer associated with this transaction.
+@property (nonatomic, copy, readonly, nullable) NSString *customerID;
+
 /// A custom note to associate with the resulting payment.
 @property (nonatomic, copy, readonly, nullable) NSString *notes;
 
@@ -106,6 +117,9 @@ typedef NS_OPTIONS(NSUInteger, SCCAPIRequestTenderTypes) {
 
 /// If NO, merchant must tap New Sale in Register to switch back to requesting application on the receipt screen.
 /// If YES, Register will automatically switch back to the requesting application after a timeout elapses.
+/// Note that if the merchant taps the "Add Customer" or "Save Card on File" buttons at the end of the payment flow, causing a modal
+/// to appear in Register before the auto return timeout elapses, we will not automatically switch back to your application, regardless
+/// of the value of this parameter.
 @property (nonatomic, assign, readonly) BOOL returnsAutomaticallyAfterPayment;
 
 /**
@@ -120,12 +134,12 @@ typedef NS_OPTIONS(NSUInteger, SCCAPIRequestTenderTypes) {
 @interface SCCAPIRequest ()
 
 /**
- @see requestWithCallbackURL:amount:userInfoString:merchantID:notes:supportedTenderTypes:clearsDefaultFees:returnAutomaticallyAfterPayment:error:
+ @see requestWithCallbackURL:amount:userInfoString:merchantID:notes:customerID:supportedTenderTypes:clearsDefaultFees:returnAutomaticallyAfterPayment:error:
  */
 + (nonnull instancetype)new  NS_UNAVAILABLE;
 
 /**
- @see requestWithCallbackURL:amount:userInfoString:merchantID:notes:supportedTenderTypes:clearsDefaultFees:returnAutomaticallyAfterPayment:error:
+ @see requestWithCallbackURL:amount:userInfoString:merchantID:notes:customerID:supportedTenderTypes:clearsDefaultFees:returnAutomaticallyAfterPayment:error:
  */
 - (nonnull instancetype)init NS_UNAVAILABLE;
 

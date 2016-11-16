@@ -43,6 +43,7 @@ typedef NS_ENUM(NSUInteger, HelloChargeTableViewSection) {
 @property (weak, nonatomic) IBOutlet UITextField *userInfoStringField;
 @property (weak, nonatomic) IBOutlet UITextField *notesField;
 @property (weak, nonatomic) IBOutlet UITextField *merchantIDField;
+@property (weak, nonatomic) IBOutlet UITextField *customerIDField;
 
 - (IBAction)oauth:(id)sender;
 - (IBAction)charge:(id)sender;
@@ -134,6 +135,7 @@ typedef NS_ENUM(NSUInteger, HelloChargeTableViewSection) {
     
     NSString *userInfoString = self.userInfoStringField.text.length ? self.userInfoStringField.text : nil;
     NSString *merchantID = self.merchantIDField.text.length ? self.merchantIDField.text : nil;
+    NSString *customerID = self.customerIDField.text.length ? self.customerIDField.text : nil;
     NSString *notes = self.notesField.text.length ? self.notesField.text : nil;
     
     SCCAPIRequest *request = [SCCAPIRequest requestWithCallbackURL:[NSURL URLWithString:yourCallbackURLString]
@@ -141,6 +143,7 @@ typedef NS_ENUM(NSUInteger, HelloChargeTableViewSection) {
                                                     userInfoString:userInfoString
                                                         merchantID:merchantID
                                                              notes:notes
+                                                        customerID:customerID
                                               supportedTenderTypes:self.supportedTenderTypes
                                                  clearsDefaultFees:self.clearsDefaultFees
                                    returnAutomaticallyAfterPayment:self.returnAutomaticallyAfterPayment
