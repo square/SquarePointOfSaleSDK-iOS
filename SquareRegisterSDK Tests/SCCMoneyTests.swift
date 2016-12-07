@@ -57,13 +57,13 @@ class SCCMoneyTests: XCTestCase {
         }
     }
 
-    func test_moneyWithAmountCentsCurrencyCodeError_unsupportedCurrency() {
+    func test_moneyWithAmountCentsDoesNotError_previouslyUnsupportedCurrency() {
         do {
-            _ = try SCCMoney(amountCents: 100, currencyCode: "EUR")
+            let money = try SCCMoney(amountCents: 100, currencyCode: "EUR")
+            XCTAssertEqual(money.amountCents, 100);
+            XCTAssertEqual(money.currencyCode, "EUR");
+        } catch _ {
             XCTFail()
-        } catch let error as NSError {
-            XCTAssertEqual(error.domain, SCCErrorDomain);
-            XCTAssertEqual(SCCErrorCode(rawValue: UInt(error.code)), .unsupportedCurrencyCode);
         }
     }
 

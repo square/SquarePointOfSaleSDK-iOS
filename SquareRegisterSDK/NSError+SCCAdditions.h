@@ -32,8 +32,8 @@ typedef NS_ENUM(NSUInteger, SCCErrorCode) {
     /// No currency code was specified.
     SCCErrorCodeMissingCurrencyCode,
 
-    /// An unsupported or invalid currency code was specified.
-    SCCErrorCodeUnsupportedCurrencyCode,
+    /// (Deprecated) An unsupported or invalid currency code was specified.
+    SCCErrorCodeUnsupportedCurrencyCode_Deprecated,
 
     /// No client ID was specified to build a request.
     SCCErrorCodeMissingRequestClientID,
@@ -74,11 +74,6 @@ typedef NS_ENUM(NSUInteger, SCCErrorCode) {
  @return An error indicating that no currency code was specified.
  */
 + (nonnull NSError *)SCC_missingCurrencyCodeError;
-
-/**
- @return An error indicating that an unsupported or invalid currency code was specified.
- */
-+ (nonnull NSError *)SCC_unsupportedCurrencyCodeError;
 
 ///
 /// @name Request Errors

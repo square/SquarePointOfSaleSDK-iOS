@@ -32,16 +32,6 @@ NSString *__nonnull const SCCMoneyRequestDictionaryCurrencyCodeKey = @"currency_
 
 #pragma mark - Class Methods
 
-+ (nonnull NSSet *)setOfSupportedISO4217CurrencyCodes;
-{
-    static NSSet *setOfSupportedISO4217CurrencyCodes = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        setOfSupportedISO4217CurrencyCodes = [NSSet setWithObjects:@"USD", @"CAD", @"JPY", @"AUD", nil];
-    });
-    return setOfSupportedISO4217CurrencyCodes;
-}
-
 + (nullable instancetype)moneyWithAmountCents:(NSInteger)amountCents
                                  currencyCode:(nonnull NSString *)currencyCode
                                         error:(out NSError *__nullable *__nullable)error;
@@ -53,13 +43,6 @@ NSString *__nonnull const SCCMoneyRequestDictionaryCurrencyCodeKey = @"currency_
         return nil;
     }
 
-    if (![[self.class setOfSupportedISO4217CurrencyCodes] containsObject:currencyCode]) {
-        if (error) {
-            *error = [NSError SCC_unsupportedCurrencyCodeError];
-        }
-        return nil;
-    }
-
     return [[self alloc] initWithAmountCents:amountCents currencyCode:currencyCode];
 }
 
@@ -67,8 +50,6 @@ NSString *__nonnull const SCCMoneyRequestDictionaryCurrencyCodeKey = @"currency_
 
 - (instancetype)initWithAmountCents:(NSInteger)amount currencyCode:(nonnull NSString *)currencyCode;
 {
-    NSAssert([[self.class setOfSupportedISO4217CurrencyCodes] containsObject:currencyCode], @"Unsupported currency code.");
-
     self = [super init];
     if (!self) {
         return nil;
