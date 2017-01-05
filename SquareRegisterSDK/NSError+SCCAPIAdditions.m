@@ -113,7 +113,7 @@ NSString *__nonnull const SCCAPIErrorUserInfoCodeStringKey = @"error_code";
     }
 
     if ([errorCodeString isEqualToString:SCCAPIErrorStringAmountTooLarge]) {
-        return @"Amount too small.  Ensure the amount is less than the maximum credit card amount (e.g., $50,000) or add a non-card tender type to your request.";
+        return @"Amount too large.  Ensure the amount is less than the maximum credit card amount (e.g., $50,000) or add a non-card tender type to your request.";
     }
 
     if ([errorCodeString isEqualToString:SCCAPIErrorStringInvalidTenderType]) {

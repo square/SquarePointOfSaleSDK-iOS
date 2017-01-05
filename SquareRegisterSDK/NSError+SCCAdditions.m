@@ -35,13 +35,6 @@ NSString *__nonnull const SCCErrorDomain = @"SCCErrorDomain";
                            userInfo:@{NSLocalizedDescriptionKey : @"Currency code was missing.  Please provide a valid currency code."}];
 }
 
-+ (nonnull NSError *)SCC_unsupportedCurrencyCodeError;
-{
-    return [NSError errorWithDomain:SCCErrorDomain
-                               code:SCCErrorCodeUnsupportedCurrencyCode
-                           userInfo:@{NSLocalizedDescriptionKey : @"Unsupported currency code.  Please provide a code from the set of supported ISO 4217 currency codes found in SCCMoney."}];
-}
-
 #pragma mark - Class Methods - Request Errors
 
 + (nonnull NSError *)SCC_missingRequestClientIDError;

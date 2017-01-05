@@ -27,11 +27,6 @@
 @interface SCCMoney : NSObject <NSCopying>
 
 /**
- @return The set of supported ISO 4217 currency codes.  Only codes in this set may be used with Register API.
- */
-+ (nonnull NSSet *)setOfSupportedISO4217CurrencyCodes;
-
-/**
  @param amountCents Number of the smallest atomic units of the specified currency code.
  @param currencyCode ISO 4217 currency code associated with the amount.
  @param error Stores an error (domain SCCErrorDomain) in the event one or more parameters are invalid.
