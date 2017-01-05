@@ -21,7 +21,6 @@ DerivedData
 # CocoaPods
 Pods
 Podfile.local
-Gemfile.lock
 
 # Carthage
 Carthage/Build
