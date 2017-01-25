@@ -20,6 +20,10 @@ let yourCallbackURL = URL(string: "hellocharge://callback")!
 
 enum Section: Int {
     case amount = 0, supportedTenderTypes, optionalFields, settings
+
+    init?(at indexPath: IndexPath) {
+        self.init(rawValue: indexPath.section)
+    }
 }
 
 
