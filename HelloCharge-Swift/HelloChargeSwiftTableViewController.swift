@@ -61,28 +61,7 @@ class HelloChargeSwiftTableViewController: UITableViewController {
     // MARK: - UITableViewDataSource
 
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        guard let section = Section(at: indexPath) else {
-            return
-        }
-
-        let showCheckmark: Bool
-        switch section {
-        case .supportedTenderTypes:
-            let tenderTypeForRow = allTenderTypes[indexPath.row]
-            showCheckmark = supportedTenderTypes.contains(tenderTypeForRow)
-        case .settings:
-            if indexPath.row == 0 {
-                showCheckmark = clearsDefaultFees
-            } else if indexPath.row == 1 {
-                showCheckmark = returnAutomaticallyAfterPayment
-            } else {
-                return
-            }
-        case .amount, .optionalFields:
-            return
-        }
-
-        if showCheckmark {
+        if shouldShowCheckmark(for: indexPath) {
             cell.accessoryType = .checkmark
         } else {
             cell.accessoryType = .none
@@ -182,6 +161,21 @@ class HelloChargeSwiftTableViewController: UITableViewController {
     }
     
     // MARK: - Private Methods
+    private func shouldShowCheckmark(for indexPath: IndexPath) -> Bool {
+        guard let section = Section(at: indexPath) else {
+            return false
+        }
+
+        switch section {
+        case .supportedTenderTypes:
+            let tenderTypeForRow = allTenderTypes[indexPath.row]
+            return supportedTenderTypes.contains(tenderTypeForRow)
+
+        case .settings where indexPath.row == 0: return clearsDefaultFees
+        case .settings where indexPath.row == 1: return returnAutomaticallyAfterPayment
+        default: return false
+        }
+    }
     
     private func showErrorMessage(title: String, error: NSError) {
         showErrorMessage(title: title, message: error.localizedDescription)
