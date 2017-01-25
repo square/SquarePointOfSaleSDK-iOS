@@ -94,7 +94,7 @@ class HelloChargeSwiftTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        if let section = Section(rawValue: indexPath.section) {
+        if let section = Section(at: indexPath) {
             switch section {
             case .supportedTenderTypes:
                 let tenderTypeForRow = allTenderTypes[indexPath.row]
