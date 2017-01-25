@@ -121,7 +121,7 @@ class HelloChargeSwiftTableViewController: UITableViewController {
         }
         
         let cell = tableView.cellForRow(at: indexPath)!
-        self.tableView(tableView, willDisplay:cell, forRowAt: indexPath)
+        self.tableView(tableView, willDisplay: cell, forRowAt: indexPath)
     }
     
     // MARK: - Actions
@@ -130,6 +130,7 @@ class HelloChargeSwiftTableViewController: UITableViewController {
         guard let oauthURL = URL(string: "https://squareup.com/oauth2/authorize?client_id=\(yourClientID)&scope=PAYMENTS_WRITE&response_type=token") else {
             return
         }
+
         UIApplication.shared.openURL(oauthURL)
     }
     
