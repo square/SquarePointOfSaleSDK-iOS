@@ -61,35 +61,45 @@ class HelloChargeSwiftTableViewController: UITableViewController {
     // MARK: - UITableViewDataSource
 
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if let section = Section(rawValue: indexPath.section) {
-            switch section {
-            case .supportedTenderTypes:
-                let tenderTypeForRow = allTenderTypes[indexPath.row]
-                let checked = supportedTenderTypes.contains(tenderTypeForRow)
-                cell.accessoryType = (checked ? .checkmark : .none)
-            case .settings:
-                if indexPath.row == 0 {
-                    cell.accessoryType = (clearsDefaultFees ? .checkmark : .none)
-                } else if indexPath.row == 1 {
-                    cell.accessoryType = (returnAutomaticallyAfterPayment ? .checkmark : .none)
-                }
-            case .amount, .optionalFields:
+        guard let section = Section(at: indexPath) else {
+            return
+        }
+
+        let showCheckmark: Bool
+        switch section {
+        case .supportedTenderTypes:
+            let tenderTypeForRow = allTenderTypes[indexPath.row]
+            showCheckmark = supportedTenderTypes.contains(tenderTypeForRow)
+        case .settings:
+            if indexPath.row == 0 {
+                showCheckmark = clearsDefaultFees
+            } else if indexPath.row == 1 {
+                showCheckmark = returnAutomaticallyAfterPayment
+            } else {
                 return
             }
+        case .amount, .optionalFields:
+            return
+        }
+
+        if showCheckmark {
+            cell.accessoryType = .checkmark
+        } else {
+            cell.accessoryType = .none
         }
     }
     
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        if let section = Section(rawValue: indexPath.section) {
-            switch section {
-            case .supportedTenderTypes, .settings:
-                return indexPath
-            case .amount, .optionalFields:
-                return nil
-            }
+        guard let section = Section(at: indexPath) else {
+            return nil
         }
-        
-        return nil
+
+        switch section {
+        case .supportedTenderTypes, .settings:
+            return indexPath
+        case .amount, .optionalFields:
+            return nil
+        }
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
