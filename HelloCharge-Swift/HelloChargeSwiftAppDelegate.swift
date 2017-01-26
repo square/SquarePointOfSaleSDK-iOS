@@ -15,16 +15,17 @@ class HelloChargeSwiftAppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         return true
     }
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        
-        guard let sourceApplication = options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String else { return false }
-        guard sourceApplication.hasPrefix("com.squareup.square") else { return false }
-        guard let window = window, let rootViewController = window.rootViewController else { return false }
+        guard let sourceApplication = options[.sourceApplication] as? String,
+            let window = window,
+            let rootViewController = window.rootViewController,
+            sourceApplication.hasPrefix("com.squareup.square") else {
+                return false
+        }
 
         let message: String
         let title: String
