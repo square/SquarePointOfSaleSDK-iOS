@@ -35,7 +35,6 @@
 @implementation SCCAPIConnectionTests
 
 #pragma mark - Tests
-
 - (void)test_canPerformRequestError_isYESWhenApplicationCanOpenURL;
 {
     NSURL *const callbackURL = [NSURL URLWithString:@"my-app://perform-callback"];
@@ -48,7 +47,7 @@
     SCCAPIRequest *const request = [SCCAPIRequest requestWithCallbackURL:callbackURL
                                                                   amount:amount
                                                           userInfoString:nil
-                                                              merchantID:nil
+                                                              locationID:nil
                                                                    notes:nil
                                                               customerID:nil
                                                     supportedTenderTypes:SCCAPIRequestTenderTypeCard
@@ -77,7 +76,7 @@
     SCCAPIRequest *const request = [SCCAPIRequest requestWithCallbackURL:callbackURL
                                                                   amount:amount
                                                           userInfoString:nil
-                                                              merchantID:nil
+                                                              locationID:nil
                                                                    notes:nil
                                                               customerID:nil
                                                     supportedTenderTypes:SCCAPIRequestTenderTypeCard
@@ -95,5 +94,4 @@
     XCTAssertEqualObjects(error.domain, SCCErrorDomain);
     XCTAssertEqual(error.code, SCCErrorCodeCannotPerformRequest);
 }
-
 @end

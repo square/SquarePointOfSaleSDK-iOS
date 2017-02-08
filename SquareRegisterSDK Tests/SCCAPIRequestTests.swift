@@ -48,7 +48,7 @@ class SCCAPIRequestTests: SCCTestCase {
     func test_requestWithCallbackURL_propagatesAllParametersWhenValid() {
         do {
             let notes = "Notes"
-            let merchantID = "7074ME2C077ZB"
+            let locationID = "7074ME2C077ZB"
             let customerID = "YT6ZX064G97X12NVED31CJJK34"
             let userInfoString = "User Info"
             let amount = try! SCCMoney(amountCents: 100, currencyCode: "USD")
@@ -61,7 +61,7 @@ class SCCAPIRequestTests: SCCTestCase {
                 callbackURL: callbackURL,
                 amount: amount,
                 userInfoString: userInfoString,
-                merchantID: merchantID,
+                locationID: locationID,
                 notes: notes,
                 customerID: customerID,
                 supportedTenderTypes: supportedTenderTypes,
@@ -70,7 +70,7 @@ class SCCAPIRequestTests: SCCTestCase {
 
             XCTAssertEqual(completeRequest.clientID, SCCAPIRequestTests.defaultTestClientID)
             XCTAssertEqual(completeRequest.notes, notes)
-            XCTAssertEqual(completeRequest.merchantID, merchantID)
+            XCTAssertEqual(completeRequest.locationID, locationID)
             XCTAssertEqual(completeRequest.customerID, customerID)
             XCTAssertEqual(completeRequest.userInfoString, userInfoString)
             XCTAssertEqual(completeRequest.amount, amount)
@@ -90,7 +90,7 @@ class SCCAPIRequestTests: SCCTestCase {
                 callbackURL: URL(string: "register-sdk-testapp://myCallback")!,
                 amount: try! SCCMoney(amountCents: 100, currencyCode: "USD"),
                 userInfoString: nil,
-                merchantID: nil,
+                locationID: nil,
                 notes: nil,
                 customerID: nil,
                 supportedTenderTypes: SCCAPIRequestTenderTypes.all,
@@ -109,7 +109,7 @@ class SCCAPIRequestTests: SCCTestCase {
                 callbackURL: URL(string: "//myCallback")!,
                 amount: try! SCCMoney(amountCents: 100, currencyCode: "USD"),
                 userInfoString: nil,
-                merchantID: nil,
+                locationID: nil,
                 notes: nil,
                 customerID: nil,
                 supportedTenderTypes: SCCAPIRequestTenderTypes.all,
@@ -128,7 +128,7 @@ class SCCAPIRequestTests: SCCTestCase {
                 callbackURL: URL(string: "register-sdk-testapp://myCallback")!,
                 amount: try! SCCMoney(amountCents: -100, currencyCode: "USD"),
                 userInfoString: nil,
-                merchantID: nil,
+                locationID: nil,
                 notes: nil,
                 customerID: nil,
                 supportedTenderTypes: SCCAPIRequestTenderTypes.all,
@@ -147,7 +147,7 @@ class SCCAPIRequestTests: SCCTestCase {
                 callbackURL: URL(string: "my-app://perform-callback")!,
                 amount: try! SCCMoney(amountCents: 100, currencyCode: "USD"),
                 userInfoString: "state-user-info",
-                merchantID: "abc123",
+                locationID: "abc123",
                 notes: "blue shoes",
                 customerID: "def456",
                 supportedTenderTypes: SCCAPIRequestTenderTypes.card,
@@ -158,14 +158,14 @@ class SCCAPIRequestTests: SCCTestCase {
             let expectedData: [String : Any] = [
                 "client_id" : SCCAPIRequestTests.defaultTestClientID,
                 "sdk_version" : "2.0",
-                "version" : "1.2",
+                "version" : "1.3",
                 "amount_money" : [
                     "amount" : 100,
                     "currency_code" : "USD"
                 ],
                 "callback_url" : "my-app://perform-callback",
                 "state" : "state-user-info",
-                "merchant_id" : "abc123",
+                "location_id" : "abc123",
                 "customer_id": "def456",
                 "notes" : "blue shoes",
                 "options" : [
@@ -183,7 +183,7 @@ class SCCAPIRequestTests: SCCTestCase {
 
     func test_isEqualToAPIRequest_comparesAllFields() {
         let notes = "Notes"
-        let merchantID = "7074ME2C077ZB"
+        let locationID = "7074ME2C077ZB"
         let customerID = "YT6ZX064G97X12NVED31CJJK34"
         let userInfoString = "User Info"
         let amount = try! SCCMoney(amountCents: 100, currencyCode: "USD")
@@ -196,7 +196,7 @@ class SCCAPIRequestTests: SCCTestCase {
             callbackURL: callbackURL,
             amount: amount,
             userInfoString: userInfoString,
-            merchantID: merchantID,
+            locationID: locationID,
             notes: notes,
             customerID: customerID,
             supportedTenderTypes: supportedTenderTypes,
@@ -208,7 +208,7 @@ class SCCAPIRequestTests: SCCTestCase {
             callbackURL: callbackURL,
             amount: amount,
             userInfoString: userInfoString,
-            merchantID: merchantID,
+            locationID: locationID,
             notes: notes,
             customerID: customerID,
             supportedTenderTypes: supportedTenderTypes,
@@ -221,7 +221,7 @@ class SCCAPIRequestTests: SCCTestCase {
             callbackURL: callbackURL,
             amount: amount,
             userInfoString: userInfoString,
-            merchantID: merchantID,
+            locationID: locationID,
             notes: notes,
             customerID: customerID,
             supportedTenderTypes: supportedTenderTypes,
@@ -234,7 +234,7 @@ class SCCAPIRequestTests: SCCTestCase {
             callbackURL: URL(string: "http://google.com")!,
             amount: amount,
             userInfoString: userInfoString,
-            merchantID: merchantID,
+            locationID: locationID,
             notes: notes,
             customerID: customerID,
             supportedTenderTypes: supportedTenderTypes,
@@ -246,7 +246,7 @@ class SCCAPIRequestTests: SCCTestCase {
             callbackURL: callbackURL,
             amount: try! SCCMoney(amountCents: 200, currencyCode: "USD"),
             userInfoString: userInfoString,
-            merchantID: merchantID,
+            locationID: locationID,
             notes: notes,
             customerID: customerID,
             supportedTenderTypes: supportedTenderTypes,
@@ -258,7 +258,7 @@ class SCCAPIRequestTests: SCCTestCase {
             callbackURL: callbackURL,
             amount: amount,
             userInfoString: "DIFFERENT_USER_INFO_STRING",
-            merchantID: merchantID,
+            locationID: locationID,
             notes: notes,
             customerID: customerID,
             supportedTenderTypes: supportedTenderTypes,
@@ -270,7 +270,7 @@ class SCCAPIRequestTests: SCCTestCase {
             callbackURL: callbackURL,
             amount: amount,
             userInfoString: userInfoString,
-            merchantID: "DIFFERENT_MERCHANT_ID",
+            locationID: "DIFFERENT_LOCATION_ID",
             notes: notes,
             customerID: customerID,
             supportedTenderTypes: supportedTenderTypes,
@@ -282,7 +282,7 @@ class SCCAPIRequestTests: SCCTestCase {
             callbackURL: callbackURL,
             amount: amount,
             userInfoString: userInfoString,
-            merchantID: merchantID,
+            locationID: locationID,
             notes: "DIFFERENT_NOTES",
             customerID: customerID,
             supportedTenderTypes: supportedTenderTypes,
@@ -294,7 +294,7 @@ class SCCAPIRequestTests: SCCTestCase {
             callbackURL: callbackURL,
             amount: amount,
             userInfoString: userInfoString,
-            merchantID: merchantID,
+            locationID: locationID,
             notes: notes,
             customerID: "DIFFERENT_CUSTOMER_ID",
             supportedTenderTypes: supportedTenderTypes,
@@ -306,7 +306,7 @@ class SCCAPIRequestTests: SCCTestCase {
             callbackURL: callbackURL,
             amount: amount,
             userInfoString: userInfoString,
-            merchantID: merchantID,
+            locationID: locationID,
             notes: notes,
             customerID: customerID,
             supportedTenderTypes: supportedTenderTypes,
@@ -318,7 +318,7 @@ class SCCAPIRequestTests: SCCTestCase {
             callbackURL: callbackURL,
             amount: amount,
             userInfoString: userInfoString,
-            merchantID: merchantID,
+            locationID: locationID,
             notes: notes,
             customerID: customerID,
             supportedTenderTypes: supportedTenderTypes,

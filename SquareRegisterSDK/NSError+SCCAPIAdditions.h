@@ -34,7 +34,7 @@ typedef NS_ENUM(NSUInteger, SCCAPIErrorCode) {
     SCCAPIErrorCodePayloadMissingOrInvalid,
     SCCAPIErrorCodeAppNotLoggedIn,
     SCCAPIErrorCodeUnused,
-    SCCAPIErrorCodeMerchantIDMismatch,
+    SCCAPIErrorCodeMerchantIDMismatch __deprecated_msg("Starting with Register API version 1.3, this error has been replaced by SCCAPIErrorCodeLocationIDMismatch"),
     SCCAPIErrorCodeUserNotActivated,
     SCCAPIErrorCodeCurrencyMissingOrInvalid,
     SCCAPIErrorCodeCurrencyUnsupported,
@@ -50,7 +50,8 @@ typedef NS_ENUM(NSUInteger, SCCAPIErrorCode) {
     SCCAPIErrorCodeUnsupportedAPIVersion,
     SCCAPIErrorCodeInvalidVersionNumber,
     SCCAPIErrorCodeCustomerManagementNotSupported,
-    SCCAPIErrorCodeInvalidCustomerID
+    SCCAPIErrorCodeInvalidCustomerID,
+    SCCAPIErrorCodeLocationIDMismatch
 };
 
 
