@@ -28,7 +28,7 @@
 
 
 NSString *__nonnull const SCCSDKVersion = @"2.0";
-NSString *__nonnull const SCCAPIVersion = @"1.2";
+NSString *__nonnull const SCCAPIVersion = @"1.3";
 
 NSString *__nonnull const SCCAPIRequestSDKVersionKey = @"sdk_version";
 NSString *__nonnull const SCCAPIRequestAPIVersionKey = @"version";
@@ -36,7 +36,7 @@ NSString *__nonnull const SCCAPIRequestClientIDKey = @"client_id";
 NSString *__nonnull const SCCAPIRequestAmountMoneyKey = @"amount_money";
 NSString *__nonnull const SCCAPIRequestCallbackURLKey = @"callback_url";
 NSString *__nonnull const SCCAPIRequestStateKey = @"state";
-NSString *__nonnull const SCCAPIRequestMerchantIDKey = @"merchant_id";
+NSString *__nonnull const SCCAPIRequestLocationIDKey = @"location_id";
 NSString *__nonnull const SCCAPIRequestCustomerIDKey = @"customer_id";
 NSString *__nonnull const SCCAPIRequestNotesKey = @"notes";
 NSString *__nonnull const SCCAPIRequestOptionsKey = @"options";
@@ -49,6 +49,8 @@ NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringOther = @"OTHER";
 NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringSquareGiftCard = @"SQUARE_GIFT_CARD";
 NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringCardOnFile = @"CARD_ON_FILE";
 
+// Deprecated keys
+NSString *__nonnull const SCCAPIRequestMerchantIDKey = @"location_id";
 
 @implementation SCCAPIRequest
 
@@ -78,7 +80,7 @@ static NSString *__nullable APIClientID = nil;
 + (nullable instancetype)requestWithCallbackURL:(nonnull NSURL *)callbackURL
                                          amount:(nonnull SCCMoney *)amount
                                  userInfoString:(nullable NSString *)userInfoString
-                                     merchantID:(nullable NSString *)merchantID
+                                     locationID:(nullable NSString *)locationID
                                           notes:(nullable NSString *)notes
                                      customerID:(nullable NSString *)customerID
                            supportedTenderTypes:(SCCAPIRequestTenderTypes)supportedTenderTypes
@@ -92,7 +94,7 @@ static NSString *__nullable APIClientID = nil;
         }
         return nil;
     }
-
+    
     if (!amount || amount.amountCents < 0) {
         if (error) {
             *error = [NSError SCC_invalidRequestAmountError];
@@ -111,7 +113,7 @@ static NSString *__nullable APIClientID = nil;
                               callbackURL:callbackURL
                                    amount:amount
                            userInfoString:userInfoString
-                               merchantID:merchantID
+                               locationID:locationID
                                     notes:notes
                                customerID:customerID
                      supportedTenderTypes:supportedTenderTypes
@@ -123,7 +125,7 @@ static NSString *__nullable APIClientID = nil;
                      callbackURL:(nonnull NSURL *)callbackURL
                           amount:(nonnull SCCMoney *)amount
                   userInfoString:(nullable NSString *)userInfoString
-                      merchantID:(nullable NSString *)merchantID
+                      locationID:(nullable NSString *)locatonID
                            notes:(nullable NSString *)notes
                       customerID:(nullable NSString *)customerID
             supportedTenderTypes:(SCCAPIRequestTenderTypes)supportedTenderTypes
@@ -142,7 +144,7 @@ static NSString *__nullable APIClientID = nil;
     _callbackURL = callbackURL;
     _amount = [amount copy];
     _userInfoString = [userInfoString copy];
-    _merchantID = [merchantID copy];
+    _locationID = [locatonID copy];
     _notes = [notes copy];
     _supportedTenderTypes = supportedTenderTypes;
     _clearsDefaultFees = clearsDefaultFees;
@@ -150,6 +152,29 @@ static NSString *__nullable APIClientID = nil;
     _customerID = [customerID copy];
 
     return self;
+}
+
++ (nullable instancetype)requestWithCallbackURL:(nonnull NSURL *)callbackURL
+                                         amount:(nonnull SCCMoney *)amount
+                                 userInfoString:(nullable NSString *)userInfoString
+                                     merchantID:(nullable NSString *)merchantID
+                                          notes:(nullable NSString *)notes
+                                     customerID:(nullable NSString *)customerID
+                           supportedTenderTypes:(SCCAPIRequestTenderTypes)supportedTenderTypes
+                              clearsDefaultFees:(BOOL)clearsDefaultFees
+                returnAutomaticallyAfterPayment:(BOOL)autoreturn
+                                          error:(out NSError *__nullable *__nullable)error __deprecated;
+{
+    return [self requestWithCallbackURL:callbackURL
+                                 amount:amount
+                         userInfoString:userInfoString
+                             locationID:merchantID
+                                  notes:notes
+                             customerID:customerID
+                   supportedTenderTypes:supportedTenderTypes
+                      clearsDefaultFees:clearsDefaultFees
+        returnAutomaticallyAfterPayment:autoreturn
+                                  error:error];
 }
 
 #pragma mark - NSObject
@@ -170,7 +195,7 @@ static NSString *__nullable APIClientID = nil;
 - (NSUInteger)hash;
 {
     NSUInteger const hashOfRequiredFields = self.clientID.hash ^ self.callbackURL.hash ^ self.amount.hash;
-    NSUInteger const hashOfOptionalFields = self.userInfoString.hash ^ self.merchantID.hash ^ self.notes.hash ^ self.customerID.hash;
+    NSUInteger const hashOfOptionalFields = self.userInfoString.hash ^ self.locationID.hash ^ self.notes.hash ^ self.customerID.hash;
     NSUInteger const hashOfScalarFields = (NSUInteger)self.supportedTenderTypes ^ (NSUInteger)self.clearsDefaultFees ^ (NSUInteger)self.returnsAutomaticallyAfterPayment;
 
     return hashOfRequiredFields ^ hashOfOptionalFields ^ hashOfScalarFields;
@@ -197,6 +222,11 @@ static NSString *__nullable APIClientID = nil;
 
 #pragma mark - Public Methods
 
+- (NSString *)merchantID;
+{
+    return self.locationID;
+}
+
 - (BOOL)isEqualToAPIRequest:(nullable SCCAPIRequest *)request;
 {
     if (!request) {
@@ -219,11 +249,11 @@ static NSString *__nullable APIClientID = nil;
 
     // The following properties are nullable and require additional verification.
     BOOL const haveEqualUserInfoStrings = (!self.userInfoString && !request.userInfoString) || [self.userInfoString isEqual:request.userInfoString];
-    BOOL const haveEqualMerchantIDs = (!self.merchantID && !request.merchantID) || [self.merchantID isEqual:request.merchantID];
+    BOOL const haveEqualLocationIDs = (!self.locationID && !request.locationID) || [self.locationID isEqual:request.locationID];
     BOOL const haveEqualCustomerIDs = (!self.customerID && !request.customerID) || [self.customerID isEqual:request.customerID];
     BOOL const haveEqualNotes = (!self.notes && !request.notes) || [self.notes isEqual:request.notes];
 
-    if (!(haveEqualUserInfoStrings && haveEqualMerchantIDs && haveEqualNotes && haveEqualCustomerIDs)) {
+    if (!(haveEqualUserInfoStrings && haveEqualLocationIDs && haveEqualNotes && haveEqualCustomerIDs)) {
         return NO;
     }
 
@@ -245,7 +275,7 @@ static NSString *__nullable APIClientID = nil;
     [data SCC_setSafeObject:self.amount.requestDictionaryRepresentation forKey:SCCAPIRequestAmountMoneyKey];
     [data SCC_setSafeObject:self.callbackURL.absoluteString forKey:SCCAPIRequestCallbackURLKey];
     [data SCC_setSafeObject:self.userInfoString forKey:SCCAPIRequestStateKey];
-    [data SCC_setSafeObject:self.merchantID forKey:SCCAPIRequestMerchantIDKey];
+    [data SCC_setSafeObject:self.locationID forKey:SCCAPIRequestLocationIDKey];
     [data SCC_setSafeObject:self.notes forKey:SCCAPIRequestNotesKey];
     [data SCC_setSafeObject:self.customerID forKey:SCCAPIRequestCustomerIDKey];
 
