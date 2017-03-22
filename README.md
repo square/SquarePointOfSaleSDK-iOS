@@ -1,12 +1,12 @@
-# Square Register SDK
+# Square Point of Sale SDK
 
-[![CI Status](https://travis-ci.org/square/SquareRegisterSDK-iOS.svg?branch=master)](https://travis-ci.org/square/SquareRegisterSDK-iOS)
+[![CI Status](https://travis-ci.org/square/SquarePointOfSaleSDK-iOS.svg?branch=master)](https://travis-ci.org/square/SquarePointOfSaleSDK-iOS)
 [![Carthage Compatibility](https://img.shields.io/badge/carthage-✓-e2c245.svg)](https://github.com/Carthage/Carthage/)
-[![Version](https://img.shields.io/cocoapods/v/SquareRegisterSDK.svg)](http://cocoadocs.org/docsets/SquareRegisterSDK)
-[![License](https://img.shields.io/cocoapods/l/SquareRegisterSDK.svg)](http://cocoadocs.org/docsets/SquareRegisterSDK)
-[![Platform](https://img.shields.io/cocoapods/p/SquareRegisterSDK.svg)](http://cocoadocs.org/docsets/SquareRegisterSDK)
+[![Version](https://img.shields.io/cocoapods/v/SquarePointOfSaleSDK.svg)](http://cocoadocs.org/docsets/SquarePointOfSaleSDK)
+[![License](https://img.shields.io/cocoapods/l/SquarePointOfSaleSDK.svg)](http://cocoadocs.org/docsets/SquarePointOfSaleSDK)
+[![Platform](https://img.shields.io/cocoapods/p/SquarePointOfSaleSDK.svg)](http://cocoadocs.org/docsets/SquarePointOfSaleSDK)
 
-The Square Register SDK lets you quickly and easily add support to your application for completing in-store payments using Square Register.
+The Square Point of Sale SDK lets you quickly and easily add support to your application for completing in-store payments using Square Point of Sale.
 
 ## Getting started
 
@@ -15,24 +15,24 @@ The Square Register SDK lets you quickly and easily add support to your applicat
 #### [CocoaPods](https://cocoapods.org)
 ```
 platform :ios, '8.0'
-pod 'SquareRegisterSDK'
+pod 'SquarePointOfSaleSDK'
 ```
 
 Be sure to call `pod update` and use `pod install --repo-update` to ensure you have the most recent version of the SDK installed.
 
 #### [Carthage](https://github.com/Carthage/Carthage)
 ```
-github "Square/SquareRegisterSDK-iOS"
+github "Square/SquarePointOfSaleSDK-iOS"
 ```
 
 #### Git Submodules
-Checkout the submodule with `git submodule add git@github.com:Square/SquareRegisterSDK-iOS.git`, drag SquareRegisterSDK.xcodeproj to your project, and add SquareRegisterSDK as a build dependency.
+Checkout the submodule with `git submodule add git@github.com:Square/SquarePointOfSaleSDK-iOS.git`, drag SquarePointOfSaleSDK.xcodeproj to your project, and add SquarePointOfSaleSDK as a build dependency.
 
 #### Clone-and-Copy
-You can always just clone this repository and copy the source files from the SquareRegisterSDK directory into your project, but when using this approach, you must manually keep the SDK up-to-date yourself.
+You can always just clone this repository and copy the source files from the SquarePointOfSaleSDK directory into your project, but when using this approach, you must manually keep the SDK up-to-date yourself.
 
 ## Usage
-Integrating Square Register SDK into your app takes just a couple of minutes. Once you've calculated how much you'd like to charge your customer, bundle up the relevant details into an API Request.
+Integrating Square Point of Sale SDK into your app takes just a couple of minutes. Once you've calculated how much you'd like to charge your customer, bundle up the relevant details into an API Request.
 
 ```objc
 // Replace with your app's callback URL.
@@ -55,7 +55,7 @@ SCCMoney *const amount = [SCCMoney moneyWithAmountCents:100 currencyCode:@"USD" 
                                 error:&error];
 ```
 
-When you're ready to charge the customer, use our API Connection object to bring Register into the foreground to complete the payment.
+When you're ready to charge the customer, use our API Connection object to bring Point of Sale into the foreground to complete the payment.
 
 ```objc
 [SCCAPIConnection performRequest:request error:&error];
@@ -76,7 +76,7 @@ Finally, implement the relevant UIApplication delegate.
 }
 ```
 
-You'll need to make two quick changes to your app Info.plist file, one to declare that you'll be looking for Square Register, and one declaring that Register can call you back when it's finished.
+You'll need to make two quick changes to your app Info.plist file, one to declare that you'll be looking for Square Point of Sale, and one declaring that Point of Sale can call you back when it's finished.
 
 ```xml
 <key>LSApplicationQueriesSchemes</key>
@@ -105,7 +105,7 @@ Check out the HelloCharge and HelloCharge-Swift apps in the project for a comple
 * iOS 8 or later.
 
 ## Contributing
-We’re glad you’re interested in Square Register SDK, and we’d love to see where you take it. Please read our [contributing guidelines](Contributing.md) prior to submitting a Pull Request.
+We’re glad you’re interested in Square Point of Sale SDK, and we’d love to see where you take it. Please read our [contributing guidelines](Contributing.md) prior to submitting a Pull Request.
 
 ## License
 Copyright 2016 Square, Inc.
