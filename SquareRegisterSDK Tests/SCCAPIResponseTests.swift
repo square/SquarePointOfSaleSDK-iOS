@@ -19,7 +19,7 @@
 //
 
 import Foundation
-import SquareRegisterSDK
+import SquarePointOfSaleSDK
 import XCTest
 
 

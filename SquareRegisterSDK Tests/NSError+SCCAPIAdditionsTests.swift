@@ -6,7 +6,7 @@
 //  Copyright © 2016 Square, Inc. All rights reserved.
 //
 
-import SquareRegisterSDK
+import SquarePointOfSaleSDK
 import XCTest
 
 class NSError_SCCAPIAdditionsTests: XCTestCase {

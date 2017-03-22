@@ -10,7 +10,6 @@
 		3E0592448BFF7C4AC0D4F73C /* Pods_SquareRegisterSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2135BF5C72737CD2FD7420 /* Pods_SquareRegisterSDK_Tests.framework */; };
 		65588757FD3D0B8796C99BCF /* Pods_HelloCharge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84D61797940709E0BC8B7A8 /* Pods_HelloCharge.framework */; };
 		85A6FF421DCBEEE90023D15F /* HelloCharge-Swift.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85A6FF401DCBEEE90023D15F /* HelloCharge-Swift.storyboard */; };
-		85D810C81DC280C200FB4286 /* SquareRegisterSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85D810C71DC280C200FB4286 /* SquareRegisterSDK.framework */; };
 		85EEDAAE1BA261C7009B8340 /* SCCAPIResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EEDAAD1BA261C7009B8340 /* SCCAPIResponseTests.swift */; };
 		8D5B8D771C89112600517590 /* SCCMoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5B8D761C89112600517590 /* SCCMoneyTests.swift */; };
 		8DB920861C8E3E6900AAD8CC /* SCCAPIRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB920851C8E3E6900AAD8CC /* SCCAPIRequestTests.swift */; };
@@ -81,6 +80,7 @@
 		9CE9D8641D95D98C00ACB62E /* HelloCharge-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "HelloCharge-Swift-Bridging-Header.h"; path = "HelloCharge-Swift/HelloCharge-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		9CE9D86C1D95DBF500ACB62E /* HelloCharge-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloCharge-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		9CE9D86F1D95ECE600ACB62E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = HelloCharge/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		9F55F45F1E8321C800252221 /* SquarePointOfSaleSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SquarePointOfSaleSDK.framework; path = "../../../Library/Developer/Xcode/DerivedData/SquareRegisterSDK_Tests-amipeshyqbmvbgfpocmrtkqsygeu/Build/Products/Debug-iphonesimulator/SquarePointOfSaleSDK/SquarePointOfSaleSDK.framework"; sourceTree = "<group>"; };
 		B84D61797940709E0BC8B7A8 /* Pods_HelloCharge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloCharge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA2135BF5C72737CD2FD7420 /* Pods_SquareRegisterSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SquareRegisterSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D32DAFE1185C0D2300EB5572 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -101,7 +101,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85D810C81DC280C200FB4286 /* SquareRegisterSDK.framework in Frameworks */,
 				65588757FD3D0B8796C99BCF /* Pods_HelloCharge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,6 +153,7 @@
 		0A02641117B027A2008E22F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9F55F45F1E8321C800252221 /* SquarePointOfSaleSDK.framework */,
 				85D810C71DC280C200FB4286 /* SquareRegisterSDK.framework */,
 				9CE9D8641D95D98C00ACB62E /* HelloCharge-Swift-Bridging-Header.h */,
 				7F68204B1D249A2700ACB51A /* libOCMock.a */,

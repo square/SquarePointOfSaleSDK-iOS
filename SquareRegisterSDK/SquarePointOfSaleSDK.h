@@ -1,6 +1,6 @@
 //
-//  SquareRegisterSDK.h
-//  SquareRegisterSDK
+//  SquarePointOfSaleSDK.h
+//  SquarePointOfSaleSDK
 //
 //  Created by Kyle Van Essen on 8/5/13.
 //  Copyright (c) 2013 Square, Inc.
@@ -22,12 +22,12 @@
 #import <Foundation/Foundation.h>
 
 // Categories
-#import <SquareRegisterSDK/NSError+SCCAdditions.h>
-#import <SquareRegisterSDK/NSError+SCCAPIAdditions.h>
-#import <SquareRegisterSDK/NSURL+SCCAdditions.h>
+#import <SquarePointOfSaleSDK/NSError+SCCAdditions.h>
+#import <SquarePointOfSaleSDK/NSError+SCCAPIAdditions.h>
+#import <SquarePointOfSaleSDK/NSURL+SCCAdditions.h>
 
 // Classes
-#import <SquareRegisterSDK/SCCAPIConnection.h>
-#import <SquareRegisterSDK/SCCAPIRequest.h>
-#import <SquareRegisterSDK/SCCAPIResponse.h>
-#import <SquareRegisterSDK/SCCMoney.h>
+#import <SquarePointOfSaleSDK/SCCAPIConnection.h>
+#import <SquarePointOfSaleSDK/SCCAPIRequest.h>
+#import <SquarePointOfSaleSDK/SCCAPIResponse.h>
+#import <SquarePointOfSaleSDK/SCCMoney.h>

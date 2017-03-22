@@ -8,7 +8,7 @@
 
 #import "HelloChargeAppDelegate.h"
 
-#import "SquareRegisterSDK.h"
+#import "SquarePointOfSaleSDK.h"
 
 
 @implementation HelloChargeAppDelegate
