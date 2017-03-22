@@ -18,7 +18,7 @@
 //  limitations under the License.
 //
 
-#import <SquareRegisterSDK/SCCMoney.h>
+#import <SquarePointOfSaleSDK/SCCMoney.h>
 
 
 /// The key associated with cents amount number in a dictionary representation of a money object.

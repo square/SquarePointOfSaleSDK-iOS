@@ -18,7 +18,7 @@
 //  limitations under the License.
 //
 
-#import <SquareRegisterSDK/SCCAPIResponse.h>
+#import <SquarePointOfSaleSDK/SCCAPIResponse.h>
 
 
 typedef NS_ENUM(NSUInteger, SCCAPIResponseStatus) {

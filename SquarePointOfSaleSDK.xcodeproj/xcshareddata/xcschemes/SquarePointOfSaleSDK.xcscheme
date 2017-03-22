@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8D3BD92B1CA9D6C600DA2B06"
-               BuildableName = "SquareRegisterSDK.framework"
-               BlueprintName = "SquareRegisterSDK"
-               ReferencedContainer = "container:SquareRegisterSDK.xcodeproj">
+               BuildableName = "SquarePointOfSaleSDK.framework"
+               BlueprintName = "SquarePointOfSaleSDK"
+               ReferencedContainer = "container:SquarePointOfSaleSDK.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,9 +46,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8D3BD92B1CA9D6C600DA2B06"
-            BuildableName = "SquareRegisterSDK.framework"
-            BlueprintName = "SquareRegisterSDK"
-            ReferencedContainer = "container:SquareRegisterSDK.xcodeproj">
+            BuildableName = "SquarePointOfSaleSDK.framework"
+            BlueprintName = "SquarePointOfSaleSDK"
+            ReferencedContainer = "container:SquarePointOfSaleSDK.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -64,9 +64,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8D3BD92B1CA9D6C600DA2B06"
-            BuildableName = "SquareRegisterSDK.framework"
-            BlueprintName = "SquareRegisterSDK"
-            ReferencedContainer = "container:SquareRegisterSDK.xcodeproj">
+            BuildableName = "SquarePointOfSaleSDK.framework"
+            BlueprintName = "SquarePointOfSaleSDK"
+            ReferencedContainer = "container:SquarePointOfSaleSDK.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8D3BD92F1CA9D6C600DA2B06 /* SquareRegisterSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D3BD92E1CA9D6C600DA2B06 /* SquareRegisterSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D3BD92F1CA9D6C600DA2B06 /* SquarePointOfSaleSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D3BD92E1CA9D6C600DA2B06 /* SquarePointOfSaleSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D3BD9341CA9D6CD00DA2B06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3BD9251CA9D65C00DA2B06 /* Foundation.framework */; };
 		8D3BD9351CA9D6D100DA2B06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3BD9231CA9D65700DA2B06 /* UIKit.framework */; };
 		8D3BD9371CA9D6D400DA2B06 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3BD9361CA9D6D400DA2B06 /* CoreFoundation.framework */; };
@@ -50,11 +50,11 @@
 		8D3BD91B1CA9D63E00DA2B06 /* SCCAPIResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCAPIResponse.m; sourceTree = "<group>"; };
 		8D3BD91C1CA9D63E00DA2B06 /* SCCMoney.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCMoney.h; sourceTree = "<group>"; };
 		8D3BD91D1CA9D63E00DA2B06 /* SCCMoney.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCMoney.m; sourceTree = "<group>"; };
-		8D3BD9221CA9D64600DA2B06 /* SquareRegisterSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareRegisterSDK.h; sourceTree = "<group>"; };
+		8D3BD9221CA9D64600DA2B06 /* SquarePointOfSaleSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquarePointOfSaleSDK.h; sourceTree = "<group>"; };
 		8D3BD9231CA9D65700DA2B06 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8D3BD9251CA9D65C00DA2B06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		8D3BD92C1CA9D6C600DA2B06 /* SquareRegisterSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SquareRegisterSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D3BD92E1CA9D6C600DA2B06 /* SquareRegisterSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SquareRegisterSDK.h; sourceTree = "<group>"; };
+		8D3BD92C1CA9D6C600DA2B06 /* SquarePointOfSaleSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SquarePointOfSaleSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D3BD92E1CA9D6C600DA2B06 /* SquarePointOfSaleSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SquarePointOfSaleSDK.h; sourceTree = "<group>"; };
 		8D3BD9301CA9D6C600DA2B06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D3BD9361CA9D6D400DA2B06 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		8DF7312C1CA9EC540072012A /* NSError+SCCAPISerializationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+SCCAPISerializationAdditions.h"; sourceTree = "<group>"; };
@@ -80,8 +80,8 @@
 		8D3BD8F21CA9D5EE00DA2B06 = {
 			isa = PBXGroup;
 			children = (
-				8D3BD8FD1CA9D5EE00DA2B06 /* SquareRegisterSDK */,
-				8D3BD92D1CA9D6C600DA2B06 /* SquareRegisterSDK */,
+				8D3BD8FD1CA9D5EE00DA2B06 /* SquarePointOfSaleSDK */,
+				8D3BD92D1CA9D6C600DA2B06 /* SquarePointOfSaleSDK */,
 				8D3BD9081CA9D61900DA2B06 /* Frameworks */,
 				8D3BD8FC1CA9D5EE00DA2B06 /* Products */,
 			);
@@ -90,18 +90,19 @@
 		8D3BD8FC1CA9D5EE00DA2B06 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D3BD92C1CA9D6C600DA2B06 /* SquareRegisterSDK.framework */,
+				8D3BD92C1CA9D6C600DA2B06 /* SquarePointOfSaleSDK.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8D3BD8FD1CA9D5EE00DA2B06 /* SquareRegisterSDK */ = {
+		8D3BD8FD1CA9D5EE00DA2B06 /* SquarePointOfSaleSDK */ = {
 			isa = PBXGroup;
 			children = (
-				8D3BD9221CA9D64600DA2B06 /* SquareRegisterSDK.h */,
+				8D3BD9221CA9D64600DA2B06 /* SquarePointOfSaleSDK.h */,
 				8D3BD9091CA9D62300DA2B06 /* Categories */,
 				8D3BD9071CA9D61500DA2B06 /* Classes */,
 			);
+			name = SquarePointOfSaleSDK;
 			path = SquareRegisterSDK;
 			sourceTree = "<group>";
 		};
@@ -149,12 +150,13 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
-		8D3BD92D1CA9D6C600DA2B06 /* SquareRegisterSDK */ = {
+		8D3BD92D1CA9D6C600DA2B06 /* SquarePointOfSaleSDK */ = {
 			isa = PBXGroup;
 			children = (
-				8D3BD92E1CA9D6C600DA2B06 /* SquareRegisterSDK.h */,
+				8D3BD92E1CA9D6C600DA2B06 /* SquarePointOfSaleSDK.h */,
 				8D3BD9301CA9D6C600DA2B06 /* Info.plist */,
 			);
+			name = SquarePointOfSaleSDK;
 			path = SquareRegisterSDK;
 			sourceTree = "<group>";
 		};
@@ -174,7 +176,7 @@
 				8D3BD9471CA9D72D00DA2B06 /* NSURL+SCCAdditions.h in Headers */,
 				8D3BD9441CA9D72500DA2B06 /* NSError+SCCAdditions.h in Headers */,
 				8DF731311CA9EC540072012A /* SCCAPIRequest+Serialization.h in Headers */,
-				8D3BD92F1CA9D6C600DA2B06 /* SquareRegisterSDK.h in Headers */,
+				8D3BD92F1CA9D6C600DA2B06 /* SquarePointOfSaleSDK.h in Headers */,
 				8D3BD9411CA9D6F100DA2B06 /* SCCAPIRequest.h in Headers */,
 				8D3BD9401CA9D6F100DA2B06 /* SCCAPIConnection.h in Headers */,
 				8DF731321CA9EC540072012A /* SCCAPIResponse+Serialization.h in Headers */,
@@ -184,9 +186,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		8D3BD92B1CA9D6C600DA2B06 /* SquareRegisterSDK */ = {
+		8D3BD92B1CA9D6C600DA2B06 /* SquarePointOfSaleSDK */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8D3BD9311CA9D6C600DA2B06 /* Build configuration list for PBXNativeTarget "SquareRegisterSDK" */;
+			buildConfigurationList = 8D3BD9311CA9D6C600DA2B06 /* Build configuration list for PBXNativeTarget "SquarePointOfSaleSDK" */;
 			buildPhases = (
 				8D3BD9271CA9D6C600DA2B06 /* Sources */,
 				8D3BD9281CA9D6C600DA2B06 /* Frameworks */,
@@ -197,9 +199,9 @@
 			);
 			dependencies = (
 			);
-			name = SquareRegisterSDK;
+			name = SquarePointOfSaleSDK;
 			productName = SquareRegisterSDK;
-			productReference = 8D3BD92C1CA9D6C600DA2B06 /* SquareRegisterSDK.framework */;
+			productReference = 8D3BD92C1CA9D6C600DA2B06 /* SquarePointOfSaleSDK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -216,7 +218,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8D3BD8F61CA9D5EE00DA2B06 /* Build configuration list for PBXProject "SquareRegisterSDK" */;
+			buildConfigurationList = 8D3BD8F61CA9D5EE00DA2B06 /* Build configuration list for PBXProject "SquarePointOfSaleSDK" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -228,7 +230,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D3BD92B1CA9D6C600DA2B06 /* SquareRegisterSDK */,
+				8D3BD92B1CA9D6C600DA2B06 /* SquarePointOfSaleSDK */,
 			);
 		};
 /* End PBXProject section */
@@ -353,7 +355,7 @@
 				INFOPLIST_FILE = SquareRegisterSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.squareup.SquareRegisterSDK;
+				PRODUCT_BUNDLE_IDENTIFIER = com.squareup.SquarePointOfSaleSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -373,7 +375,7 @@
 				INFOPLIST_FILE = SquareRegisterSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.squareup.SquareRegisterSDK;
+				PRODUCT_BUNDLE_IDENTIFIER = com.squareup.SquarePointOfSaleSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -385,7 +387,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8D3BD8F61CA9D5EE00DA2B06 /* Build configuration list for PBXProject "SquareRegisterSDK" */ = {
+		8D3BD8F61CA9D5EE00DA2B06 /* Build configuration list for PBXProject "SquarePointOfSaleSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8D3BD9021CA9D5EE00DA2B06 /* Debug */,
@@ -394,7 +396,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8D3BD9311CA9D6C600DA2B06 /* Build configuration list for PBXNativeTarget "SquareRegisterSDK" */ = {
+		8D3BD9311CA9D6C600DA2B06 /* Build configuration list for PBXNativeTarget "SquarePointOfSaleSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8D3BD9321CA9D6C600DA2B06 /* Debug */,
