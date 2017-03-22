@@ -15,14 +15,14 @@ The Square Register SDK lets you quickly and easily add support to your applicat
 #### [CocoaPods](https://cocoapods.org)
 ```
 platform :ios, '8.0'
-pod 'SquareRegisterSDK'
+pod 'SquarePointOfSaleSDK'
 ```
 
 Be sure to call `pod update` and use `pod install --repo-update` to ensure you have the most recent version of the SDK installed.
 
 #### [Carthage](https://github.com/Carthage/Carthage)
 ```
-github "Square/SquareRegisterSDK-iOS"
+github "Square/SquarePointOfSaleSDK-iOS"
 ```
 
 #### Git Submodules
