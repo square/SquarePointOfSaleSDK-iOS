@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage     = 'https://github.com/kgleong/SquarePointOfSaleSDK-iOS/'
   s.license      = { :type => 'Apache License, Version 2.0', :text => "© #{ Date.today.year } Square, Inc." }
   s.authors      = 'Square'
-  s.source       = { :git => 'https://github.com/kgleong/SquareRegisterSDK-iOS.git', :tag => s.version }
+  s.source       = { :git => 'https://github.com/kgleong/SquarePointOfSaleSDK-iOS.git', :tag => s.version }
 
   s.ios.deployment_target = '8.0'
 
