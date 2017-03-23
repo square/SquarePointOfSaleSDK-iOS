@@ -43,16 +43,17 @@ SCCMoney *const amount = [SCCMoney moneyWithAmountCents:100 currencyCode:@"USD" 
 
 // Note: You only need to set your client ID once, before creating your first request.
 [SCCAPIRequest setClientID:@"YOUR_CLIENT_ID"];
-[SCCAPIRequest requestWithCallbackURL:callbackURL
-                               amount:amount
-                       userInfoString:nil
-                           merchantID:nil
-                                notes:@"Coffee"
-                           customerID:nil
-                 supportedTenderTypes:SCCAPIRequestTenderTypeAll
-                    clearsDefaultFees:NO
-      returnAutomaticallyAfterPayment:NO
-                                error:&error];
+
+request = [SCCAPIRequest requestWithCallbackURL:callbackURL
+                                         amount:amount
+                                 userInfoString:nil
+                                     merchantID:nil
+                                          notes:@"Coffee"
+                                     customerID:nil
+                           supportedTenderTypes:SCCAPIRequestTenderTypeAll
+                              clearsDefaultFees:NO
+                returnAutomaticallyAfterPayment:NO
+                                          error:&error];
 ```
 
 When you're ready to charge the customer, use our API Connection object to bring Point of Sale into the foreground to complete the payment.

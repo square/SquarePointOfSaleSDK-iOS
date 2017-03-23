@@ -1,6 +1,6 @@
 PODS:
   - OCMock (3.3.1)
-  - SquarePointOfSaleSDK (3.0.beta.2)
+  - SquarePointOfSaleSDK (3.0.rc.1)
 
 DEPENDENCIES:
   - OCMock (~> 3.1)
@@ -12,7 +12,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   OCMock: f3f61e6eaa16038c30caa5798c5e49d3307b6f22
-  SquarePointOfSaleSDK: 47a81d1f6a2e6014a46f83af8a1e60a02c5a1606
+  SquarePointOfSaleSDK: 27275d9798a63925cb2b718a4c63b1e093a23d45
 
 PODFILE CHECKSUM: ccc81ef0e52c4416bc8bb487f3ed14ba80d8fa4a
 

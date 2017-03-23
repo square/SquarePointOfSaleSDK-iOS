@@ -157,7 +157,7 @@ class SCCAPIRequestTests: SCCTestCase {
 
             let expectedData: [String : Any] = [
                 "client_id" : SCCAPIRequestTests.defaultTestClientID,
-                "sdk_version" : "2.0",
+                "sdk_version" : "3.0",
                 "version" : "1.2",
                 "amount_money" : [
                     "amount" : 100,
@@ -288,7 +288,7 @@ class SCCAPIRequestTests: SCCTestCase {
             supportedTenderTypes: supportedTenderTypes,
             clearsDefaultFees: clearsDefaultFees,
             returnAutomaticallyAfterPayment: autoreturn))
-        
+
         // Different customer ID.
         XCTAssertNotEqual(baseRequest, try! SCCAPIRequest(
             callbackURL: callbackURL,
@@ -300,7 +300,7 @@ class SCCAPIRequestTests: SCCTestCase {
             supportedTenderTypes: supportedTenderTypes,
             clearsDefaultFees: clearsDefaultFees,
             returnAutomaticallyAfterPayment: autoreturn))
-        
+
         // Different clears default fees.
         XCTAssertNotEqual(baseRequest, try! SCCAPIRequest(
             callbackURL: callbackURL,
