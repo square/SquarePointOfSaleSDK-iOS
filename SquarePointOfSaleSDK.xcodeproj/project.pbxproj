@@ -26,7 +26,7 @@
 		8D3BD9441CA9D72500DA2B06 /* NSError+SCCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D3BD90C1CA9D62E00DA2B06 /* NSError+SCCAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D3BD9451CA9D72500DA2B06 /* NSError+SCCAPIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D3BD90E1CA9D62E00DA2B06 /* NSError+SCCAPIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D3BD9461CA9D72D00DA2B06 /* NSDictionary+SCCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D3BD90A1CA9D62E00DA2B06 /* NSDictionary+SCCAdditions.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		8D3BD9471CA9D72D00DA2B06 /* NSURL+SCCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D3BD9101CA9D62E00DA2B06 /* NSURL+SCCAdditions.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		8D3BD9471CA9D72D00DA2B06 /* NSURL+SCCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D3BD9101CA9D62E00DA2B06 /* NSURL+SCCAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8DF731301CA9EC540072012A /* NSError+SCCAPISerializationAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DF7312C1CA9EC540072012A /* NSError+SCCAPISerializationAdditions.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		8DF731311CA9EC540072012A /* SCCAPIRequest+Serialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DF7312D1CA9EC540072012A /* SCCAPIRequest+Serialization.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		8DF731321CA9EC540072012A /* SCCAPIResponse+Serialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DF7312E1CA9EC540072012A /* SCCAPIResponse+Serialization.h */; settings = {ATTRIBUTES = (Private, ); }; };
