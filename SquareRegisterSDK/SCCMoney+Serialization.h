@@ -1,6 +1,6 @@
 //
 //  SCCMoney+Serialization.h
-//  SquareRegisterSDK
+//  SquarePointOfSaleSDK
 //
 //  Created by Martin Mroz on 3/28/16.
 //  Copyright (c) 2016 Square, Inc.
@@ -18,7 +18,7 @@
 //  limitations under the License.
 //
 
-#import <SquareRegisterSDK/SCCMoney.h>
+#import <SquarePointOfSaleSDK/SCCMoney.h>
 
 
 /// The key associated with cents amount number in a dictionary representation of a money object.

@@ -6,7 +6,7 @@
 //  Copyright © 2016 Square, Inc. All rights reserved.
 //
 
-import SquareRegisterSDK
+import SquarePointOfSaleSDK
 import UIKit
 
 
@@ -48,7 +48,7 @@ class HelloChargeSwiftTableViewController: UITableViewController {
     
     @IBOutlet weak var notesField: UITextField!
     @IBOutlet weak var userInfoStringField: UITextField!
-    @IBOutlet weak var locationIDField: UITextField!
+    @IBOutlet weak var merchantIDField: UITextField!
     @IBOutlet weak var customerIDField: UITextField!
     
     override func awakeFromNib() {
@@ -132,7 +132,7 @@ class HelloChargeSwiftTableViewController: UITableViewController {
         }
         
         let userInfoString = userInfoStringField.text?.nilIfEmpty
-        let locationID = locationIDField.text?.nilIfEmpty
+        let merchantID = merchantIDField.text?.nilIfEmpty
         let customerID = customerIDField.text?.nilIfEmpty
         let notes = notesField.text?.nilIfEmpty
 
@@ -141,7 +141,7 @@ class HelloChargeSwiftTableViewController: UITableViewController {
             request = try SCCAPIRequest(callbackURL: yourCallbackURL,
                                         amount: amount,
                                         userInfoString: userInfoString,
-                                        locationID: locationID,
+                                        merchantID: merchantID,
                                         notes: notes,
                                         customerID: customerID,
                                         supportedTenderTypes: supportedTenderTypes,

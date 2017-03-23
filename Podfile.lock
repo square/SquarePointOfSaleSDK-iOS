@@ -1,19 +1,19 @@
 PODS:
   - OCMock (3.3.1)
-  - SquareRegisterSDK (2.2)
+  - SquarePointOfSaleSDK (3.0.rc.1)
 
 DEPENDENCIES:
   - OCMock (~> 3.1)
-  - SquareRegisterSDK (from `SquareRegisterSDK.podspec`)
+  - SquarePointOfSaleSDK (from `SquarePointOfSaleSDK.podspec`)
 
 EXTERNAL SOURCES:
-  SquareRegisterSDK:
-    :path: SquareRegisterSDK.podspec
+  SquarePointOfSaleSDK:
+    :path: SquarePointOfSaleSDK.podspec
 
 SPEC CHECKSUMS:
   OCMock: f3f61e6eaa16038c30caa5798c5e49d3307b6f22
-  SquareRegisterSDK: b0b9031bab04bc2279cec482e85290546a9bd8ec
+  SquarePointOfSaleSDK: 27275d9798a63925cb2b718a4c63b1e093a23d45
 
-PODFILE CHECKSUM: e87a353312f4f52953a24f66a1cd188f2dc48ad9
+PODFILE CHECKSUM: ccc81ef0e52c4416bc8bb487f3ed14ba80d8fa4a
 
-COCOAPODS: 1.1.0
+COCOAPODS: 1.1.0.rc.2

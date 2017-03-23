@@ -9,7 +9,7 @@
 
 #import "HelloChargeTableViewController.h"
 
-#import "SquareRegisterSDK.h"
+#import "SquarePointOfSaleSDK.h"
 
 
 // Replace with the Application ID found in the Square Application Dashboard [https://connect.squareup.com/apps].
@@ -42,7 +42,7 @@ typedef NS_ENUM(NSUInteger, HelloChargeTableViewSection) {
 
 @property (weak, nonatomic) IBOutlet UITextField *userInfoStringField;
 @property (weak, nonatomic) IBOutlet UITextField *notesField;
-@property (weak, nonatomic) IBOutlet UITextField *locationIDField;
+@property (weak, nonatomic) IBOutlet UITextField *merchantIDField;
 @property (weak, nonatomic) IBOutlet UITextField *customerIDField;
 
 - (IBAction)oauth:(id)sender;
@@ -134,14 +134,14 @@ typedef NS_ENUM(NSUInteger, HelloChargeTableViewSection) {
     }
     
     NSString *userInfoString = self.userInfoStringField.text.length ? self.userInfoStringField.text : nil;
-    NSString *locationID = self.locationIDField.text.length ? self.locationIDField.text : nil;
+    NSString *merchantID = self.merchantIDField.text.length ? self.merchantIDField.text : nil;
     NSString *customerID = self.customerIDField.text.length ? self.customerIDField.text : nil;
     NSString *notes = self.notesField.text.length ? self.notesField.text : nil;
     
     SCCAPIRequest *request = [SCCAPIRequest requestWithCallbackURL:[NSURL URLWithString:yourCallbackURLString]
                                                             amount:amount
                                                     userInfoString:userInfoString
-                                                        locationID:locationID
+                                                        merchantID:merchantID
                                                              notes:notes
                                                         customerID:customerID
                                               supportedTenderTypes:self.supportedTenderTypes

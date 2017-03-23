@@ -1,6 +1,6 @@
 //
 //  SCCAPIConnection.h
-//  SquareRegisterSDK
+//  SquarePointOfSaleSDK
 //
 //  Created by Martin Mroz on 3/7/16.
 //  Copyright (c) 2016 Square, Inc.
@@ -25,7 +25,7 @@
 
 
 /**
- Validates and executes Register API requests.
+ Validates and executes Point of Sale API requests.
  */
 @interface SCCAPIConnection : NSObject
 

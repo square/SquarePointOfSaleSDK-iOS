@@ -1,6 +1,6 @@
 //
 //  SCCAPIRequest+Serialization.h
-//  SquareRegisterSDK
+//  SquarePointOfSaleSDK
 //
 //  Created by Martin Mroz on 3/28/16.
 //  Copyright (c) 2016 Square, Inc.
@@ -18,14 +18,14 @@
 //  limitations under the License.
 //
 
-#import <SquareRegisterSDK/SCCAPIRequest.h>
+#import <SquarePointOfSaleSDK/SCCAPIRequest.h>
 
 
 extern NSString *__nonnull const SCCAPIRequestClientIDKey;
 extern NSString *__nonnull const SCCAPIRequestAmountMoneyKey;
 extern NSString *__nonnull const SCCAPIRequestCallbackURLKey;
 extern NSString *__nonnull const SCCAPIRequestStateKey;
-extern NSString *__nonnull const SCCAPIRequestLocationIDKey;
+extern NSString *__nonnull const SCCAPIRequestMerchantIDKey;
 extern NSString *__nonnull const SCCAPIRequestCustomerIDKey;
 extern NSString *__nonnull const SCCAPIRequestNotesKey;
 extern NSString *__nonnull const SCCAPIRequestOptionsKey;
@@ -38,8 +38,6 @@ extern NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringOther;
 extern NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringSquareGiftCard;
 extern NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringCardOnFile;
 
-// Deprecated keys
-extern NSString *__nonnull const SCCAPIRequestMerchantIDKey __deprecated_msg("Use SCCAPIRequestLocationIDKey instead");
 
 /**
  @param tenderTypes Combination of API Request Tender Types.
@@ -51,7 +49,7 @@ NSArray<NSString *> *__nonnull NSArrayOfTenderTypeStringsFromSCCAPIRequestTender
 @interface SCCAPIRequest (Serialization)
 
 /**
- Generates the URL that the request would use to communicate with Square Register, based on current property values.
+ Generates the URL that the request would use to communicate with Square Point of Sale, based on current property values.
  @param error Stores an error (domain SCCErrorDomain) in the event the URL could not be generated.
  @return The URL corresponding to the API request, or `nil`.
  */

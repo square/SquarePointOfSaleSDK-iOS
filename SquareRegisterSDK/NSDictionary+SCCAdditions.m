@@ -1,6 +1,6 @@
 //
 //  NSDictionary+SCCAdditions.m
-//  SquareRegisterSDK
+//  SquarePointOfSaleSDK
 //
 //  Created by Mark Jen on 2/26/14.
 //  Copyright (c) 2014 Square, Inc.

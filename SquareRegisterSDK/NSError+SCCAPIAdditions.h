@@ -1,6 +1,6 @@
 //
 //  NSError+SCCAPIAdditions.h
-//  SquareRegisterSDK
+//  SquarePointOfSaleSDK
 //
 //  Created by Martin Mroz on 3/14/16.
 //  Copyright (c) 2016 Square, Inc.
@@ -34,7 +34,7 @@ typedef NS_ENUM(NSUInteger, SCCAPIErrorCode) {
     SCCAPIErrorCodePayloadMissingOrInvalid,
     SCCAPIErrorCodeAppNotLoggedIn,
     SCCAPIErrorCodeUnused,
-    SCCAPIErrorCodeMerchantIDMismatch __deprecated_msg("Starting with Register API version 1.3, this error has been replaced by SCCAPIErrorCodeLocationIDMismatch"),
+    SCCAPIErrorCodeMerchantIDMismatch,
     SCCAPIErrorCodeUserNotActivated,
     SCCAPIErrorCodeCurrencyMissingOrInvalid,
     SCCAPIErrorCodeCurrencyUnsupported,
@@ -46,20 +46,19 @@ typedef NS_ENUM(NSUInteger, SCCAPIErrorCode) {
     SCCAPIErrorCodeUnsupportedTenderType,
     SCCAPIErrorCodeCouldNotPerform,
     SCCAPIErrorCodeNoNetworkConnection,
-    SCCAPIErrorCodeClientNotAuthorizedForUser __deprecated_enum_msg("Starting with Register API version 1.2, the OAuth authorization flow is no longer required for Register API, and this error will never be returned."),
+    SCCAPIErrorCodeClientNotAuthorizedForUser __deprecated_enum_msg("Starting with Point of Sale API version 1.2, the OAuth authorization flow is no longer required for Point of Sale API, and this error will never be returned."),
     SCCAPIErrorCodeUnsupportedAPIVersion,
     SCCAPIErrorCodeInvalidVersionNumber,
     SCCAPIErrorCodeCustomerManagementNotSupported,
-    SCCAPIErrorCodeInvalidCustomerID,
-    SCCAPIErrorCodeLocationIDMismatch
+    SCCAPIErrorCodeInvalidCustomerID
 };
 
 
 @interface NSError (SCCAPIAdditions)
 
 /**
- @param errorCodeString A Register API error code string.
- @return A new Register API error with an appropriate numeric code in the `SCCAPIErrorDomain`.
+ @param errorCodeString A Point of Sale API error code string.
+ @return A new Point of Sale API error with an appropriate numeric code in the `SCCAPIErrorDomain`.
  The user info dictionary associated with the error will include, if available,
  the error code string associated with the `SCCAPIErrorUserInfoCodeStringKey`.
  
@@ -69,7 +68,7 @@ typedef NS_ENUM(NSUInteger, SCCAPIErrorCode) {
 + (nonnull NSError *)SCC_APIErrorWithErrorCodeString:(NSString *_Nonnull)errorCodeString;
 
 /**
- @param errorCodeString A Register API error code string.
+ @param errorCodeString A Point of Sale API error code string.
  @return A human-readable description of the error represented by the error code string.
  
  Note that this string is intended to be seen by developers only.  Developers should present 
