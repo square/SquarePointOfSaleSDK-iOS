@@ -27,7 +27,7 @@
 #import "SCCMoney+Serialization.h"
 
 
-NSString *__nonnull const SCCSDKVersion = @"2.0";
+NSString *__nonnull const SCCSDKVersion = @"3.0";
 NSString *__nonnull const SCCAPIVersion = @"1.2";
 
 NSString *__nonnull const SCCAPIRequestSDKVersionKey = @"sdk_version";
@@ -287,19 +287,19 @@ NSArray<NSString *> *__nonnull NSArrayOfTenderTypeStringsFromSCCAPIRequestTender
     if (tenderTypes & SCCAPIRequestTenderTypeCard) {
         [arrayOfTenderTypes addObject:SCCAPIRequestOptionsTenderTypeStringCard];
     }
-    
+
     if (tenderTypes & SCCAPIRequestTenderTypeCash) {
         [arrayOfTenderTypes addObject:SCCAPIRequestOptionsTenderTypeStringCash];
     }
-    
+
     if (tenderTypes & SCCAPIRequestTenderTypeOther) {
         [arrayOfTenderTypes addObject:SCCAPIRequestOptionsTenderTypeStringOther];
     }
-    
+
     if (tenderTypes & SCCAPIRequestTenderTypeSquareGiftCard) {
         [arrayOfTenderTypes addObject:SCCAPIRequestOptionsTenderTypeStringSquareGiftCard];
     }
-    
+
     if (tenderTypes & SCCAPIRequestTenderTypeCardOnFile) {
         [arrayOfTenderTypes addObject:SCCAPIRequestOptionsTenderTypeStringCardOnFile];
     }
