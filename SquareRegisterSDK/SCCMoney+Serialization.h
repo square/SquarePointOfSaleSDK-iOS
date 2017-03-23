@@ -1,6 +1,6 @@
 //
 //  SCCMoney+Serialization.h
-//  SquareRegisterSDK
+//  SquarePointOfSaleSDK
 //
 //  Created by Martin Mroz on 3/28/16.
 //  Copyright (c) 2016 Square, Inc.

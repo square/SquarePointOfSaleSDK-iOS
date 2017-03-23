@@ -1,6 +1,6 @@
 //
 //  SCCAPIConnection.m
-//  SquareRegisterSDK
+//  SquarePointOfSaleSDK
 //
 //  Created by Martin Mroz on 3/7/16.
 //  Copyright (c) 2016 Square, Inc.

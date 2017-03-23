@@ -1,6 +1,6 @@
 //
 //  SCCAPIRequest.h
-//  SquareRegisterSDK
+//  SquarePointOfSaleSDK
 //
 //  Created by Mark Jen on 2/9/14.
 //  Copyright (c) 2014 Square, Inc.
@@ -46,7 +46,7 @@ typedef NS_OPTIONS(NSUInteger, SCCAPIRequestTenderTypes) {
 
 
 /**
- Immutable value type representing the totality of a Register API request.
+ Immutable value type representing the totality of a Point of Sale API request.
  */
 @interface SCCAPIRequest : NSObject <NSCopying>
 
@@ -58,7 +58,7 @@ typedef NS_OPTIONS(NSUInteger, SCCAPIRequestTenderTypes) {
 + (void)setClientID:(nullable NSString *)clientID;
 
 /**
- Designated initializer for the Register API request.
+ Designated initializer for the Point of Sale API request.
  @param callbackURL The URL that Square Register sends responses to. 
    Must use the custom URL scheme you specified on your application dashboard. Required.
  @param amount The amount of money to charge for the payment. Required.

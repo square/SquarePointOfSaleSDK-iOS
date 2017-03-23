@@ -1,6 +1,6 @@
 //
 //  NSError+SCCAdditions.m
-//  SquareRegisterSDK
+//  SquarePointOfSaleSDK
 //
 //  Created by Martin Mroz on 3/3/16.
 //  Copyright (c) 2016 Square, Inc.
@@ -62,7 +62,7 @@ NSString *__nonnull const SCCErrorDomain = @"SCCErrorDomain";
 {
     return [NSError errorWithDomain:SCCErrorDomain
                                code:SCCErrorCodeCannotPerformRequest
-                           userInfo:@{NSLocalizedDescriptionKey : @"Cannot Perform Request.  Ensure that \"square-commerce-v1\" is included in the LSApplicationQueriesSchemes in your Info.plist and that Square Register is installed on your device."}];
+                           userInfo:@{NSLocalizedDescriptionKey : @"Cannot Perform Request.  Ensure that \"square-commerce-v1\" is included in the LSApplicationQueriesSchemes in your Info.plist and that Square Point of Sale is installed on your device."}];
 }
 
 + (nonnull NSError *)SCC_unableToGenerateRequestJSONError;
@@ -78,28 +78,28 @@ NSString *__nonnull const SCCErrorDomain = @"SCCErrorDomain";
 {
     return [NSError errorWithDomain:SCCErrorDomain
                                code:SCCErrorCodeMissingOrInvalidResponseData
-                           userInfo:@{NSLocalizedDescriptionKey : @"Missing or Invalid Response Data.  Please report this error to developers@squareup.com with your request URL, the response URL and the version of Square Register you are running."}];
+                           userInfo:@{NSLocalizedDescriptionKey : @"Missing or Invalid Response Data.  Please report this error to developers@squareup.com with your request URL, the response URL and the version of Square Point of Sale you are running."}];
 }
 
 + (nonnull NSError *)SCC_missingOrInvalidResponseJSONDataError;
 {
     return [NSError errorWithDomain:SCCErrorDomain
                                code:SCCErrorCodeMissingOrInvalidResponseJSONData
-                           userInfo:@{NSLocalizedDescriptionKey : @"Missing or Invalid Response JSON.  Please report this error to developers@squareup.com with your request URL, the response URL and the version of Square Register you are running."}];
+                           userInfo:@{NSLocalizedDescriptionKey : @"Missing or Invalid Response JSON.  Please report this error to developers@squareup.com with your request URL, the response URL and the version of Square Point of Sale you are running."}];
 }
 
 + (nonnull NSError *)SCC_missingOrInvalidResponseStatusError;
 {
     return [NSError errorWithDomain:SCCErrorDomain
                                code:SCCErrorCodeMissingOrInvalidResponseStatus
-                           userInfo:@{NSLocalizedDescriptionKey : @"Missing or Invalid Response Status.  Please report this error to developers@squareup.com with your request URL, the response URL and the version of Square Register you are running."}];
+                           userInfo:@{NSLocalizedDescriptionKey : @"Missing or Invalid Response Status.  Please report this error to developers@squareup.com with your request URL, the response URL and the version of Square Point of Sale you are running."}];
 }
 
 + (nonnull NSError *)SCC_missingOrInvalidResponseErrorCodeError;
 {
     return [NSError errorWithDomain:SCCErrorDomain
                                code:SCCErrorCodeMissingOrInvalidResponseErrorCode
-                           userInfo:@{NSLocalizedDescriptionKey : @"Missing or Invalid Error Code.  Please report this error to developers@squareup.com with your request URL, the response URL and the version of Square Register you are running."}];
+                           userInfo:@{NSLocalizedDescriptionKey : @"Missing or Invalid Error Code.  Please report this error to developers@squareup.com with your request URL, the response URL and the version of Square Point of Sale you are running."}];
 }
 
 @end

@@ -1,6 +1,6 @@
 //
 //  SCCAPIRequest+Serialization.h
-//  SquareRegisterSDK
+//  SquarePointOfSaleSDK
 //
 //  Created by Martin Mroz on 3/28/16.
 //  Copyright (c) 2016 Square, Inc.
@@ -49,7 +49,7 @@ NSArray<NSString *> *__nonnull NSArrayOfTenderTypeStringsFromSCCAPIRequestTender
 @interface SCCAPIRequest (Serialization)
 
 /**
- Generates the URL that the request would use to communicate with Square Register, based on current property values.
+ Generates the URL that the request would use to communicate with Square Point of Sale, based on current property values.
  @param error Stores an error (domain SCCErrorDomain) in the event the URL could not be generated.
  @return The URL corresponding to the API request, or `nil`.
  */

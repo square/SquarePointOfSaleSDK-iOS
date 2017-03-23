@@ -1,6 +1,6 @@
 //
 //  NSError+SCCAPIAdditions.m
-//  SquareRegisterSDK
+//  SquarePointOfSaleSDK
 //
 //  Created by Martin Mroz on 3/14/16.
 //  Copyright (c) 2016 Square, Inc.
@@ -81,11 +81,11 @@ NSString *__nonnull const SCCAPIErrorUserInfoCodeStringKey = @"error_code";
     }
 
     if ([errorCodeString isEqualToString:SCCAPIErrorStringAppNotLoggedIn]) {
-        return @"App not logged in.  Ensure that you are logged in to Square Register and try again.";
+        return @"App not logged in.  Ensure that you are logged in to Square Point of Sale and try again.";
     }
 
     if ([errorCodeString isEqualToString:SCCAPIErrorStringMerchantIDMismatch]) {
-        return @"Merchant ID mismatch.  The ID for the location selected in Square Register does not match the merchant_id parameter in the request.  Check the merchant_id parameter and the selected location and try again.";
+        return @"Merchant ID mismatch.  The ID for the location selected in Square Point of Sale does not match the merchant_id parameter in the request.  Check the merchant_id parameter and the selected location and try again.";
     }
 
     if ([errorCodeString isEqualToString:SCCAPIErrorStringUserNotActivated]) {
@@ -117,19 +117,19 @@ NSString *__nonnull const SCCAPIErrorUserInfoCodeStringKey = @"error_code";
     }
 
     if ([errorCodeString isEqualToString:SCCAPIErrorStringInvalidTenderType]) {
-        return @"Invalid tender type.  A string in the supported_tender_types array was not recognized by Register.  Check your tender types and try again.";
+        return @"Invalid tender type.  A string in the supported_tender_types array was not recognized by Point of Sale.  Check your tender types and try again.";
     }
 
     if ([errorCodeString isEqualToString:SCCAPIErrorStringUnsupportedTenderType]) {
-        return @"Unsupported tender type.  One of the tender types in your supported_tender_types array is not supported by this version of Square Register.  Ensure that you are on the most recent version of Square Register and try again.";
+        return @"Unsupported tender type.  One of the tender types in your supported_tender_types array is not supported by this version of Square Point of Sale.  Ensure that you are on the most recent version of Square Point of Sale and try again.";
     }
 
     if ([errorCodeString isEqualToString:SCCAPIErrorStringCouldNotPerform]) {
-        return @"Could not perform.  This error is most likely due to a previous Register API transaction that was started but not completed.  Open Square Register and finish the transaction before retrying your request.";
+        return @"Could not perform.  This error is most likely due to a previous Point of Sale API transaction that was started but not completed.  Open Square Point of Sale and finish the transaction before retrying your request.";
     }
 
     if ([errorCodeString isEqualToString:SCCAPIErrorStringNoNetworkConnection]) {
-        return @"No network connection.  Before processing payments, Square Register must be able to reach the Internet to validate the calling application.  Please connect to the Internet and try again.";
+        return @"No network connection.  Before processing payments, Square Point of Sale must be able to reach the Internet to validate the calling application.  Please connect to the Internet and try again.";
     }
 
     if ([errorCodeString isEqualToString:SCCAPIErrorStringClientNotAuthorizedForUser]) {
@@ -137,11 +137,11 @@ NSString *__nonnull const SCCAPIErrorUserInfoCodeStringKey = @"error_code";
     }
 
     if ([errorCodeString isEqualToString:SCCAPIErrorStringUnsupportedAPIVersion]) {
-        return @"Unsupported API version.  The API version specified in the request is not supported by this version of Square Register.  Ensure that you are on the most recent version of Square Register and try again.";
+        return @"Unsupported API version.  The API version specified in the request is not supported by this version of Square Point of Sale.  Ensure that you are on the most recent version of Square Point of Sale and try again.";
     }
 
     if ([errorCodeString isEqualToString:SCCAPIErrorStringInvalidVersionNumber]) {
-        return @"Invalid version number.  The specified API version is not in a form that Square Register recognizes.  Ensure that the version parameter you are passing is in standard decimal form (e.g., 1.1) and try again.";
+        return @"Invalid version number.  The specified API version is not in a form that Square Point of Sale recognizes.  Ensure that the version parameter you are passing is in standard decimal form (e.g., 1.1) and try again.";
     }
 
     if ([errorCodeString isEqualToString:SCCAPIErrorStringCustomerManagementNotSupported]) {
