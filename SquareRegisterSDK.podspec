@@ -1,3 +1,6 @@
+###
+# Deprecated.  Replaced by SquarePointOfSaleSDK.podspec.
+#
 Pod::Spec.new do |s|
   s.name         = 'SquareRegisterSDK'
   s.version      = '2.2'
@@ -12,6 +15,8 @@ Pod::Spec.new do |s|
   s.source_files = 'SquareRegisterSDK/*.{h,m}'
 
   s.private_header_files = 'SquareRegisterSDK/NSDictionary+SCCAdditions.h'
+
+  s.deprecate_in_favor_of = 'SquarePointOfSaleSDK'
 
   s.pod_target_xcconfig = {
 	  #
