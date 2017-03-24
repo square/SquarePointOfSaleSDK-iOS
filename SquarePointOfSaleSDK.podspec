@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'SquarePointOfSaleSDK'
-  s.version      = '3.0.rc.1'
+  s.version      = '3.0'
   s.summary      = 'SDK for clients using Register API on iOS'
   s.homepage     = 'https://github.com/square/SquarePointOfSaleSDK-iOS/'
   s.license      = { :type => 'Apache License, Version 2.0', :text => "© #{ Date.today.year } Square, Inc." }
@@ -9,9 +9,9 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'SquareRegisterSDK/*.{h,m}'
+  s.source_files = 'SquarePointOfSaleSDK/*.{h,m}'
 
-  s.private_header_files = 'SquareRegisterSDK/NSDictionary+SCCAdditions.h'
+  s.private_header_files = 'SquarePointOfSaleSDK/NSDictionary+SCCAdditions.h'
 
   s.pod_target_xcconfig = {
 	  #

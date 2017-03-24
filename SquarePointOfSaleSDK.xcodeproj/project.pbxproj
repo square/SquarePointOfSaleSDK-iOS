@@ -102,8 +102,7 @@
 				8D3BD9091CA9D62300DA2B06 /* Categories */,
 				8D3BD9071CA9D61500DA2B06 /* Classes */,
 			);
-			name = SquarePointOfSaleSDK;
-			path = SquareRegisterSDK;
+			path = SquarePointOfSaleSDK;
 			sourceTree = "<group>";
 		};
 		8D3BD9071CA9D61500DA2B06 /* Classes */ = {
@@ -156,8 +155,7 @@
 				8D3BD92E1CA9D6C600DA2B06 /* SquarePointOfSaleSDK.h */,
 				8D3BD9301CA9D6C600DA2B06 /* Info.plist */,
 			);
-			name = SquarePointOfSaleSDK;
-			path = SquareRegisterSDK;
+			path = SquarePointOfSaleSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,7 +198,7 @@
 			dependencies = (
 			);
 			name = SquarePointOfSaleSDK;
-			productName = SquareRegisterSDK;
+			productName = SquarePointOfSaleSDK;
 			productReference = 8D3BD92C1CA9D6C600DA2B06 /* SquarePointOfSaleSDK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
@@ -352,7 +350,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SquareRegisterSDK/Info.plist;
+				INFOPLIST_FILE = SquarePointOfSaleSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.squareup.SquarePointOfSaleSDK;
@@ -372,7 +370,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SquareRegisterSDK/Info.plist;
+				INFOPLIST_FILE = SquarePointOfSaleSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.squareup.SquarePointOfSaleSDK;

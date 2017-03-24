@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D368EE4B185855D700180B41"
-               BuildableName = "SquareRegisterSDK Tests.xctest"
-               BlueprintName = "SquareRegisterSDK Tests"
-               ReferencedContainer = "container:SquareRegisterSDK Tests.xcodeproj">
+               BuildableName = "SquarePointOfSaleSDK Tests.xctest"
+               BlueprintName = "SquarePointOfSaleSDK Tests"
+               ReferencedContainer = "container:SquarePointOfSaleSDK Tests.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D368EE4B185855D700180B41"
-               BuildableName = "SquareRegisterSDK Tests.xctest"
-               BlueprintName = "SquareRegisterSDK Tests"
-               ReferencedContainer = "container:SquareRegisterSDK Tests.xcodeproj">
+               BuildableName = "SquarePointOfSaleSDK Tests.xctest"
+               BlueprintName = "SquarePointOfSaleSDK Tests"
+               ReferencedContainer = "container:SquarePointOfSaleSDK Tests.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D368EE4B185855D700180B41"
-            BuildableName = "SquareRegisterSDK Tests.xctest"
-            BlueprintName = "SquareRegisterSDK Tests"
-            ReferencedContainer = "container:SquareRegisterSDK Tests.xcodeproj">
+            BuildableName = "SquarePointOfSaleSDK Tests.xctest"
+            BlueprintName = "SquarePointOfSaleSDK Tests"
+            ReferencedContainer = "container:SquarePointOfSaleSDK Tests.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D368EE4B185855D700180B41"
-            BuildableName = "SquareRegisterSDK Tests.xctest"
-            BlueprintName = "SquareRegisterSDK Tests"
-            ReferencedContainer = "container:SquareRegisterSDK Tests.xcodeproj">
+            BuildableName = "SquarePointOfSaleSDK Tests.xctest"
+            BlueprintName = "SquarePointOfSaleSDK Tests"
+            ReferencedContainer = "container:SquarePointOfSaleSDK Tests.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
