@@ -133,7 +133,7 @@ NSString *__nonnull const SCCAPIErrorUserInfoCodeStringKey = @"error_code";
     }
 
     if ([errorCodeString isEqualToString:SCCAPIErrorStringClientNotAuthorizedForUser]) {
-        return @"Client not authorized for user.  The account logged in to Square Register has not completed the OAuth flow for the calling application.  Guide the user through the OAuth flow and retry the request.";
+        return @"Client not authorized for user.  The account logged in to Square Point of Sale has not completed the OAuth flow for the calling application.  Guide the user through the OAuth flow and retry the request.";
     }
 
     if ([errorCodeString isEqualToString:SCCAPIErrorStringUnsupportedAPIVersion]) {

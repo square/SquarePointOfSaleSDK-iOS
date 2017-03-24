@@ -30,16 +30,16 @@ typedef NS_OPTIONS(NSUInteger, SCCAPIRequestTenderTypes) {
 
     /// Allow the merchant to accept card tenders to complete the payment.
     SCCAPIRequestTenderTypeCard = 1 << 0,
-    
+
     /// Allow the merchant to accept cash tenders to complete the payment.
     SCCAPIRequestTenderTypeCash = 1 << 1,
-    
+
     /// Allow the merchant to accept other tenders to complete the payment.
     SCCAPIRequestTenderTypeOther = 1 << 2,
-    
+
     /// Allow the merchant to accept Square gift cards to complete the payment.
     SCCAPIRequestTenderTypeSquareGiftCard = 1 << 3,
-    
+
     /// Allow the merchant to accept Square customers' cards on file to complete the payment.
     SCCAPIRequestTenderTypeCardOnFile = 1 << 4
 };
@@ -59,20 +59,20 @@ typedef NS_OPTIONS(NSUInteger, SCCAPIRequestTenderTypes) {
 
 /**
  Designated initializer for the Point of Sale API request.
- @param callbackURL The URL that Square Register sends responses to. 
+ @param callbackURL The URL that Square Point of Sale sends responses to.
    Must use the custom URL scheme you specified on your application dashboard. Required.
  @param amount The amount of money to charge for the payment. Required.
- @param userInfoString If you provide this value, it's passed along to your application's 
-   callbackURL after the payment completes. Use this parameter to associate any 
+ @param userInfoString If you provide this value, it's passed along to your application's
+   callbackURL after the payment completes. Use this parameter to associate any
    helpful state information with the payment request. Optional.
  @param merchantID The merchant's Square-issued ID. Optional.
  @param notes A custom note to associate with the resulting payment. Optional.
- @param supportedTenderTypes The types of tender that Square Register is allowed to accept for the payment. Required.
- @param clearsDefaultFees If YES, default fees (i.e., taxes) are not automatically applied to the payment in Square Register.
- @param autoreturn If NO, merchant must tap New Sale in Register to switch back to requesting application on the receipt screen.
-   If YES, Register will automatically switch back to the requesting application after a timeout elapses from the receipt screen.
+ @param supportedTenderTypes The types of tender that Square Point of Sale is allowed to accept for the payment. Required.
+ @param clearsDefaultFees If YES, default fees (i.e., taxes) are not automatically applied to the payment in Square Point of Sale.
+ @param autoreturn If NO, merchant must tap New Sale in Point of Sale to switch back to requesting application on the receipt screen.
+   If YES, Point of Sale will automatically switch back to the requesting application after a timeout elapses from the receipt screen.
    Note that if the merchant taps the "Add Customer" or "Save Card on File" buttons at the end of the payment flow, causing a modal
-   to appear in Register before the auto return timeout elapses, we will not automatically switch back to your application, regardless
+   to appear in Point of Sale before the auto return timeout elapses, we will not automatically switch back to your application, regardless
    of the value of this parameter.
  @param customerID The Square-issued ID for the merchant's customer associated with this transaction.
  @param error Stores an error (domain SCCErrorDomain) in the event one or more parameters are invalid.
@@ -91,7 +91,7 @@ typedef NS_OPTIONS(NSUInteger, SCCAPIRequestTenderTypes) {
 /// Application Client ID bound to the request at the time of creation.
 @property (nonatomic, copy, readonly, nonnull) NSString *clientID;
 
-/// The URL that Square Register sends responses to.
+/// The URL that Square Point of Sale sends responses to.
 @property (nonatomic, copy, readonly, nonnull) NSURL *callbackURL;
 
 /// The amount of money to charge for the payment.
@@ -109,16 +109,16 @@ typedef NS_OPTIONS(NSUInteger, SCCAPIRequestTenderTypes) {
 /// A custom note to associate with the resulting payment.
 @property (nonatomic, copy, readonly, nullable) NSString *notes;
 
-/// The types of tender that Square Register is allowed to accept for the payment.
+/// The types of tender that Square Point of Sale is allowed to accept for the payment.
 @property (nonatomic, assign, readonly) SCCAPIRequestTenderTypes supportedTenderTypes;
 
-/// If YES, default fees (i.e., taxes) are not automatically applied to the payment in Square Register.
+/// If YES, default fees (i.e., taxes) are not automatically applied to the payment in Square Point of Sale.
 @property (nonatomic, assign, readonly) BOOL clearsDefaultFees;
 
-/// If NO, merchant must tap New Sale in Register to switch back to requesting application on the receipt screen.
-/// If YES, Register will automatically switch back to the requesting application after a timeout elapses.
+/// If NO, merchant must tap New Sale in Point of Sale to switch back to requesting application on the receipt screen.
+/// If YES, Point of Sale will automatically switch back to the requesting application after a timeout elapses.
 /// Note that if the merchant taps the "Add Customer" or "Save Card on File" buttons at the end of the payment flow, causing a modal
-/// to appear in Register before the auto return timeout elapses, we will not automatically switch back to your application, regardless
+/// to appear in Point of Sale before the auto return timeout elapses, we will not automatically switch back to your application, regardless
 /// of the value of this parameter.
 @property (nonatomic, assign, readonly) BOOL returnsAutomaticallyAfterPayment;
 
