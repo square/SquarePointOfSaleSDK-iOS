@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name         = 'SquarePointOfSaleSDK'
-  s.version      = '3.0'
+  s.version      = '3.0.rc.2'
   s.summary      = 'SDK for clients using Register API on iOS'
   s.homepage     = 'https://github.com/square/SquarePointOfSaleSDK-iOS/'
   s.license      = { :type => 'Apache License, Version 2.0', :text => "© #{ Date.today.year } Square, Inc." }
   s.authors      = 'Square'
-  s.source       = { :git => 'https://github.com/square/SquarePointOfSaleSDK-iOS.git', :tag => s.version }
+  s.source       = { :git => 'https://github.com/kgleong/SquarePointOfSaleSDK-iOS.git', :tag => s.version }
 
   s.ios.deployment_target = '8.0'
 
