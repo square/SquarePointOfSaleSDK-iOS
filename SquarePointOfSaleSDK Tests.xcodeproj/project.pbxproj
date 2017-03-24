@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E0592448BFF7C4AC0D4F73C /* Pods_SquareRegisterSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2135BF5C72737CD2FD7420 /* Pods_SquareRegisterSDK_Tests.framework */; };
-		65588757FD3D0B8796C99BCF /* Pods_HelloCharge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84D61797940709E0BC8B7A8 /* Pods_HelloCharge.framework */; };
+		385A415C5CAF727E72E8EBEA /* Pods_SquarePointOfSaleSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABCEE612B8AF7A11280E6CA6 /* Pods_SquarePointOfSaleSDK_Tests.framework */; };
+		77273BEFDBD0A3C53C7CA928 /* Pods_HelloCharge_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835AD5A309FA43473F98EE2F /* Pods_HelloCharge_Swift.framework */; };
 		85A6FF421DCBEEE90023D15F /* HelloCharge-Swift.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85A6FF401DCBEEE90023D15F /* HelloCharge-Swift.storyboard */; };
 		85EEDAAE1BA261C7009B8340 /* SCCAPIResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EEDAAD1BA261C7009B8340 /* SCCAPIResponseTests.swift */; };
 		8D5B8D771C89112600517590 /* SCCMoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5B8D761C89112600517590 /* SCCMoneyTests.swift */; };
@@ -25,12 +25,12 @@
 		9CE9D8581D95D82100ACB62E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CE9D8571D95D82100ACB62E /* Assets.xcassets */; };
 		9CE9D8631D95D8AE00ACB62E /* HelloChargeSwiftTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9D8621D95D8AE00ACB62E /* HelloChargeSwiftTableViewController.swift */; };
 		9CE9D8721D95ECE600ACB62E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CE9D86E1D95ECE600ACB62E /* LaunchScreen.storyboard */; };
+		A35DD60F034EA3C46F19CA0B /* Pods_HelloCharge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00FF938CD806F6D92C8F115A /* Pods_HelloCharge.framework */; };
 		D32DAFE0185C0CF900EB5572 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A02646E17B02E50008E22F5 /* CoreData.framework */; };
 		D32DAFE3185C0D2F00EB5572 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32DAFE1185C0D2300EB5572 /* UIKit.framework */; };
 		D368EE4F185855D700180B41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A02641217B027A2008E22F5 /* Foundation.framework */; };
 		D368EF7C185C071400180B41 /* SCCTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = D368EF7B185C071400180B41 /* SCCTestCase.m */; };
 		D373DF47185C2468006BAFB3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D373DF43185C2468006BAFB3 /* InfoPlist.strings */; };
-		F38084A1C73362FCF9C7FC80 /* Pods_HelloCharge_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E679D35337DD3F8373EA5EC /* Pods_HelloCharge_Swift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,22 +45,21 @@
 
 /* Begin PBXFileReference section */
 		008778C942D881A3E18C2E5B /* Pods-HelloCharge-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloCharge-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloCharge-Swift/Pods-HelloCharge-Swift.release.xcconfig"; sourceTree = "<group>"; };
+		00FF938CD806F6D92C8F115A /* Pods_HelloCharge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloCharge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A02641217B027A2008E22F5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0A02646E17B02E50008E22F5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0A74A1F68AF56B5107CA38E2 /* Pods-HelloCharge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloCharge.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloCharge/Pods-HelloCharge.release.xcconfig"; sourceTree = "<group>"; };
-		0C51AD265558A4FDD6491C55 /* libPods-SquareRegisterSDK-Test-App-Swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SquareRegisterSDK-Test-App-Swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D4E615E282ACFD54E47750D /* Pods-HelloCharge-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloCharge-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloCharge-Swift/Pods-HelloCharge-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		266852125415334F831385A0 /* Pods-SquareRegisterSDK Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquareRegisterSDK Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SquareRegisterSDK Tests/Pods-SquareRegisterSDK Tests.release.xcconfig"; sourceTree = "<group>"; };
-		5E679D35337DD3F8373EA5EC /* Pods_HelloCharge_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloCharge_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7F68204B1D249A2700ACB51A /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = "../../../Library/Developer/Xcode/DerivedData/SquareRegisterSDK_Tests-csmeghvkxhpobrdxjmkoxnqenniy/Build/Products/Debug-iphoneos/OCMock/libOCMock.a"; sourceTree = "<group>"; };
+		380283C8AE89A7BFE99DA2D7 /* Pods-SquarePointOfSaleSDK Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquarePointOfSaleSDK Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SquarePointOfSaleSDK Tests/Pods-SquarePointOfSaleSDK Tests.release.xcconfig"; sourceTree = "<group>"; };
+		835AD5A309FA43473F98EE2F /* Pods_HelloCharge_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloCharge_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85A6FF411DCBEEE90023D15F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/HelloCharge-Swift.storyboard"; sourceTree = "<group>"; };
-		85D810C71DC280C200FB4286 /* SquareRegisterSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SquareRegisterSDK.framework; path = "../../Library/Developer/Xcode/DerivedData/SquareRegisterSDK_Tests-hhxeiiroxofcijhdstsvbknjritu/Build/Products/Debug-iphonesimulator/SquareRegisterSDK/SquareRegisterSDK.framework"; sourceTree = "<group>"; };
 		85EEDAAD1BA261C7009B8340 /* SCCAPIResponseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCCAPIResponseTests.swift; sourceTree = "<group>"; };
 		8D5B8D751C89112600517590 /* SquareRegisterSDK Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SquareRegisterSDK Tests-Bridging-Header.h"; sourceTree = "<group>"; };
 		8D5B8D761C89112600517590 /* SCCMoneyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCCMoneyTests.swift; sourceTree = "<group>"; };
 		8DB920851C8E3E6900AAD8CC /* SCCAPIRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCCAPIRequestTests.swift; sourceTree = "<group>"; };
 		8DB9208B1C8E687E00AAD8CC /* SCCAPIConnectionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCAPIConnectionTests.m; sourceTree = "<group>"; };
-		9C655C1F1DA2D5D0000F94C3 /* SquareRegisterSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SquareRegisterSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9007E47B531BAE96FE899D97 /* Pods-SquarePointOfSaleSDK Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquarePointOfSaleSDK Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SquarePointOfSaleSDK Tests/Pods-SquarePointOfSaleSDK Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		9C98F4621D9472F50078FED4 /* HelloCharge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloCharge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C98F4651D9472F50078FED4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9C98F4671D9472F50078FED4 /* HelloChargeAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloChargeAppDelegate.h; sourceTree = "<group>"; };
@@ -81,19 +80,16 @@
 		9CE9D86C1D95DBF500ACB62E /* HelloCharge-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloCharge-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		9CE9D86F1D95ECE600ACB62E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = HelloCharge/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		9F55F45F1E8321C800252221 /* SquarePointOfSaleSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SquarePointOfSaleSDK.framework; path = "../../../Library/Developer/Xcode/DerivedData/SquareRegisterSDK_Tests-amipeshyqbmvbgfpocmrtkqsygeu/Build/Products/Debug-iphonesimulator/SquarePointOfSaleSDK/SquarePointOfSaleSDK.framework"; sourceTree = "<group>"; };
-		B84D61797940709E0BC8B7A8 /* Pods_HelloCharge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloCharge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA2135BF5C72737CD2FD7420 /* Pods_SquareRegisterSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SquareRegisterSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABCEE612B8AF7A11280E6CA6 /* Pods_SquarePointOfSaleSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SquarePointOfSaleSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D32DAFE1185C0D2300EB5572 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D32DB01B185C1FD700EB5572 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		D368EE4C185855D700180B41 /* SquareRegisterSDK Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SquareRegisterSDK Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D368EE4D185855D700180B41 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D368EE4C185855D700180B41 /* SquarePointOfSaleSDK Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SquarePointOfSaleSDK Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D368EF7A185C071400180B41 /* SCCTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCTestCase.h; sourceTree = "<group>"; };
 		D368EF7B185C071400180B41 /* SCCTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCTestCase.m; sourceTree = "<group>"; };
 		D373DF44185C2468006BAFB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D373DF45185C2468006BAFB3 /* SquareRegisterSDK Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SquareRegisterSDK Tests-Info.plist"; sourceTree = "<group>"; };
+		D373DF45185C2468006BAFB3 /* SquarePointOfSaleSDK Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SquarePointOfSaleSDK Tests-Info.plist"; sourceTree = "<group>"; };
 		F170F785F7C6ABEEFB107B55 /* Pods-SquareRegisterSDK Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquareRegisterSDK Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SquareRegisterSDK Tests/Pods-SquareRegisterSDK Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F4683E44AD7DEF2A91B089A6 /* Pods-HelloCharge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloCharge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloCharge/Pods-HelloCharge.debug.xcconfig"; sourceTree = "<group>"; };
-		F4F9857FFD5D8B7513A0B06C /* libPods-SquareRegisterSDK Test App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SquareRegisterSDK Test App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65588757FD3D0B8796C99BCF /* Pods_HelloCharge.framework in Frameworks */,
+				A35DD60F034EA3C46F19CA0B /* Pods_HelloCharge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F38084A1C73362FCF9C7FC80 /* Pods_HelloCharge_Swift.framework in Frameworks */,
+				77273BEFDBD0A3C53C7CA928 /* Pods_HelloCharge_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +116,7 @@
 				D32DAFE0185C0CF900EB5572 /* CoreData.framework in Frameworks */,
 				D368EE4F185855D700180B41 /* Foundation.framework in Frameworks */,
 				D32DAFE3185C0D2F00EB5572 /* UIKit.framework in Frameworks */,
-				3E0592448BFF7C4AC0D4F73C /* Pods_SquareRegisterSDK_Tests.framework in Frameworks */,
+				385A415C5CAF727E72E8EBEA /* Pods_SquarePointOfSaleSDK_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,8 +126,7 @@
 		0A02640617B027A2008E22F5 = {
 			isa = PBXGroup;
 			children = (
-				9C655C1F1DA2D5D0000F94C3 /* SquareRegisterSDK.framework */,
-				D368EE52185855D700180B41 /* SquareRegisterSDK Tests */,
+				D368EE52185855D700180B41 /* SquarePointOfSaleSDK Tests */,
 				9C98F4631D9472F50078FED4 /* HelloCharge */,
 				9CE9D84B1D95D81F00ACB62E /* HelloCharge-Swift */,
 				0A02641117B027A2008E22F5 /* Frameworks */,
@@ -143,7 +138,7 @@
 		0A02641017B027A2008E22F5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D368EE4C185855D700180B41 /* SquareRegisterSDK Tests.xctest */,
+				D368EE4C185855D700180B41 /* SquarePointOfSaleSDK Tests.xctest */,
 				9C98F4621D9472F50078FED4 /* HelloCharge.app */,
 				9CE9D84A1D95D81F00ACB62E /* HelloCharge-Swift.app */,
 			);
@@ -154,19 +149,14 @@
 			isa = PBXGroup;
 			children = (
 				9F55F45F1E8321C800252221 /* SquarePointOfSaleSDK.framework */,
-				85D810C71DC280C200FB4286 /* SquareRegisterSDK.framework */,
 				9CE9D8641D95D98C00ACB62E /* HelloCharge-Swift-Bridging-Header.h */,
-				7F68204B1D249A2700ACB51A /* libOCMock.a */,
 				0A02646E17B02E50008E22F5 /* CoreData.framework */,
 				D32DB01B185C1FD700EB5572 /* CoreGraphics.framework */,
 				0A02641217B027A2008E22F5 /* Foundation.framework */,
-				D368EE4D185855D700180B41 /* XCTest.framework */,
 				D32DAFE1185C0D2300EB5572 /* UIKit.framework */,
-				F4F9857FFD5D8B7513A0B06C /* libPods-SquareRegisterSDK Test App.a */,
-				0C51AD265558A4FDD6491C55 /* libPods-SquareRegisterSDK-Test-App-Swift.a */,
-				CA2135BF5C72737CD2FD7420 /* Pods_SquareRegisterSDK_Tests.framework */,
-				B84D61797940709E0BC8B7A8 /* Pods_HelloCharge.framework */,
-				5E679D35337DD3F8373EA5EC /* Pods_HelloCharge_Swift.framework */,
+				00FF938CD806F6D92C8F115A /* Pods_HelloCharge.framework */,
+				835AD5A309FA43473F98EE2F /* Pods_HelloCharge_Swift.framework */,
+				ABCEE612B8AF7A11280E6CA6 /* Pods_SquarePointOfSaleSDK_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -209,14 +199,14 @@
 			path = "HelloCharge-Swift";
 			sourceTree = "<group>";
 		};
-		D368EE52185855D700180B41 /* SquareRegisterSDK Tests */ = {
+		D368EE52185855D700180B41 /* SquarePointOfSaleSDK Tests */ = {
 			isa = PBXGroup;
 			children = (
 				D368EF2318585CBC00180B41 /* Base Test Classes */,
 				D368EF2418585CC800180B41 /* Tests */,
 				D373DF42185C2468006BAFB3 /* Other */,
 			);
-			path = "SquareRegisterSDK Tests";
+			path = "SquarePointOfSaleSDK Tests";
 			sourceTree = "<group>";
 		};
 		D368EF2318585CBC00180B41 /* Base Test Classes */ = {
@@ -245,7 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				D373DF43185C2468006BAFB3 /* InfoPlist.strings */,
-				D373DF45185C2468006BAFB3 /* SquareRegisterSDK Tests-Info.plist */,
+				D373DF45185C2468006BAFB3 /* SquarePointOfSaleSDK Tests-Info.plist */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -259,6 +249,8 @@
 				0A74A1F68AF56B5107CA38E2 /* Pods-HelloCharge.release.xcconfig */,
 				0D4E615E282ACFD54E47750D /* Pods-HelloCharge-Swift.debug.xcconfig */,
 				008778C942D881A3E18C2E5B /* Pods-HelloCharge-Swift.release.xcconfig */,
+				9007E47B531BAE96FE899D97 /* Pods-SquarePointOfSaleSDK Tests.debug.xcconfig */,
+				380283C8AE89A7BFE99DA2D7 /* Pods-SquarePointOfSaleSDK Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -306,9 +298,9 @@
 			productReference = 9CE9D84A1D95D81F00ACB62E /* HelloCharge-Swift.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D368EE4B185855D700180B41 /* SquareRegisterSDK Tests */ = {
+		D368EE4B185855D700180B41 /* SquarePointOfSaleSDK Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D368EE61185855D700180B41 /* Build configuration list for PBXNativeTarget "SquareRegisterSDK Tests" */;
+			buildConfigurationList = D368EE61185855D700180B41 /* Build configuration list for PBXNativeTarget "SquarePointOfSaleSDK Tests" */;
 			buildPhases = (
 				7CD89D0E46FAE6C8930AFAE3 /* [CP] Check Pods Manifest.lock */,
 				4F517CD3AF2025A72D83AAF1 /* [CP] Check Pods Manifest.lock */,
@@ -326,9 +318,9 @@
 			dependencies = (
 				9C8BE1361DA45D9600DCEC9E /* PBXTargetDependency */,
 			);
-			name = "SquareRegisterSDK Tests";
+			name = "SquarePointOfSaleSDK Tests";
 			productName = "SquareRegisterSDK Tests";
-			productReference = D368EE4C185855D700180B41 /* SquareRegisterSDK Tests.xctest */;
+			productReference = D368EE4C185855D700180B41 /* SquarePointOfSaleSDK Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -358,7 +350,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0A02640A17B027A2008E22F5 /* Build configuration list for PBXProject "SquareRegisterSDK Tests" */;
+			buildConfigurationList = 0A02640A17B027A2008E22F5 /* Build configuration list for PBXProject "SquarePointOfSaleSDK Tests" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -371,7 +363,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D368EE4B185855D700180B41 /* SquareRegisterSDK Tests */,
+				D368EE4B185855D700180B41 /* SquarePointOfSaleSDK Tests */,
 				9C98F4611D9472F50078FED4 /* HelloCharge */,
 				9CE9D8491D95D81F00ACB62E /* HelloCharge-Swift */,
 			);
@@ -437,7 +429,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SquareRegisterSDK Tests/Pods-SquareRegisterSDK Tests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SquarePointOfSaleSDK Tests/Pods-SquarePointOfSaleSDK Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		405037E00A2B11FCC33B7AB7 /* [CP] Embed Pods Frameworks */ = {
@@ -467,7 +459,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SquareRegisterSDK Tests/Pods-SquareRegisterSDK Tests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SquarePointOfSaleSDK Tests/Pods-SquarePointOfSaleSDK Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4F517CD3AF2025A72D83AAF1 /* [CP] Check Pods Manifest.lock */ = {
@@ -512,7 +504,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SquareRegisterSDK Tests/Pods-SquareRegisterSDK Tests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SquarePointOfSaleSDK Tests/Pods-SquarePointOfSaleSDK Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7CD89D0E46FAE6C8930AFAE3 /* [CP] Check Pods Manifest.lock */ = {
@@ -557,7 +549,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SquareRegisterSDK Tests/Pods-SquareRegisterSDK Tests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SquarePointOfSaleSDK Tests/Pods-SquarePointOfSaleSDK Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ABA800F80196966AED48404F /* [CP] Check Pods Manifest.lock */ = {
@@ -942,7 +934,7 @@
 		};
 		D368EE5D185855D700180B41 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F170F785F7C6ABEEFB107B55 /* Pods-SquareRegisterSDK Tests.debug.xcconfig */;
+			baseConfigurationReference = 9007E47B531BAE96FE899D97 /* Pods-SquarePointOfSaleSDK Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -967,10 +959,10 @@
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
 					"\"${PODS_ROOT}/Headers/Public/OCMock\"",
-					"\"${PODS_ROOT}/Headers/Public/SquareRegisterSDK\"",
-					"\"${PODS_ROOT}/Headers/Private/SquareRegisterSDK\"",
+					"\"${PODS_ROOT}/Headers/Public/SquarePointOfSaleSDK\"",
+					"\"${PODS_ROOT}/Headers/Private/SquarePointOfSaleSDK\"",
 				);
-				INFOPLIST_FILE = "SquareRegisterSDK Tests/Other/SquareRegisterSDK Tests-Info.plist";
+				INFOPLIST_FILE = "SquarePointOfSaleSDK Tests/Other/SquarePointOfSaleSDK Tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
@@ -978,7 +970,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.square.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SquareRegisterSDK Tests/SquareRegisterSDK Tests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "SquarePointOfSaleSDK Tests/SquarePointOfSaleSDK Tests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HelloCharge-Swift.app/HelloCharge-Swift";
@@ -988,7 +980,7 @@
 		};
 		D368EE60185855D700180B41 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 266852125415334F831385A0 /* Pods-SquareRegisterSDK Tests.release.xcconfig */;
+			baseConfigurationReference = 380283C8AE89A7BFE99DA2D7 /* Pods-SquarePointOfSaleSDK Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1023,10 +1015,10 @@
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
 					"\"${PODS_ROOT}/Headers/Public/OCMock\"",
-					"\"${PODS_ROOT}/Headers/Public/SquareRegisterSDK\"",
-					"\"${PODS_ROOT}/Headers/Private/SquareRegisterSDK\"",
+					"\"${PODS_ROOT}/Headers/Public/SquarePointOfSaleSDK\"",
+					"\"${PODS_ROOT}/Headers/Private/SquarePointOfSaleSDK\"",
 				);
-				INFOPLIST_FILE = "SquareRegisterSDK Tests/Other/SquareRegisterSDK Tests-Info.plist";
+				INFOPLIST_FILE = "SquarePointOfSaleSDK Tests/Other/SquarePointOfSaleSDK Tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
@@ -1035,7 +1027,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.square.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "SquareRegisterSDK Tests/SquareRegisterSDK Tests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "SquarePointOfSaleSDK Tests/SquarePointOfSaleSDK Tests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HelloCharge-Swift.app/HelloCharge-Swift";
 				VALIDATE_PRODUCT = YES;
@@ -1046,7 +1038,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0A02640A17B027A2008E22F5 /* Build configuration list for PBXProject "SquareRegisterSDK Tests" */ = {
+		0A02640A17B027A2008E22F5 /* Build configuration list for PBXProject "SquarePointOfSaleSDK Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0A02641B17B027A2008E22F5 /* Debug */,
@@ -1073,7 +1065,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D368EE61185855D700180B41 /* Build configuration list for PBXNativeTarget "SquareRegisterSDK Tests" */ = {
+		D368EE61185855D700180B41 /* Build configuration list for PBXNativeTarget "SquarePointOfSaleSDK Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D368EE5D185855D700180B41 /* Debug */,
