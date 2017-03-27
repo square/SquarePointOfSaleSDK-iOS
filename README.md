@@ -146,9 +146,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 ```
 
 ### Objective C
-**Import Declarations:**
-* `@import SquarePointOfSaleSDK`
-* `#import SquarePointOfSaleSDK.h`
+**Import Declaration:** `@import SquarePointOfSaleSDK;`
 
 ```objc
 /**
