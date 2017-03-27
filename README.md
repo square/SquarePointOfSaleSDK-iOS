@@ -8,6 +8,12 @@
 
 The Square Point of Sale SDK lets you quickly and easily add support to your application for completing in-store payments using Square Point of Sale.
 
+## Requirements
+* Square Application ID.
+    * [How to register your application with Square](https://docs.connect.squareup.com/articles/getting-started)
+* Xcode 8.0 or later.
+* iOS 8 or later.
+
 ## Getting started
 
 ### Add the SDK to your project
@@ -34,6 +40,104 @@ You can always just clone this repository and copy the source files from the Squ
 ## Usage
 Integrating Square Point of Sale SDK into your app takes just a couple of minutes. Once you've calculated how much you'd like to charge your customer, bundle up the relevant details into an API Request.
 
+Check out the HelloCharge and HelloCharge-Swift apps in the project for a complete example and don't forget to check out our [API Documentation](https://docs.connect.squareup.com/).
+
+### Configuration
+
+You'll need to make two quick changes to your app Info.plist file, one to declare that you'll be looking for Square Point of Sale, and one declaring that Point of Sale can call you back when it's finished.
+
+```xml
+<key>LSApplicationQueriesSchemes</key>
+<array>
+  <string>square-commerce-v1</string>
+</array>
+<key>CFBundleURLTypes</key>
+<array>
+  <dict>
+    <key>CFBundleTypeRole</key>
+    <string>Editor</string>
+    <key>CFBundleURLName</key>
+    <string>Callback</string>
+    <key>CFBundleURLSchemes</key>
+    <array>
+        <string>your-url-scheme</string>
+    </array>
+  </dict>
+</array>
+```
+
+### Swift
+
+```swift
+let yourClientID = "KGL8h2796khqLl0T4eong383" // Square Application ID
+let yourCallbackURL = URL(string: "your-url-scheme://myCallback")!
+
+do {
+    let money = try SCCMoney(amountCents: 300, currencyCode: "USD")
+
+    SCCAPIRequest.setClientID(yourClientID)
+
+    let sccRequest =
+        try SCCAPIRequest(
+            callbackURL: yourCallbackURL,
+            amount: money,
+            userInfoString: nil,
+            merchantID: nil,
+            notes: "Coffee",
+            customerID: nil,
+            supportedTenderTypes: .all,
+            clearsDefaultFees: false,
+            returnAutomaticallyAfterPayment: false
+        )
+} catch let error as NSError {
+    print(error.localizedDescription)
+}
+```
+
+When you're ready to charge the customer, use our API Connection object to bring Point of Sale into the foreground to complete the payment.
+
+```swift
+do {
+    try SCCAPIConnection.perform(sccRequest)
+} catch let error as NSError {
+    print(error.localizedDescription)
+}
+```
+
+Finally, implement the relevant UIApplication delegate.
+
+```swift
+func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+    guard let sourceApplication = options[.sourceApplication] as? String,
+        let window = window,
+        let rootViewController = window.rootViewController,
+        sourceApplication.hasPrefix("com.squareup.square") else {
+
+        return false
+    }
+
+    do {
+        let response = try SCCAPIResponse(responseURL: url)
+
+        if response.isSuccessResponse {
+            // Handle a successful requests.
+        } else if let error = response.error {
+            // Handle failed requests.
+            print(error.localizedDescription)
+        } else {
+            fatalError("We should never have received a response with neither a successful status nor an error message.")
+        }
+    } catch let error as NSError {
+        // Handle unexpected errors.
+        print(error.localizedDescription)
+    }
+
+    return true
+}
+```
+
+### Objective C
+
 ```objc
 // Replace with your app's callback URL.
 NSURL *const callbackURL = [NSURL URLWithString:@"your-url-scheme://myCallback"];
@@ -42,6 +146,7 @@ NSURL *const callbackURL = [NSURL URLWithString:@"your-url-scheme://myCallback"]
 SCCMoney *const amount = [SCCMoney moneyWithAmountCents:100 currencyCode:@"USD" error:NULL];
 
 // Note: You only need to set your client ID once, before creating your first request.
+// Your client ID is the same as your Square Application ID.
 [SCCAPIRequest setClientID:@"YOUR_CLIENT_ID"];
 
 SCCAPIRequest *request = [SCCAPIRequest requestWithCallbackURL:callbackURL
@@ -77,39 +182,11 @@ Finally, implement the relevant UIApplication delegate.
 }
 ```
 
-You'll need to make two quick changes to your app Info.plist file, one to declare that you'll be looking for Square Point of Sale, and one declaring that Point of Sale can call you back when it's finished.
-
-```xml
-<key>LSApplicationQueriesSchemes</key>
-<array>
-  <string>square-commerce-v1</string>
-</array>
-<key>CFBundleURLTypes</key>
-<array>
-  <dict>
-    <key>CFBundleTypeRole</key>
-    <string>Editor</string>
-    <key>CFBundleURLName</key>
-    <string>Callback</string>
-    <key>CFBundleURLSchemes</key>
-    <array>
-        <string>your-url-scheme</string>
-    </array>
-  </dict>
-</array>
-```
-
-Check out the HelloCharge and HelloCharge-Swift apps in the project for a complete example and don't forget to check out our [API Documentation](https://docs.connect.squareup.com/).
-
-## Requirements
-* Xcode 8.0 or later.
-* iOS 8 or later.
-
 ## Contributing
 We’re glad you’re interested in Square Point of Sale SDK, and we’d love to see where you take it. Please read our [contributing guidelines](Contributing.md) prior to submitting a Pull Request.
 
 ## Support
-If you are having trouble with the using this SDK in your project, please create a question on [Stack Overflow](https://stackoverflow.com/questions/tagged/square-connect) with the `square-connect` tag. Our team monitors that tag and will be able to help you. If you think there is something wrong with the SDK itself, please create an issue. 
+If you are having trouble with using this SDK in your project, please create a question on [Stack Overflow](https://stackoverflow.com/questions/tagged/square-connect) with the `square-connect` tag. Our team monitors that tag and will be able to help you. If you think there is something wrong with the SDK itself, please create an issue.
 
 ## License
 Copyright 2016 Square, Inc.
