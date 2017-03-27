@@ -9,10 +9,11 @@
 The Square Point of Sale SDK lets you quickly and easily add support to your application for completing in-store payments using Square Point of Sale.
 
 ## Requirements
-* Square Application ID.
-    * [How to register your application with Square](https://docs.connect.squareup.com/articles/getting-started)
+* The following information about your app is required from the [Square Developer Portal](https://connect.squareup.com/apps):
+    * **Square application ID.** Follow the [Square APIs getting started guide](https://docs.connect.squareup.com/articles/getting-started) if you need to register your app.
+    * **Custom URL scheme**. This allows Square Point of Sale to send a callback to your app when the transaction is finished.  The URL scheme must be registered for your app in the [Square Developer Portal](https://connect.squareup.com/apps).
 * Xcode 8.0 or later.
-* iOS 8 or later.
+* iOS 9 or later.
 
 ## Getting started
 
@@ -20,7 +21,7 @@ The Square Point of Sale SDK lets you quickly and easily add support to your app
 
 #### [CocoaPods](https://cocoapods.org)
 ```
-platform :ios, '8.0'
+platform :ios, '9.0'
 pod 'SquarePointOfSaleSDK'
 ```
 
@@ -67,15 +68,23 @@ You'll need to make two quick changes to your app Info.plist file, one to declar
 ```
 
 ### Swift
+**Import Declaration:** `import SquarePointOfSaleSDK`
 
 ```swift
-let yourClientID = "KGL8h2796khqLl0T4eong383" // Square Application ID
+/**
+ * Your callback URL and client ID (application ID) can be found and/or configured
+ * in the Square Developer Portal: https://connect.squareup.com/apps
+ */
+
+// Replace with your app's callback URL.
 let yourCallbackURL = URL(string: "your-url-scheme://myCallback")!
+
+// Your client ID is the same as your Square Application ID.
+// Note: You only need to set your client ID once, before creating your first request.
+SCCAPIRequest.setClientID("YOUR_CLIENT_ID")
 
 do {
     let money = try SCCMoney(amountCents: 300, currencyCode: "USD")
-
-    SCCAPIRequest.setClientID(yourClientID)
 
     let sccRequest =
         try SCCAPIRequest(
@@ -120,7 +129,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
         let response = try SCCAPIResponse(responseURL: url)
 
         if response.isSuccessResponse {
-            // Handle a successful requests.
+            // Handle successful requests.
         } else if let error = response.error {
             // Handle failed requests.
             print(error.localizedDescription)
@@ -137,16 +146,24 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 ```
 
 ### Objective C
+**Import Declarations:**
+* `@import SquarePointOfSaleSDK`
+* `#import SquarePointOfSaleSDK.h`
 
 ```objc
+/**
+ * Your callback URL and client ID (application ID) can be found and/or configured
+ * in the Square Developer Portal: https://connect.squareup.com/apps
+ */
+
 // Replace with your app's callback URL.
 NSURL *const callbackURL = [NSURL URLWithString:@"your-url-scheme://myCallback"];
 
 // Specify the amount of money to charge.
 SCCMoney *const amount = [SCCMoney moneyWithAmountCents:100 currencyCode:@"USD" error:NULL];
 
-// Note: You only need to set your client ID once, before creating your first request.
 // Your client ID is the same as your Square Application ID.
+// Note: You only need to set your client ID once, before creating your first request.
 [SCCAPIRequest setClientID:@"YOUR_CLIENT_ID"];
 
 SCCAPIRequest *request = [SCCAPIRequest requestWithCallbackURL:callbackURL
