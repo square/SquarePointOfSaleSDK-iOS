@@ -35,9 +35,6 @@ github "Square/SquarePointOfSaleSDK-iOS"
 #### Git Submodules
 Checkout the submodule with `git submodule add git@github.com:Square/SquarePointOfSaleSDK-iOS.git`, drag SquarePointOfSaleSDK.xcodeproj to your project, and add SquarePointOfSaleSDK as a build dependency.
 
-#### Clone-and-Copy
-You can always just clone this repository and copy the source files from the SquarePointOfSaleSDK directory into your project, but when using this approach, you must manually keep the SDK up-to-date yourself.
-
 ## Usage
 Integrating Square Point of Sale SDK into your app takes just a couple of minutes. Once you've calculated how much you'd like to charge your customer, bundle up the relevant details into an API Request.
 
