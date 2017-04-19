@@ -46,16 +46,15 @@
 /* Begin PBXFileReference section */
 		008778C942D881A3E18C2E5B /* Pods-HelloCharge-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloCharge-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloCharge-Swift/Pods-HelloCharge-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		00FF938CD806F6D92C8F115A /* Pods_HelloCharge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloCharge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		038A522D1EA179B80087D31E /* SquarePointOfSaleSDK Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SquarePointOfSaleSDK Tests-Bridging-Header.h"; sourceTree = "<group>"; };
 		0A02641217B027A2008E22F5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0A02646E17B02E50008E22F5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0A74A1F68AF56B5107CA38E2 /* Pods-HelloCharge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloCharge.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloCharge/Pods-HelloCharge.release.xcconfig"; sourceTree = "<group>"; };
 		0D4E615E282ACFD54E47750D /* Pods-HelloCharge-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloCharge-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloCharge-Swift/Pods-HelloCharge-Swift.debug.xcconfig"; sourceTree = "<group>"; };
-		266852125415334F831385A0 /* Pods-SquareRegisterSDK Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquareRegisterSDK Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SquareRegisterSDK Tests/Pods-SquareRegisterSDK Tests.release.xcconfig"; sourceTree = "<group>"; };
 		380283C8AE89A7BFE99DA2D7 /* Pods-SquarePointOfSaleSDK Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquarePointOfSaleSDK Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SquarePointOfSaleSDK Tests/Pods-SquarePointOfSaleSDK Tests.release.xcconfig"; sourceTree = "<group>"; };
 		835AD5A309FA43473F98EE2F /* Pods_HelloCharge_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloCharge_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85A6FF411DCBEEE90023D15F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/HelloCharge-Swift.storyboard"; sourceTree = "<group>"; };
 		85EEDAAD1BA261C7009B8340 /* SCCAPIResponseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCCAPIResponseTests.swift; sourceTree = "<group>"; };
-		8D5B8D751C89112600517590 /* SquareRegisterSDK Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SquareRegisterSDK Tests-Bridging-Header.h"; sourceTree = "<group>"; };
 		8D5B8D761C89112600517590 /* SCCMoneyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCCMoneyTests.swift; sourceTree = "<group>"; };
 		8DB920851C8E3E6900AAD8CC /* SCCAPIRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCCAPIRequestTests.swift; sourceTree = "<group>"; };
 		8DB9208B1C8E687E00AAD8CC /* SCCAPIConnectionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCAPIConnectionTests.m; sourceTree = "<group>"; };
@@ -88,7 +87,6 @@
 		D368EF7B185C071400180B41 /* SCCTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCTestCase.m; sourceTree = "<group>"; };
 		D373DF44185C2468006BAFB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D373DF45185C2468006BAFB3 /* SquarePointOfSaleSDK Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SquarePointOfSaleSDK Tests-Info.plist"; sourceTree = "<group>"; };
-		F170F785F7C6ABEEFB107B55 /* Pods-SquareRegisterSDK Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquareRegisterSDK Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SquareRegisterSDK Tests/Pods-SquareRegisterSDK Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F4683E44AD7DEF2A91B089A6 /* Pods-HelloCharge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloCharge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloCharge/Pods-HelloCharge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -221,7 +219,7 @@
 		D368EF2418585CC800180B41 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				8D5B8D751C89112600517590 /* SquareRegisterSDK Tests-Bridging-Header.h */,
+				038A522D1EA179B80087D31E /* SquarePointOfSaleSDK Tests-Bridging-Header.h */,
 				8DB9208B1C8E687E00AAD8CC /* SCCAPIConnectionTests.m */,
 				8D5B8D761C89112600517590 /* SCCMoneyTests.swift */,
 				8DB920851C8E3E6900AAD8CC /* SCCAPIRequestTests.swift */,
@@ -243,8 +241,6 @@
 		FB6607806952E7B45DCBCE3C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F170F785F7C6ABEEFB107B55 /* Pods-SquareRegisterSDK Tests.debug.xcconfig */,
-				266852125415334F831385A0 /* Pods-SquareRegisterSDK Tests.release.xcconfig */,
 				F4683E44AD7DEF2A91B089A6 /* Pods-HelloCharge.debug.xcconfig */,
 				0A74A1F68AF56B5107CA38E2 /* Pods-HelloCharge.release.xcconfig */,
 				0D4E615E282ACFD54E47750D /* Pods-HelloCharge-Swift.debug.xcconfig */,
