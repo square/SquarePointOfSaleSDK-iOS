@@ -9,7 +9,7 @@
 
 #import "HelloChargeTableViewController.h"
 
-#import "SquarePointOfSaleSDK.h"
+@import SquarePointOfSaleSDK;
 
 
 // Replace with the Application ID found in the Square Application Dashboard [https://connect.squareup.com/apps].
