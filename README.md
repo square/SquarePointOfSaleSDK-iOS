@@ -9,9 +9,7 @@
 The Square Point of Sale SDK lets you quickly and easily add support to your application for completing in-store payments using Square Point of Sale.
 
 ## Requirements
-* The following information about your app is required from the [Square Developer Portal](https://connect.squareup.com/apps):
-    * **Square application ID.** Follow the [Square APIs getting started guide](https://docs.connect.squareup.com/articles/getting-started) if you need to register your app.
-    * **Custom URL scheme**. This allows Square Point of Sale to send a callback to your app when the transaction is finished.  The URL scheme must be registered for your app in the [Square Developer Portal](https://connect.squareup.com/apps).
+* A [Square account](https://squareup.com/signup).
 * Xcode 8.0 or later.
 * iOS 9 or later.
 
@@ -35,53 +33,53 @@ github "Square/SquarePointOfSaleSDK-iOS"
 #### Git Submodules
 Checkout the submodule with `git submodule add git@github.com:Square/SquarePointOfSaleSDK-iOS.git`, drag SquarePointOfSaleSDK.xcodeproj to your project, and add SquarePointOfSaleSDK as a build dependency.
 
+-------------------------------
+
+### Update your Info.plist
+
+To get started with the Square Point of Sale SDK, you'll need to configure your `Info.plist` file with a few changes.
+
+First, navigate to your project's settings in Xcode and click the "Info" tab. Under `Custom iOS Target Properties`:
+1. Add a new entry with key `LSApplicationQueriesSchemes`.
+2. Set the "Type" to `Array`.
+3. Add the value `square-commerce-v1` to the array.
+
+Next, create a [URL scheme](https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Inter-AppCommunication/Inter-AppCommunication.html#//apple_ref/doc/uid/TP40007072-CH6-SW1) so that Square Point of Sale can re-open your app after a customer finishes a transaction. If your app already has a URL scheme, you can use that.
+
+Finally, open the "URL Types" section and click the "+" in the bottom left to add a new URL type. 
+Set the values to the following:
+
+Property    | Value
+----------- | -----------------
+Identifier  | Square
+URL Schemes | *Your URL Scheme*
+Role        | Editor
+
+-------------------------------
+
+### Register your app with Square
+
+1. Create a new app in the [Square Developer Portal](https://connect.squareup.com/apps).
+2. Under the `Point of Sale API` tab, add your application's [bundle identifier](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html#//apple_ref/doc/uid/TP40012582-CH28-SW16) and URL scheme, then click "Save".
+3. Get your `Application ID` from the `Credentials` tab.
+
+-------------------------------
 ## Usage
-Integrating Square Point of Sale SDK into your app takes just a couple of minutes. Once you've calculated how much you'd like to charge your customer, bundle up the relevant details into an API Request.
-
-Check out the HelloCharge and HelloCharge-Swift apps in the project for a complete example and don't forget to check out our [API Documentation](https://docs.connect.squareup.com/).
-
-### Configuration
-
-You'll need to make two quick changes to your app Info.plist file, one to declare that you'll be looking for Square Point of Sale, and one declaring that Point of Sale can call you back when it's finished.
-
-```xml
-<key>LSApplicationQueriesSchemes</key>
-<array>
-  <string>square-commerce-v1</string>
-</array>
-<key>CFBundleURLTypes</key>
-<array>
-  <dict>
-    <key>CFBundleTypeRole</key>
-    <string>Editor</string>
-    <key>CFBundleURLName</key>
-    <string>Callback</string>
-    <key>CFBundleURLSchemes</key>
-    <array>
-        <string>your-url-scheme</string>
-    </array>
-  </dict>
-</array>
-```
 
 ### Swift
 **Import Declaration:** `import SquarePointOfSaleSDK`
 
 ```swift
-/**
- * Your callback URL and client ID (application ID) can be found and/or configured
- * in the Square Developer Portal: https://connect.squareup.com/apps
- */
-
-// Replace with your app's callback URL.
-let yourCallbackURL = URL(string: "your-url-scheme://myCallback")!
+// Replace with your app's URL scheme.
+let yourCallbackURL = URL(string: "your-url-scheme://")!
 
 // Your client ID is the same as your Square Application ID.
 // Note: You only need to set your client ID once, before creating your first request.
 SCCAPIRequest.setClientID("YOUR_CLIENT_ID")
 
 do {
-    let money = try SCCMoney(amountCents: 300, currencyCode: "USD")
+    // Specify the amount of money to charge.
+    let money = try SCCMoney(amountCents: 100, currencyCode: "USD")
 
     let sccRequest =
         try SCCAPIRequest(
@@ -100,7 +98,7 @@ do {
 }
 ```
 
-When you're ready to charge the customer, use our API Connection object to bring Point of Sale into the foreground to complete the payment.
+When you're ready to charge the customer, bring Point of Sale into the foreground to complete the payment:
 
 ```swift
 do {
@@ -110,7 +108,7 @@ do {
 }
 ```
 
-Finally, implement the relevant UIApplication delegate.
+Finally, implement the UIApplication delegate method as follows:
 
 ```swift
 func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
@@ -142,17 +140,14 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 }
 ```
 
+-------------------------------
+
 ### Objective C
 **Import Declaration:** `@import SquarePointOfSaleSDK;`
 
 ```objc
-/**
- * Your callback URL and client ID (application ID) can be found and/or configured
- * in the Square Developer Portal: https://connect.squareup.com/apps
- */
-
 // Replace with your app's callback URL.
-NSURL *const callbackURL = [NSURL URLWithString:@"your-url-scheme://myCallback"];
+NSURL *const callbackURL = [NSURL URLWithString:@"your-url-scheme://"];
 
 // Specify the amount of money to charge.
 SCCMoney *const amount = [SCCMoney moneyWithAmountCents:100 currencyCode:@"USD" error:NULL];
@@ -173,7 +168,7 @@ SCCAPIRequest *request = [SCCAPIRequest requestWithCallbackURL:callbackURL
                                                          error:&error];
 ```
 
-When you're ready to charge the customer, use our API Connection object to bring Point of Sale into the foreground to complete the payment.
+When you're ready to charge the customer, bring Point of Sale into the foreground to complete the payment:
 
 ```objc
 [SCCAPIConnection performRequest:request error:&error];
@@ -185,7 +180,7 @@ Finally, implement the relevant UIApplication delegate.
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)URL options:(NSDictionary<NSString *,id> *)options;
 {
     NSString *const sourceApplication = options[UIApplicationOpenURLOptionsSourceApplicationKey];
-	if ([sourceApplication hasPrefix:@"com.squareup.square"]) {
+    if ([sourceApplication hasPrefix:@"com.squareup.square"]) {
         SCCAPIResponse *const response = [SCCAPIResponse responseWithResponseURL:URL error:&decodeError];
         ...
         return YES;
@@ -201,7 +196,7 @@ We’re glad you’re interested in Square Point of Sale SDK, and we’d love to
 If you are having trouble with using this SDK in your project, please create a question on [Stack Overflow](https://stackoverflow.com/questions/tagged/square-connect) with the `square-connect` tag. Our team monitors that tag and will be able to help you. If you think there is something wrong with the SDK itself, please create an issue.
 
 ## License
-Copyright 2016 Square, Inc.
+Copyright 2017 Square, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
