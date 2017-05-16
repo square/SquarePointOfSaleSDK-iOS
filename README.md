@@ -81,7 +81,8 @@ do {
     // Specify the amount of money to charge.
     let money = try SCCMoney(amountCents: 100, currencyCode: "USD")
 
-    let sccRequest =
+    // Create the request.
+    let apiRequest =
         try SCCAPIRequest(
             callbackURL: yourCallbackURL,
             amount: money,
@@ -93,16 +94,10 @@ do {
             clearsDefaultFees: false,
             returnAutomaticallyAfterPayment: false
         )
-} catch let error as NSError {
-    print(error.localizedDescription)
-}
-```
 
-When you're ready to charge the customer, bring Point of Sale into the foreground to complete the payment:
+    // Open Point of Sale to complete the payment.
+    try SCCAPIConnection.perform(apiRequest)
 
-```swift
-do {
-    try SCCAPIConnection.perform(sccRequest)
 } catch let error as NSError {
     print(error.localizedDescription)
 }
@@ -113,24 +108,20 @@ Finally, implement the UIApplication delegate method as follows:
 ```swift
 func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
     guard let sourceApplication = options[.sourceApplication] as? String,
-        let window = window,
-        let rootViewController = window.rootViewController,
         sourceApplication.hasPrefix("com.squareup.square") else {
-
         return false
     }
 
     do {
         let response = try SCCAPIResponse(responseURL: url)
 
-        if response.isSuccessResponse {
-            // Handle successful requests.
-        } else if let error = response.error {
-            // Handle failed requests.
+        if let error = response.error {
+            // Handle a failed request.
             print(error.localizedDescription)
         } else {
-            fatalError("We should never have received a response with neither a successful status nor an error message.")
+            // Handle a successful request.
         }
+
     } catch let error as NSError {
         // Handle unexpected errors.
         print(error.localizedDescription)
