@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = 'SquarePointOfSaleSDK'
   s.version      = '3.0'
-  s.summary      = 'SDK for clients using Register API on iOS'
+  s.summary      = 'SDK for easier use of Square\'s Point of Sale app-switching API on iOS'
   s.homepage     = 'https://github.com/square/SquarePointOfSaleSDK-iOS/'
   s.license      = { :type => 'Apache License, Version 2.0', :text => "© #{ Date.today.year } Square, Inc." }
   s.authors      = 'Square'
