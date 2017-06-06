@@ -9,9 +9,11 @@
 The Square Point of Sale SDK lets you quickly and easily add support to your application for completing in-store payments using Square Point of Sale.
 
 ## Requirements
-* A [Square account](https://squareup.com/signup).
+* A [Square developer account](https://squareup.com/signup?v=developers).
 * Xcode 8.0 or later.
 * iOS 9 or later.
+
+It is not currently possible to process a fake credit card payment with the Point of Sale API. If you are testing your integration, you can process small card payments (as low as $1) and then [issue refunds from Square Point of Sale](https://squareup.com/help/us/en/article/5060). Please visit [squareup.com/activate](https://www.squareup.com/activate) to ensure your account is enabled for payment processing.
 
 ## Getting started
 
@@ -46,7 +48,7 @@ First, navigate to your project's settings in Xcode and click the "Info" tab. Un
 
 Next, create a [URL scheme](https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Inter-AppCommunication/Inter-AppCommunication.html#//apple_ref/doc/uid/TP40007072-CH6-SW1) so that Square Point of Sale can re-open your app after a customer finishes a transaction. If your app already has a URL scheme, you can use that.
 
-Finally, open the "URL Types" section and click the "+" in the bottom left to add a new URL type. 
+Finally, open the "URL Types" section and click the "+" in the bottom left to add a new URL type.
 Set the values to the following:
 
 Property    | Value
