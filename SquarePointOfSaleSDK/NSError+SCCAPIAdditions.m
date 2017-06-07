@@ -89,7 +89,7 @@ NSString *__nonnull const SCCAPIErrorUserInfoCodeStringKey = @"error_code";
     }
 
     if ([errorCodeString isEqualToString:SCCAPIErrorStringUserNotActivated]) {
-        return @"User not activated.  The logged-in account cannot take credit card payments.  This could be because the account is from a country where Square does not process payments, because the account did not complete the initial activation flow, or because it has been deactivated for security reasons.";
+        return @"User not activated. Please visit https://squareup.com/activate. The logged-in account cannot take credit card payments.  This could be because the account is from a country where Square does not process payments, because the account did not complete the initial activation flow, or because it has been deactivated for security reasons.";
     }
 
     if ([errorCodeString isEqualToString:SCCAPIErrorStringCurrencyMissingOrInvalid]) {
