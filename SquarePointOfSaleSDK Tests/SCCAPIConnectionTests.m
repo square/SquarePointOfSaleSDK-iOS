@@ -48,7 +48,7 @@
     SCCAPIRequest *const request = [SCCAPIRequest requestWithCallbackURL:callbackURL
                                                                   amount:amount
                                                           userInfoString:nil
-                                                              merchantID:nil
+                                                              locationID:nil
                                                                    notes:nil
                                                               customerID:nil
                                                     supportedTenderTypes:SCCAPIRequestTenderTypeCard
@@ -77,7 +77,7 @@
     SCCAPIRequest *const request = [SCCAPIRequest requestWithCallbackURL:callbackURL
                                                                   amount:amount
                                                           userInfoString:nil
-                                                              merchantID:nil
+                                                              locationID:nil
                                                                    notes:nil
                                                               customerID:nil
                                                     supportedTenderTypes:SCCAPIRequestTenderTypeCard

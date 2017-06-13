@@ -25,7 +25,6 @@ extern NSString *__nonnull const SCCAPIRequestClientIDKey;
 extern NSString *__nonnull const SCCAPIRequestAmountMoneyKey;
 extern NSString *__nonnull const SCCAPIRequestCallbackURLKey;
 extern NSString *__nonnull const SCCAPIRequestStateKey;
-extern NSString *__nonnull const SCCAPIRequestMerchantIDKey;
 extern NSString *__nonnull const SCCAPIRequestCustomerIDKey;
 extern NSString *__nonnull const SCCAPIRequestNotesKey;
 extern NSString *__nonnull const SCCAPIRequestOptionsKey;
@@ -37,6 +36,7 @@ extern NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringCash;
 extern NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringOther;
 extern NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringSquareGiftCard;
 extern NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringCardOnFile;
+extern NSString *__nonnull const SCCAPIRequestLocationIDKey;
 
 
 /**

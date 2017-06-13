@@ -22,8 +22,6 @@
 extern NSString *__nonnull const SCCAPIErrorStringPaymentCanceled;
 extern NSString *__nonnull const SCCAPIErrorStringPayloadMissingOrInvalid;
 extern NSString *__nonnull const SCCAPIErrorStringAppNotLoggedIn;
-extern NSString *__nonnull const SCCAPIErrorStringMerchantIDMismatch;
-extern NSString *__nonnull const SCCAPIErrorStringClientNotAuthorizedForUser;
 extern NSString *__nonnull const SCCAPIErrorStringUserNotActivated;
 extern NSString *__nonnull const SCCAPIErrorStringCurrencyMissingOrInvalid;
 extern NSString *__nonnull const SCCAPIErrorStringCurrencyUnsupported;
@@ -37,6 +35,11 @@ extern NSString *__nonnull const SCCAPIErrorStringCouldNotPerform;
 extern NSString *__nonnull const SCCAPIErrorStringNoNetworkConnection;
 extern NSString *__nonnull const SCCAPIErrorStringCustomerManagementNotSupported;
 extern NSString *__nonnull const SCCAPIErrorStringInvalidCustomerID;
+extern NSString *__nonnull const SCCAPIErrorStringLocationIDMismatch;
+
+// deprecated error codes
+extern NSString *__nonnull const SCCAPIErrorStringMerchantIDMismatch __deprecated_msg("Starting with Register API version 1.3, this error has been replaced by SCCAPIErrorStringLocationIDMismatch");
+extern NSString *__nonnull const SCCAPIErrorStringClientNotAuthorizedForUser __deprecated;
 
 /**
  @param errorCodeString The string value of the API error code.
