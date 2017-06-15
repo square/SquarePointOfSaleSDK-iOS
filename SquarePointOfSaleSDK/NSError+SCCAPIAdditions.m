@@ -25,8 +25,7 @@
 NSString *__nonnull const SCCAPIErrorStringPaymentCanceled = @"payment_canceled";
 NSString *__nonnull const SCCAPIErrorStringPayloadMissingOrInvalid = @"data_invalid";
 NSString *__nonnull const SCCAPIErrorStringAppNotLoggedIn = @"not_logged_in";
-NSString *__nonnull const SCCAPIErrorStringMerchantIDMismatch = @"user_id_mismatch";
-NSString *__nonnull const SCCAPIErrorStringClientNotAuthorizedForUser = @"client_not_authorized_for_user";
+NSString *__nonnull const SCCAPIErrorStringLocationIDMismatch = @"location_id_mismatch";
 NSString *__nonnull const SCCAPIErrorStringUserNotActivated = @"user_not_active";
 NSString *__nonnull const SCCAPIErrorStringCurrencyMissingOrInvalid = @"currency_code_missing";
 NSString *__nonnull const SCCAPIErrorStringCurrencyUnsupported = @"unsupported_currency_code";
@@ -46,6 +45,10 @@ NSString *__nonnull const SCCAPIErrorStringInvalidCustomerID = @"invalid_custome
 NSString *__nonnull const SCCAPIErrorDomain = @"SCCAPIErrorDomain";
 
 NSString *__nonnull const SCCAPIErrorUserInfoCodeStringKey = @"error_code";
+
+// deprecated errors
+NSString *__nonnull const SCCAPIErrorStringMerchantIDMismatch = @"location_id_mismatch";
+NSString *__nonnull const SCCAPIErrorStringClientNotAuthorizedForUser = @"client_not_authorized_for_user";
 
 
 @implementation NSError (SCCAPIAdditions)
@@ -84,8 +87,8 @@ NSString *__nonnull const SCCAPIErrorUserInfoCodeStringKey = @"error_code";
         return @"App not logged in.  Ensure that you are logged in to Square Point of Sale and try again.";
     }
 
-    if ([errorCodeString isEqualToString:SCCAPIErrorStringMerchantIDMismatch]) {
-        return @"Merchant ID mismatch.  The ID for the location selected in Square Point of Sale does not match the merchant_id parameter in the request.  Check the merchant_id parameter and the selected location and try again.";
+    if ([errorCodeString isEqualToString:SCCAPIErrorStringLocationIDMismatch]) {
+        return @"Location ID mismatch.  The ID for the location selected in Square Point of Sale does not match the location_id parameter in the request.  Check the location_id parameter and the selected location and try again.";
     }
 
     if ([errorCodeString isEqualToString:SCCAPIErrorStringUserNotActivated]) {
@@ -132,10 +135,6 @@ NSString *__nonnull const SCCAPIErrorUserInfoCodeStringKey = @"error_code";
         return @"No network connection.  Before processing payments, Square Point of Sale must be able to reach the Internet to validate the calling application.  Please connect to the Internet and try again.";
     }
 
-    if ([errorCodeString isEqualToString:SCCAPIErrorStringClientNotAuthorizedForUser]) {
-        return @"Client not authorized for user.  The account logged in to Square Point of Sale has not completed the OAuth flow for the calling application.  Guide the user through the OAuth flow and retry the request.";
-    }
-
     if ([errorCodeString isEqualToString:SCCAPIErrorStringUnsupportedAPIVersion]) {
         return @"Unsupported API version.  The API version specified in the request is not supported by this version of Square Point of Sale.  Ensure that you are on the most recent version of Square Point of Sale and try again.";
     }
@@ -176,8 +175,8 @@ SCCAPIErrorCode SCCAPIErrorCodeFromString(NSString *__nullable errorCodeString)
         return SCCAPIErrorCodeAppNotLoggedIn;
     }
 
-    if ([errorCodeString isEqualToString:SCCAPIErrorStringMerchantIDMismatch]) {
-        return SCCAPIErrorCodeMerchantIDMismatch;
+    if ([errorCodeString isEqualToString:SCCAPIErrorStringLocationIDMismatch]) {
+        return SCCAPIErrorCodeLocationIDMismatch;
     }
 
     if ([errorCodeString isEqualToString:SCCAPIErrorStringUserNotActivated]) {
@@ -256,8 +255,8 @@ NSString *__nullable NSStringFromSCCAPIErrorCode(SCCAPIErrorCode errorCode)
             return SCCAPIErrorStringAppNotLoggedIn;
         case SCCAPIErrorCodeUnused:
             return nil;
-        case SCCAPIErrorCodeMerchantIDMismatch:
-            return SCCAPIErrorStringMerchantIDMismatch;
+        case SCCAPIErrorCodeLocationIDMismatch:
+            return SCCAPIErrorStringLocationIDMismatch;
         case SCCAPIErrorCodeUserNotActivated:
             return SCCAPIErrorStringUserNotActivated;
         case SCCAPIErrorCodeCurrencyMissingOrInvalid:

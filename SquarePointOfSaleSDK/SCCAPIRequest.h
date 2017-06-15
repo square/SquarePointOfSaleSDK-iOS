@@ -60,23 +60,34 @@ typedef NS_OPTIONS(NSUInteger, SCCAPIRequestTenderTypes) {
 /**
  Designated initializer for the Point of Sale API request.
  @param callbackURL The URL that Square Point of Sale sends responses to.
-   Must use the custom URL scheme you specified on your application dashboard. Required.
+ Must use the custom URL scheme you specified on your application dashboard. Required.
  @param amount The amount of money to charge for the payment. Required.
  @param userInfoString If you provide this value, it's passed along to your application's
-   callbackURL after the payment completes. Use this parameter to associate any
-   helpful state information with the payment request. Optional.
- @param merchantID The merchant's Square-issued ID. Optional.
+ callbackURL after the payment completes. Use this parameter to associate any
+ helpful state information with the payment request. Optional.
+ @param locationID The business location's Square-issued ID. Optional.
  @param notes A custom note to associate with the resulting payment. Optional.
  @param supportedTenderTypes The types of tender that Square Point of Sale is allowed to accept for the payment. Required.
  @param clearsDefaultFees If YES, default fees (i.e., taxes) are not automatically applied to the payment in Square Point of Sale.
  @param autoreturn If NO, merchant must tap New Sale in Point of Sale to switch back to requesting application on the receipt screen.
-   If YES, Point of Sale will automatically switch back to the requesting application after a timeout elapses from the receipt screen.
-   Note that if the merchant taps the "Add Customer" or "Save Card on File" buttons at the end of the payment flow, causing a modal
-   to appear in Point of Sale before the auto return timeout elapses, we will not automatically switch back to your application, regardless
-   of the value of this parameter.
+ If YES, Point of Sale will automatically switch back to the requesting application after a timeout elapses from the receipt screen.
+ Note that if the merchant taps the "Add Customer" or "Save Card on File" buttons at the end of the payment flow, causing a modal
+ to appear in Point of Sale before the auto return timeout elapses, we will not automatically switch back to your application, regardless
+ of the value of this parameter.
  @param customerID The Square-issued ID for the merchant's customer associated with this transaction.
  @param error Stores an error (domain SCCErrorDomain) in the event one or more parameters are invalid.
  */
++ (nullable instancetype)requestWithCallbackURL:(nonnull NSURL *)callbackURL
+                                         amount:(nonnull SCCMoney *)amount
+                                 userInfoString:(nullable NSString *)userInfoString
+                                     locationID:(nullable NSString *)locationID
+                                          notes:(nullable NSString *)notes
+                                     customerID:(nullable NSString*)customerID
+                           supportedTenderTypes:(SCCAPIRequestTenderTypes)supportedTenderTypes
+                              clearsDefaultFees:(BOOL)clearsDefaultFees
+                returnAutomaticallyAfterPayment:(BOOL)autoreturn
+                                          error:(out NSError *__nullable *__nullable)error;
+
 + (nullable instancetype)requestWithCallbackURL:(nonnull NSURL *)callbackURL
                                          amount:(nonnull SCCMoney *)amount
                                  userInfoString:(nullable NSString *)userInfoString
@@ -86,7 +97,7 @@ typedef NS_OPTIONS(NSUInteger, SCCAPIRequestTenderTypes) {
                            supportedTenderTypes:(SCCAPIRequestTenderTypes)supportedTenderTypes
                               clearsDefaultFees:(BOOL)clearsDefaultFees
                 returnAutomaticallyAfterPayment:(BOOL)autoreturn
-                                          error:(out NSError *__nullable *__nullable)error;
+                                          error:(out NSError *__nullable *__nullable)error __deprecated_msg("Use requestWithCallbackURL:amount:userInfoString:locationID:notes:customerID:supportedTenderTypes:clearsDefaultFees:returnAutomaticallyAfterPayment:error: instead.");
 
 /// Application Client ID bound to the request at the time of creation.
 @property (nonatomic, copy, readonly, nonnull) NSString *clientID;
@@ -100,8 +111,11 @@ typedef NS_OPTIONS(NSUInteger, SCCAPIRequestTenderTypes) {
 /// Free-form string passed along to your application's callbackURL after the payment completes.
 @property (nonatomic, copy, readonly, nullable) NSString *userInfoString;
 
-/// The merchant's Square-issued ID.
-@property (nonatomic, copy, readonly, nullable) NSString *merchantID;
+/// The business location's Square-issued ID.
+@property (nonatomic, copy, readonly, nullable) NSString *merchantID __deprecated_msg("Use locationID instead");
+
+/// The business location's Square-issued ID.
+@property (nonatomic, copy, readonly, nullable) NSString *locationID;
 
 /// The Square-issued ID for the merchant's customer associated with this transaction.
 @property (nonatomic, copy, readonly, nullable) NSString *customerID;
@@ -134,12 +148,12 @@ typedef NS_OPTIONS(NSUInteger, SCCAPIRequestTenderTypes) {
 @interface SCCAPIRequest ()
 
 /**
- @see requestWithCallbackURL:amount:userInfoString:merchantID:notes:customerID:supportedTenderTypes:clearsDefaultFees:returnAutomaticallyAfterPayment:error:
+ @see requestWithCallbackURL:amount:userInfoString:locationID:notes:customerID:supportedTenderTypes:clearsDefaultFees:returnAutomaticallyAfterPayment:error:
  */
 + (nonnull instancetype)new  NS_UNAVAILABLE;
 
 /**
- @see requestWithCallbackURL:amount:userInfoString:merchantID:notes:customerID:supportedTenderTypes:clearsDefaultFees:returnAutomaticallyAfterPayment:error:
+ @see requestWithCallbackURL:amount:userInfoString:locationID:notes:customerID:supportedTenderTypes:clearsDefaultFees:returnAutomaticallyAfterPayment:error:
  */
 - (nonnull instancetype)init NS_UNAVAILABLE;
 
