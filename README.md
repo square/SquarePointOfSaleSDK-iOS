@@ -33,7 +33,7 @@ github "Square/SquarePointOfSaleSDK-iOS"
 ```
 
 #### Git Submodules
-Checkout the submodule with `git submodule add git@github.com:Square/SquarePointOfSaleSDK-iOS.git`, drag SquarePointOfSaleSDK.xcodeproj to your project, and add SquarePointOfSaleSDK as a build dependency.
+Checkout the submodule with `git submodule add https://github.com/square/SquarePointOfSaleSDK-iOS.git`, drag SquarePointOfSaleSDK.xcodeproj to your project, and add SquarePointOfSaleSDK as a build dependency.
 
 -------------------------------
 
