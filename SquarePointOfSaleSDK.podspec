@@ -9,9 +9,9 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'SquarePointOfSaleSDK/*.{h,m}'
+  s.source_files = 'SquarePointOfSaleSDK/**/*.{h,m}'
 
-  s.private_header_files = 'SquarePointOfSaleSDK/NSDictionary+SCCAdditions.h'
+  s.private_header_files = 'SquarePointOfSaleSDK/Sources/Categories/NSDictionary+SCCAdditions.h'
 
   s.pod_target_xcconfig = {
 	  #

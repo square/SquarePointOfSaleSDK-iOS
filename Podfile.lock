@@ -1,19 +1,12 @@
 PODS:
   - OCMock (3.3.1)
-  - SquarePointOfSaleSDK (3.1)
 
 DEPENDENCIES:
   - OCMock (~> 3.1)
-  - SquarePointOfSaleSDK (from `SquarePointOfSaleSDK.podspec`)
-
-EXTERNAL SOURCES:
-  SquarePointOfSaleSDK:
-    :path: SquarePointOfSaleSDK.podspec
 
 SPEC CHECKSUMS:
   OCMock: f3f61e6eaa16038c30caa5798c5e49d3307b6f22
-  SquarePointOfSaleSDK: b5f4d00022d88e31e20c81efeffa43f553128b9d
 
-PODFILE CHECKSUM: 7600ae620186a2c36f24e003c307f483826f8c0b
+PODFILE CHECKSUM: a93cd169ded6efeb01beadcccd21dd61e3efba8e
 
 COCOAPODS: 1.1.0
