@@ -24,7 +24,11 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         if SquareApplicationId == "your_application_id" {
-            fatalError("Set your application ID in Config.swift. To get your application ID, visit connect.squareup.com/apps and create a new application.")
+            fatalError("Set your application identifier in Config.swift. To get your application identifier, visit connect.squareup.com/apps and create a new application.")
+        }
+        
+        if SquareApplicationId.hasPrefix("sandbox") {
+            fatalError("Sandbox application identifiers are not supported in Point of Sale API.")
         }
         
         // You only need to set your client id once

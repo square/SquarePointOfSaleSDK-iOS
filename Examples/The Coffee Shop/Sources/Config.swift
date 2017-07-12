@@ -17,9 +17,9 @@
 import UIKit
 import SquarePointOfSaleSDK
 
-//@available(*, unavailable, message: "Add your application ID below. To get your application ID, visit connect.squareup.com/apps and create a new application. Once you've added your application ID, feel free to delete this warning.")
+@available(*, unavailable, message: "Add your application ID below. To get your application ID, visit connect.squareup.com/apps and create a new application. Once you've added your application ID, feel free to delete this warning.")
 /// You can find your application ID in the [application dashboard](https://connect.squareup.com/apps)
-let SquareApplicationId = "your_application_id1"
+let SquareApplicationId = "your_application_id"
 
 /// This should be the same Callback URL Scheme registered in the [Application Dashboard](https://connect.squareup.com/apps)
 let CallbackURLScheme = "coffeeshop://handle-pos-api-response"
