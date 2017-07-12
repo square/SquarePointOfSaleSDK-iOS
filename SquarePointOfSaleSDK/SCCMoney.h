@@ -27,7 +27,9 @@
 @interface SCCMoney : NSObject <NSCopying>
 
 /**
- @param amountCents Number of the smallest atomic units of the specified currency code.
+ @param amountCents The amount of money, in the smallest denomination of the currency specified by
+                    `currencyCode`. For example, when the currency is USD, the amount is in cents,
+                    and when the currency is JPY, the amount is in Yen.
  @param currencyCode ISO 4217 currency code associated with the amount.
  @param error Stores an error (domain SCCErrorDomain) in the event one or more parameters are invalid.
  @return A new money value consisting of a currency code and value or `nil` if an invalid parameter is specified.
@@ -36,7 +38,10 @@
                                  currencyCode:(nonnull NSString *)currencyCode
                                         error:(out NSError *__nullable *__nullable)error;
 
-/// Value as specified in the number of the smallest atomic units of the currency.
+/**
+ The amount of money, in the smallest denomination of the currency specified by `currencyCode`. For example,
+ when the currency is USD, the amount is in cents, and when the currency is JPY, the amount is in Yen.
+ */
 @property (nonatomic, assign, readonly) NSInteger amountCents;
 
 /// ISO 4217 currency code associated with the amount.
