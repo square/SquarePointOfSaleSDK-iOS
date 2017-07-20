@@ -58,11 +58,11 @@ NSString *__nonnull const SCCErrorDomain = @"SCCErrorDomain";
                            userInfo:@{NSLocalizedDescriptionKey : @"Invalid Request Amount.  You must provide a valid SCCMoney object with a cents amount greater than zero."}];
 }
 
-+ (nonnull NSError *)SCC_cannotPerformRequestError;
++ (nonnull NSError *)SCC_cannotOpenApplicationError;
 {
     return [NSError errorWithDomain:SCCErrorDomain
-                               code:SCCErrorCodeCannotPerformRequest
-                           userInfo:@{NSLocalizedDescriptionKey : @"Cannot Perform Request.  Ensure that \"square-commerce-v1\" is included in the LSApplicationQueriesSchemes in your Info.plist and that Square Point of Sale is installed on your device."}];
+                               code:SCCErrorCodeCannotOpenApplication
+                           userInfo:@{NSLocalizedDescriptionKey : @"Cannot Open Point of Sale.  Ensure that you have added an LSApplicationQueriesSchemes array to your Info.plist containing the value \"square-commerce-v1\" and that Square Point of Sale is installed on your device."}];
 }
 
 + (nonnull NSError *)SCC_unableToGenerateRequestJSONError;

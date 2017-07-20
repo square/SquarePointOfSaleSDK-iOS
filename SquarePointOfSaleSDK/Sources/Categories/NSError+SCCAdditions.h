@@ -44,8 +44,8 @@ typedef NS_ENUM(NSUInteger, SCCErrorCode) {
     /// An invalid amount was specified.
     SCCErrorCodeInvalidRequestAmount,
 
-    /// The request could not be performed.
-    SCCErrorCodeCannotPerformRequest,
+    /// Point of Sale could not be opened.
+    SCCErrorCodeCannotOpenApplication,
 
     /// The JSON body of the request could not be generated.
     SCCErrorCodeUnableToGenerateRequestJSON,
@@ -95,9 +95,9 @@ typedef NS_ENUM(NSUInteger, SCCErrorCode) {
 + (nonnull NSError *)SCC_invalidRequestAmountError;
 
 /**
- @return An error indicating that the request could not be performed.
+ @return An error indicating that Point of Sale could not be opened.
  */
-+ (nonnull NSError *)SCC_cannotPerformRequestError;
++ (nonnull NSError *)SCC_cannotOpenApplicationError;
 
 /**
  @return An error indicating that the JSON body of the request could not be generated.

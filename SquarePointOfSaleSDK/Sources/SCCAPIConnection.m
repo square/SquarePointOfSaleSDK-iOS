@@ -55,13 +55,21 @@
 
 + (BOOL)_canPerformRequestWithURL:(nonnull NSURL *)URL error:(out NSError *__nullable *__nullable)error;
 {
-    if (![[UIApplication sharedApplication] canOpenURL:URL]) {
+    NSArray *applicationQueriesSchemes = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"LSApplicationQueriesSchemes"];
+    if (!([applicationQueriesSchemes isKindOfClass:[NSArray class]] && [applicationQueriesSchemes containsObject:@"square-commerce-v1"])) {
         if (error != NULL) {
-            *error = [NSError SCC_cannotPerformRequestError];
+            *error = [NSError SCC_cannotOpenApplicationError];
         }
         return NO;
     }
-
+    
+    if (![[UIApplication sharedApplication] canOpenURL:URL]) {
+        if (error != NULL) {
+            *error = [NSError SCC_cannotOpenApplicationError];
+        }
+        return NO;
+    }
+    
     return YES;
 }
 
