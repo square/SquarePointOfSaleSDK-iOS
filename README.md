@@ -48,7 +48,7 @@ First, navigate to your project's settings in Xcode and click the "Info" tab. Un
 
 Next, create a [URL scheme](https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Inter-AppCommunication/Inter-AppCommunication.html#//apple_ref/doc/uid/TP40007072-CH6-SW1) so that Square Point of Sale can re-open your app after a customer finishes a transaction. If your app already has a URL scheme, you can use that.
 
-Finally, open the "URL Types" section and click the "+" in the bottom left to add a new URL type.
+Finally, open the "URL Types" section and click the "+" to add a new URL type.
 Set the values to the following:
 
 Property    | Value
@@ -59,11 +59,21 @@ Role        | Editor
 
 -------------------------------
 
+It should look like this:
+
+![URL Scheme](./Resources/README/url-scheme.png)
+
 ### Register your app with Square
 
-1. Create a new app in the [Square Developer Portal](https://connect.squareup.com/apps).
-2. Under the `Point of Sale API` tab, add your application's [bundle identifier](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html#//apple_ref/doc/uid/TP40012582-CH28-SW16) and URL scheme, then click "Save".
-3. Get your `Application ID` from the `Credentials` tab.
+Go to the [Square Developer Portal](https://connect.squareup.com/apps) and create a new application.
+
+Under the `Point of Sale API` tab, add your app's [bundle identifier](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html#//apple_ref/doc/uid/TP40012582-CH28-SW16) and [URL scheme](https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Inter-AppCommunication/Inter-AppCommunication.html#//apple_ref/doc/uid/TP40007072-CH6-SW1), then click "Save".
+
+![Point of Sale API](./Resources/README/api.png)
+
+Get your `Application ID` from the `Credentials` tab.
+
+![Credentials](./Resources/README/credentials.png)
 
 -------------------------------
 ## Usage

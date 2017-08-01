@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		406BACCA1F04157B0096DE8E /* SquarePointOfSaleSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4006836C1F04156600487BA7 /* SquarePointOfSaleSDK.framework */; };
+		406BACCB1F04157B0096DE8E /* SquarePointOfSaleSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4006836C1F04156600487BA7 /* SquarePointOfSaleSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		40E20B181F0414F800DD6750 /* HelloCharge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E20B0F1F0414F800DD6750 /* HelloCharge.storyboard */; };
+		40E20B191F0414F800DD6750 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E20B101F0414F800DD6750 /* LaunchScreen.storyboard */; };
+		40E20B1A1F0414F800DD6750 /* HelloChargeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E20B131F0414F800DD6750 /* HelloChargeAppDelegate.m */; };
+		40E20B1B1F0414F800DD6750 /* HelloChargeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E20B151F0414F800DD6750 /* HelloChargeTableViewController.m */; };
+		40E20B1C1F0414F800DD6750 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E20B161F0414F800DD6750 /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4006836B1F04156600487BA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 400683651F04156600487BA7 /* SquarePointOfSaleSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D3BD92C1CA9D6C600DA2B06;
+			remoteInfo = SquarePointOfSaleSDK;
+		};
+		4006836D1F04156600487BA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 400683651F04156600487BA7 /* SquarePointOfSaleSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 40F4276E1F019E4E0015BFEB;
+			remoteInfo = SquarePointOfSaleSDKTests;
+		};
+		4006836F1F04156600487BA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 400683651F04156600487BA7 /* SquarePointOfSaleSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4010C4341F02C678008D4FB5;
+			remoteInfo = TestHostApp;
+		};
+		406BACC51F0415750096DE8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 400683651F04156600487BA7 /* SquarePointOfSaleSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D3BD92B1CA9D6C600DA2B06;
+			remoteInfo = SquarePointOfSaleSDK;
+		};
+		406BACCC1F04157B0096DE8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 400683651F04156600487BA7 /* SquarePointOfSaleSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D3BD92B1CA9D6C600DA2B06;
+			remoteInfo = SquarePointOfSaleSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		406BACCE1F04157B0096DE8E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				406BACCB1F04157B0096DE8E /* SquarePointOfSaleSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		400683651F04156600487BA7 /* SquarePointOfSaleSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SquarePointOfSaleSDK.xcodeproj; path = ../../SquarePointOfSaleSDK.xcodeproj; sourceTree = "<group>"; };
+		404325901F041BFF00C9348C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		40E20AF31F04149C00DD6750 /* HelloCharge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloCharge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		40E20B0E1F0414F800DD6750 /* HelloCharge-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "HelloCharge-Info.plist"; sourceTree = "<group>"; };
+		40E20B0F1F0414F800DD6750 /* HelloCharge.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HelloCharge.storyboard; sourceTree = "<group>"; };
+		40E20B101F0414F800DD6750 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		40E20B121F0414F800DD6750 /* HelloChargeAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloChargeAppDelegate.h; sourceTree = "<group>"; };
+		40E20B131F0414F800DD6750 /* HelloChargeAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelloChargeAppDelegate.m; sourceTree = "<group>"; };
+		40E20B141F0414F800DD6750 /* HelloChargeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloChargeTableViewController.h; sourceTree = "<group>"; };
+		40E20B151F0414F800DD6750 /* HelloChargeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelloChargeTableViewController.m; sourceTree = "<group>"; };
+		40E20B161F0414F800DD6750 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		40E20AF01F04149C00DD6750 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				406BACCA1F04157B0096DE8E /* SquarePointOfSaleSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		400683661F04156600487BA7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4006836C1F04156600487BA7 /* SquarePointOfSaleSDK.framework */,
+				4006836E1F04156600487BA7 /* SquarePointOfSaleSDKTests.xctest */,
+				400683701F04156600487BA7 /* TestHostApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		40E20AEA1F04149C00DD6750 = {
+			isa = PBXGroup;
+			children = (
+				400683651F04156600487BA7 /* SquarePointOfSaleSDK.xcodeproj */,
+				404325901F041BFF00C9348C /* README.md */,
+				40E20B0D1F0414F800DD6750 /* Resources */,
+				40E20B111F0414F800DD6750 /* Sources */,
+				40E20AF41F04149C00DD6750 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		40E20AF41F04149C00DD6750 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40E20AF31F04149C00DD6750 /* HelloCharge.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		40E20B0D1F0414F800DD6750 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				40E20B0E1F0414F800DD6750 /* HelloCharge-Info.plist */,
+				40E20B0F1F0414F800DD6750 /* HelloCharge.storyboard */,
+				40E20B101F0414F800DD6750 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		40E20B111F0414F800DD6750 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				40E20B121F0414F800DD6750 /* HelloChargeAppDelegate.h */,
+				40E20B131F0414F800DD6750 /* HelloChargeAppDelegate.m */,
+				40E20B141F0414F800DD6750 /* HelloChargeTableViewController.h */,
+				40E20B151F0414F800DD6750 /* HelloChargeTableViewController.m */,
+				40E20B161F0414F800DD6750 /* main.m */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		40E20AF21F04149C00DD6750 /* HelloCharge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40E20B0A1F04149C00DD6750 /* Build configuration list for PBXNativeTarget "HelloCharge" */;
+			buildPhases = (
+				40E20AEF1F04149C00DD6750 /* Sources */,
+				40E20AF01F04149C00DD6750 /* Frameworks */,
+				40E20AF11F04149C00DD6750 /* Resources */,
+				406BACCE1F04157B0096DE8E /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				406BACC61F0415750096DE8E /* PBXTargetDependency */,
+				406BACCD1F04157B0096DE8E /* PBXTargetDependency */,
+			);
+			name = HelloCharge;
+			productName = HelloCharge;
+			productReference = 40E20AF31F04149C00DD6750 /* HelloCharge.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		40E20AEB1F04149C00DD6750 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Square;
+				TargetAttributes = {
+					40E20AF21F04149C00DD6750 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 40E20AEE1F04149C00DD6750 /* Build configuration list for PBXProject "HelloCharge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 40E20AEA1F04149C00DD6750;
+			productRefGroup = 40E20AF41F04149C00DD6750 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 400683661F04156600487BA7 /* Products */;
+					ProjectRef = 400683651F04156600487BA7 /* SquarePointOfSaleSDK.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				40E20AF21F04149C00DD6750 /* HelloCharge */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4006836C1F04156600487BA7 /* SquarePointOfSaleSDK.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SquarePointOfSaleSDK.framework;
+			remoteRef = 4006836B1F04156600487BA7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4006836E1F04156600487BA7 /* SquarePointOfSaleSDKTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SquarePointOfSaleSDKTests.xctest;
+			remoteRef = 4006836D1F04156600487BA7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		400683701F04156600487BA7 /* TestHostApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = TestHostApp.app;
+			remoteRef = 4006836F1F04156600487BA7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		40E20AF11F04149C00DD6750 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40E20B191F0414F800DD6750 /* LaunchScreen.storyboard in Resources */,
+				40E20B181F0414F800DD6750 /* HelloCharge.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		40E20AEF1F04149C00DD6750 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40E20B1B1F0414F800DD6750 /* HelloChargeTableViewController.m in Sources */,
+				40E20B1C1F0414F800DD6750 /* main.m in Sources */,
+				40E20B1A1F0414F800DD6750 /* HelloChargeAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		406BACC61F0415750096DE8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SquarePointOfSaleSDK;
+			targetProxy = 406BACC51F0415750096DE8E /* PBXContainerItemProxy */;
+		};
+		406BACCD1F04157B0096DE8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SquarePointOfSaleSDK;
+			targetProxy = 406BACCC1F04157B0096DE8E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		40E20B081F04149C00DD6750 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		40E20B091F04149C00DD6750 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		40E20B0B1F04149C00DD6750 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/HelloCharge-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.squareup.HelloCharge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		40E20B0C1F04149C00DD6750 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/HelloCharge-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.squareup.HelloCharge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		40E20AEE1F04149C00DD6750 /* Build configuration list for PBXProject "HelloCharge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40E20B081F04149C00DD6750 /* Debug */,
+				40E20B091F04149C00DD6750 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40E20B0A1F04149C00DD6750 /* Build configuration list for PBXNativeTarget "HelloCharge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40E20B0B1F04149C00DD6750 /* Debug */,
+				40E20B0C1F04149C00DD6750 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 40E20AEB1F04149C00DD6750 /* Project object */;
+}

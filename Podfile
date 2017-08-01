@@ -1,22 +1,12 @@
 
 source 'https://github.com/CocoaPods/Specs'
 
-project 'SquarePointOfSaleSDK Tests.xcodeproj'
+project 'SquarePointOfSaleSDK.xcodeproj'
 
 platform :ios, '8.0'
 
-target 'SquarePointOfSaleSDK Tests' do
+target 'SquarePointOfSaleSDKTests' do
   use_frameworks!
-  pod 'SquarePointOfSaleSDK', :path => 'SquarePointOfSaleSDK.podspec'
   pod 'OCMock', '~> 3.1'
 end
 
-target 'HelloCharge' do
-  use_frameworks!
-  pod 'SquarePointOfSaleSDK', :path => 'SquarePointOfSaleSDK.podspec'
-end
-
-target 'HelloCharge-Swift' do
-  use_frameworks!
-  pod 'SquarePointOfSaleSDK', :path => 'SquarePointOfSaleSDK.podspec'
-end
