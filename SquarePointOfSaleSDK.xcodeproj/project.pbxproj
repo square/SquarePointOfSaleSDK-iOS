@@ -7,124 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03E95D841F33D67200F5ABED /* SCCAPIConnection_Testing.h in Headers */ = {isa = PBXBuildFile; fileRef = 03E95D821F33D67200F5ABED /* SCCAPIConnection_Testing.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		296927C41B8E976894BE90C7 /* Pods_SquarePointOfSaleSDKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99E6FD80EB8C6E414DD326E /* Pods_SquarePointOfSaleSDKTests.framework */; };
-		402407381F02D607008C91C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402407361F02D607008C91C7 /* AppDelegate.swift */; };
-		404325881F0417F400C9348C /* SquarePointOfSaleSDKTests-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 404325871F0417F400C9348C /* SquarePointOfSaleSDKTests-Bridging-Header.h */; };
+		03AAE1AA1F33D0A100907B4A /* NSDictionary+SCCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4078ACC81F01C61E00C6A4CE /* NSDictionary+SCCAdditions.m */; };
+		03AAE1AB1F33D0A100907B4A /* NSError+SCCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4078ACCA1F01C61E00C6A4CE /* NSError+SCCAdditions.m */; };
+		03AAE1AC1F33D0A100907B4A /* NSError+SCCAPIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4078ACCC1F01C61E00C6A4CE /* NSError+SCCAPIAdditions.m */; };
+		03AAE1AD1F33D0A100907B4A /* NSURL+SCCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4078ACCF1F01C61E00C6A4CE /* NSURL+SCCAdditions.m */; };
+		03AAE1B21F33D0BD00907B4A /* SCCAPIConnection_Testing.h in Headers */ = {isa = PBXBuildFile; fileRef = 03AAE1B11F33D0BD00907B4A /* SCCAPIConnection_Testing.h */; };
+		03E95D7B1F33D3DD00F5ABED /* SCCAPIRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40736A481F01C00700E4448C /* SCCAPIRequest.m */; };
+		03E95D7C1F33D3E100F5ABED /* SCCAPIResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 40736A4A1F01C00700E4448C /* SCCAPIResponse.m */; };
+		03E95D7D1F33D3E400F5ABED /* SCCMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = 40736A4C1F01C00700E4448C /* SCCMoney.m */; };
+		03E95D7E1F33D3EC00F5ABED /* SCCAPIConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 40736A461F01C00700E4448C /* SCCAPIConnection.m */; };
 		4043258A1F04185A00C9348C /* SquarePointOfSaleSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 404325891F04185A00C9348C /* SquarePointOfSaleSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		406D85FE1F02CDD800D79D74 /* NSError+SCCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4078ACC91F01C61E00C6A4CE /* NSError+SCCAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		40736A5A1F01C00700E4448C /* SCCAPIConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 40736A451F01C00700E4448C /* SCCAPIConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		40736A5B1F01C00700E4448C /* SCCAPIConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 40736A461F01C00700E4448C /* SCCAPIConnection.m */; };
 		40736A5C1F01C00700E4448C /* SCCAPIRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 40736A471F01C00700E4448C /* SCCAPIRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		40736A5D1F01C00700E4448C /* SCCAPIRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40736A481F01C00700E4448C /* SCCAPIRequest.m */; };
 		40736A5E1F01C00700E4448C /* SCCAPIResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 40736A491F01C00700E4448C /* SCCAPIResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		40736A5F1F01C00700E4448C /* SCCAPIResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 40736A4A1F01C00700E4448C /* SCCAPIResponse.m */; };
 		40736A601F01C00700E4448C /* SCCMoney.h in Headers */ = {isa = PBXBuildFile; fileRef = 40736A4B1F01C00700E4448C /* SCCMoney.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		40736A611F01C00700E4448C /* SCCMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = 40736A4C1F01C00700E4448C /* SCCMoney.m */; };
-		4078ACBF1F01C5B000C6A4CE /* SCCTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 4078ACB81F01C5B000C6A4CE /* SCCTestCase.h */; };
-		4078ACC01F01C5B000C6A4CE /* SCCTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4078ACB91F01C5B000C6A4CE /* SCCTestCase.m */; };
-		4078ACC11F01C5B000C6A4CE /* NSError+SCCAPIAdditionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4078ACBA1F01C5B000C6A4CE /* NSError+SCCAPIAdditionsTests.swift */; };
-		4078ACC21F01C5B000C6A4CE /* SCCAPIConnectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4078ACBB1F01C5B000C6A4CE /* SCCAPIConnectionTests.m */; };
-		4078ACC31F01C5B000C6A4CE /* SCCAPIRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4078ACBC1F01C5B000C6A4CE /* SCCAPIRequestTests.swift */; };
-		4078ACC41F01C5B000C6A4CE /* SCCAPIResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4078ACBD1F01C5B000C6A4CE /* SCCAPIResponseTests.swift */; };
-		4078ACC51F01C5B000C6A4CE /* SCCMoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4078ACBE1F01C5B000C6A4CE /* SCCMoneyTests.swift */; };
 		4078ACD31F01C61E00C6A4CE /* NSDictionary+SCCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4078ACC71F01C61E00C6A4CE /* NSDictionary+SCCAdditions.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		4078ACD41F01C61E00C6A4CE /* NSDictionary+SCCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4078ACC81F01C61E00C6A4CE /* NSDictionary+SCCAdditions.m */; };
-		4078ACD61F01C61E00C6A4CE /* NSError+SCCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4078ACCA1F01C61E00C6A4CE /* NSError+SCCAdditions.m */; };
 		4078ACD71F01C61E00C6A4CE /* NSError+SCCAPIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4078ACCB1F01C61E00C6A4CE /* NSError+SCCAPIAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4078ACD81F01C61E00C6A4CE /* NSError+SCCAPIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4078ACCC1F01C61E00C6A4CE /* NSError+SCCAPIAdditions.m */; };
 		4078ACD91F01C61E00C6A4CE /* NSError+SCCAPISerializationAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4078ACCD1F01C61E00C6A4CE /* NSError+SCCAPISerializationAdditions.h */; };
 		4078ACDA1F01C61E00C6A4CE /* NSURL+SCCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4078ACCE1F01C61E00C6A4CE /* NSURL+SCCAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4078ACDB1F01C61E00C6A4CE /* NSURL+SCCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4078ACCF1F01C61E00C6A4CE /* NSURL+SCCAdditions.m */; };
 		4078ACDC1F01C61E00C6A4CE /* SCCAPIRequest+Serialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 4078ACD01F01C61E00C6A4CE /* SCCAPIRequest+Serialization.h */; };
 		4078ACDD1F01C61E00C6A4CE /* SCCAPIResponse+Serialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 4078ACD11F01C61E00C6A4CE /* SCCAPIResponse+Serialization.h */; };
 		4078ACDE1F01C61E00C6A4CE /* SCCMoney+Serialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 4078ACD21F01C61E00C6A4CE /* SCCMoney+Serialization.h */; };
-		40F427731F019E4E0015BFEB /* SquarePointOfSaleSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3BD92C1CA9D6C600DA2B06 /* SquarePointOfSaleSDK.framework */; };
 		8D3BD9341CA9D6CD00DA2B06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3BD9251CA9D65C00DA2B06 /* Foundation.framework */; };
 		8D3BD9351CA9D6D100DA2B06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3BD9231CA9D65700DA2B06 /* UIKit.framework */; };
 		8D3BD9371CA9D6D400DA2B06 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3BD9361CA9D6D400DA2B06 /* CoreFoundation.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		4010C4461F02C8CC008D4FB5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8D3BD8F31CA9D5EE00DA2B06 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4010C4331F02C678008D4FB5;
-			remoteInfo = TestHostApp;
-		};
-		40F427741F019E4E0015BFEB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8D3BD8F31CA9D5EE00DA2B06 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D3BD92B1CA9D6C600DA2B06;
-			remoteInfo = SquarePointOfSaleSDK;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		03E95D821F33D67200F5ABED /* SCCAPIConnection_Testing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCAPIConnection_Testing.h; sourceTree = "<group>"; };
-		4010C4341F02C678008D4FB5 /* TestHostApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestHostApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		402407361F02D607008C91C7 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Tests/TestHostApp/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
-		402407371F02D607008C91C7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Tests/TestHostApp/Info.plist; sourceTree = SOURCE_ROOT; };
-		404325871F0417F400C9348C /* SquarePointOfSaleSDKTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SquarePointOfSaleSDKTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		404325891F04185A00C9348C /* SquarePointOfSaleSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquarePointOfSaleSDK.h; sourceTree = "<group>"; };
-		40736A431F01C00700E4448C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		40736A451F01C00700E4448C /* SCCAPIConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCAPIConnection.h; sourceTree = "<group>"; };
-		40736A461F01C00700E4448C /* SCCAPIConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCAPIConnection.m; sourceTree = "<group>"; };
-		40736A471F01C00700E4448C /* SCCAPIRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCAPIRequest.h; sourceTree = "<group>"; };
-		40736A481F01C00700E4448C /* SCCAPIRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCAPIRequest.m; sourceTree = "<group>"; };
-		40736A491F01C00700E4448C /* SCCAPIResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCAPIResponse.h; sourceTree = "<group>"; };
-		40736A4A1F01C00700E4448C /* SCCAPIResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCAPIResponse.m; sourceTree = "<group>"; };
-		40736A4B1F01C00700E4448C /* SCCMoney.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCMoney.h; sourceTree = "<group>"; };
-		40736A4C1F01C00700E4448C /* SCCMoney.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCMoney.m; sourceTree = "<group>"; };
-		4078ACB81F01C5B000C6A4CE /* SCCTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCTestCase.h; sourceTree = "<group>"; };
-		4078ACB91F01C5B000C6A4CE /* SCCTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCTestCase.m; sourceTree = "<group>"; };
-		4078ACBA1F01C5B000C6A4CE /* NSError+SCCAPIAdditionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+SCCAPIAdditionsTests.swift"; sourceTree = "<group>"; };
-		4078ACBB1F01C5B000C6A4CE /* SCCAPIConnectionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCAPIConnectionTests.m; sourceTree = "<group>"; };
-		4078ACBC1F01C5B000C6A4CE /* SCCAPIRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCCAPIRequestTests.swift; sourceTree = "<group>"; };
-		4078ACBD1F01C5B000C6A4CE /* SCCAPIResponseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCCAPIResponseTests.swift; sourceTree = "<group>"; };
-		4078ACBE1F01C5B000C6A4CE /* SCCMoneyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCCMoneyTests.swift; sourceTree = "<group>"; };
-		4078ACC71F01C61E00C6A4CE /* NSDictionary+SCCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SCCAdditions.h"; sourceTree = "<group>"; };
-		4078ACC81F01C61E00C6A4CE /* NSDictionary+SCCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SCCAdditions.m"; sourceTree = "<group>"; };
-		4078ACC91F01C61E00C6A4CE /* NSError+SCCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+SCCAdditions.h"; sourceTree = "<group>"; };
-		4078ACCA1F01C61E00C6A4CE /* NSError+SCCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+SCCAdditions.m"; sourceTree = "<group>"; };
-		4078ACCB1F01C61E00C6A4CE /* NSError+SCCAPIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+SCCAPIAdditions.h"; sourceTree = "<group>"; };
-		4078ACCC1F01C61E00C6A4CE /* NSError+SCCAPIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+SCCAPIAdditions.m"; sourceTree = "<group>"; };
-		4078ACCD1F01C61E00C6A4CE /* NSError+SCCAPISerializationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+SCCAPISerializationAdditions.h"; sourceTree = "<group>"; };
-		4078ACCE1F01C61E00C6A4CE /* NSURL+SCCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+SCCAdditions.h"; sourceTree = "<group>"; };
-		4078ACCF1F01C61E00C6A4CE /* NSURL+SCCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+SCCAdditions.m"; sourceTree = "<group>"; };
-		4078ACD01F01C61E00C6A4CE /* SCCAPIRequest+Serialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SCCAPIRequest+Serialization.h"; sourceTree = "<group>"; };
-		4078ACD11F01C61E00C6A4CE /* SCCAPIResponse+Serialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SCCAPIResponse+Serialization.h"; sourceTree = "<group>"; };
-		4078ACD21F01C61E00C6A4CE /* SCCMoney+Serialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SCCMoney+Serialization.h"; sourceTree = "<group>"; };
-		40F4276E1F019E4E0015BFEB /* SquarePointOfSaleSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SquarePointOfSaleSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		40F4277F1F019E660015BFEB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03AAE1B11F33D0BD00907B4A /* SCCAPIConnection_Testing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCCAPIConnection_Testing.h; path = Sources/SCCAPIConnection_Testing.h; sourceTree = SOURCE_ROOT; };
+		404325891F04185A00C9348C /* SquarePointOfSaleSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SquarePointOfSaleSDK.h; path = Sources/SquarePointOfSaleSDK.h; sourceTree = SOURCE_ROOT; };
+		40736A431F01C00700E4448C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
+		40736A451F01C00700E4448C /* SCCAPIConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCCAPIConnection.h; path = Sources/SCCAPIConnection.h; sourceTree = SOURCE_ROOT; };
+		40736A461F01C00700E4448C /* SCCAPIConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCCAPIConnection.m; path = Sources/SCCAPIConnection.m; sourceTree = SOURCE_ROOT; };
+		40736A471F01C00700E4448C /* SCCAPIRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCCAPIRequest.h; path = Sources/SCCAPIRequest.h; sourceTree = SOURCE_ROOT; };
+		40736A481F01C00700E4448C /* SCCAPIRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCCAPIRequest.m; path = Sources/SCCAPIRequest.m; sourceTree = SOURCE_ROOT; };
+		40736A491F01C00700E4448C /* SCCAPIResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCCAPIResponse.h; path = Sources/SCCAPIResponse.h; sourceTree = SOURCE_ROOT; };
+		40736A4A1F01C00700E4448C /* SCCAPIResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCCAPIResponse.m; path = Sources/SCCAPIResponse.m; sourceTree = SOURCE_ROOT; };
+		40736A4B1F01C00700E4448C /* SCCMoney.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCCMoney.h; path = Sources/SCCMoney.h; sourceTree = SOURCE_ROOT; };
+		40736A4C1F01C00700E4448C /* SCCMoney.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCCMoney.m; path = Sources/SCCMoney.m; sourceTree = SOURCE_ROOT; };
+		4078ACC71F01C61E00C6A4CE /* NSDictionary+SCCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+SCCAdditions.h"; path = "Sources/Categories/NSDictionary+SCCAdditions.h"; sourceTree = SOURCE_ROOT; };
+		4078ACC81F01C61E00C6A4CE /* NSDictionary+SCCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+SCCAdditions.m"; path = "Sources/Categories/NSDictionary+SCCAdditions.m"; sourceTree = SOURCE_ROOT; };
+		4078ACC91F01C61E00C6A4CE /* NSError+SCCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+SCCAdditions.h"; path = "Sources/Categories/NSError+SCCAdditions.h"; sourceTree = SOURCE_ROOT; };
+		4078ACCA1F01C61E00C6A4CE /* NSError+SCCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+SCCAdditions.m"; path = "Sources/Categories/NSError+SCCAdditions.m"; sourceTree = SOURCE_ROOT; };
+		4078ACCB1F01C61E00C6A4CE /* NSError+SCCAPIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+SCCAPIAdditions.h"; path = "Sources/Categories/NSError+SCCAPIAdditions.h"; sourceTree = SOURCE_ROOT; };
+		4078ACCC1F01C61E00C6A4CE /* NSError+SCCAPIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+SCCAPIAdditions.m"; path = "Sources/Categories/NSError+SCCAPIAdditions.m"; sourceTree = SOURCE_ROOT; };
+		4078ACCD1F01C61E00C6A4CE /* NSError+SCCAPISerializationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+SCCAPISerializationAdditions.h"; path = "Sources/Categories/NSError+SCCAPISerializationAdditions.h"; sourceTree = SOURCE_ROOT; };
+		4078ACCE1F01C61E00C6A4CE /* NSURL+SCCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURL+SCCAdditions.h"; path = "Sources/Categories/NSURL+SCCAdditions.h"; sourceTree = SOURCE_ROOT; };
+		4078ACCF1F01C61E00C6A4CE /* NSURL+SCCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURL+SCCAdditions.m"; path = "Sources/Categories/NSURL+SCCAdditions.m"; sourceTree = SOURCE_ROOT; };
+		4078ACD01F01C61E00C6A4CE /* SCCAPIRequest+Serialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SCCAPIRequest+Serialization.h"; path = "Sources/Categories/SCCAPIRequest+Serialization.h"; sourceTree = SOURCE_ROOT; };
+		4078ACD11F01C61E00C6A4CE /* SCCAPIResponse+Serialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SCCAPIResponse+Serialization.h"; path = "Sources/Categories/SCCAPIResponse+Serialization.h"; sourceTree = SOURCE_ROOT; };
+		4078ACD21F01C61E00C6A4CE /* SCCMoney+Serialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SCCMoney+Serialization.h"; path = "Sources/Categories/SCCMoney+Serialization.h"; sourceTree = SOURCE_ROOT; };
 		8D3BD9231CA9D65700DA2B06 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8D3BD9251CA9D65C00DA2B06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8D3BD92C1CA9D6C600DA2B06 /* SquarePointOfSaleSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SquarePointOfSaleSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D3BD9361CA9D6D400DA2B06 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		A99E6FD80EB8C6E414DD326E /* Pods_SquarePointOfSaleSDKTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SquarePointOfSaleSDKTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF66124B177CD8C725236AB1 /* Pods-SquarePointOfSaleSDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquarePointOfSaleSDKTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SquarePointOfSaleSDKTests/Pods-SquarePointOfSaleSDKTests.debug.xcconfig"; sourceTree = "<group>"; };
-		FCB9FC43272CDDCF63B19A46 /* Pods-SquarePointOfSaleSDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquarePointOfSaleSDKTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SquarePointOfSaleSDKTests/Pods-SquarePointOfSaleSDKTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4010C4311F02C678008D4FB5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		40F4276B1F019E4E0015BFEB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				40F427731F019E4E0015BFEB /* SquarePointOfSaleSDK.framework in Frameworks */,
-				296927C41B8E976894BE90C7 /* Pods_SquarePointOfSaleSDKTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8D3BD9281CA9D6C600DA2B06 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -138,31 +78,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		12207D7C7F7B1DBB470CB837 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				CF66124B177CD8C725236AB1 /* Pods-SquarePointOfSaleSDKTests.debug.xcconfig */,
-				FCB9FC43272CDDCF63B19A46 /* Pods-SquarePointOfSaleSDKTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		4010C4351F02C678008D4FB5 /* TestHostApp */ = {
-			isa = PBXGroup;
-			children = (
-				402407361F02D607008C91C7 /* AppDelegate.swift */,
-				402407371F02D607008C91C7 /* Info.plist */,
-			);
-			name = TestHostApp;
-			path = ../TestHostApp;
-			sourceTree = "<group>";
-		};
 		40736A421F01C00700E4448C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				40736A431F01C00700E4448C /* Info.plist */,
 			);
-			path = Resources;
+			name = Resources;
+			path = SquarePointOfSaleSDK/Resources;
 			sourceTree = "<group>";
 		};
 		40736A441F01C00700E4448C /* Sources */ = {
@@ -180,31 +102,8 @@
 				40736A4B1F01C00700E4448C /* SCCMoney.h */,
 				40736A4C1F01C00700E4448C /* SCCMoney.m */,
 			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		4078ACB61F01C5B000C6A4CE /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				404325871F0417F400C9348C /* SquarePointOfSaleSDKTests-Bridging-Header.h */,
-				4078ACB71F01C5B000C6A4CE /* Base Test Classes */,
-				4078ACBA1F01C5B000C6A4CE /* NSError+SCCAPIAdditionsTests.swift */,
-				4078ACBB1F01C5B000C6A4CE /* SCCAPIConnectionTests.m */,
-				4078ACBC1F01C5B000C6A4CE /* SCCAPIRequestTests.swift */,
-				4078ACBD1F01C5B000C6A4CE /* SCCAPIResponseTests.swift */,
-				4078ACBE1F01C5B000C6A4CE /* SCCMoneyTests.swift */,
-			);
 			name = Sources;
-			path = Tests/Sources;
-			sourceTree = SOURCE_ROOT;
-		};
-		4078ACB71F01C5B000C6A4CE /* Base Test Classes */ = {
-			isa = PBXGroup;
-			children = (
-				4078ACB81F01C5B000C6A4CE /* SCCTestCase.h */,
-				4078ACB91F01C5B000C6A4CE /* SCCTestCase.m */,
-			);
-			path = "Base Test Classes";
+			path = SquarePointOfSaleSDK/Sources;
 			sourceTree = "<group>";
 		};
 		4078ACC61F01C61E00C6A4CE /* Categories */ = {
@@ -226,34 +125,13 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
-		40F4276F1F019E4E0015BFEB /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				4010C4351F02C678008D4FB5 /* TestHostApp */,
-				40F4277C1F019E660015BFEB /* Resources */,
-				4078ACB61F01C5B000C6A4CE /* Sources */,
-			);
-			name = Tests;
-			path = SquarePointOfSaleSDKTests;
-			sourceTree = "<group>";
-		};
-		40F4277C1F019E660015BFEB /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				40F4277F1F019E660015BFEB /* Info.plist */,
-			);
-			name = Resources;
-			path = Tests/Resources;
-			sourceTree = SOURCE_ROOT;
-		};
 		8D3BD8F21CA9D5EE00DA2B06 = {
 			isa = PBXGroup;
 			children = (
-				8D3BD8FD1CA9D5EE00DA2B06 /* SquarePointOfSaleSDK */,
-				40F4276F1F019E4E0015BFEB /* Tests */,
+				40736A441F01C00700E4448C /* Sources */,
+				40736A421F01C00700E4448C /* Resources */,
 				8D3BD9081CA9D61900DA2B06 /* Frameworks */,
 				8D3BD8FC1CA9D5EE00DA2B06 /* Products */,
-				12207D7C7F7B1DBB470CB837 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -261,19 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				8D3BD92C1CA9D6C600DA2B06 /* SquarePointOfSaleSDK.framework */,
-				40F4276E1F019E4E0015BFEB /* SquarePointOfSaleSDKTests.xctest */,
-				4010C4341F02C678008D4FB5 /* TestHostApp.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		8D3BD8FD1CA9D5EE00DA2B06 /* SquarePointOfSaleSDK */ = {
-			isa = PBXGroup;
-			children = (
-				40736A421F01C00700E4448C /* Resources */,
-				40736A441F01C00700E4448C /* Sources */,
-			);
-			path = SquarePointOfSaleSDK;
 			sourceTree = "<group>";
 		};
 		8D3BD9081CA9D61900DA2B06 /* Frameworks */ = {
@@ -282,7 +149,6 @@
 				8D3BD9361CA9D6D400DA2B06 /* CoreFoundation.framework */,
 				8D3BD9251CA9D65C00DA2B06 /* Foundation.framework */,
 				8D3BD9231CA9D65700DA2B06 /* UIKit.framework */,
-				A99E6FD80EB8C6E414DD326E /* Pods_SquarePointOfSaleSDKTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -290,22 +156,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		40F4278F1F019EDD0015BFEB /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				404325881F0417F400C9348C /* SquarePointOfSaleSDKTests-Bridging-Header.h in Headers */,
-				4078ACBF1F01C5B000C6A4CE /* SCCTestCase.h in Headers */,
-				03E95D841F33D67200F5ABED /* SCCAPIConnection_Testing.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8D3BD9291CA9D6C600DA2B06 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4043258A1F04185A00C9348C /* SquarePointOfSaleSDK.h in Headers */,
 				4078ACD91F01C61E00C6A4CE /* NSError+SCCAPISerializationAdditions.h in Headers */,
+				03AAE1B21F33D0BD00907B4A /* SCCAPIConnection_Testing.h in Headers */,
 				406D85FE1F02CDD800D79D74 /* NSError+SCCAdditions.h in Headers */,
 				40736A5E1F01C00700E4448C /* SCCAPIResponse.h in Headers */,
 				40736A5A1F01C00700E4448C /* SCCAPIConnection.h in Headers */,
@@ -323,46 +180,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4010C4331F02C678008D4FB5 /* TestHostApp */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4010C4431F02C678008D4FB5 /* Build configuration list for PBXNativeTarget "TestHostApp" */;
-			buildPhases = (
-				4010C4301F02C678008D4FB5 /* Sources */,
-				4010C4311F02C678008D4FB5 /* Frameworks */,
-				4010C4321F02C678008D4FB5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = TestHostApp;
-			productName = TestHostApp;
-			productReference = 4010C4341F02C678008D4FB5 /* TestHostApp.app */;
-			productType = "com.apple.product-type.application";
-		};
-		40F4276D1F019E4E0015BFEB /* SquarePointOfSaleSDKTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 40F427781F019E4E0015BFEB /* Build configuration list for PBXNativeTarget "SquarePointOfSaleSDKTests" */;
-			buildPhases = (
-				2FDD8447090744D8B11C86AA /* [CP] Check Pods Manifest.lock */,
-				40F4276A1F019E4E0015BFEB /* Sources */,
-				40F4276B1F019E4E0015BFEB /* Frameworks */,
-				40F4276C1F019E4E0015BFEB /* Resources */,
-				40F4278F1F019EDD0015BFEB /* Headers */,
-				0B88A0286A1E6AD2383A167E /* [CP] Embed Pods Frameworks */,
-				511F4E603F6994353BAFF03B /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				40F427751F019E4E0015BFEB /* PBXTargetDependency */,
-				4010C4471F02C8CC008D4FB5 /* PBXTargetDependency */,
-			);
-			name = SquarePointOfSaleSDKTests;
-			productName = SquarePointOfSaleSDKTests;
-			productReference = 40F4276E1F019E4E0015BFEB /* SquarePointOfSaleSDKTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		8D3BD92B1CA9D6C600DA2B06 /* SquarePointOfSaleSDK */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D3BD9311CA9D6C600DA2B06 /* Build configuration list for PBXNativeTarget "SquarePointOfSaleSDK" */;
@@ -391,16 +208,6 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Square, Inc.";
 				TargetAttributes = {
-					4010C4331F02C678008D4FB5 = {
-						CreatedOnToolsVersion = 8.3.3;
-						LastSwiftMigration = 0830;
-						ProvisioningStyle = Automatic;
-					};
-					40F4276D1F019E4E0015BFEB = {
-						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 4010C4331F02C678008D4FB5;
-					};
 					8D3BD92B1CA9D6C600DA2B06 = {
 						CreatedOnToolsVersion = 7.2;
 					};
@@ -420,27 +227,11 @@
 			projectRoot = "";
 			targets = (
 				8D3BD92B1CA9D6C600DA2B06 /* SquarePointOfSaleSDK */,
-				40F4276D1F019E4E0015BFEB /* SquarePointOfSaleSDKTests */,
-				4010C4331F02C678008D4FB5 /* TestHostApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4010C4321F02C678008D4FB5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		40F4276C1F019E4E0015BFEB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8D3BD92A1CA9D6C600DA2B06 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -450,187 +241,25 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		0B88A0286A1E6AD2383A167E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SquarePointOfSaleSDKTests/Pods-SquarePointOfSaleSDKTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2FDD8447090744D8B11C86AA /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		511F4E603F6994353BAFF03B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SquarePointOfSaleSDKTests/Pods-SquarePointOfSaleSDKTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		4010C4301F02C678008D4FB5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				402407381F02D607008C91C7 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		40F4276A1F019E4E0015BFEB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4078ACC51F01C5B000C6A4CE /* SCCMoneyTests.swift in Sources */,
-				4078ACC11F01C5B000C6A4CE /* NSError+SCCAPIAdditionsTests.swift in Sources */,
-				4078ACC01F01C5B000C6A4CE /* SCCTestCase.m in Sources */,
-				4078ACC41F01C5B000C6A4CE /* SCCAPIResponseTests.swift in Sources */,
-				4078ACC31F01C5B000C6A4CE /* SCCAPIRequestTests.swift in Sources */,
-				4078ACC21F01C5B000C6A4CE /* SCCAPIConnectionTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8D3BD9271CA9D6C600DA2B06 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40736A5B1F01C00700E4448C /* SCCAPIConnection.m in Sources */,
-				40736A5D1F01C00700E4448C /* SCCAPIRequest.m in Sources */,
-				4078ACD81F01C61E00C6A4CE /* NSError+SCCAPIAdditions.m in Sources */,
-				4078ACD41F01C61E00C6A4CE /* NSDictionary+SCCAdditions.m in Sources */,
-				4078ACD61F01C61E00C6A4CE /* NSError+SCCAdditions.m in Sources */,
-				40736A611F01C00700E4448C /* SCCMoney.m in Sources */,
-				4078ACDB1F01C61E00C6A4CE /* NSURL+SCCAdditions.m in Sources */,
-				40736A5F1F01C00700E4448C /* SCCAPIResponse.m in Sources */,
+				03E95D7E1F33D3EC00F5ABED /* SCCAPIConnection.m in Sources */,
+				03E95D7D1F33D3E400F5ABED /* SCCMoney.m in Sources */,
+				03E95D7C1F33D3E100F5ABED /* SCCAPIResponse.m in Sources */,
+				03E95D7B1F33D3DD00F5ABED /* SCCAPIRequest.m in Sources */,
+				03AAE1AA1F33D0A100907B4A /* NSDictionary+SCCAdditions.m in Sources */,
+				03AAE1AB1F33D0A100907B4A /* NSError+SCCAdditions.m in Sources */,
+				03AAE1AC1F33D0A100907B4A /* NSError+SCCAPIAdditions.m in Sources */,
+				03AAE1AD1F33D0A100907B4A /* NSURL+SCCAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		4010C4471F02C8CC008D4FB5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4010C4331F02C678008D4FB5 /* TestHostApp */;
-			targetProxy = 4010C4461F02C8CC008D4FB5 /* PBXContainerItemProxy */;
-		};
-		40F427751F019E4E0015BFEB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8D3BD92B1CA9D6C600DA2B06 /* SquarePointOfSaleSDK */;
-			targetProxy = 40F427741F019E4E0015BFEB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		4010C4441F02C678008D4FB5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Tests/TestHostApp/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.squareup.TestHostApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		4010C4451F02C678008D4FB5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Tests/TestHostApp/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.squareup.TestHostApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		40F427761F019E4E0015BFEB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF66124B177CD8C725236AB1 /* Pods-SquarePointOfSaleSDKTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				INFOPLIST_FILE = "$(SOURCE_ROOT)/Tests/Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.squareup.SquarePointOfSaleSDKTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SOURCE_ROOT)/Tests/Sources/SquarePointOfSaleSDKTests-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestHostApp.app/TestHostApp";
-			};
-			name = Debug;
-		};
-		40F427771F019E4E0015BFEB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FCB9FC43272CDDCF63B19A46 /* Pods-SquarePointOfSaleSDKTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				INFOPLIST_FILE = "$(SOURCE_ROOT)/Tests/Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.squareup.SquarePointOfSaleSDKTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SOURCE_ROOT)/Tests/Sources/SquarePointOfSaleSDKTests-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestHostApp.app/TestHostApp";
-			};
-			name = Release;
-		};
 		8D3BD9021CA9D5EE00DA2B06 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -725,7 +354,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/SquarePointOfSaleSDK/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.squareup.SquarePointOfSaleSDK;
@@ -746,7 +375,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/SquarePointOfSaleSDK/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.squareup.SquarePointOfSaleSDK;
@@ -761,24 +390,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4010C4431F02C678008D4FB5 /* Build configuration list for PBXNativeTarget "TestHostApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4010C4441F02C678008D4FB5 /* Debug */,
-				4010C4451F02C678008D4FB5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		40F427781F019E4E0015BFEB /* Build configuration list for PBXNativeTarget "SquarePointOfSaleSDKTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				40F427761F019E4E0015BFEB /* Debug */,
-				40F427771F019E4E0015BFEB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		8D3BD8F61CA9D5EE00DA2B06 /* Build configuration list for PBXProject "SquarePointOfSaleSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
