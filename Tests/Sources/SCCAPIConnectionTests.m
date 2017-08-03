@@ -18,15 +18,11 @@
 //  limitations under the License.
 //
 
+@import SquarePointOfSaleSDK;
+
 #import <OCMock/OCMock.h>
 #import <XCTest/XCTest.h>
-
-#import "SCCAPIConnection.h"
-
-#import "NSError+SCCAdditions.h"
-#import "SCCMoney.h"
-#import "SCCAPIRequest.h"
-
+#import "SCCAPIConnection_Testing.h"
 
 @interface SCCAPIConnectionTests : XCTestCase
 @end
@@ -56,11 +52,15 @@
                                          returnAutomaticallyAfterPayment:NO
                                                                    error:NULL];
 
-    id const appMock = OCMPartialMock([UIApplication sharedApplication]);
+    id const bundleMock = OCMPartialMock([NSBundle mainBundle]);
+    NSArray *validURLSchemes = @[@"square-commerce-v1"];
+    OCMStub([bundleMock objectForInfoDictionaryKey:[OCMArg isNotNil]]).andReturn(validURLSchemes);
+
+    id const appMock = OCMClassMock([UIApplication class]);
     OCMStub([appMock canOpenURL:[OCMArg isNotNil]]).andReturn(YES);
 
     NSError *error = nil;
-    BOOL const canPerformRequest = [SCCAPIConnection canPerformRequest:request error:&error];
+    BOOL const canPerformRequest = [SCCAPIConnection _canPerformRequest:request error:&error application:appMock];
     XCTAssertTrue(canPerformRequest);
     XCTAssertNil(error);
 }
@@ -85,15 +85,16 @@
                                          returnAutomaticallyAfterPayment:NO
                                                                    error:NULL];
 
-    id const appMock = OCMPartialMock([UIApplication sharedApplication]);
-    OCMStub([appMock canOpenURL:[OCMArg isNotNil]]).andReturn(NO);
+    id const bundleMock = OCMPartialMock([NSBundle mainBundle]);
+    NSArray *validURLSchemes = @[];
+    OCMStub([bundleMock objectForInfoDictionaryKey:[OCMArg isNotNil]]).andReturn(validURLSchemes);
 
     NSError *error = nil;
     BOOL const canPerformRequest = [SCCAPIConnection canPerformRequest:request error:&error];
     XCTAssertFalse(canPerformRequest);
     XCTAssertNotNil(error);
     XCTAssertEqualObjects(error.domain, SCCErrorDomain);
-    XCTAssertEqual(error.code, SCCErrorCodeCannotPerformRequest);
+    XCTAssertEqual(error.code, SCCErrorCodeCannotOpenApplication);
 }
 
 @end
