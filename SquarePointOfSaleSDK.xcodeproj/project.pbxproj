@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03E95D841F33D67200F5ABED /* SCCAPIConnection_Testing.h in Headers */ = {isa = PBXBuildFile; fileRef = 03E95D821F33D67200F5ABED /* SCCAPIConnection_Testing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		296927C41B8E976894BE90C7 /* Pods_SquarePointOfSaleSDKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99E6FD80EB8C6E414DD326E /* Pods_SquarePointOfSaleSDKTests.framework */; };
 		402407381F02D607008C91C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402407361F02D607008C91C7 /* AppDelegate.swift */; };
 		404325881F0417F400C9348C /* SquarePointOfSaleSDKTests-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 404325871F0417F400C9348C /* SquarePointOfSaleSDKTests-Bridging-Header.h */; };
@@ -62,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03E95D821F33D67200F5ABED /* SCCAPIConnection_Testing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCAPIConnection_Testing.h; sourceTree = "<group>"; };
 		4010C4341F02C678008D4FB5 /* TestHostApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestHostApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		402407361F02D607008C91C7 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Tests/TestHostApp/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		402407371F02D607008C91C7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Tests/TestHostApp/Info.plist; sourceTree = SOURCE_ROOT; };
@@ -169,6 +171,7 @@
 				404325891F04185A00C9348C /* SquarePointOfSaleSDK.h */,
 				4078ACC61F01C61E00C6A4CE /* Categories */,
 				40736A451F01C00700E4448C /* SCCAPIConnection.h */,
+				03E95D821F33D67200F5ABED /* SCCAPIConnection_Testing.h */,
 				40736A461F01C00700E4448C /* SCCAPIConnection.m */,
 				40736A471F01C00700E4448C /* SCCAPIRequest.h */,
 				40736A481F01C00700E4448C /* SCCAPIRequest.m */,
@@ -293,6 +296,7 @@
 			files = (
 				404325881F0417F400C9348C /* SquarePointOfSaleSDKTests-Bridging-Header.h in Headers */,
 				4078ACBF1F01C5B000C6A4CE /* SCCTestCase.h in Headers */,
+				03E95D841F33D67200F5ABED /* SCCAPIConnection_Testing.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

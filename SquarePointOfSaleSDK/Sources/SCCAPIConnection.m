@@ -33,12 +33,7 @@
 
 + (BOOL)canPerformRequest:(nonnull SCCAPIRequest *)request error:(out NSError *__nullable *__nullable)error;
 {
-    NSURL *const requestURL = [request APIRequestURLWithError:error];
-    if (!requestURL) {
-        return NO;
-    }
-
-    return [self _canPerformRequestWithURL:requestURL error:error];
+    return [self _canPerformRequest:request error:error application:[UIApplication sharedApplication]];
 }
 
 + (BOOL)performRequest:(nonnull SCCAPIRequest *)request error:(out NSError *__nullable *__nullable)error;
@@ -51,9 +46,21 @@
     return [self _performRequestWithURL:requestURL error:error];
 }
 
+#pragma mark - Class Methods - Protected
+
++ (BOOL)_canPerformRequest:(nonnull SCCAPIRequest *)request error:(out NSError *__nullable *__nullable)error application:(nonnull UIApplication *)application;
+{
+    NSURL *const requestURL = [request APIRequestURLWithError:error];
+    if (!requestURL) {
+        return NO;
+    }
+
+    return [self _canPerformRequestWithURL:requestURL error:error application:application];
+}
+
 #pragma mark - Class Methods - Private
 
-+ (BOOL)_canPerformRequestWithURL:(nonnull NSURL *)URL error:(out NSError *__nullable *__nullable)error;
++ (BOOL)_canPerformRequestWithURL:(nonnull NSURL *)URL error:(out NSError *__nullable *__nullable)error application:(nonnull UIApplication *)application;
 {
     NSArray *applicationQueriesSchemes = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"LSApplicationQueriesSchemes"];
     if (!([applicationQueriesSchemes isKindOfClass:[NSArray class]] && [applicationQueriesSchemes containsObject:@"square-commerce-v1"])) {
@@ -63,7 +70,7 @@
         return NO;
     }
     
-    if (![[UIApplication sharedApplication] canOpenURL:URL]) {
+    if (![application canOpenURL:URL]) {
         if (error != NULL) {
             *error = [NSError SCC_cannotOpenApplicationError];
         }
@@ -75,7 +82,7 @@
 
 + (BOOL)_performRequestWithURL:(nonnull NSURL *)URL error:(out NSError *__nullable *__nullable)error;
 {
-    if (![self _canPerformRequestWithURL:URL error:error]) {
+    if (![self _canPerformRequestWithURL:URL error:error application:[UIApplication sharedApplication]]) {
         return NO;
     }
 
