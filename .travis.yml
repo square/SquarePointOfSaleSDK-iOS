@@ -3,6 +3,5 @@ osx_image: xcode8.2
 rvm: 2.2.2
 before_script:
     - bundle install
-    - bundle exec pod install
 script:
-    - ./build-script.sh
+    - bundle exec pod lib lint --verbose --fail-fast --allow-warnings

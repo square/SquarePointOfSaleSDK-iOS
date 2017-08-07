@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'SquarePointOfSaleSDK'
-  s.version      = '3.3'
+  s.version      = '3.3.1'
   s.summary      = 'SDK for easier use of Square\'s Point of Sale app-switching API on iOS'
   s.homepage     = 'https://github.com/square/SquarePointOfSaleSDK-iOS/'
   s.license      = { :type => 'Apache License, Version 2.0', :text => "© #{ Date.today.year } Square, Inc." }
@@ -9,9 +9,14 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'SquarePointOfSaleSDK/**/*.{h,m}'
+  s.source_files = 'Sources/**/*.{h,m}'
 
-  s.private_header_files = 'SquarePointOfSaleSDK/Sources/Categories/NSDictionary+SCCAdditions.h'
+  s.private_header_files = 'Sources/Categories/NSDictionary+SCCAdditions.h'
+
+  s.test_spec 'Tests' do |test_spec|
+  	test_spec.source_files = 'Tests/**/*.{h,m}'
+  	test_spec.dependency 'OCMock', '= 3.1'
+  end
 
   s.pod_target_xcconfig = {
 	  #
@@ -81,9 +86,6 @@ Pod::Spec.new do |s|
 	  # Warn if parentheses are omitted in certain contexts, such as when there is an assignment in a context where a truth value is expected, or when operators are nested whose precedence people often get confused about.
 	  'GCC_WARN_MISSING_PARENTHESES' => 'YES',
 
-	  # Warn when a comparison between signed and unsigned values could produce an incorrect result when the signed value is converted to unsigned.
-	  'GCC_WARN_SIGN_COMPARE' => 'YES',
-
 	  # Check calls to printf and scanf, etc., to make sure that the arguments supplied have types appropriate to the format string specified, and that the conversions specified in the format string make sense.
 	  'GCC_WARN_TYPECHECK_CALLS_TO_PRINTF' => 'YES',
 
@@ -108,11 +110,6 @@ Pod::Spec.new do |s|
 	  # Warn whenever a local variable or non-constant static variable is unused aside from its declaration.
 	  'GCC_WARN_UNUSED_VARIABLE' => 'YES',
 
-	  # Warn about assigning integer constants to enum values that are out of the range of the enumerated type.
-	  # ----------------------------------------------------------------------------------------------------------------
-	  # NOTE: In order to set a bitmask to 0, you must cast 0 to the type: 'SCNetworkReachabilityFlags flags = (SCNetworkReachabilityFlags)0;'.
-	  'CLANG_WARN_ASSIGN_ENUM' => 'YES',
-
 	  # Warn about using __bridge casts when not using ARC (where they have no effect).
 	  'CLANG_WARN__ARC_BRIDGE_CAST_NONARC' => 'YES',
 
@@ -136,15 +133,6 @@ Pod::Spec.new do |s|
 
 	  # Warn about implicit conversions between different kinds of enum values.  For example, this can catch issues when using the wrong enum flag as an argument to a function or method.
 	  'CLANG_WARN_ENUM_CONVERSION' => 'YES',
-
-	  # Warn about implicit integer conversions that change the signedness of an integer value.
-	  'CLANG_WARN_IMPLICIT_SIGN_CONVERSION' => 'YES',
-
-	  # Warn about implicit conversions between pointers and integers.  For example, this can catch issues when one incorrectly intermixes using NSNumber*'s and raw integers.
-	  'CLANG_WARN_INT_CONVERSION' => 'YES',
-
-	  # Warns when a nullable expression is used somewhere it’s not allowed (for example, passed as a _Nonnull parameter).
-	  'CLANG_WARN_NULLABLE_TO_NONNULL_CONVERSION' => 'YES',
 
 	  # Warn about implicit retains of 'self' within blocks, which can create a retain-cycle.
 	  'CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF' => 'YES',
