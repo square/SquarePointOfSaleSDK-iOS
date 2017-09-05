@@ -83,11 +83,11 @@ Get your `Application ID` from the `Credentials` tab.
 
 ```swift
 // Replace with your app's URL scheme.
-let yourCallbackURL = URL(string: "your-url-scheme://")!
+let callbackURL = URL(string: <#T##Your URL Scheme##String#>)!
 
 // Your client ID is the same as your Square Application ID.
 // Note: You only need to set your client ID once, before creating your first request.
-SCCAPIRequest.setClientID("YOUR_CLIENT_ID")
+SCCAPIRequest.setClientID(<#T##Client ID##String#>)
 
 do {
     // Specify the amount of money to charge.
@@ -96,7 +96,7 @@ do {
     // Create the request.
     let apiRequest =
         try SCCAPIRequest(
-            callbackURL: yourCallbackURL,
+            callbackURL: callbackURL,
             amount: money,
             userInfoString: nil,
             merchantID: nil,
@@ -150,14 +150,14 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 
 ```objc
 // Replace with your app's callback URL.
-NSURL *const callbackURL = [NSURL URLWithString:@"your-url-scheme://"];
+NSURL *const callbackURL = [NSURL URLWithString:<#Your URL Scheme#>];
 
 // Specify the amount of money to charge.
 SCCMoney *const amount = [SCCMoney moneyWithAmountCents:100 currencyCode:@"USD" error:NULL];
 
 // Your client ID is the same as your Square Application ID.
 // Note: You only need to set your client ID once, before creating your first request.
-[SCCAPIRequest setClientID:@"YOUR_CLIENT_ID"];
+[SCCAPIRequest setClientID:<#Client ID#>];
 
 SCCAPIRequest *request = [SCCAPIRequest requestWithCallbackURL:callbackURL
                                                         amount:amount
