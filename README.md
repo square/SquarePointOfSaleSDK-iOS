@@ -99,7 +99,7 @@ do {
             callbackURL: callbackURL,
             amount: money,
             userInfoString: nil,
-            merchantID: nil,
+            locationID: nil,
             notes: "Coffee",
             customerID: nil,
             supportedTenderTypes: .all,
