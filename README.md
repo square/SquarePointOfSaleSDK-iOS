@@ -162,7 +162,7 @@ SCCMoney *const amount = [SCCMoney moneyWithAmountCents:100 currencyCode:@"USD" 
 SCCAPIRequest *request = [SCCAPIRequest requestWithCallbackURL:callbackURL
                                                         amount:amount
                                                 userInfoString:nil
-                                                    merchantID:nil
+                                                    locationID:nil
                                                          notes:@"Coffee"
                                                     customerID:nil
                                           supportedTenderTypes:SCCAPIRequestTenderTypeAll
