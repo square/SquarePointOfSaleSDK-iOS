@@ -83,11 +83,11 @@ Get your `Application ID` from the `Credentials` tab.
 
 ```swift
 // Replace with your app's URL scheme.
-let callbackURL = URL(string: <#T##Your URL Scheme##String#>)!
+let callbackURL = URL(string: "YourUrlScheme://")!
 
 // Your client ID is the same as your Square Application ID.
 // Note: You only need to set your client ID once, before creating your first request.
-SCCAPIRequest.setClientID(<#T##Client ID##String#>)
+SCCAPIRequest.setClientID("Square-App-ID")
 
 do {
     // Specify the amount of money to charge.
