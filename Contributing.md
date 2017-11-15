@@ -12,8 +12,11 @@ If you want to add a feature, please file an [Issue](issues) first. An Issue giv
 
 ### Backwards compatibility
 
-Respect the minimum deployment target. If you are adding code that uses new APIs, make sure to prevent older clients from crashing or misbehaving. Our CI runs against our minimum deployment targets, so you will not get a green build unless your code is backwards compatible. 
+Respect the minimum deployment target. If you are adding code that uses new APIs, make sure to prevent older clients from crashing or misbehaving. Our CI runs against our minimum deployment targets, so you will not get a green build unless your code is backwards compatible.
 
 ### Forwards compatibility
 
 Please do not write new code using deprecated APIs.
+
+### Unit Testing
+To run the unit tests, run `bundle exec pod lib lint --verbose` from the command line. Note that the SquarePointOfSaleSDK.podspec includes a [cocoapods test specification](https://guides.cocoapods.org/using/test-specs.html).
