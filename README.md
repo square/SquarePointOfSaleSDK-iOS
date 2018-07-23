@@ -83,7 +83,7 @@ Get your `Application ID` from the `Credentials` tab.
 
 ```swift
 // Replace with your app's URL scheme.
-let callbackURL = URL(string: <#T##Your URL Scheme##String#>)!
+let callbackURL = URL(string: "<#T##Your URL Scheme##String#>://")!
 
 // Your client ID is the same as your Square Application ID.
 // Note: You only need to set your client ID once, before creating your first request.
@@ -150,7 +150,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 
 ```objc
 // Replace with your app's callback URL.
-NSURL *const callbackURL = [NSURL URLWithString:<#Your URL Scheme#>];
+NSURL *const callbackURL = [NSURL URLWithString:@"<#Your URL Scheme#>://"];
 
 // Specify the amount of money to charge.
 SCCMoney *const amount = [SCCMoney moneyWithAmountCents:100 currencyCode:@"USD" error:NULL];
