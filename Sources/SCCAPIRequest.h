@@ -140,7 +140,7 @@ typedef NS_OPTIONS(NSUInteger, SCCAPIRequestTenderTypes) {
 /// Defaults to NO.
 @property (nonatomic, assign) BOOL disablesKeyedInCardEntry;
 
-/// If YES, Point of Sale will not skip the receipt screen of the payment flow.
+/// If YES, Point of Sale will skip the receipt screen of the payment flow for non-cash payments.
 /// Defaults to NO.
 @property (nonatomic, assign) BOOL skipsReceipt;
 
