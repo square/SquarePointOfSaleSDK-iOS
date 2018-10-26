@@ -19,4 +19,4 @@ Respect the minimum deployment target. If you are adding code that uses new APIs
 Please do not write new code using deprecated APIs.
 
 ### Unit Testing
-To run the unit tests, run `bundle exec pod lib lint --verbose` from the command line. Note that the SquarePointOfSaleSDK.podspec includes a [cocoapods test specification](https://guides.cocoapods.org/using/test-specs.html).
+To run the unit tests, run `bundle exec pod lib lint --verbose --allow-warnings` from the command line. Note that the SquarePointOfSaleSDK.podspec includes a [cocoapods test specification](https://guides.cocoapods.org/using/test-specs.html).
