@@ -136,6 +136,14 @@ typedef NS_OPTIONS(NSUInteger, SCCAPIRequestTenderTypes) {
 /// of the value of this parameter.
 @property (nonatomic, assign, readonly) BOOL returnsAutomaticallyAfterPayment;
 
+/// If YES, Point of Sale will not display the option to manually key-in a credit card number.
+/// Defaults to NO.
+@property (nonatomic, assign) BOOL disablesKeyedInCardEntry;
+
+/// If YES, Point of Sale will skip the receipt screen of the payment flow for non-cash payments.
+/// Defaults to NO.
+@property (nonatomic, assign) BOOL skipsReceipt;
+
 /**
  @param request The request to compare the receiver to.
  @return YES if the receiver and `request` are logically equivalent.
