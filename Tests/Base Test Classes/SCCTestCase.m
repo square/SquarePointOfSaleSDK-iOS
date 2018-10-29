@@ -34,13 +34,8 @@
     XCTAssertNil(error);
 
     NSString *queryStr = [[NSString alloc] initWithData:JSONData encoding:NSUTF8StringEncoding];
-    NSString *encodedStr = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(
-        kCFAllocatorDefault,
-        (CFStringRef)queryStr,
-        NULL,
-        CFSTR(":/?#[]@!$&'()*+,;="),
-        kCFStringEncodingUTF8));
-    
+    NSString *encodedStr = [queryStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet characterSetWithCharactersInString:@":/?#[]@!$&'()*+,;="]];
+
     XCTAssertNotNil(encodedStr);
     return encodedStr;
 }
