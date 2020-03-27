@@ -11,11 +11,32 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Sources/**/*.{h,m}'
 
-  s.private_header_files = 'Sources/Categories/NSDictionary+SCCAdditions.h'
+  s.private_header_files = %w[
+    Sources/Categories/NSDictionary+SCCAdditions.h
+  ]
 
   s.test_spec 'Tests' do |test_spec|
   	test_spec.source_files = 'Tests/**/*.{h,m}'
   	test_spec.dependency 'OCMock', '= 3.1'
+  end
+
+  s.app_spec 'SampleApp' do |app_spec|
+    app_spec.source_files = 'SampleApp/Sources/**/*.{h,m,swift}'
+
+    app_spec.info_plist = {
+      'CFBundleURLTypes' => [
+        {
+          CFBundleURLTypes: 'Editor', 
+          CFBundleURLName: 'Square POS Api Return Location',
+          CFBundleURLSchemes: [
+            'square-pos-api-sample'
+          ]
+        }
+      ],
+      'LSApplicationQueriesSchemes' => [
+        'square-commerce-v1'
+      ]
+    }
   end
 
   s.pod_target_xcconfig = {
@@ -149,5 +170,4 @@ Pod::Spec.new do |s|
 	  # Warn about declaring the same method more than once within the same @interface.
 	  'CLANG_WARN__DUPLICATE_METHOD_MATCH' => 'YES',
 	}
-
 end

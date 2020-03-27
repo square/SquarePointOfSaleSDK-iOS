@@ -28,3 +28,6 @@ Carthage/Build
 # ios-builder
 .bin
 .bundle
+
+# cocoapods-gen working folder
+gen

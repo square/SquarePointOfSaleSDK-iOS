@@ -1,0 +1,27 @@
+PODS:
+  - OCMock (3.1)
+  - SquarePointOfSaleSDK (3.3.2)
+  - SquarePointOfSaleSDK/SampleApp (3.3.2)
+  - SquarePointOfSaleSDK/Tests (3.3.2):
+    - OCMock (= 3.1)
+
+DEPENDENCIES:
+  - SquarePointOfSaleSDK (from `./`)
+  - SquarePointOfSaleSDK/SampleApp (from `./`)
+  - SquarePointOfSaleSDK/Tests (from `./`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - OCMock
+
+EXTERNAL SOURCES:
+  SquarePointOfSaleSDK:
+    :path: "./"
+
+SPEC CHECKSUMS:
+  OCMock: 721c11680ae2d65d67f40932777194daf7002781
+  SquarePointOfSaleSDK: 34def1e44074f7962ed71eaf990d76dade0d78b1
+
+PODFILE CHECKSUM: e781ee37c527dfe47abbeca21610d209a98372ff
+
+COCOAPODS: 1.8.4
