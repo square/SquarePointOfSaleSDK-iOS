@@ -21,6 +21,8 @@
 #import "SCCAPIResponse.h"
 #import "SCCAPIResponse+Serialization.h"
 
+#import "SCAPIURLConversion.h"
+
 #import "NSError+SCCAdditions.h"
 #import "NSError+SCCAPIAdditions.h"
 #import "NSError+SCCAPISerializationAdditions.h"
@@ -96,10 +98,15 @@ NSString *__nonnull const SCCAPIResponseStatusStringError = @"error";
 
     NSString *const transactionID = [data SCC_stringForKey:SCCAPIResponseTransactionIDKey];
     NSString *const clientTransactionID = [data SCC_stringForKey:SCCAPIResponseClientTransactionIDKey];
-    
+
     return [[self alloc] initWithTransactionID:transactionID
                            clientTransactionID:clientTransactionID
                                 userInfoString:userInfoString];
+}
+
++ (BOOL)isSquareResponse:(nonnull NSURL *)url;
+{
+    return [SCAPIURLConversion isEncoded:url];
 }
 
 #pragma mark - Initialization

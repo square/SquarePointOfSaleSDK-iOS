@@ -21,6 +21,8 @@
 #import "SCCAPIRequest.h"
 #import "SCCAPIRequest+Serialization.h"
 
+#import "SCAPIURLConversion.h"
+
 #import "NSDictionary+SCCAdditions.h"
 #import "NSError+SCCAdditions.h"
 #import "SCCMoney.h"
@@ -50,7 +52,6 @@ NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringOther = @"OTHER";
 NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringSquareGiftCard = @"SQUARE_GIFT_CARD";
 NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringCardOnFile = @"CARD_ON_FILE";
 NSString *__nonnull const SCCAPIRequestLocationIDKey = @"location_id";
-
 
 @implementation SCCAPIRequest
 
@@ -155,7 +156,7 @@ static NSString *__nullable APIClientID = nil;
     }
 
     _clientID = [clientID copy];
-    _callbackURL = callbackURL;
+    _callbackURL = [callbackURL copy];
     _amount = [amount copy];
     _userInfoString = [userInfoString copy];
     _locationID = [locationID copy];
@@ -266,7 +267,7 @@ static NSString *__nullable APIClientID = nil;
     [data setObject:self.clientID forKey:SCCAPIRequestClientIDKey];
 
     [data SCC_setSafeObject:self.amount.requestDictionaryRepresentation forKey:SCCAPIRequestAmountMoneyKey];
-    [data SCC_setSafeObject:self.callbackURL.absoluteString forKey:SCCAPIRequestCallbackURLKey];
+    [data SCC_setSafeObject:[SCAPIURLConversion encode:self.callbackURL].absoluteString forKey:SCCAPIRequestCallbackURLKey];
     [data SCC_setSafeObject:self.userInfoString forKey:SCCAPIRequestStateKey];
     [data SCC_setSafeObject:self.locationID forKey:SCCAPIRequestLocationIDKey];
     [data SCC_setSafeObject:self.notes forKey:SCCAPIRequestNotesKey];
