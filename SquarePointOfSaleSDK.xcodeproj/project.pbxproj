@@ -16,6 +16,8 @@
 		03E95D7C1F33D3E100F5ABED /* SCCAPIResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 40736A4A1F01C00700E4448C /* SCCAPIResponse.m */; };
 		03E95D7D1F33D3E400F5ABED /* SCCMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = 40736A4C1F01C00700E4448C /* SCCMoney.m */; };
 		03E95D7E1F33D3EC00F5ABED /* SCCAPIConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 40736A461F01C00700E4448C /* SCCAPIConnection.m */; };
+		2EA8986B2432A880002C4324 /* SCAPIURLConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA898692432A880002C4324 /* SCAPIURLConversion.m */; };
+		2EA8986C2432A880002C4324 /* SCAPIURLConversion.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EA8986A2432A880002C4324 /* SCAPIURLConversion.h */; };
 		4043258A1F04185A00C9348C /* SquarePointOfSaleSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 404325891F04185A00C9348C /* SquarePointOfSaleSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		406D85FE1F02CDD800D79D74 /* NSError+SCCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4078ACC91F01C61E00C6A4CE /* NSError+SCCAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		40736A5A1F01C00700E4448C /* SCCAPIConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 40736A451F01C00700E4448C /* SCCAPIConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -36,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		03AAE1B11F33D0BD00907B4A /* SCCAPIConnection_Testing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCCAPIConnection_Testing.h; path = Sources/SCCAPIConnection_Testing.h; sourceTree = SOURCE_ROOT; };
+		2EA898692432A880002C4324 /* SCAPIURLConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCAPIURLConversion.m; path = Sources/SCAPIURLConversion.m; sourceTree = SOURCE_ROOT; };
+		2EA8986A2432A880002C4324 /* SCAPIURLConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCAPIURLConversion.h; path = Sources/SCAPIURLConversion.h; sourceTree = SOURCE_ROOT; };
 		404325891F04185A00C9348C /* SquarePointOfSaleSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SquarePointOfSaleSDK.h; path = Sources/SquarePointOfSaleSDK.h; sourceTree = SOURCE_ROOT; };
 		40736A431F01C00700E4448C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		40736A451F01C00700E4448C /* SCCAPIConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCCAPIConnection.h; path = Sources/SCCAPIConnection.h; sourceTree = SOURCE_ROOT; };
@@ -90,10 +94,11 @@
 		40736A441F01C00700E4448C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				2EA8986A2432A880002C4324 /* SCAPIURLConversion.h */,
+				2EA898692432A880002C4324 /* SCAPIURLConversion.m */,
 				404325891F04185A00C9348C /* SquarePointOfSaleSDK.h */,
 				4078ACC61F01C61E00C6A4CE /* Categories */,
 				40736A451F01C00700E4448C /* SCCAPIConnection.h */,
-				03E95D821F33D67200F5ABED /* SCCAPIConnection_Testing.h */,
 				40736A461F01C00700E4448C /* SCCAPIConnection.m */,
 				40736A471F01C00700E4448C /* SCCAPIRequest.h */,
 				40736A481F01C00700E4448C /* SCCAPIRequest.m */,
@@ -161,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4043258A1F04185A00C9348C /* SquarePointOfSaleSDK.h in Headers */,
+				2EA8986C2432A880002C4324 /* SCAPIURLConversion.h in Headers */,
 				4078ACD91F01C61E00C6A4CE /* NSError+SCCAPISerializationAdditions.h in Headers */,
 				03AAE1B21F33D0BD00907B4A /* SCCAPIConnection_Testing.h in Headers */,
 				406D85FE1F02CDD800D79D74 /* NSError+SCCAdditions.h in Headers */,
@@ -218,6 +224,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -248,6 +255,7 @@
 			files = (
 				03E95D7E1F33D3EC00F5ABED /* SCCAPIConnection.m in Sources */,
 				03E95D7D1F33D3E400F5ABED /* SCCMoney.m in Sources */,
+				2EA8986B2432A880002C4324 /* SCAPIURLConversion.m in Sources */,
 				03E95D7C1F33D3E100F5ABED /* SCCAPIResponse.m in Sources */,
 				03E95D7B1F33D3DD00F5ABED /* SCCAPIRequest.m in Sources */,
 				03AAE1AA1F33D0A100907B4A /* NSDictionary+SCCAdditions.m in Sources */,

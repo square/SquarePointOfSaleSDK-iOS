@@ -33,9 +33,14 @@
  @param URL Response URL from Point of Sale.
  @param error Stores an error in the event the callback URL does not contain a valid API response.
  @return An instance of SCCAPIResponse if the callback URL contains a well-formed response,
-   (whether a success or an error response) otherwise returns nil.
+ (whether a success or an error response) otherwise returns nil.
  */
 + (nullable instancetype)responseWithResponseURL:(nonnull NSURL *)URL error:(out NSError *__nullable *__nullable)error;
+
+/**
+ Returns YES if if the incoming request URI is a valid Square response.
+ */
++ (BOOL)isSquareResponse:(nonnull NSURL *)url;
 
 /**
  The value you provided for userInfoString in your SCCAPIRequest, if any.

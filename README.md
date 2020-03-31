@@ -119,9 +119,8 @@ Finally, implement the UIApplication delegate method as follows:
 
 ```swift
 func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-    guard let sourceApplication = options[.sourceApplication] as? String,
-        sourceApplication.hasPrefix("com.squareup.square") else {
-        return false
+    guard SCCAPIResponse.isSquareResponse(url) else {
+        return
     }
 
     do {
@@ -182,8 +181,7 @@ Finally, implement the relevant UIApplication delegate.
 ```objc
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)URL options:(NSDictionary<NSString *,id> *)options;
 {
-    NSString *const sourceApplication = options[UIApplicationOpenURLOptionsSourceApplicationKey];
-    if ([sourceApplication hasPrefix:@"com.squareup.square"]) {
+    if ([SCCAPIResponse isSquareResponse:url]) {
         SCCAPIResponse *const response = [SCCAPIResponse responseWithResponseURL:URL error:&decodeError];
         ...
         return YES;
