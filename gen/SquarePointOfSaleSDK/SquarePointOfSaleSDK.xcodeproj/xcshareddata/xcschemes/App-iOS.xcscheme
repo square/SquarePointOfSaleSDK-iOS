@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8A560C3F76F7DECE7E6534C7"
+               BlueprintIdentifier = "44A8E09689DFCD6CAF5C117A"
                BuildableName = "App-iOS.app"
                BlueprintName = "App-iOS"
                ReferencedContainer = "container:SquarePointOfSaleSDK.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8A560C3F76F7DECE7E6534C7"
+            BlueprintIdentifier = "44A8E09689DFCD6CAF5C117A"
             BuildableName = "App-iOS.app"
             BlueprintName = "App-iOS"
             ReferencedContainer = "container:SquarePointOfSaleSDK.xcodeproj">
@@ -67,7 +67,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8A560C3F76F7DECE7E6534C7"
+            BlueprintIdentifier = "44A8E09689DFCD6CAF5C117A"
             BuildableName = "App-iOS.app"
             BlueprintName = "App-iOS"
             ReferencedContainer = "container:SquarePointOfSaleSDK.xcodeproj">
@@ -83,7 +83,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8A560C3F76F7DECE7E6534C7"
+            BlueprintIdentifier = "44A8E09689DFCD6CAF5C117A"
             BuildableName = "App-iOS.app"
             BlueprintName = "App-iOS"
             ReferencedContainer = "container:SquarePointOfSaleSDK.xcodeproj">
