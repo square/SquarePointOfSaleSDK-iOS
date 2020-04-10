@@ -193,6 +193,25 @@ Finally, implement the relevant UIApplication delegate.
 ## Contributing
 We’re glad you’re interested in Square Point of Sale SDK, and we’d love to see where you take it. Please read our [contributing guidelines](Contributing.md) prior to submitting a Pull Request.
 
+## Releasing
+
+First create a new tag:
+```
+git tag XYZ
+```
+
+Push the tag to Github
+```
+git push --tags
+```
+
+Generate a new release on Github.com and upload an archive of the binary using:
+
+```
+xcodebuild -workspace SquarePointOfSaleSDK.xcworkspace/ -scheme SquarePointOfSaleSDK -sdk iphonesimulator13.2
+```
+
+
 ## Support
 If you are having trouble with using this SDK in your project, please create a question on [Stack Overflow](https://stackoverflow.com/questions/tagged/square-connect) with the `square-connect` tag. Our team monitors that tag and will be able to help you. If you think there is something wrong with the SDK itself, please create an issue.
 
