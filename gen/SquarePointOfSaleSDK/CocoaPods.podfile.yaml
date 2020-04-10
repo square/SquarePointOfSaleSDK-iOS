@@ -1,0 +1,36 @@
+---
+installation_method:
+  name: cocoapods
+  options:
+    :deterministic_uuids: false
+    :generate_multiple_pod_projects: false
+    :incremental_installation: false
+    :share_schemes_for_development_pods: true
+    :warn_for_multiple_pod_sources: false
+workspace: SquarePointOfSaleSDK.xcworkspace
+sources:
+  - https://github.com/CocoaPods/Specs.git
+plugins:
+  cocoapods-disable-podfile-validations:
+    no_abstract_only_pods: true
+  cocoapods-generate:
+    {}
+target_definitions:
+  - abstract: true
+    children:
+      - abstract: true
+        dependencies:
+          - OCMock:
+            - "= 3.1"
+        name: Transitive Dependencies
+      - name: App-iOS
+    dependencies:
+      - SquarePointOfSaleSDK:
+        - :path: "../../SquarePointOfSaleSDK.podspec"
+      - SquarePointOfSaleSDK/SampleApp:
+        - :path: "../../SquarePointOfSaleSDK.podspec"
+      - SquarePointOfSaleSDK/Tests:
+        - :path: "../../SquarePointOfSaleSDK.podspec"
+    name: Pods
+    user_project_path: SquarePointOfSaleSDK.xcodeproj
+    uses_frameworks: true

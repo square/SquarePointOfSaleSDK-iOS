@@ -19,7 +19,6 @@ DerivedData
 .clang-format
 
 # CocoaPods
-Pods
 Podfile.local
 
 # Carthage
@@ -30,4 +29,4 @@ Carthage/Build
 .bundle
 
 # cocoapods-gen working folder
-gen
+Pods
