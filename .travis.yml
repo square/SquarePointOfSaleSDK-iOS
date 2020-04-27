@@ -6,5 +6,6 @@ xcode_scheme: SquarePointOfSaleSDK-Unit-Tests
 xcode_destination: platform=iOS Simulator,OS=13.2,name=iPad Pro (9.7-inch)
 before_script:
     - bundle install
+    - bundle exec pod gen
 script:
     - bundle exec pod lib lint --verbose --fail-fast --allow-warnings

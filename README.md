@@ -208,7 +208,7 @@ git push --tags
 Generate a new release on Github.com and upload an archive of the binary using:
 
 ```
-xcodebuild -workspace SquarePointOfSaleSDK.xcworkspace/ -scheme SquarePointOfSaleSDK -sdk iphonesimulator13.2
+bundle exec pod gen && carthage build --no-skip-current --platform ios && carthage archive SquarePointOfSaleSDK
 ```
 
 
