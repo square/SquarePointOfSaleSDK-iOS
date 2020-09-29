@@ -86,7 +86,13 @@
         return NO;
     }
 
-    return [[UIApplication sharedApplication] openURL:URL];
+    if (@available(iOS 10, *)) {
+        [[UIApplication sharedApplication] openURL:URL options:@{} completionHandler:nil];
+    } else {
+        return [[UIApplication sharedApplication] openURL:URL];
+    }
+
+    return YES;
 }
 
 @end
