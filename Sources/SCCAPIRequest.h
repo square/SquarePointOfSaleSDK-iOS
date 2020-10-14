@@ -58,6 +58,13 @@ typedef NS_OPTIONS(NSUInteger, SCCAPIRequestTenderTypes) {
 + (void)setClientID:(nullable NSString *)clientID;
 
 /**
+ Sets application client ID to associate with all subsequent API requests.
+ The application ID must be set to something other than nil before the first API request object is created.
+ @param applicationID The applicationID ID to associate with all subsequent API requests.
+ */
++ (void)setApplicationID:(nullable NSString *)applicationID;
+
+/**
  Designated initializer for the Point of Sale API request.
  @param callbackURL The URL that Square Point of Sale sends responses to.
  Must use the custom URL scheme you specified on your application dashboard. Required.
@@ -85,22 +92,14 @@ typedef NS_OPTIONS(NSUInteger, SCCAPIRequestTenderTypes) {
                                      customerID:(nullable NSString*)customerID
                            supportedTenderTypes:(SCCAPIRequestTenderTypes)supportedTenderTypes
                               clearsDefaultFees:(BOOL)clearsDefaultFees
-                returnAutomaticallyAfterPayment:(BOOL)autoreturn
+               returnsAutomaticallyAfterPayment:(BOOL)autoreturn
                                           error:(out NSError *__nullable *__nullable)error;
 
-+ (nullable instancetype)requestWithCallbackURL:(nonnull NSURL *)callbackURL
-                                         amount:(nonnull SCCMoney *)amount
-                                 userInfoString:(nullable NSString *)userInfoString
-                                     merchantID:(nullable NSString *)merchantID
-                                          notes:(nullable NSString *)notes
-                                     customerID:(nullable NSString*)customerID
-                           supportedTenderTypes:(SCCAPIRequestTenderTypes)supportedTenderTypes
-                              clearsDefaultFees:(BOOL)clearsDefaultFees
-                returnAutomaticallyAfterPayment:(BOOL)autoreturn
-                                          error:(out NSError *__nullable *__nullable)error __deprecated_msg("Use requestWithCallbackURL:amount:userInfoString:locationID:notes:customerID:supportedTenderTypes:clearsDefaultFees:returnAutomaticallyAfterPayment:error: instead.");
+/// Application Client ID bound to the request at the time of creation. Same as applicationID
+@property (nonatomic, copy, readonly, nonnull) NSString *clientID __deprecated_msg("Use applicationID instead");
 
-/// Application Client ID bound to the request at the time of creation.
-@property (nonatomic, copy, readonly, nonnull) NSString *clientID;
+/// Application ID bound to the request at the time of creation.
+@property (nonatomic, copy, readonly, nonnull) NSString *applicationID;
 
 /// The URL that Square Point of Sale sends responses to.
 @property (nonatomic, copy, readonly, nonnull) NSURL *callbackURL;
@@ -110,9 +109,6 @@ typedef NS_OPTIONS(NSUInteger, SCCAPIRequestTenderTypes) {
 
 /// Free-form string passed along to your application's callbackURL after the payment completes.
 @property (nonatomic, copy, readonly, nullable) NSString *userInfoString;
-
-/// The business location's Square-issued ID.
-@property (nonatomic, copy, readonly, nullable) NSString *merchantID __deprecated_msg("Use locationID instead");
 
 /// The business location's Square-issued ID.
 @property (nonatomic, copy, readonly, nullable) NSString *locationID;
