@@ -40,7 +40,8 @@
     XCTAssertNotNil(callbackURL);
     XCTAssertNotNil(amount);
 
-    [SCCAPIRequest setClientID:@"my-app-client-id"];
+    [SCCAPIRequest setApplicationID:@"my-app-client-id"];
+
     SCCAPIRequest *const request = [SCCAPIRequest requestWithCallbackURL:callbackURL
                                                                   amount:amount
                                                           userInfoString:nil
@@ -49,7 +50,9 @@
                                                               customerID:nil
                                                     supportedTenderTypes:SCCAPIRequestTenderTypeCard
                                                        clearsDefaultFees:NO
-                                         returnAutomaticallyAfterPayment:NO
+                                        returnsAutomaticallyAfterPayment:NO
+                                                disablesKeyedInCardEntry:NO
+                                                            skipsReceipt:NO
                                                                    error:NULL];
 
     id const bundleMock = OCMPartialMock([NSBundle mainBundle]);
@@ -73,7 +76,7 @@
     XCTAssertNotNil(callbackURL);
     XCTAssertNotNil(amount);
 
-    [SCCAPIRequest setClientID:@"my-app-client-id"];
+    [SCCAPIRequest setApplicationID:@"my-app-client-id"];
     SCCAPIRequest *const request = [SCCAPIRequest requestWithCallbackURL:callbackURL
                                                                   amount:amount
                                                           userInfoString:nil
@@ -82,7 +85,9 @@
                                                               customerID:nil
                                                     supportedTenderTypes:SCCAPIRequestTenderTypeCard
                                                        clearsDefaultFees:NO
-                                         returnAutomaticallyAfterPayment:NO
+                                        returnsAutomaticallyAfterPayment:NO
+                                                disablesKeyedInCardEntry:NO
+                                                            skipsReceipt:NO
                                                                    error:NULL];
 
     id const bundleMock = OCMPartialMock([NSBundle mainBundle]);

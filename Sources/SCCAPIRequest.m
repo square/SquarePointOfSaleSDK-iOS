@@ -28,8 +28,7 @@
 #import "SCCMoney.h"
 #import "SCCMoney+Serialization.h"
 
-
-NSString *__nonnull const SCCSDKVersion = @"3.1";
+NSString *__nonnull const SCCSDKVersion = @"3.4.1";
 NSString *__nonnull const SCCAPIVersion = @"1.3";
 
 NSString *__nonnull const SCCAPIRequestSDKVersionKey = @"sdk_version";
@@ -81,6 +80,11 @@ static NSString *__nullable APIClientID = nil;
     return @"square-commerce-v1";
 }
 
+- (nonnull NSString *)sdkVersion;
+{
+    return SCCSDKVersion;
+}
+
 #pragma mark - Initialization
 
 + (nullable instancetype)requestWithCallbackURL:(nonnull NSURL *)callbackURL
@@ -92,6 +96,8 @@ static NSString *__nullable APIClientID = nil;
                            supportedTenderTypes:(SCCAPIRequestTenderTypes)supportedTenderTypes
                               clearsDefaultFees:(BOOL)clearsDefaultFees
                returnsAutomaticallyAfterPayment:(BOOL)autoreturn
+                       disablesKeyedInCardEntry:(BOOL)disablesKeyedInCardEntry
+                                   skipsReceipt:(BOOL)skipsReceipt
                                           error:(out NSError *__nullable *__nullable)error;
 {
     if (![self.class _applicationID].length) {
@@ -124,7 +130,9 @@ static NSString *__nullable APIClientID = nil;
                                     customerID:customerID
                           supportedTenderTypes:supportedTenderTypes
                              clearsDefaultFees:clearsDefaultFees
-               returnAutomaticallyAfterPayment:autoreturn];
+               returnAutomaticallyAfterPayment:autoreturn
+                      disablesKeyedInCardEntry:disablesKeyedInCardEntry
+                                  skipsReceipt:skipsReceipt];
 }
 
 - (instancetype)initWithApplicationID:(nonnull NSString *)applicationID
@@ -136,7 +144,9 @@ static NSString *__nullable APIClientID = nil;
                            customerID:(nullable NSString *)customerID
                  supportedTenderTypes:(SCCAPIRequestTenderTypes)supportedTenderTypes
                     clearsDefaultFees:(BOOL)clearsDefaultFees
-      returnAutomaticallyAfterPayment:(BOOL)autoreturn;
+      returnAutomaticallyAfterPayment:(BOOL)autoreturn
+             disablesKeyedInCardEntry:(BOOL)disablesKeyedInCardEntry
+                         skipsReceipt:(BOOL)skipsReceipt
 {
     NSAssert(callbackURL.scheme.length, @"Callback URL must be specified and have a scheme.");
     NSAssert(amount && amount.amountCents >= 0, @"SCCMoney amount must be specified.");
@@ -152,10 +162,13 @@ static NSString *__nullable APIClientID = nil;
     _userInfoString = [userInfoString copy];
     _locationID = [locationID copy];
     _notes = [notes copy];
+    _customerID = [customerID copy];
     _supportedTenderTypes = supportedTenderTypes;
     _clearsDefaultFees = clearsDefaultFees;
     _returnsAutomaticallyAfterPayment = autoreturn;
-    _customerID = [customerID copy];
+    _disablesKeyedInCardEntry = disablesKeyedInCardEntry;
+    _skipsReceipt = skipsReceipt;
+    _apiVersion = SCCAPIVersion;
 
     return self;
 }
@@ -248,8 +261,8 @@ static NSString *__nullable APIClientID = nil;
 - (nullable NSURL *)APIRequestURLWithError:(out NSError *__nullable *__nullable)error;
 {
     NSMutableDictionary *const data = [NSMutableDictionary dictionary];
-    [data setObject:SCCSDKVersion forKey:SCCAPIRequestSDKVersionKey];
-    [data setObject:SCCAPIVersion forKey:SCCAPIRequestAPIVersionKey];
+    [data setObject:[self sdkVersion] forKey:SCCAPIRequestSDKVersionKey];
+    [data setObject:self.apiVersion forKey:SCCAPIRequestAPIVersionKey];
     [data setObject:self.applicationID forKey:SCCAPIRequestClientIDKey];
 
     [data SCC_setSafeObject:self.amount.requestDictionaryRepresentation forKey:SCCAPIRequestAmountMoneyKey];
