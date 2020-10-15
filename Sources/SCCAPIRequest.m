@@ -52,6 +52,38 @@ NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringSquareGiftCard = @
 NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringCardOnFile = @"CARD_ON_FILE";
 NSString *__nonnull const SCCAPIRequestLocationIDKey = @"location_id";
 
+@interface SCCAPIRequest ()
+
+@property (nonatomic, copy, readwrite, nonnull) NSString *applicationID;
+
+@property (nonatomic, copy, readwrite, nonnull) NSURL *callbackURL;
+
+@property (nonatomic, copy, readwrite, nonnull) SCCMoney *amount;
+
+@property (nonatomic, copy, readwrite, nullable) NSString *userInfoString;
+
+@property (nonatomic, copy, readwrite, nullable) NSString *locationID;
+
+@property (nonatomic, copy, readwrite, nullable) NSString *customerID;
+
+@property (nonatomic, copy, readwrite, nullable) NSString *notes;
+
+@property (nonatomic, copy, readwrite, nonnull) NSString *apiVersion;
+
+@property (nonatomic, copy, readwrite, nonnull) NSString *sdkVersion;
+
+@property (nonatomic, assign, readwrite) SCCAPIRequestTenderTypes supportedTenderTypes;
+
+@property (nonatomic, assign, readwrite) BOOL clearsDefaultFees;
+
+@property (nonatomic, assign, readwrite) BOOL returnsAutomaticallyAfterPayment;
+
+@property (nonatomic, assign, readwrite) BOOL disablesKeyedInCardEntry;
+
+@property (nonatomic, assign, readwrite) BOOL skipsReceipt;
+
+@end
+
 @implementation SCCAPIRequest
 
 #pragma mark - Class Methods
