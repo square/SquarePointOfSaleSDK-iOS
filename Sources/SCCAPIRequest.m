@@ -28,7 +28,7 @@
 #import "SCCMoney.h"
 #import "SCCMoney+Serialization.h"
 
-NSString *__nonnull const SCCSDKVersion = @"3.4.1";
+NSString *__nonnull const SCCSDKVersion = @"3.5.0";
 NSString *__nonnull const SCCAPIVersion = @"1.3";
 
 NSString *__nonnull const SCCAPIRequestSDKVersionKey = @"sdk_version";
