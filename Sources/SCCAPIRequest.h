@@ -55,7 +55,14 @@ typedef NS_OPTIONS(NSUInteger, SCCAPIRequestTenderTypes) {
  The client ID must be set to something other than nil before the first API request object is created.
  @param clientID The client ID to associate with all subsequent API requests.
  */
-+ (void)setClientID:(nullable NSString *)clientID;
++ (void)setClientID:(nullable NSString *)clientID __deprecated_msg("Use the favored `setApplicationID` instead.");
+
+/**
+ Sets application client ID to associate with all subsequent API requests.
+ The application ID must be set to something other than nil before the first API request object is created.
+ @param applicationID The applicationID ID to associate with all subsequent API requests.
+ */
++ (void)setApplicationID:(nullable NSString *)applicationID;
 
 /**
  Designated initializer for the Point of Sale API request.
@@ -85,22 +92,16 @@ typedef NS_OPTIONS(NSUInteger, SCCAPIRequestTenderTypes) {
                                      customerID:(nullable NSString*)customerID
                            supportedTenderTypes:(SCCAPIRequestTenderTypes)supportedTenderTypes
                               clearsDefaultFees:(BOOL)clearsDefaultFees
-                returnAutomaticallyAfterPayment:(BOOL)autoreturn
+               returnsAutomaticallyAfterPayment:(BOOL)autoreturn
+                       disablesKeyedInCardEntry:(BOOL)disablesKeyedInCardEntry
+                                   skipsReceipt:(BOOL)skipsReceipt
                                           error:(out NSError *__nullable *__nullable)error;
 
-+ (nullable instancetype)requestWithCallbackURL:(nonnull NSURL *)callbackURL
-                                         amount:(nonnull SCCMoney *)amount
-                                 userInfoString:(nullable NSString *)userInfoString
-                                     merchantID:(nullable NSString *)merchantID
-                                          notes:(nullable NSString *)notes
-                                     customerID:(nullable NSString*)customerID
-                           supportedTenderTypes:(SCCAPIRequestTenderTypes)supportedTenderTypes
-                              clearsDefaultFees:(BOOL)clearsDefaultFees
-                returnAutomaticallyAfterPayment:(BOOL)autoreturn
-                                          error:(out NSError *__nullable *__nullable)error __deprecated_msg("Use requestWithCallbackURL:amount:userInfoString:locationID:notes:customerID:supportedTenderTypes:clearsDefaultFees:returnAutomaticallyAfterPayment:error: instead.");
+/// Application Client ID bound to the request at the time of creation. Same as applicationID
+@property (nonatomic, copy, readonly, nonnull) NSString *clientID __deprecated_msg("Use applicationID instead");
 
-/// Application Client ID bound to the request at the time of creation.
-@property (nonatomic, copy, readonly, nonnull) NSString *clientID;
+/// Application ID bound to the request at the time of creation.
+@property (nonatomic, copy, readonly, nonnull) NSString *applicationID;
 
 /// The URL that Square Point of Sale sends responses to.
 @property (nonatomic, copy, readonly, nonnull) NSURL *callbackURL;
@@ -112,9 +113,6 @@ typedef NS_OPTIONS(NSUInteger, SCCAPIRequestTenderTypes) {
 @property (nonatomic, copy, readonly, nullable) NSString *userInfoString;
 
 /// The business location's Square-issued ID.
-@property (nonatomic, copy, readonly, nullable) NSString *merchantID __deprecated_msg("Use locationID instead");
-
-/// The business location's Square-issued ID.
 @property (nonatomic, copy, readonly, nullable) NSString *locationID;
 
 /// The Square-issued ID for the merchant's customer associated with this transaction.
@@ -122,6 +120,12 @@ typedef NS_OPTIONS(NSUInteger, SCCAPIRequestTenderTypes) {
 
 /// A custom note to associate with the resulting payment.
 @property (nonatomic, copy, readonly, nullable) NSString *notes;
+
+/// Square Point of Sale API Version
+@property (nonatomic, copy, readonly, nonnull) NSString *apiVersion;
+
+/// SquarePointOfSaleSDK Version
+@property (nonatomic, copy, readonly, nonnull) NSString *sdkVersion;
 
 /// The types of tender that Square Point of Sale is allowed to accept for the payment.
 @property (nonatomic, assign, readonly) SCCAPIRequestTenderTypes supportedTenderTypes;
@@ -138,11 +142,11 @@ typedef NS_OPTIONS(NSUInteger, SCCAPIRequestTenderTypes) {
 
 /// If YES, Point of Sale will not display the option to manually key-in a credit card number.
 /// Defaults to NO.
-@property (nonatomic, assign) BOOL disablesKeyedInCardEntry;
+@property (nonatomic, assign, readonly) BOOL disablesKeyedInCardEntry;
 
 /// If YES, Point of Sale will skip the receipt screen of the payment flow for non-cash payments.
 /// Defaults to NO.
-@property (nonatomic, assign) BOOL skipsReceipt;
+@property (nonatomic, assign, readonly) BOOL skipsReceipt;
 
 /**
  @param request The request to compare the receiver to.

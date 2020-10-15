@@ -28,8 +28,7 @@
 #import "SCCMoney.h"
 #import "SCCMoney+Serialization.h"
 
-
-NSString *__nonnull const SCCSDKVersion = @"3.1";
+NSString *__nonnull const SCCSDKVersion = @"3.4.1";
 NSString *__nonnull const SCCAPIVersion = @"1.3";
 
 NSString *__nonnull const SCCAPIRequestSDKVersionKey = @"sdk_version";
@@ -61,12 +60,17 @@ static NSString *__nullable APIClientID = nil;
 
 + (void)setClientID:(nullable NSString *)clientID;
 {
-    APIClientID = clientID;
+    [self setApplicationID:clientID];
+}
+
++ (void)setApplicationID:(NSString *)applicationID;
+{
+    APIClientID = applicationID;
 }
 
 #pragma mark - Class Methods - Private
 
-+ (nullable NSString *)_clientID;
++ (nullable NSString *)_applicationID;
 {
     return APIClientID;
 }
@@ -76,21 +80,12 @@ static NSString *__nullable APIClientID = nil;
     return @"square-commerce-v1";
 }
 
-#pragma mark - Initialization
-
-+ (nullable instancetype)requestWithCallbackURL:(nonnull NSURL *)callbackURL
-                                         amount:(nonnull SCCMoney *)amount
-                                 userInfoString:(nullable NSString *)userInfoString
-                                     merchantID:(nullable NSString *)merchantID
-                                          notes:(nullable NSString *)notes
-                                     customerID:(nullable NSString *)customerID
-                           supportedTenderTypes:(SCCAPIRequestTenderTypes)supportedTenderTypes
-                              clearsDefaultFees:(BOOL)clearsDefaultFees
-                returnAutomaticallyAfterPayment:(BOOL)autoreturn
-                                          error:(out NSError *__nullable *__nullable)error __deprecated;
+- (nonnull NSString *)sdkVersion;
 {
-    return [self requestWithCallbackURL:callbackURL amount:amount userInfoString:userInfoString locationID:merchantID notes:notes customerID:customerID supportedTenderTypes:supportedTenderTypes clearsDefaultFees:clearsDefaultFees returnAutomaticallyAfterPayment:autoreturn error:error];
+    return SCCSDKVersion;
 }
+
+#pragma mark - Initialization
 
 + (nullable instancetype)requestWithCallbackURL:(nonnull NSURL *)callbackURL
                                          amount:(nonnull SCCMoney *)amount
@@ -100,10 +95,12 @@ static NSString *__nullable APIClientID = nil;
                                      customerID:(nullable NSString *)customerID
                            supportedTenderTypes:(SCCAPIRequestTenderTypes)supportedTenderTypes
                               clearsDefaultFees:(BOOL)clearsDefaultFees
-                returnAutomaticallyAfterPayment:(BOOL)autoreturn
+               returnsAutomaticallyAfterPayment:(BOOL)autoreturn
+                       disablesKeyedInCardEntry:(BOOL)disablesKeyedInCardEntry
+                                   skipsReceipt:(BOOL)skipsReceipt
                                           error:(out NSError *__nullable *__nullable)error;
 {
-    if (![self.class _clientID].length) {
+    if (![self.class _applicationID].length) {
         if (error) {
             *error = [NSError SCC_missingRequestClientIDError];
         }
@@ -124,28 +121,32 @@ static NSString *__nullable APIClientID = nil;
         return nil;
     }
 
-    return [[self alloc] initWithClientID:(NSString *__nonnull)[self.class _clientID]
-                              callbackURL:callbackURL
-                                   amount:amount
-                           userInfoString:userInfoString
-                               locationID:locationID
-                                    notes:notes
-                               customerID:customerID
-                     supportedTenderTypes:supportedTenderTypes
-                        clearsDefaultFees:clearsDefaultFees
-          returnAutomaticallyAfterPayment:autoreturn];
+    return [[self alloc] initWithApplicationID:(NSString *__nonnull)[self.class _applicationID]
+                                   callbackURL:callbackURL
+                                        amount:amount
+                                userInfoString:userInfoString
+                                    locationID:locationID
+                                         notes:notes
+                                    customerID:customerID
+                          supportedTenderTypes:supportedTenderTypes
+                             clearsDefaultFees:clearsDefaultFees
+               returnAutomaticallyAfterPayment:autoreturn
+                      disablesKeyedInCardEntry:disablesKeyedInCardEntry
+                                  skipsReceipt:skipsReceipt];
 }
 
-- (instancetype)initWithClientID:(nonnull NSString *)clientID
-                     callbackURL:(nonnull NSURL *)callbackURL
-                          amount:(nonnull SCCMoney *)amount
-                  userInfoString:(nullable NSString *)userInfoString
-                      locationID:(nullable NSString *)locationID
-                           notes:(nullable NSString *)notes
-                      customerID:(nullable NSString *)customerID
-            supportedTenderTypes:(SCCAPIRequestTenderTypes)supportedTenderTypes
-               clearsDefaultFees:(BOOL)clearsDefaultFees
- returnAutomaticallyAfterPayment:(BOOL)autoreturn;
+- (instancetype)initWithApplicationID:(nonnull NSString *)applicationID
+                          callbackURL:(nonnull NSURL *)callbackURL
+                               amount:(nonnull SCCMoney *)amount
+                       userInfoString:(nullable NSString *)userInfoString
+                           locationID:(nullable NSString *)locationID
+                                notes:(nullable NSString *)notes
+                           customerID:(nullable NSString *)customerID
+                 supportedTenderTypes:(SCCAPIRequestTenderTypes)supportedTenderTypes
+                    clearsDefaultFees:(BOOL)clearsDefaultFees
+      returnAutomaticallyAfterPayment:(BOOL)autoreturn
+             disablesKeyedInCardEntry:(BOOL)disablesKeyedInCardEntry
+                         skipsReceipt:(BOOL)skipsReceipt
 {
     NSAssert(callbackURL.scheme.length, @"Callback URL must be specified and have a scheme.");
     NSAssert(amount && amount.amountCents >= 0, @"SCCMoney amount must be specified.");
@@ -155,16 +156,19 @@ static NSString *__nullable APIClientID = nil;
         return nil;
     }
 
-    _clientID = [clientID copy];
+    _applicationID = [applicationID copy];
     _callbackURL = [callbackURL copy];
     _amount = [amount copy];
     _userInfoString = [userInfoString copy];
     _locationID = [locationID copy];
     _notes = [notes copy];
+    _customerID = [customerID copy];
     _supportedTenderTypes = supportedTenderTypes;
     _clearsDefaultFees = clearsDefaultFees;
     _returnsAutomaticallyAfterPayment = autoreturn;
-    _customerID = [customerID copy];
+    _disablesKeyedInCardEntry = disablesKeyedInCardEntry;
+    _skipsReceipt = skipsReceipt;
+    _apiVersion = SCCAPIVersion;
 
     return self;
 }
@@ -186,7 +190,7 @@ static NSString *__nullable APIClientID = nil;
 
 - (NSUInteger)hash;
 {
-    NSUInteger const hashOfRequiredFields = self.clientID.hash ^ self.callbackURL.hash ^ self.amount.hash;
+    NSUInteger const hashOfRequiredFields = self.applicationID.hash ^ self.callbackURL.hash ^ self.amount.hash;
     NSUInteger const hashOfOptionalFields = self.userInfoString.hash ^ self.locationID.hash ^ self.notes.hash ^ self.customerID.hash;
     NSUInteger const hashOfScalarFields = (NSUInteger)self.supportedTenderTypes ^ (NSUInteger)self.clearsDefaultFees ^ (NSUInteger)self.returnsAutomaticallyAfterPayment ^ (NSUInteger)self.disablesKeyedInCardEntry ^ (NSUInteger)self.skipsReceipt;
 
@@ -199,14 +203,9 @@ static NSString *__nullable APIClientID = nil;
     return [NSString stringWithFormat:@"<%@: %p> { clientID: %@, callbackURL: %@, amount: %@ }",
         NSStringFromClass(self.class),
         self,
-        self.clientID,
+        self.applicationID,
         self.callbackURL,
         self.amount];
-}
-
-- (NSString*)merchantID;
-{
-    return self.locationID;
 }
 
 #pragma mark - NSCopying
@@ -226,7 +225,7 @@ static NSString *__nullable APIClientID = nil;
     }
 
     // The following properties are required and cannot be nil.
-    if (![self.clientID isEqualToString:(NSString *__nonnull)request.clientID] ||
+    if (![self.applicationID isEqualToString:(NSString *__nonnull)request.applicationID] ||
         ![self.callbackURL isEqual:request.callbackURL] ||
         ![self.amount isEqualToSCCMoney:request.amount]) {
         return NO;
@@ -262,9 +261,9 @@ static NSString *__nullable APIClientID = nil;
 - (nullable NSURL *)APIRequestURLWithError:(out NSError *__nullable *__nullable)error;
 {
     NSMutableDictionary *const data = [NSMutableDictionary dictionary];
-    [data setObject:SCCSDKVersion forKey:SCCAPIRequestSDKVersionKey];
-    [data setObject:SCCAPIVersion forKey:SCCAPIRequestAPIVersionKey];
-    [data setObject:self.clientID forKey:SCCAPIRequestClientIDKey];
+    [data setObject:[self sdkVersion] forKey:SCCAPIRequestSDKVersionKey];
+    [data setObject:self.apiVersion forKey:SCCAPIRequestAPIVersionKey];
+    [data setObject:self.applicationID forKey:SCCAPIRequestClientIDKey];
 
     [data SCC_setSafeObject:self.amount.requestDictionaryRepresentation forKey:SCCAPIRequestAmountMoneyKey];
     [data SCC_setSafeObject:[SCAPIURLConversion encode:self.callbackURL].absoluteString forKey:SCCAPIRequestCallbackURLKey];

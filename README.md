@@ -87,7 +87,7 @@ let callbackURL = URL(string: "<#T##Your URL Scheme##String#>://")!
 
 // Your client ID is the same as your Square Application ID.
 // Note: You only need to set your client ID once, before creating your first request.
-SCCAPIRequest.setClientID(<#T##Client ID##String#>)
+SCCAPIRequest.setApplicationID(<#T##Application ID##String#>)
 
 do {
     // Specify the amount of money to charge.
@@ -96,15 +96,17 @@ do {
     // Create the request.
     let apiRequest =
         try SCCAPIRequest(
-            callbackURL: callbackURL,
-            amount: money,
-            userInfoString: nil,
-            locationID: nil,
-            notes: "Coffee",
-            customerID: nil,
-            supportedTenderTypes: .all,
-            clearsDefaultFees: false,
-            returnAutomaticallyAfterPayment: false
+                callbackURL: callbackURL,
+                amount: money,
+                userInfoString: nil,
+                locationID: nil,
+                notes: "Coffee",
+                customerID: nil,
+                supportedTenderTypes: .all,
+                clearsDefaultFees: false,
+                returnsAutomaticallyAfterPayment: false,
+                disablesKeyedInCardEntry: false,
+                skipsReceipt: false
         )
 
     // Open Point of Sale to complete the payment.

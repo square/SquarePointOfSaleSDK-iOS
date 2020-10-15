@@ -53,7 +53,9 @@ class ViewController: UIViewController {
                     customerID: nil,
                     supportedTenderTypes: .all,
                     clearsDefaultFees: false,
-                    returnAutomaticallyAfterPayment: false
+                    returnsAutomaticallyAfterPayment: false,
+                    disablesKeyedInCardEntry: false,
+                    skipsReceipt: false
             )
 
             // Open Point of Sale to complete the payment.
