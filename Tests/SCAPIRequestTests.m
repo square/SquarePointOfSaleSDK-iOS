@@ -44,7 +44,7 @@
     XCTAssertTrue([request.notes isEqualToString:@"notes"]);
     XCTAssertTrue([request.customerID isEqualToString:@"customer-id"]);
     XCTAssertTrue([request.apiVersion isEqualToString:@"1.3"]);
-    XCTAssertTrue([request.sdkVersion isEqualToString:@"3.4.1"]);
+    XCTAssertTrue([request.sdkVersion isEqualToString:@"3.5.0"]);
     XCTAssertEqual(request.supportedTenderTypes, SCCAPIRequestTenderTypeCard);
     XCTAssertEqual(request.clearsDefaultFees, YES);
     XCTAssertEqual(request.returnsAutomaticallyAfterPayment, YES);
