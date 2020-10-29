@@ -27,13 +27,12 @@ pod 'SquarePointOfSaleSDK'
 
 Be sure to call `pod update` and use `pod install --repo-update` to ensure you have the most recent version of the SDK installed.
 
+Drag Pods/SquarePointOfSaleSDK.xcodeproj to your project, and add SquarePointOfSaleSDK as a build dependency.
+
 #### [Carthage](https://github.com/Carthage/Carthage)
 ```
 github "Square/SquarePointOfSaleSDK-iOS"
 ```
-
-#### Git Submodules
-Checkout the submodule with `git submodule add https://github.com/square/SquarePointOfSaleSDK-iOS.git`, drag SquarePointOfSaleSDK.xcodeproj to your project, and add SquarePointOfSaleSDK as a build dependency.
 
 -------------------------------
 
