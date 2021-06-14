@@ -1,9 +1,11 @@
 language: objective-c
-osx_image: xcode11.2.1
-rvm: 2.4.4
+osx_image: xcode12.1
+rvm: 2.6.1
 xcode_project: SquarePointOfSaleSDK.xcworkspace
 xcode_scheme: SquarePointOfSaleSDK-Unit-Tests
 xcode_destination: platform=iOS Simulator,OS=13.2,name=iPad Pro (9.7-inch)
+before_install:
+  - gem install cocoapods -v '0.32.1'
 before_script:
     - bundle install
     - bundle exec pod gen

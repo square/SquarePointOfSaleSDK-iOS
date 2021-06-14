@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
   s.name         = 'SquarePointOfSaleSDK'
-  s.version      = '3.5.0'
+  s.version      = '3.5.1'
   s.summary      = 'SDK for easier use of Square\'s Point of Sale app-switching API on iOS'
   s.homepage     = 'https://github.com/square/SquarePointOfSaleSDK-iOS/'
   s.license      = { :type => 'Apache License, Version 2.0', :text => "© #{ Date.today.year } Square, Inc." }
   s.authors      = 'Square'
   s.source       = { :git => 'https://github.com/square/SquarePointOfSaleSDK-iOS.git', :tag => s.version }
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '12.0'
 
   s.source_files = 'Sources/**/*.{h,m}'
 
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   ]
 
   s.test_spec 'Tests' do |test_spec|
-  	test_spec.source_files = 'Tests/**/*.{h,m}'
+	test_spec.source_files = 'Tests/**/*.{h,m}'
   	test_spec.dependency 'OCMock', '= 3.1'
   end
 
