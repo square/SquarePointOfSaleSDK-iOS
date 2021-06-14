@@ -86,11 +86,12 @@
         return NO;
     }
 
-    if (@available(iOS 10, *)) {
+    #if TARGET_OS_IOS && __IPHONE_OS_VERSION_MAX_ALLOWED >= 100000
+        // Processing when iOS version is 10.0 or later
         [[UIApplication sharedApplication] openURL:URL options:@{} completionHandler:nil];
-    } else {
+    #else
         return [[UIApplication sharedApplication] openURL:URL];
-    }
+    #endif
 
     return YES;
 }
