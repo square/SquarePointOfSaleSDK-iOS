@@ -209,7 +209,7 @@ git push --tags
 Generate a new release on Github.com and upload an archive of the binary using:
 
 ```
-bundle exec pod gen && carthage build --no-skip-current --platform ios && carthage archive SquarePointOfSaleSDK && bundle exec pod push SquarePointOfSaleSDK.podspec --allow-warnings
+bundle exec pod gen && carthage build --no-skip-current --platform --use-xcframeworks ios && carthage archive SquarePointOfSaleSDK && bundle exec pod trunk push SquarePointOfSaleSDK.podspec --allow-warnings
 ```
 
 
