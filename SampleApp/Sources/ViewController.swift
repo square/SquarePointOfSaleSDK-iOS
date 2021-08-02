@@ -36,7 +36,7 @@ class ViewController: UIViewController {
 
         // Your client ID is the same as your Square Application ID.
         // Note: You only need to set your client ID once, before creating your first request.
-        SCCAPIRequest.setClientID("<#T##Your Application ID##String#>")
+        SCCAPIRequest.setApplicationID("<#T##Your Application ID##String#>")
 
         do {
             // Specify the amount of money to charge.

@@ -18,7 +18,7 @@
 //  limitations under the License.
 //
 
-#import <SquarePointOfSaleSDK/SCCAPIRequest.h>
+#import "SCCAPIRequest.h"
 
 
 extern NSString *__nonnull const SCCAPIRequestClientIDKey;

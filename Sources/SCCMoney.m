@@ -19,7 +19,6 @@
 //
 
 #import "SCCMoney.h"
-#import "SCCMoney+Serialization.h"
 
 #import "NSError+SCCAdditions.h"
 
@@ -59,6 +58,14 @@ NSString *__nonnull const SCCMoneyRequestDictionaryCurrencyCodeKey = @"currency_
     _currencyCode = [currencyCode copy];
 
     return self;
+}
+
+- (nonnull NSDictionary *)requestDictionaryRepresentation;
+{
+    return @{
+        SCCMoneyRequestDictionaryAmountKey : @(self.amountCents),
+        SCCMoneyRequestDictionaryCurrencyCodeKey : self.currencyCode
+    };
 }
 
 #pragma mark - NSCopying
@@ -115,19 +122,6 @@ NSString *__nonnull const SCCMoneyRequestDictionaryCurrencyCodeKey = @"currency_
     }
 
     return YES;
-}
-
-@end
-
-
-@implementation SCCMoney (Serialization)
-
-- (nonnull NSDictionary *)requestDictionaryRepresentation;
-{
-    return @{
-        SCCMoneyRequestDictionaryAmountKey : @(self.amountCents),
-        SCCMoneyRequestDictionaryCurrencyCodeKey : self.currencyCode
-    };
 }
 
 @end

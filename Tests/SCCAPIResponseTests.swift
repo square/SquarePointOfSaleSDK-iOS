@@ -23,7 +23,7 @@ import SquarePointOfSaleSDK
 import XCTest
 
 
-class SCCAPIResponseTests: SCCTestCase {
+class SCCAPIResponseTests: XCTestCase {
 
     // MARK: - Tests - Valid Responses
 
@@ -37,7 +37,7 @@ class SCCAPIResponseTests: SCCTestCase {
             "state" : "PASS_ME_BACK"
         ]
 
-        let responseData = self.queryString(forData: responseDictionary)
+        let responseData = makeQueryString(data: responseDictionary)
         let callbackURL = URL(string: "my-app://callback?data=\(responseData)")!
 
         do {
@@ -58,7 +58,7 @@ class SCCAPIResponseTests: SCCTestCase {
             "state" : "PASS_ME_BACK"
         ]
 
-        let responseData = self.queryString(forData: responseDictionary)
+        let responseData = makeQueryString(data: responseDictionary)
         let callbackURL = URL(string: "my-app://callback?data=\(responseData)")!
 
         do {
@@ -86,7 +86,7 @@ class SCCAPIResponseTests: SCCTestCase {
             "state" : "PASS_ME_BACK"
         ]
 
-        let responseData = self.queryString(forData: responseDictionary)
+        let responseData = makeQueryString(data: responseDictionary)
         let callbackURL = URL(string: "my-app://callback?data=\(responseData)")!
 
         do {
@@ -133,7 +133,7 @@ class SCCAPIResponseTests: SCCTestCase {
     func test_responseWithResponseURLError_handlesMissingOrInvalidStatus() {
         do {
             let responseDictionary: [AnyHashable: Any] = [ "status" : "INVALID_STATUS" ]
-            let responseData = self.queryString(forData: responseDictionary)
+            let responseData = makeQueryString(data: responseDictionary)
             let callbackURL = URL(string: "my-app://callback?data=\(responseData)")!
             _ = try SCCAPIResponse(responseURL: callbackURL)
             XCTFail()
@@ -150,7 +150,7 @@ class SCCAPIResponseTests: SCCTestCase {
                 "state" : "PASS_ME_BACK"
             ]
 
-            let responseData = self.queryString(forData: responseDictionary)
+            let responseData = makeQueryString(data: responseDictionary)
             let callbackURL = URL(string: "my-app://callback?data=\(responseData)")!
 
             _ = try SCCAPIResponse(responseURL: callbackURL)
@@ -161,4 +161,22 @@ class SCCAPIResponseTests: SCCTestCase {
         }
     }
 
+}
+
+private extension SCCAPIResponseTests {
+    func makeQueryString(data: [AnyHashable: Any]) -> String {
+        guard let jsonData = try? JSONSerialization.data(withJSONObject: data, options: []) else {
+            fatalError()
+        }
+
+        guard let queryStr = NSString(data: jsonData, encoding: String.Encoding.utf8.rawValue) else {
+            fatalError()
+        }
+
+        guard let encodedQuery = queryStr.addingPercentEncoding(withAllowedCharacters: NSCharacterSet(charactersIn: ":/?#[]@!$&'()*+,;=") as CharacterSet) else {
+            fatalError()
+        }
+
+        return encodedQuery as String
+    }
 }

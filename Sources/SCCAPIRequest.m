@@ -26,7 +26,6 @@
 #import "NSDictionary+SCCAdditions.h"
 #import "NSError+SCCAdditions.h"
 #import "SCCMoney.h"
-#import "SCCMoney+Serialization.h"
 
 NSString *__nonnull const SCCSDKVersion = @"3.5.0";
 NSString *__nonnull const SCCAPIVersion = @"1.3";
