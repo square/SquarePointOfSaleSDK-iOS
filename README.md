@@ -10,8 +10,8 @@ The Square Point of Sale SDK lets you quickly and easily add support to your app
 
 ## Requirements
 * A [Square developer account](https://squareup.com/signup?v=developers).
-* Xcode 8.0 or later.
-* iOS 9 or later.
+* Xcode 12.0 or later.
+* iOS 12 or later.
 
 It is not currently possible to process a fake credit card payment with the Point of Sale API. If you are testing your integration, you can process small card payments (as low as $1) and then [issue refunds from Square Point of Sale](https://squareup.com/help/us/en/article/5060). Please visit [squareup.com/activate](https://www.squareup.com/activate) to ensure your account is enabled for payment processing.
 
@@ -21,7 +21,7 @@ It is not currently possible to process a fake credit card payment with the Poin
 
 #### [CocoaPods](https://cocoapods.org)
 ```
-platform :ios, '9.0'
+platform :ios, '12.0'
 pod 'SquarePointOfSaleSDK'
 ```
 
@@ -32,6 +32,14 @@ Drag Pods/SquarePointOfSaleSDK.xcodeproj to your project, and add SquarePointOfS
 #### [Carthage](https://github.com/Carthage/Carthage)
 ```
 github "Square/SquarePointOfSaleSDK-iOS"
+```
+
+#### [SPM](https://swift.org/package-manager/)
+
+To add the SquarePointOfSaleSDK package to your Xcode project, select File > Swift Packages > Add Package Dependency and enter
+
+```
+"https://github.com/square/SquarePointOfSaleSDK-iOS"
 ```
 
 -------------------------------
@@ -121,7 +129,7 @@ Finally, implement the UIApplication delegate method as follows:
 ```swift
 func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
     guard SCCAPIResponse.isSquareResponse(url) else {
-        return
+        return true
     }
 
     do {
@@ -209,7 +217,7 @@ git push --tags
 Generate a new release on Github.com and upload an archive of the binary using:
 
 ```
-bundle exec pod gen && carthage build --no-skip-current --platform --use-xcframeworks ios && carthage archive SquarePointOfSaleSDK && bundle exec pod trunk push SquarePointOfSaleSDK.podspec --allow-warnings
+bundle exec pod gen &&  carthage build --no-skip-current --platform ios --use-xcframeworks && carthage archive SquarePointOfSaleSDK && bundle exec pod trunk push SquarePointOfSaleSDK.podspec --allow-warnings
 ```
 
 
@@ -217,7 +225,7 @@ bundle exec pod gen && carthage build --no-skip-current --platform --use-xcframe
 If you are having trouble with using this SDK in your project, please create a question on [Stack Overflow](https://stackoverflow.com/questions/tagged/square-connect) with the `square-connect` tag. Our team monitors that tag and will be able to help you. If you think there is something wrong with the SDK itself, please create an issue.
 
 ## License
-Copyright 2017 Square, Inc.
+Copyright 2021 Square, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
