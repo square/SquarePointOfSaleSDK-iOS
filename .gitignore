@@ -29,3 +29,6 @@ Carthage/Build
 
 # cocoapods-gen working folder
 gen
+
+# Swift working folder
+.swiftpm

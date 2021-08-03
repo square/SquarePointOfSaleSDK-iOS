@@ -18,7 +18,7 @@
 //  limitations under the License.
 //
 
-#import <UIKit/UIApplication.h>
+@import UIKit;
 
 #import "SCCAPIConnection.h"
 

@@ -20,6 +20,11 @@
 
 #import <Foundation/Foundation.h>
 
+/// The key associated with cents amount number in a dictionary representation of a money object.
+extern NSString *__nonnull const SCCMoneyRequestDictionaryAmountKey;
+
+/// The key associated with ISO currency code string in a dictionary representation of a money object.
+extern NSString *__nonnull const SCCMoneyRequestDictionaryCurrencyCodeKey;
 
 /**
  An immutable value type representing a chargeable amount in a specific currency.
@@ -51,6 +56,11 @@
  @return YES if the argument is logically equal to the receiver.
  */
 - (BOOL)isEqualToSCCMoney:(nullable SCCMoney *)money;
+
+/**
+ @return The dictionary representation of the value amount suitable for use in an API request.
+ */
+- (nonnull NSDictionary *)requestDictionaryRepresentation;
 
 @end
 

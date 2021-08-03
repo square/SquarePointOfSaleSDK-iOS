@@ -10,18 +10,14 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '12.0'
 
   s.source_files = 'Sources/**/*.{h,m}'
-
-  s.private_header_files = %w[
-    Sources/Categories/NSDictionary+SCCAdditions.h
-  ]
+  s.public_header_files = ['Sources/Public/**/*.h']
 
   s.test_spec 'Tests' do |test_spec|
-	test_spec.source_files = 'Tests/**/*.{h,m}'
-  	test_spec.dependency 'OCMock', '= 3.1'
+	test_spec.source_files = 'Tests/**/*.{swift}'
   end
 
   s.app_spec 'SampleApp' do |app_spec|
-    app_spec.source_files = 'SampleApp/Sources/**/*.{h,m,swift}'
+    app_spec.source_files = 'SampleApp/Sources/**/*.{swift}'
 
     app_spec.info_plist = {
       'CFBundleURLTypes' => [
