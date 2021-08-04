@@ -1,0 +1,19 @@
+name: iOS Test Runner
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: Build and Test default scheme using any available iPhone simulator
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Test
+        run: |
+          xcodebuild \
+            -scheme SquarePointOfSaleSDK \
+            -sdk iphonesimulator \
+            -destination 'platform=iOS Simulator,name=iPhone 12,OS=14.4' \
+            test

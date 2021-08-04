@@ -21,7 +21,6 @@
 import Foundation
 import XCTest
 
-//@testable import SquarePointOfSaleSDK_TestHelpers
 @testable import SquarePointOfSaleSDK
 
 class SCCAPIRequestTests: XCTestCase {
