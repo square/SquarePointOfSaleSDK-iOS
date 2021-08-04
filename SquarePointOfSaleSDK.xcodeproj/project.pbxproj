@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		"SquarePointOfSaleSDK::SquarePointOfSaleSDKPackageTests::ProductTarget" /* SquarePointOfSaleSDKPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_73 /* Build configuration list for PBXAggregateTarget "SquarePointOfSaleSDKPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_76 /* PBXTargetDependency */,
+			);
+			name = SquarePointOfSaleSDKPackageTests;
+			productName = SquarePointOfSaleSDKPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		OBJ_56 /* NSDictionary+SCCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* NSDictionary+SCCAdditions.m */; };
+		OBJ_57 /* NSError+SCCAPIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* NSError+SCCAPIAdditions.m */; };
+		OBJ_58 /* NSError+SCCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* NSError+SCCAdditions.m */; };
+		OBJ_59 /* NSURL+SCCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* NSURL+SCCAdditions.m */; };
+		OBJ_60 /* SCAPIURLConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* SCAPIURLConversion.m */; };
+		OBJ_61 /* SCCAPIConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* SCCAPIConnection.m */; };
+		OBJ_62 /* SCCAPIRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* SCCAPIRequest.m */; };
+		OBJ_63 /* SCCAPIResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* SCCAPIResponse.m */; };
+		OBJ_64 /* SCCMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* SCCMoney.m */; };
+		OBJ_71 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_82 /* NSError+SCCAPIAdditionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* NSError+SCCAPIAdditionsTests.swift */; };
+		OBJ_83 /* SCCAPIRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* SCCAPIRequestTests.swift */; };
+		OBJ_84 /* SCCAPIResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* SCCAPIResponseTests.swift */; };
+		OBJ_85 /* SCCMoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* SCCMoneyTests.swift */; };
+		OBJ_87 /* SquarePointOfSaleSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SquarePointOfSaleSDK::SquarePointOfSaleSDK::Product" /* SquarePointOfSaleSDK.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2E173BC426BB235E000BDB9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SquarePointOfSaleSDK::SquarePointOfSaleSDK";
+			remoteInfo = SquarePointOfSaleSDK;
+		};
+		2E173BC726BB235F000BDB9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SquarePointOfSaleSDK::SquarePontOfSaleSDK-Unit-Tests-Swift";
+			remoteInfo = "SquarePontOfSaleSDK-Unit-Tests-Swift";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		OBJ_10 /* SCCAPIConnection_Testing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCCAPIConnection_Testing.h; sourceTree = "<group>"; };
+		OBJ_11 /* NSError+SCCAPISerializationAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSError+SCCAPISerializationAdditions.h"; sourceTree = "<group>"; };
+		OBJ_12 /* SCCAPIResponse+Serialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SCCAPIResponse+Serialization.h"; sourceTree = "<group>"; };
+		OBJ_13 /* NSDictionary+SCCAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SCCAdditions.m"; sourceTree = "<group>"; };
+		OBJ_14 /* NSError+SCCAPIAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSError+SCCAPIAdditions.m"; sourceTree = "<group>"; };
+		OBJ_15 /* NSError+SCCAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSError+SCCAdditions.m"; sourceTree = "<group>"; };
+		OBJ_16 /* NSURL+SCCAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURL+SCCAdditions.m"; sourceTree = "<group>"; };
+		OBJ_17 /* SCAPIURLConversion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCAPIURLConversion.m; sourceTree = "<group>"; };
+		OBJ_18 /* SCCAPIConnection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCCAPIConnection.m; sourceTree = "<group>"; };
+		OBJ_19 /* SCCAPIRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCCAPIRequest.m; sourceTree = "<group>"; };
+		OBJ_20 /* SCCAPIResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCCAPIResponse.m; sourceTree = "<group>"; };
+		OBJ_21 /* SCCMoney.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCCMoney.m; sourceTree = "<group>"; };
+		OBJ_23 /* SCCAPIConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCCAPIConnection.h; sourceTree = "<group>"; };
+		OBJ_24 /* NSURL+SCCAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL+SCCAdditions.h"; sourceTree = "<group>"; };
+		OBJ_25 /* SCCAPIRequest+Serialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SCCAPIRequest+Serialization.h"; sourceTree = "<group>"; };
+		OBJ_26 /* NSError+SCCAPIAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSError+SCCAPIAdditions.h"; sourceTree = "<group>"; };
+		OBJ_27 /* SCCAPIResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCCAPIResponse.h; sourceTree = "<group>"; };
+		OBJ_28 /* SCCAPIRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCCAPIRequest.h; sourceTree = "<group>"; };
+		OBJ_29 /* SCCMoney.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCCMoney.h; sourceTree = "<group>"; };
+		OBJ_30 /* NSError+SCCAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSError+SCCAdditions.h"; sourceTree = "<group>"; };
+		OBJ_31 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = "/Users/msilvis/Developer/SquarePointOfSaleSDK-iOS/SquarePointOfSaleSDK.xcodeproj/GeneratedModuleMap/SquarePointOfSaleSDK/module.modulemap"; sourceTree = "<group>"; };
+		OBJ_33 /* NSError+SCCAPIAdditionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+SCCAPIAdditionsTests.swift"; sourceTree = "<group>"; };
+		OBJ_34 /* SCCAPIRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCCAPIRequestTests.swift; sourceTree = "<group>"; };
+		OBJ_35 /* SCCAPIResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCCAPIResponseTests.swift; sourceTree = "<group>"; };
+		OBJ_36 /* SCCMoneyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCCMoneyTests.swift; sourceTree = "<group>"; };
+		OBJ_40 /* SquarePointOfSaleSDK.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = SquarePointOfSaleSDK.xcworkspace; sourceTree = SOURCE_ROOT; };
+		OBJ_41 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = SOURCE_ROOT; };
+		OBJ_42 /* SampleApp */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SampleApp; sourceTree = SOURCE_ROOT; };
+		OBJ_43 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		OBJ_44 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		OBJ_45 /* SquarePointOfSaleSDK.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = SquarePointOfSaleSDK.podspec; sourceTree = "<group>"; };
+		OBJ_46 /* Contributing.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Contributing.md; sourceTree = "<group>"; };
+		OBJ_47 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
+		OBJ_48 /* Gemfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile.lock; sourceTree = "<group>"; };
+		OBJ_49 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		OBJ_50 /* Podfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_8 /* SCAPIURLConversion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCAPIURLConversion.h; sourceTree = "<group>"; };
+		OBJ_9 /* NSDictionary+SCCAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SCCAdditions.h"; sourceTree = "<group>"; };
+		"SquarePointOfSaleSDK::SquarePointOfSaleSDK::Product" /* SquarePointOfSaleSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SquarePointOfSaleSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"SquarePointOfSaleSDK::SquarePontOfSaleSDK-Unit-Tests-Swift::Product" /* SquarePontOfSaleSDK_Unit_Tests_Swift.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; name = SquarePontOfSaleSDK_Unit_Tests_Swift.xctest; path = "SquarePontOfSaleSDK-Unit-Tests-Swift.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_87 /* SquarePointOfSaleSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		OBJ_22 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_23 /* SCCAPIConnection.h */,
+				OBJ_24 /* NSURL+SCCAdditions.h */,
+				OBJ_25 /* SCCAPIRequest+Serialization.h */,
+				OBJ_26 /* NSError+SCCAPIAdditions.h */,
+				OBJ_27 /* SCCAPIResponse.h */,
+				OBJ_28 /* SCCAPIRequest.h */,
+				OBJ_29 /* SCCMoney.h */,
+				OBJ_30 /* NSError+SCCAdditions.h */,
+				OBJ_31 /* module.modulemap */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		OBJ_32 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_33 /* NSError+SCCAPIAdditionsTests.swift */,
+				OBJ_34 /* SCCAPIRequestTests.swift */,
+				OBJ_35 /* SCCAPIResponseTests.swift */,
+				OBJ_36 /* SCCMoneyTests.swift */,
+			);
+			path = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_37 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"SquarePointOfSaleSDK::SquarePontOfSaleSDK-Unit-Tests-Swift::Product" /* SquarePontOfSaleSDK_Unit_Tests_Swift.xctest */,
+				"SquarePointOfSaleSDK::SquarePointOfSaleSDK::Product" /* SquarePointOfSaleSDK.framework */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_32 /* Tests */,
+				OBJ_37 /* Products */,
+				OBJ_40 /* SquarePointOfSaleSDK.xcworkspace */,
+				OBJ_41 /* Resources */,
+				OBJ_42 /* SampleApp */,
+				OBJ_43 /* LICENSE */,
+				OBJ_44 /* README.md */,
+				OBJ_45 /* SquarePointOfSaleSDK.podspec */,
+				OBJ_46 /* Contributing.md */,
+				OBJ_47 /* Gemfile */,
+				OBJ_48 /* Gemfile.lock */,
+				OBJ_49 /* Podfile */,
+				OBJ_50 /* Podfile.lock */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* SCAPIURLConversion.h */,
+				OBJ_9 /* NSDictionary+SCCAdditions.h */,
+				OBJ_10 /* SCCAPIConnection_Testing.h */,
+				OBJ_11 /* NSError+SCCAPISerializationAdditions.h */,
+				OBJ_12 /* SCCAPIResponse+Serialization.h */,
+				OBJ_13 /* NSDictionary+SCCAdditions.m */,
+				OBJ_14 /* NSError+SCCAPIAdditions.m */,
+				OBJ_15 /* NSError+SCCAdditions.m */,
+				OBJ_16 /* NSURL+SCCAdditions.m */,
+				OBJ_17 /* SCAPIURLConversion.m */,
+				OBJ_18 /* SCCAPIConnection.m */,
+				OBJ_19 /* SCCAPIRequest.m */,
+				OBJ_20 /* SCCAPIResponse.m */,
+				OBJ_21 /* SCCMoney.m */,
+				OBJ_22 /* Public */,
+			);
+			path = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"SquarePointOfSaleSDK::SquarePointOfSaleSDK" /* SquarePointOfSaleSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_52 /* Build configuration list for PBXNativeTarget "SquarePointOfSaleSDK" */;
+			buildPhases = (
+				OBJ_55 /* Sources */,
+				OBJ_65 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SquarePointOfSaleSDK;
+			productName = SquarePointOfSaleSDK;
+			productReference = "SquarePointOfSaleSDK::SquarePointOfSaleSDK::Product" /* SquarePointOfSaleSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"SquarePointOfSaleSDK::SquarePontOfSaleSDK-Unit-Tests-Swift" /* SquarePontOfSaleSDK-Unit-Tests-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_78 /* Build configuration list for PBXNativeTarget "SquarePontOfSaleSDK-Unit-Tests-Swift" */;
+			buildPhases = (
+				OBJ_81 /* Sources */,
+				OBJ_86 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_88 /* PBXTargetDependency */,
+			);
+			name = "SquarePontOfSaleSDK-Unit-Tests-Swift";
+			productName = SquarePontOfSaleSDK_Unit_Tests_Swift;
+			productReference = "SquarePointOfSaleSDK::SquarePontOfSaleSDK-Unit-Tests-Swift::Product" /* SquarePontOfSaleSDK_Unit_Tests_Swift.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"SquarePointOfSaleSDK::SwiftPMPackageDescription" /* SquarePointOfSaleSDKPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_67 /* Build configuration list for PBXNativeTarget "SquarePointOfSaleSDKPackageDescription" */;
+			buildPhases = (
+				OBJ_70 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SquarePointOfSaleSDKPackageDescription;
+			productName = SquarePointOfSaleSDKPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 9999;
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "SquarePointOfSaleSDK" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_37 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"SquarePointOfSaleSDK::SquarePointOfSaleSDK" /* SquarePointOfSaleSDK */,
+				"SquarePointOfSaleSDK::SwiftPMPackageDescription" /* SquarePointOfSaleSDKPackageDescription */,
+				"SquarePointOfSaleSDK::SquarePointOfSaleSDKPackageTests::ProductTarget" /* SquarePointOfSaleSDKPackageTests */,
+				"SquarePointOfSaleSDK::SquarePontOfSaleSDK-Unit-Tests-Swift" /* SquarePontOfSaleSDK-Unit-Tests-Swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_56 /* NSDictionary+SCCAdditions.m in Sources */,
+				OBJ_57 /* NSError+SCCAPIAdditions.m in Sources */,
+				OBJ_58 /* NSError+SCCAdditions.m in Sources */,
+				OBJ_59 /* NSURL+SCCAdditions.m in Sources */,
+				OBJ_60 /* SCAPIURLConversion.m in Sources */,
+				OBJ_61 /* SCCAPIConnection.m in Sources */,
+				OBJ_62 /* SCCAPIRequest.m in Sources */,
+				OBJ_63 /* SCCAPIResponse.m in Sources */,
+				OBJ_64 /* SCCMoney.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_71 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_82 /* NSError+SCCAPIAdditionsTests.swift in Sources */,
+				OBJ_83 /* SCCAPIRequestTests.swift in Sources */,
+				OBJ_84 /* SCCAPIResponseTests.swift in Sources */,
+				OBJ_85 /* SCCMoneyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SquarePointOfSaleSDK::SquarePontOfSaleSDK-Unit-Tests-Swift" /* SquarePontOfSaleSDK-Unit-Tests-Swift */;
+			targetProxy = 2E173BC726BB235F000BDB9E /* PBXContainerItemProxy */;
+		};
+		OBJ_88 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SquarePointOfSaleSDK::SquarePointOfSaleSDK" /* SquarePointOfSaleSDK */;
+			targetProxy = 2E173BC426BB235E000BDB9E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+					"DEBUG=1",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = NO;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Sources/Public",
+				);
+				INFOPLIST_FILE = SquarePointOfSaleSDK.xcodeproj/SquarePointOfSaleSDK_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SquarePointOfSaleSDK;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				TARGET_NAME = SquarePointOfSaleSDK;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = NO;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Sources/Public",
+				);
+				INFOPLIST_FILE = SquarePointOfSaleSDK.xcodeproj/SquarePointOfSaleSDK_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SquarePointOfSaleSDK;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				TARGET_NAME = SquarePointOfSaleSDK;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -package-description-version 5.3.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -package-description-version 5.3.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Sources/Public",
+					"$(SRCROOT)/SquarePointOfSaleSDK.xcodeproj/GeneratedModuleMap/SquarePointOfSaleSDK",
+				);
+				INFOPLIST_FILE = SquarePointOfSaleSDK.xcodeproj/SquarePontOfSaleSDK_Unit_Tests_Swift_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/SquarePointOfSaleSDK.xcodeproj/GeneratedModuleMap/SquarePointOfSaleSDK/module.modulemap";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = "SquarePontOfSaleSDK-Unit-Tests-Swift";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Sources/Public",
+					"$(SRCROOT)/SquarePointOfSaleSDK.xcodeproj/GeneratedModuleMap/SquarePointOfSaleSDK",
+				);
+				INFOPLIST_FILE = SquarePointOfSaleSDK.xcodeproj/SquarePontOfSaleSDK_Unit_Tests_Swift_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/SquarePointOfSaleSDK.xcodeproj/GeneratedModuleMap/SquarePointOfSaleSDK/module.modulemap";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = "SquarePontOfSaleSDK-Unit-Tests-Swift";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_2 /* Build configuration list for PBXProject "SquarePointOfSaleSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_52 /* Build configuration list for PBXNativeTarget "SquarePointOfSaleSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_53 /* Debug */,
+				OBJ_54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_67 /* Build configuration list for PBXNativeTarget "SquarePointOfSaleSDKPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_68 /* Debug */,
+				OBJ_69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_73 /* Build configuration list for PBXAggregateTarget "SquarePointOfSaleSDKPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_74 /* Debug */,
+				OBJ_75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_78 /* Build configuration list for PBXNativeTarget "SquarePontOfSaleSDK-Unit-Tests-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_79 /* Debug */,
+				OBJ_80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
+}
