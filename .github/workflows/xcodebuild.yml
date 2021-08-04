@@ -1,0 +1,8 @@
+name: Xcodebuild Action
+on: [push]
+uses: sersoft-gmbh/xcodebuild-action@v1.6.0
+with:
+  scheme: SquarePontOfSaleSDK-Unit-Tests-Swift
+  destination: platform=iOS Simulator,name=iPhone 12,OS=14.3
+  action: test
+
