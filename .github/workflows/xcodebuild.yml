@@ -10,7 +10,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-          with: latest-stable
+        with:
+          xcode-version: latest-stable
       - name: Test
         run: |
           xcodebuild \
