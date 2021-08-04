@@ -1,4 +1,0 @@
-module SquarePointOfSaleSDK {
-    umbrella "/Users/msilvis/Developer/SquarePointOfSaleSDK-iOS/Sources/Public"
-    export *
-}
