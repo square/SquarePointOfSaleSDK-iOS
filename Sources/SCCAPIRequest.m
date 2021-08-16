@@ -89,11 +89,6 @@ NSString *__nonnull const SCCAPIRequestLocationIDKey = @"location_id";
 
 static NSString *__nullable APIClientID = nil;
 
-+ (void)setClientID:(nullable NSString *)clientID;
-{
-    [self setApplicationID:clientID];
-}
-
 + (void)setApplicationID:(NSString *)applicationID;
 {
     APIClientID = applicationID;
