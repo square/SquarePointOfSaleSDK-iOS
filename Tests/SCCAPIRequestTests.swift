@@ -427,6 +427,28 @@ class SCCAPIRequestTests: XCTestCase {
             SCCAPIRequestOptionsTenderTypeStringCardOnFile,
         ])
     }
+
+    func test_setAPIVersion_updatesValueCorrectly() throws {
+        let request = try SCCAPIRequest(
+            callbackURL: URL(string: "my-app://perform-callback")!,
+            amount: try! SCCMoney(amountCents: 100, currencyCode: "USD"),
+            userInfoString: "state-user-info",
+            locationID: "abc123",
+            notes: "blue shoes",
+            customerID: "def456",
+            supportedTenderTypes: SCCAPIRequestTenderTypes.card,
+            clearsDefaultFees: false,
+            returnsAutomaticallyAfterPayment: true,
+            disablesKeyedInCardEntry: false,
+            skipsReceipt: false
+        )
+
+        XCTAssertEqual(request.apiVersion, SCCAPIVersion)
+
+        request.setApiVersion("1.0.9")
+
+        XCTAssertEqual(request.apiVersion, "1.0.9")
+    }
 }
 
 private extension URL {
