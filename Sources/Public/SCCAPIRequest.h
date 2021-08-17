@@ -20,6 +20,8 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString *__nonnull const SCCSDKVersion;
+extern NSString *__nonnull const SCCAPIVersion;
 
 @class SCCMoney;
 
@@ -153,6 +155,8 @@ typedef NS_OPTIONS(NSUInteger, SCCAPIRequestTenderTypes) {
  @return YES if the receiver and `request` are logically equivalent.
  */
 - (BOOL)isEqualToAPIRequest:(nullable SCCAPIRequest *)request;
+
+- (void)setApiVersion:(nonnull NSString *)apiVersion;
 
 @end
 
