@@ -21,26 +21,6 @@
 #import "SCCAPIRequest.h"
 
 
-extern NSString *__nonnull const SCCAPIRequestClientIDKey;
-extern NSString *__nonnull const SCCAPIRequestAmountMoneyKey;
-extern NSString *__nonnull const SCCAPIRequestCallbackURLKey;
-extern NSString *__nonnull const SCCAPIRequestStateKey;
-extern NSString *__nonnull const SCCAPIRequestCustomerIDKey;
-extern NSString *__nonnull const SCCAPIRequestNotesKey;
-extern NSString *__nonnull const SCCAPIRequestOptionsKey;
-extern NSString *__nonnull const SCCAPIRequestOptionsClearDefaultFeesKey;
-extern NSString *__nonnull const SCCAPIRequestOptionsSupportedTenderTypesKey;
-extern NSString *__nonnull const SCCAPIRequestOptionsAutoReturnKey;
-extern NSString *__nonnull const SCCAPIRequestOptionsDisableCNPKey;
-extern NSString *__nonnull const SCCAPIRequestOptionsSkipReceiptKey;
-extern NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringCard;
-extern NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringCash;
-extern NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringOther;
-extern NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringSquareGiftCard;
-extern NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringCardOnFile;
-extern NSString *__nonnull const SCCAPIRequestLocationIDKey;
-
-
 /**
  @param tenderTypes Combination of API Request Tender Types.
  @return An array of API strings corresponding to the tender types specified.

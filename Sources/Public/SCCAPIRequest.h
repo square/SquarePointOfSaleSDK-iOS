@@ -51,13 +51,6 @@ typedef NS_OPTIONS(NSUInteger, SCCAPIRequestTenderTypes) {
 @interface SCCAPIRequest : NSObject <NSCopying>
 
 /**
- Sets the client ID to associate with all subsequent API requests.
- The client ID must be set to something other than nil before the first API request object is created.
- @param clientID The client ID to associate with all subsequent API requests.
- */
-+ (void)setClientID:(nullable NSString *)clientID __deprecated_msg("Use the favored `setApplicationID` instead.");
-
-/**
  Sets application client ID to associate with all subsequent API requests.
  The application ID must be set to something other than nil before the first API request object is created.
  @param applicationID The applicationID ID to associate with all subsequent API requests.

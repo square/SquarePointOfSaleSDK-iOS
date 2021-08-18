@@ -416,15 +416,15 @@ class SCCAPIRequestTests: XCTestCase {
         XCTAssertEqual(noTenderStrings, [ String ]())
 
         let creditOnlyStrings = NSArrayOfTenderTypeStringsFromSCCAPIRequestTenderTypes(.card)
-        XCTAssertEqual(creditOnlyStrings, [ SCCAPIRequestOptionsTenderTypeStringCard ])
+        XCTAssertEqual(creditOnlyStrings, [ "CREDIT_CARD" ])
 
         let allStrings = NSArrayOfTenderTypeStringsFromSCCAPIRequestTenderTypes(.all)
         XCTAssertEqual(allStrings, [
-            SCCAPIRequestOptionsTenderTypeStringCard,
-            SCCAPIRequestOptionsTenderTypeStringCash,
-            SCCAPIRequestOptionsTenderTypeStringOther,
-            SCCAPIRequestOptionsTenderTypeStringSquareGiftCard,
-            SCCAPIRequestOptionsTenderTypeStringCardOnFile,
+            "CREDIT_CARD",
+            "CASH",
+            "OTHER",
+            "SQUARE_GIFT_CARD",
+            "CARD_ON_FILE",
         ])
     }
 }
