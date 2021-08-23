@@ -1,7 +1,7 @@
 PODS:
-  - SquarePointOfSaleSDK (3.5.1)
-  - SquarePointOfSaleSDK/SampleApp (3.5.1)
-  - SquarePointOfSaleSDK/Tests (3.5.1)
+  - SquarePointOfSaleSDK (3.5.2)
+  - SquarePointOfSaleSDK/SampleApp (3.5.2)
+  - SquarePointOfSaleSDK/Tests (3.5.2)
 
 DEPENDENCIES:
   - SquarePointOfSaleSDK (from `./`)
@@ -13,7 +13,7 @@ EXTERNAL SOURCES:
     :path: "./"
 
 SPEC CHECKSUMS:
-  SquarePointOfSaleSDK: 0b07e6cdb4f6bbeb61c4f603de2d2696f472020b
+  SquarePointOfSaleSDK: 4cf96f9702f56171b3e9f8615acadf97879062f5
 
 PODFILE CHECKSUM: e781ee37c527dfe47abbeca21610d209a98372ff
 
