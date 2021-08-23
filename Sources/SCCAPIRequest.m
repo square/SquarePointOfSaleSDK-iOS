@@ -279,6 +279,12 @@ static NSString *__nullable APIClientID = nil;
     return YES;
 }
 
+- (void)setApiVersion:(nonnull NSString *)apiVersion {
+    NSParameterAssert(apiVersion.length > 0);
+
+    _apiVersion = apiVersion;
+}
+
 @end
 
 
