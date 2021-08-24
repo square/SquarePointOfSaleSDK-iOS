@@ -452,13 +452,13 @@ class SCCAPIRequestTests: XCTestCase {
 }
 
 private extension URL {
-    var requestData: NSDictionary {
+    var requestData: NSDictionary? {
         guard let dataString = (self as NSURL).scc_HTTPGETParameters()["data"] as? String else {
-            fatalError()
+            return nil
         }
 
         guard let decoding = try? JSONSerialization.jsonObject(with: dataString.data(using: .utf8)!, options: []) as? NSDictionary else {
-            fatalError()
+            return nil
         }
 
         return decoding
