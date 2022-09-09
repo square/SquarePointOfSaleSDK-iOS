@@ -88,6 +88,7 @@ NSString *__nonnull const SCCAPIRequestLocationIDKey = @"location_id";
 #pragma mark - Class Methods
 
 static NSString *__nullable APIClientID = nil;
+static NSInteger minimumValidAmountInCents = 100;
 
 + (void)setApplicationID:(NSString *)applicationID;
 {
@@ -133,7 +134,7 @@ static NSString *__nullable APIClientID = nil;
         return nil;
     }
 
-    if (!amount || amount.amountCents < 0) {
+    if (!amount || amount.amountCents < minimumValidAmountInCents) {
         if (error) {
             *error = [NSError SCC_invalidRequestAmountError];
         }
