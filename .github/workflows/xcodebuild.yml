@@ -19,5 +19,5 @@ jobs:
           xcodebuild \
             -scheme SquarePointOfSaleSDK \
             -sdk iphonesimulator \
-            -destination 'platform=iOS Simulator,name=iPhone 12,OS=14.4' \
+            -destination 'platform=iOS Simulator,name=iPhone 12,OS=15.2' \
             test
