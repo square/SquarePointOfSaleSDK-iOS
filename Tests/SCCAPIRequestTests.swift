@@ -134,24 +134,30 @@ class SCCAPIRequestTests: XCTestCase {
     }
 
     func test_requestWithCallbackURL_validatesAmount() {
-        do {
-            _ = try SCCAPIRequest(
-                callbackURL: URL(string: "register-sdk-testapp://myCallback")!,
-                amount: try! SCCMoney(amountCents: -100, currencyCode: "USD"),
-                userInfoString: nil,
-                locationID: nil,
-                notes: nil,
-                customerID: nil,
-                supportedTenderTypes: SCCAPIRequestTenderTypes.all,
-                clearsDefaultFees: false,
-                returnsAutomaticallyAfterPayment: false,
-                disablesKeyedInCardEntry: false,
-                skipsReceipt: false
-            )
-            XCTFail()
-        } catch let error as NSError {
-            XCTAssertEqual(error.domain, SCCErrorDomain)
-            XCTAssertEqual(SCCErrorCode(rawValue: UInt(error.code)), .invalidRequestAmount);
+        let invalidAmounts:[SCCMoney] = [
+            try! SCCMoney(amountCents: -100, currencyCode: "USD"),
+            try! SCCMoney(amountCents: 99, currencyCode: "USD"),
+        ]
+        for invalidAmount in invalidAmounts {
+            do {
+                _ = try SCCAPIRequest(
+                    callbackURL: URL(string: "register-sdk-testapp://myCallback")!,
+                    amount: invalidAmount,
+                    userInfoString: nil,
+                    locationID: nil,
+                    notes: nil,
+                    customerID: nil,
+                    supportedTenderTypes: SCCAPIRequestTenderTypes.all,
+                    clearsDefaultFees: false,
+                    returnsAutomaticallyAfterPayment: false,
+                    disablesKeyedInCardEntry: false,
+                    skipsReceipt: false
+                )
+                XCTFail("Did not reject amount: \(invalidAmount)")
+            } catch let error as NSError {
+                XCTAssertEqual(error.domain, SCCErrorDomain)
+                XCTAssertEqual(SCCErrorCode(rawValue: UInt(error.code)), .invalidRequestAmount);
+            }
         }
     }
 
