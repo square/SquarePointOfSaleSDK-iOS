@@ -88,7 +88,7 @@ NSString *__nonnull const SCCAPIRequestLocationIDKey = @"location_id";
 #pragma mark - Class Methods
 
 static NSString *__nullable APIClientID = nil;
-static NSInteger minimumValidAmountInCents = 100;
+static NSInteger minimumValidAmountInCents = 1;
 
 + (void)setApplicationID:(NSString *)applicationID;
 {

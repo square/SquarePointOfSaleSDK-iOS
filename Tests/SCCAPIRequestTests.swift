@@ -136,7 +136,7 @@ class SCCAPIRequestTests: XCTestCase {
     func test_requestWithCallbackURL_validatesAmount() {
         let invalidAmounts:[SCCMoney] = [
             try! SCCMoney(amountCents: -100, currencyCode: "USD"),
-            try! SCCMoney(amountCents: 99, currencyCode: "USD"),
+            try! SCCMoney(amountCents: 00, currencyCode: "USD"),
         ]
         for invalidAmount in invalidAmounts {
             do {
