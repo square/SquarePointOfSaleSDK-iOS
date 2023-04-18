@@ -431,6 +431,7 @@ class SCCAPIRequestTests: XCTestCase {
             "OTHER",
             "SQUARE_GIFT_CARD",
             "CARD_ON_FILE",
+            "PAYPAY",
         ])
     }
 
