@@ -49,6 +49,7 @@ NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringCash = @"CASH";
 NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringOther = @"OTHER";
 NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringSquareGiftCard = @"SQUARE_GIFT_CARD";
 NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringCardOnFile = @"CARD_ON_FILE";
+NSString *__nonnull const SCCAPIRequestOptionsTenderTypeStringPayPay = @"PAYPAY";
 NSString *__nonnull const SCCAPIRequestLocationIDKey = @"location_id";
 
 @interface SCCAPIRequest ()
@@ -360,6 +361,10 @@ NSArray<NSString *> *__nonnull NSArrayOfTenderTypeStringsFromSCCAPIRequestTender
 
     if (tenderTypes & SCCAPIRequestTenderTypeCardOnFile) {
         [arrayOfTenderTypes addObject:SCCAPIRequestOptionsTenderTypeStringCardOnFile];
+    }
+    
+    if (tenderTypes & SCCAPIRequestTenderTypePayPay) {
+        [arrayOfTenderTypes addObject:SCCAPIRequestOptionsTenderTypeStringPayPay];
     }
 
     return arrayOfTenderTypes;
